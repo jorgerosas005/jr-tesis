@@ -1,0 +1,30 @@
+%\documentclass[letterpaper,12pt]{article} % Clase de documento
+\documentclass[letterpaper,12pt,oneside]{book} % Clase de documento en la plantilla UNAM
+
+% Paquetes
+\usepackage[utf8]{inputenc} % Codificación de caracteres
+\usepackage[T1]{fontenc}    % Codificación de salida
+\usepackage[spanish,es-nodecimaldot,es-tabla]{babel}
+\usepackage{graphicx}       % Para insertar imágenes
+\usepackage[top=1in, left=0.9in, right=1.25in, bottom=1in]{geometry} % Márgenes
+\usepackage{tikz} 
+\usepackage{tocloft}
+\usepackage{setspace}
+\graphicspath{{./Imágenes/}}
+
+
+\begin{document}
+
+    \include{Capítulos/Portada}
+
+    \frontmatter
+
+        \include{Capítulos/Dedicatoria}
+        \include{Capítulos/Agradecimientos}
+
+    \backmatter%@sglvgdor
+
+    \tableofcontents
+    \listoffigures
+
+\end{document}
