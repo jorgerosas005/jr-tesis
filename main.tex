@@ -1,30 +1,41 @@
-%\documentclass[letterpaper,12pt]{article} % Clase de documento
-\documentclass[letterpaper,12pt,oneside]{book} % Clase de documento en la plantilla UNAM
-
+% Clase de documento
+\documentclass[letterpaper,12pt,oneside]{book}
 % Paquetes
-\usepackage[utf8]{inputenc} % Codificación de caracteres
-\usepackage[T1]{fontenc}    % Codificación de salida
-\usepackage[spanish,es-nodecimaldot,es-tabla]{babel}
-\usepackage{graphicx}       % Para insertar imágenes
-\usepackage[top=1in, left=0.9in, right=1.25in, bottom=1in]{geometry} % Márgenes
-\usepackage{tikz} 
-\usepackage{tocloft}
-\usepackage{setspace}
-\graphicspath{{./Imágenes/}}
+\usepackage[utf8]{inputenc}                                           % Codificación de caracteres
+\usepackage[T1]{fontenc}                                              % Codificación de salida
+\usepackage[spanish,es-nodecimaldot,es-tabla]{babel}                  % Idioma español
+\usepackage{graphicx}                                                 % Para insertar imágenes
+\usepackage[top=1in, left=0.9in, right=1.25in, bottom=1in]{geometry}  % Márgenes
+\usepackage{tikz}                                                     % Para crear gráficos
+\usepackage{tocloft}                                                  % Para personalizar la tabla de contenido
+\usepackage{setspace}                                                 % Para el interlineado
+\usepackage[backend=biber,style=numeric]{biblatex}                    % Para la bibliografía
+\usepackage{csquotes}                                                 % Para citas bibliográficas
+\usepackage{amsmath}                                                 % Para ecuaciones matemáticas
+\graphicspath{{./Imágenes/}}                                          % Ruta de las imágenes
 
+% Archivo de bibliografía
+\addbibresource{references.bib}
 
 \begin{document}
 
     \include{Capítulos/Portada}
 
-    \frontmatter
+    \frontmatter % Páginas preliminares
 
         \include{Capítulos/Dedicatoria}
         \include{Capítulos/Agradecimientos}
+    
+        \tableofcontents
+        \listoffigures
 
-    \backmatter%@sglvgdor
+    \mainmatter
+        \include{Capítulos/Introducción}
 
-    \tableofcontents
-    \listoffigures
+
+    % Bibliografía
+    \printbibliography
+
+    \backmatter 
 
 \end{document}
