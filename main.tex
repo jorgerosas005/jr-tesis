@@ -11,11 +11,15 @@
 \usepackage{setspace}                                                 % Para el interlineado
 \usepackage[backend=biber,style=numeric]{biblatex}                    % Para la bibliografía
 \usepackage{csquotes}                                                 % Para citas bibliográficas
-\usepackage{amsmath}                                                 % Para ecuaciones matemáticas
+\usepackage{amsmath}                                                  % Para ecuaciones matemáticas
+\usepackage[version=4]{mhchem}                                        % Para fórmulas químicas, especificando la versión
+\usepackage{booktabs}                                                 % Para mejores líneas en tablas
+\usepackage{siunitx}                                                  % Para el comando \SI y manejo de unidades
+\DeclareSIUnit\angstrom{\text {Å}}
 \graphicspath{{./Imágenes/}}                                          % Ruta de las imágenes
 
 % Archivo de bibliografía
-\addbibresource{references.bib}
+\addbibresource{../referencias.bib}
 
 \begin{document}
 
@@ -29,13 +33,13 @@
         \tableofcontents
         \listoffigures
 
-    \mainmatter
+    \mainmatter % Páginas principales
         \include{Capítulos/Introducción}
-
+        \include{Capítulos/Fundamentos}
 
     % Bibliografía
     \printbibliography
-
+    
     \backmatter 
 
 \end{document}

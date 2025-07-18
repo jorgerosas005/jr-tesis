@@ -1,0 +1,103 @@
+===============================
+🧠 CUESTIONARIO DE AUTOCONOCIMIENTO PROFESIONAL Y VOCACIONAL
+===============================
+
+Responde con total honestidad. No hay respuestas correctas ni incorrectas.  
+Este ejercicio es para ayudarte a conocerte mejor y definir un rumbo con sentido.
+
+--------------------------------------------------
+1. SOBRE TU PERSONALIDAD Y MOTIVACIÓN
+--------------------------------------------------
+
+1. ¿Te consideras más lógico o emocional al tomar decisiones importantes?  
+    Me considero más lógico pero no siempre razono las decisiones, me da un poco de flojera. Generalmente voy por donde me lleva la vida
+2. ¿Disfrutas más trabajar en cosas estructuradas y predecibles o prefieres variedad y caos creativo?  
+    creo que en cosas estructuradas y predecibles
+3. ¿Qué tipo de tareas te hacen perder la noción del tiempo cuando las haces?  
+    Resolver un problema técnico, como hacer un script desde cero sin usar IA, resolver un balance de materia y energía en excel (ingeniería), pensar en cómo puedo resolver un problema técnico. Importante: automatizar algo que me da flojera hacer, generalmete tareas repetitivas que sé que una computadora lo podría hacer mejor. Crear validaciones a una serie de datos. Lograr que una IA o una computadora logre hacer el trabajo repettivio que tendría que hacer yo. La última que hice fue usar un modelo de lenguaje para que leyera 40 artículos por mi i¿y sintetizara la información. Una vez también hice qe¿ue un modelo hiciera match entre nombres e imagenes para unas flash cards para mi mamá
+4. ¿Qué te da energía en un día laboral? (ejemplo: resolver problemas, ayudar a otros, trabajar en silencio, etc.)  
+    Las veces que mas me emocioné en el trabajo fue cuando marcabamos en autocad nombres de unidades de control y circuitos en un DTY y en DFPs. El hecho de cotejar mediante ATTOUT y excel que todas las Unidades de control fueran validas y no repetidas en Autocad me hizo trabajar hasta las 12 o 1 de la mañana. También cuando intenté automatizar el un cambio de variable entre nomenclaturas de pemex y las nuestras para la identificacion de puntos de medición de espesores mediante un script de python de aprox 400 líneas pero hechas con IA. Con eso me pase trabajando 3 fines de semana sin poder detenerme dado la ansiedad y el deseo de resolver el problema técnico, ahorrarme mucho tiempo y esfuerzo y hacer con menos errores el trabajo
+5. ¿Qué te agota o frustra más en un entorno de trabajo?  
+    Hacer tareas repetitivas. Hacer informes escritos. Hacer cosas que tengan que ver más con presión por personas que con dificultad técnica. En mi último trabajo me concentré más en automatizar cosas que en hacer el trabajo por el que me contrataron (cosas muy repetitivas) y por eso no log´re progresar como hubiera querido. Tampoco me gusta hacer cosas que se mdian en productividad (entregar, entregar y entregar aunque esté todo mal)
+6. ¿Prefieres trabajar solo, en pareja, o en equipo? ¿Y por qué?  
+    No tengo problema con trabajar en equipo pero como todas las personas, me gusta más trabajar sin presiones de personas o tiempos. Me gusta hacer las cosas lentas y fundamentadas. Nunca he tenido problemas por trabajar en equipo pero generalmente tiendo a no tomar el liderazgo y tomar un rol de el número 2.
+7. ¿Te consideras una persona más introvertida o extrovertida?  
+    Totalmente introvertida, pero logra hacer amistades a largo plazo cuando entro en confianza 
+
+--------------------------------------------------
+2. HABILIDADES Y CONOCIMIENTOS
+--------------------------------------------------
+
+8. ¿Qué habilidades técnicas tienes hoy, aunque estén oxidadas? (ej: Python, Excel, AutoCAD, MATLAB...)  
+    AutoCAD (macros, scripts en autoLISP con IA, bloques dinámicos), Python: he manejado muchos scripts, desde 30 líenas hasta 500, generalmente las hago con IA pero siempre soy capaz de lograr comprender el 100% de las líneas de código y puedo modificarlo para llegar a hacer el script más personalizado. He usado librerías como matplotlib, numpy, scipy, pandas. Sin embargo, si escribo desde cero mi suelen ser muy pobres mis programas, no recuerdo la úlitma vez que escribí algo en python sin usar IA. Fortran, sintaxis básica para hacer programas muy sencillos. También he hecho varios scripts en Bash y en powershell y los he utilizado sin problemas, pero no conozco la sintaxis bien dado que los he hecho 100% con IA. Sé usar la terminal en linux y powershell de forma básica. En excel he manejado pocas pero tablas dinámicas y también he usado la IA para hacer programas en VBA. He usado modelos de open ai mediante la API para algunos proyectos personales. Inglés tengo nivel B1. 
+9. ¿Cuáles de esas habilidades disfrutas usar, y cuáles no tanto?  
+    Todas las que puse las disfruto, tal vez dibujar en AutoCad no tanto pero de menos me entretiene.
+10. ¿Qué habilidades no tienes aún pero te gustaría aprender?  
+    Me gustaría no ser dependiente de la IA, aunque por otro lado he llegado a hacer cosas que me hubieran tomado meses en desarrollan en la era pre IA. Quisiera tener un excelente nivel de inglés. Me gustaría entrar a explorar (por que no la conozco) el mundo del machine learning, data science aunque pensandolo bien, si mi¿e interesara tanto ya lo habría hecho a esta altura. 
+11. ¿Qué se te daba bien en la universidad con poca energía? ¿Qué se te hacía difícil o aburrido?  
+    Balance de materia y energía fue mi materia favorita. Cálculo, métodos numéricos. También me gusto Taller de problmeas que era una materia en la que resolviamos un proyecto téncico de produccción de acetona, balance de materia, energía, diseño de procesos, optimización de costos etc. Las que casi he olvidado son materias que tienen que ver con laboratorio, organica, inorganica, ( y eso que un ingeniero químico por eso es diferente) También diseño de procesos aunque me toco cursarla en pandemia así que no soy tan bueno en ella. También me llego a cruzar por la mente enfocar mi carrera ahí.
+12. ¿Sientes que tienes alguna habilidad que podrías potenciar más que otros?  
+    No conozco muchos amigos que sean ingenieros químicos que les guste toda la onda tecnológica, incluso en mi anterior trabajo casi nadie tenía conocimeintos en eso. 
+
+--------------------------------------------------
+3. INTERESES Y VALORES
+--------------------------------------------------
+
+13. ¿Qué temas te generan curiosidad genuina o pasión?  
+    Ya los expuse arriba, automatizar y resolver problemas técnicos desafiantes.
+14. ¿Qué problemas del mundo te gustaría ayudar a resolver?    
+    En mis fantasias trabajo en el mundo de la ingeniería química o afines desde la computadora, mejorando procesos, analizando datos, programando, optimizando costos, maximizando beneficios. También me veo en investigación de lo que hago para mi tesis, dinámica molecular por ejemplo. Mi vida ideal es estar haciendo cosas dificiles desde mi computadora y que generee¿n mucho dinero
+15. ¿Qué admiras en otras personas? (ej: su dinero, seguridad, conocimiento, libertad...)  
+    Las personas de las qeu ehe sientido más envidia son las que lograron trabajar en empresas de sofware sinedo ingenenieros, uno que trabaja en Aspen Tech que tampoco era mucho mejor que yo. mi amigo con maestria en ciencias físicas que recien entro a un banco como científico de datos con un sueldo de 32K mensuales, y otras personas qeu he sabido que trabajan en data science. Es curioso por que casi no conozco gente en mi círuculo que trabaje com desarrollador de software, no creo que sea un perfil competitivo frente a personas que estudiaron ciencisa de la computación, ingeniería en sistemas etc. También me genera un poc de envidia saber que las personas ganan dinero (arriba de 30k MXN mensuales)
+16. ¿Qué valoras más en un trabajo? (ordena o pon prioridad):  
+    - Dinero  
+    - Estabilidad  
+    - Libertad  
+    - Impacto  
+    - Creatividad  
+    - Aprendizaje  
+    - Poder / liderazgo  
+    - Reconocimiento  
+    - Comodidad  
+
+    Aprendizaje, dinero, libertad, creatividad, comodidad, Reconocimiento, impacto, poder, estabilidad
+
+17. ¿Preferirías ganar mucho haciendo algo que no te gusta o lo suficiente haciendo algo que te llena?  
+    Suficiente ahciendo algo que me gusta
+18. ¿Qué estilo de vida te gustaría tener en 5–10 años? (ciudad / campo, familia, nivel económico, ritmo de vida...)
+    Me gustaría estar trabajando en una empres transnacional, ganar por lo menos 50K mensuales, con un ritmo de vida acelerado y fuerte en el trabajo. Mi interés sproncipal es el bienestar de mis padres y hermanos pero sé que ellos estarán bien, sin embargo necesitaré mucho dinero en unos 5 años que mi padre deje de trabajar. Me gustaría quedarme aquí en la Ciudad de México pero viajar al extranjero de vez en cuando, más por motivos de trabajo que personales.
+--------------------------------------------------
+4. EXPERIENCIA Y APRENDIZAJES
+--------------------------------------------------
+
+19. ¿Qué trabajos o proyectos has hecho que te han gustado realmente?  
+    Los proyectos personales con python, los de autocad con los DTIs, proyectos en la carrera
+20. ¿Qué no te ha gustado nada en tus experiencias laborales o académicas?  
+    Las tareas repetitivas y en general problemas con las personas pero, no hay nada que se pueda hacer ahí jaja. De lo académico me gusta mucho en genral, pero sé que no hay dinero ahí.
+21. ¿Qué te han dicho otras personas que haces bien?  
+    El proyecto de los DTIs y el cambio de nomenclatura con pemex fueron cosas que me posicionaron en mi empresa anterior. Me han dicho que soy bueno en AutoCAD y con los DTIs. También me han dicho que soy muy inteligente en general.
+22. ¿Qué errores has cometido que te dejaron una gran lección?  
+    
+23. ¿Qué te gustaría que dijeran de ti profesionalmente dentro de 5 años?  
+
+--------------------------------------------------
+5. SUEÑOS, MIEDOS Y BLOQUEOS
+--------------------------------------------------
+
+24. ¿Qué harías si supieras que no puedes fallar?  
+25. ¿Qué es lo que más miedo te da en tu carrera profesional?  
+26. ¿Qué pensamientos o creencias te frenan al tomar decisiones importantes?  
+27. ¿Qué parte de ti quieres transformar en esta etapa de tu vida?  
+28. ¿Qué decisiones has postergado demasiado? ¿Por qué?  
+
+--------------------------------------------------
+6. ACCIÓN Y MOMENTO ACTUAL
+--------------------------------------------------
+
+29. ¿Cuánto tiempo libre real puedes dedicar a tu crecimiento profesional por semana?  
+30. ¿Estás dispuesto a invertir dinero en tu formación ahora? ¿Cuánto?  
+31. ¿Qué tan urgente es para ti cambiar de rumbo o encontrar claridad profesional? (1 a 10)  
+32. Si mañana tuvieras total claridad sobre tu camino… ¿qué harías primero?
+
+===============================
+

@@ -1,0 +1,506 @@
+
+\title{\textbf{Estudio de la solvatación del ion Cu\textsuperscript{2+} en medios polares mediante dinámica molecular con DFT/M06-2X}}
+
+\section{Introducción}
+El ion \ce{Cu^{2+}} desempeña un papel fundamental en reacciones de oxidación-reducción, transporte electrónico y formación de complejos metaloproteicos, procesos estrechamente ligados a funciones fisiológicas clave y a enfermedades neurodegenerativas como el Alzheimer y el Parkinson \cite{da2022str18}. Tiene aplicaciones en el diseño de fármacos, catálisis homogénea, sensorización iónica, y en el análisis molecular de sistemas biológicos \cite{da2023structures}. En este estudio, se analizaron los sistemas \ce{[Cu(H2O)_{40}]^{2+}} y \ce{[Cu(CH3OH)_{40}]^{2+}}, con el objetivo de hacer un análisis estructural y energético mediante simulaciones de dinámica molecular a 300 K durante 22.5 ps.
+
+Las simulaciones de dinámica molecular de Born-Oppenheimer se llevaron a cabo en el programa ORCA v6.1 \cite{orca6.1}, utilizando condiciones de ensamble NVT y control de temperatura mediante un termostato de Nosé-Hoover en cadena. Las velocidades iniciales se generaron conforme a la distribución de Maxwell-Boltzmann a 300 K.
+
+ORCA integra el movimiento atómico empleando el algoritmo de Verlet de velocidad, y en cada paso temporal resuelve la ecuación de Schrödinger independiente del tiempo mediante el método de campo autoconsistente y teoría de los fucionales de la densidad (SCF-DFT por sus siglas en inglés), utilizando el funcional M06-2X y el nivel de teoría 6-31G$^\ast$. Este procedimiento permite obtener las fuerzas necesarias para la evolución del sistema conforme a las ecuaciones de movimiento de Newton.
+
+
+
+
+===========================================
+        ESTRUCTURA GENERAL DE TESIS
+===========================================
+
+Título: 
+Estudio de la solvatación del ion Cu²⁺ en agua y metanol mediante dinámica molecular con DFT/M06-2X
+
+Autor: Jorge Ángel Rosas Martínez  
+Institución: Facultad de Química, UNAM  
+Fecha: [Fecha de entrega]  
+
+-------------------------------------------
+SECCIONES PRELIMINARES
+-------------------------------------------
+
+1. Portada  
+2. Dedicatoria y Agradecimientos  
+3. Resumen (Español)  
+4. Abstract (Inglés)  
+5. Índice General  
+6. Lista de Figuras y Tablas  
+7. Lista de Abreviaturas y Símbolos  
+
+-------------------------------------------
+CAPÍTULO 1 – INTRODUCCIÓN
+-------------------------------------------
+- Contexto y motivación  
+- Importancia científica del ion Cu²⁺  
+- Objetivo general y específicos  
+- Hipótesis de trabajo  
+- Alcances y limitaciones  
+- Metodología general  
+- Estructura de la tesis  
+
+[~5–7 páginas]
+
+-------------------------------------------
+CAPÍTULO 2 – FUNDAMENTOS Y ANTECEDENTES
+-------------------------------------------
+(Combina marco teórico + revisión de literatura)
+
+2.1. Solvatación de iones: conceptos clave  
+2.2. Relevancia química y biológica del ion Cu²⁺  
+2.3. Fundamentos de dinámica molecular  
+      - Enfoque clásico vs. Born-Oppenheimer  
+      - Termostatos y ensambles (Nosé-Hoover, NVT)  
+2.4. Fundamentos de la teoría del funcional de la densidad (DFT)  
+2.5. El funcional M06-2X y sus aplicaciones  
+2.6. Bases 6-31G*, 6-31+G*, 6-31++G**  
+2.7. RDF y ADF: definición e interpretación  
+2.8. Revisión de literatura relevante sobre Cu²⁺ en agua/metanol
+
+[~20–25 páginas]
+
+-------------------------------------------
+CAPÍTULO 3 – METODOLOGÍA COMPUTACIONAL
+-------------------------------------------
+
+3.1. Descripción de los sistemas modelados  
+      - [Cu(H₂O)₄₀]²⁺  
+      - [Cu(CH₃OH)₄₀]²⁺  
+3.2. Parámetros de simulación  
+      - Tiempo total y paso temporal  
+      - Temperatura y control térmico  
+      - Método SCF y convergencia  
+3.3. Software utilizado  
+      - ORCA v6.1, Molden, Python  
+3.4. Recursos de cómputo  
+      - Supercomputadora Miztli  
+      - Estación local (Threadripper Pro)  
+3.5. Procesamiento y análisis  
+      - Scripts Python: RDF y ADF  
+      - Extracción de estructuras, radios y energías
+
+[~12–15 páginas]
+
+-------------------------------------------
+CAPÍTULO 4 – RESULTADOS Y DISCUSIÓN
+-------------------------------------------
+
+4.1. Geometrías optimizadas de cúmulos (n = 1–40)  
+4.2. Energía de enlace por molécula de solvente  
+4.3. Evaluación de diferentes bases (comparación)  
+4.4. Configuraciones representativas post-termalización  
+4.5. Funciones de distribución radial (RDF)  
+4.6. Funciones de distribución angular (ADF)  
+4.7. Parámetros estructurales (radio, CN)  
+4.8. Discusión crítica  
+      - Comparación con literatura  
+      - Efecto del solvente  
+      - Precisión vs. costo computacional  
+
+[~25–30 páginas]
+
+-------------------------------------------
+CAPÍTULO 5 – CONCLUSIONES Y PERSPECTIVAS
+----------------------
+
+
+
+
+
+
+-----------------------------------------------------------
+CAPÍTULO 2 – SOLVATACIÓN DEL CU2+. CONTEXTO Y ANTECEDENTES
+-----------------------------------------------------------
+
+
+
+I. JUSTIFICACIÓN CIENTÍFICA GENERAL
+-----------------------------------
+
+- ¿Por qué estudiar sistemas químicos en disolución (solvatación)?
+    ¿Qué es la solvatación?
+    Primera y segunda esfera de hidratación
+    Geometrías relevantes
+    
+
+- ¿Por qué estudiar iones metálicos en particular?
+  • ¿Qué importancia tienen en procesos biológicos, industriales o ambientales?
+
+- ¿Por qué el ion Cu²⁺ específicamente?
+  • ¿Dónde se encuentra o usa el Cu²⁺?
+  • ¿Qué lo hace interesante desde un punto de vista químico o electrónico?
+  • ¿Qué propiedades especiales tiene su solvatación?
+
+
+II. JUSTIFICACIÓN DEL PROBLEMA FÍSICO-QUÍMICO
+---------------------------------------------
+
+- ¿Por qué es importante entender la solvatación de Cu²⁺ a nivel molecular?
+  • ¿Qué aplicaciones prácticas tiene esa información?
+
+- ¿Qué se sabe actualmente sobre la solvatación de Cu²⁺?
+  • ¿Qué disolventes se han estudiado?
+  • ¿Qué datos estructurales existen (número de coordinación, geometría, etc.)?
+
+- ¿Qué limitaciones o huecos hay en la literatura?
+  • ¿Falta comparación entre disolventes?
+  • ¿Se contradicen los resultados experimentales?
+  • ¿Faltan estudios computacionales con suficiente nivel teórico?
+
+
+III. JUSTIFICACIÓN DEL SISTEMA QUÍMICO ELEGIDO
+----------------------------------------------
+
+- ¿Por qué se eligió el agua como disolvente?
+  • ¿Es un estándar en la literatura? ¿Una referencia necesaria?
+
+- ¿Por qué se eligió el metanol?
+  • ¿Qué características lo hacen relevante pero poco estudiado?
+  • ¿Qué aporta en comparación con agua?
+
+- ¿Por qué comparar agua y metanol?
+  • ¿Qué tipo de contraste se busca observar?
+
+- ¿Por qué no se incluyó otro disolvente como aminas, etanol, acetonitrilo, etc.?
+  • ¿Qué criterios se usaron para descartarlos?
+  • ¿Qué barreras técnicas o químicas presentan?
+
+
+IV. JUSTIFICACIÓN METODOLÓGICA GENERAL
+--------------------------------------
+
+- ¿Por qué se elige una aproximación computacional para este problema?
+  • ¿Qué ventajas tienen las simulaciones sobre los métodos puramente experimentales?
+
+- ¿Qué tipo de simulaciones permiten estudiar la solvatación de iones metálicos?
+  • ¿Qué propiedades se pueden obtener?
+  • ¿Qué nivel de teoría es adecuado?
+
+- ¿Qué aporta estudiar el sistema a nivel atómico o cuántico?
+  • ¿Qué precisión estructural o energética se busca?
+
+
+V. JUSTIFICACIÓN DE LA PROPUESTA PARTICULAR
+-------------------------------------------
+
+- ¿Qué tiene de original este estudio?
+  • ¿Es el enfoque comparativo? ¿El nivel teórico? ¿El solvente?
+
+- ¿Qué se espera aprender con este trabajo?
+  • ¿Validar resultados anteriores?
+  • ¿Obtener nuevos datos comparativos?
+
+- ¿Qué impacto o utilidad puede tener este conocimiento?
+  • ¿En química de coordinación? ¿Catálisis? ¿Sistemas bioinorgánicos?
+
+
+
+
+-----------------------------------------------------------
+CAPÍTULO 3 – METODOLOGÍA
+-----------------------------------------------------------
+
+
+
+VI. JUSTIFICACIÓN DEL USO DE DINÁMICA MOLECULAR AB INITIO
+----------------------------------------------------------
+
+- ¿Por qué realizar simulaciones de dinámica molecular (DM) y no solo cálculos estáticos?
+  • ¿Qué permite observar la DM en cuanto a evolución estructural?
+
+- ¿Qué beneficios tiene usar DM con DFT en lugar de potenciales clásicos?
+  • ¿Es necesario capturar la fluctuación electrónica del solvente?
+
+- ¿Qué nivel de precisión se busca con esta simulación?
+  • ¿Cuál es el compromiso entre costo computacional y calidad del resultado?
+
+- ¿Qué propiedades dinámicas o estructurales se obtienen con esta técnica?
+  • Número de coordinación, RDF, geometría promedio, fluctuaciones térmicas, etc.
+
+
+VI. JUSTIFICACIÓN DEL NIVEL TEÓRICO: QUÍMICA CUÁNTICA
+------------------------------------------------------
+
+- ¿Por qué se requiere una descripción cuántica del sistema?
+  • ¿Qué propiedades no pueden describirse correctamente con métodos clásicos?
+  • ¿Qué tipo de interacciones electrónicas son relevantes?
+
+- ¿Qué limitaciones tienen los métodos empíricos o de mecánica molecular en este sistema?
+  • ¿Se requiere tratar explícitamente la densidad electrónica?
+  • ¿Hay transiciones de estado de oxidación, efectos de polarización, etc.?
+
+- ¿Qué tipo de método cuántico es más apropiado para iones metálicos en solución?
+  • ¿Es necesario resolver la ecuación de Schrödinger completa o usar aproximaciones?
+
+
+VII. JUSTIFICACIÓN DEL USO DE DFT (Teoría del Funcional de la Densidad)
+------------------------------------------------------------------------
+
+- ¿Por qué se elige DFT para este estudio?
+  • ¿Qué ventajas ofrece frente a Hartree–Fock, MP2 o métodos multirreferencia?
+
+- ¿Es DFT lo suficientemente preciso para estudiar sistemas de solvatación?
+  • ¿Qué propiedades se pueden predecir con fiabilidad?
+  • ¿Qué errores o limitaciones se conocen?
+
+- ¿Qué evidencias hay en la literatura que validen el uso de DFT para Cu²⁺ en solución?
+  • ¿Qué tan bien reproduce los valores experimentales de coordinación, enlaces, etc.?
+
+
+VIII. JUSTIFICACIÓN DEL FUNCIONAL SELECCIONADO: M06-2X
+-------------------------------------------------------
+
+- ¿Por qué se eligió el funcional M06‑2X específicamente?
+  • ¿Qué ventajas tiene frente a B3LYP, PBE, TPSSh u otros funcionales comunes?
+
+- ¿Cuál es el desempeño de M06‑2X para metales de transición?
+  • ¿Se ha evaluado su precisión en sistemas similares?
+
+- ¿Qué tipo de interacciones modela bien este funcional?
+  • ¿Es adecuado para interacciones de dispersión, puentes de hidrógeno, complejos metálicos?
+
+- ¿Qué evidencia bibliográfica apoya el uso de M06‑2X para este problema?
+  • ¿Se ha usado antes en sistemas con Cu²⁺ solvado?
+
+
+X. JUSTIFICACIÓN DEL USO DEL SOFTWARE ORCA
+-------------------------------------------
+
+- ¿Por qué se eligió el software ORCA para este trabajo?
+  • ¿Qué características lo hacen adecuado para cálculos DFT y DM ab initio?
+
+- ¿Qué ventajas ofrece ORCA frente a otros paquetes (Gaussian, Q-Chem, ADF, etc.)?
+  • ¿Es gratuito, flexible, escalable, soporta M06‑2X y simulaciones de trayectoria?
+
+- ¿Qué nivel de personalización permite ORCA para simulaciones de trayectoria molecular?
+  • ¿Permite usar bases de datos personalizadas, modificar parámetros, observar coordenadas?
+
+- ¿Qué tan documentado está el uso de ORCA en la comunidad para problemas similares?
+  • ¿Existen estudios de referencia comparables?
+
+
+XI. JUSTIFICACIÓN DE PARÁMETROS COMPUTACIONALES
+------------------------------------------------
+
+- ¿Qué base se eligió para los elementos? ¿Por qué?
+  • ¿Se usaron bases como def2-TZVP, 6‑311++G(d,p)? ¿ECPs para Cu?
+
+- ¿Cuáles fueron las condiciones de simulación?
+  • Temperatura, duración, pasos, condiciones de contorno, etc.
+
+- ¿Qué criterios se usaron para elegir el número de moléculas de solvente?
+  • ¿Se buscó saturación de la primera capa de solvatación?
+
+- ¿Cómo se verificó la estabilidad del sistema?
+  • ¿Hubo análisis de convergencia, de energía, de estructura?
+
+
+
+
+-----------------------------------------------------------
+CAPÍTULO 4 – RESULTADOS
+-----------------------------------------------------------
+
+
+
+XII. JUSTIFICACIÓN DEL ANÁLISIS DE RESULTADOS
+---------------------------------------------
+
+- ¿Qué indicadores se usarán para evaluar la solvatación?
+  • Número de coordinación, RDF, ADF, distancia Cu–O promedio.
+
+- ¿Qué métricas comparativas se usarán entre agua y metanol?
+  • ¿Cómo se medirá el efecto del disolvente?
+
+- ¿Se hará comparación con datos experimentales?
+  • ¿Qué fuentes experimentales existen para validar los resultados?
+
+- ¿Qué nivel de precisión y error se considera aceptable?
+  • ¿Qué valores se esperan según la literatura?
+
+
+- - - - - - - - - -  F U N D A M E N T O S  D E  D I N Á M I C A  M O L E C U L A R -------------------
+
+
+# 1. Introducción General a la Dinámica Molecular
+- ¿Cuál es el objetivo fundamental del modelado y la simulación molecular en la química y la física?
+- ¿Qué limitaciones intrínsecas de los métodos puramente experimentales justifican el uso de la simulación computacional como una "tercera vía" de investigación?
+- ¿Cómo se define el concepto de "puente" que ofrece la simulación entre la teoría microscópica y las propiedades macroscópicas observables?
+- ¿Qué son los Métodos Estocásticos?  
+- ¿Qué son los Métodos Deterministas?
+¿Cuál es la diferencia conceptual clave entre la Dinámica Molecular (MD), que sigue la evolución temporal, y los métodos de Monte Carlo (MC), que exploran el espacio de configuraciones?
+- ¿Qué es la dinámica molecular?
+- ¿En qué situaciones es inadecuado o insuficiente el uso de un campo de fuerza clásico y se vuelve obligatorio un tratamiento cuántico?
+- ¿Qué es la Dinamica molecular clásica?
+- ¿Qué es la parametrización de campos de fuerza clásicos?
+- ¿Cuáles son las diferencias fundamentales, ventajas y desventajas entre la Dinámica Molecular Clásica (basada en campos de fuerza) y la Dinámica Molecular Ab Initio (AIMD)?
+- ¿Qué es la aproximación de Born-Oppenheimer y por qué es el pilar fundamental que permite la realización práctica de la mayoría de las simulaciones AIMD (específicamente la BOMD)?
+- ¿Cómo se diferencia conceptualmente la Dinámica Molecular de Born-Oppenheimer (BOMD) de la Dinámica Molecular de Car-Parrinello (CPMD)?
+
+
+# 2. Ecuaciones de Movimiento e Integración
+- ¿Cuál es el papel de las ecuaciones de movimiento de Newton (F=ma) como el fundamento matemático de la Dinámica Molecular?
+- Dado que el sistema de N-cuerpos no tiene solución analítica, ¿por qué es indispensable la integración numérica para las simulaciones de MD y cuál es su objetivo principal?
+- ¿Qué propiedades debe tener un buen algoritmo de integración para ser útil en MD?
+- ¿Cómo se formula el algoritmo de Verlet y cuál es su principal ventaja (simplicidad, reversibilidad temporal) y su mayor desventaja (manejo de las velocidades)?
+- ¿Cómo funciona el algoritmo Leap-Frog ("salto de rana") y de qué manera soluciona el problema de las velocidades presente en el algoritmo de Verlet original?
+- ¿Por qué el algoritmo de Velocity-Verlet es uno de los más populares actualmente? ¿Cómo se formula y qué ventajas ofrece sobre los métodos de Verlet y Leap-Frog (ej. sincronización de posiciones y velocidades en el mismo paso de tiempo)?
+- ¿Qué factores físicos y computacionales determinan la elección del paso de tiempo (Δt) en una simulación?
+- ¿Cuál es la relación directa entre la elección del paso de tiempo (Δt) y la frecuencia vibracional más alta del sistema (ej. vibraciones de enlaces O-H o C-H)?
+- ¿Qué consecuencias tiene para la simulación elegir un Δt demasiado grande (inestabilidad numérica, mala conservación de la energía) o demasiado pequeño (alto costo computacional, muestreo ineficiente del espacio de fases)?
+
+
+# 3. Configuración del Sistema
+- ¿Qué son las condiciones iniciales?
+- ¿Cómo afecta el tamaño del sistema molecular en una simulación a la convergencia de las propiedades?
+- ¿Qué son las condiciones de frontera en una simulación?
+- ¿Qué son las condiciones periódicas en una simulación?
+- ¿En qué consiste la etapa de construcción de las coordenadas iniciales de un sistema molecular antes de cualquier cálculo energético o dinámico?
+- ¿Por qué es un paso crítico realizar una minimización de energía (u optimización de geometría) antes de iniciar la dinámica? ¿Qué problemas prácticos se evitan con este procedimiento 
+- ¿Cómo se asignan las velocidades iniciales a los átomos en una simulación de MD y por qué se utiliza la distribución de Maxwell-Boltzmann para asegurar que el sistema comience a la temperatura deseada?
+
+
+# 4. Ensambles Termodinámicos
+- En el marco de la mecánica estadística, ¿qué es un ensamble termodinámico y por qué es un concepto indispensable para conectar una simulación de un sistema microscópico con las propiedades termodinámicas macroscópicas (como la temperatura o la presión)?
+- ¿Qué es el ensamble microcanónico (NVE)?
+- ¿Por qué el ensamble microcanónico (NVE) se considera el ensamble "natural" o fundamental de la dinámica molecular al resolver las ecuaciones de movimiento de Newton sin perturbaciones externas?
+- ¿Cómo se formula el ensamble canónico (NVT)?
+- ¿Cómo se formula el ensamble macrocanónico (NPT)?
+- Dado que los experimentos se realizan típicamente a temperatura y/o presión constantes, ¿qué propósito cumplen los ensambles canónico (NVT) e isotérmico-isobárico (NPT) en las simulaciones?
+- ¿Cuál es la diferencia fundamental en las cantidades que se conservan y las que fluctúan en los ensambles NVE, NVT y NPT?
+- ¿Qué establece la hipótesis ergódica?
+- ¿Qué es la distribución de velocidades de Maxwell-Boltzmann?
+- ¿Cómo se relaciona la distribución de velocidades de Maxwell-Boltzmann con la definición de temperatura en un sistema simulado y por qué se utiliza para inicializar las velocidades en un ensamble como el NVT?
+
+
+# 5. Control de Temperatura: Termostatos
+- ¿Qué es un termostato y para qué se usa?
+- ¿Cómo se formula el termostato de Berendsen?
+- ¿Cómo se formula el termostato de Andersen?
+- ¿Cómo se formula el termostato de Nosé-Hoover?
+- ¿Cómo se formula el termostato de Langevin?
+- ¿Por qué es necesario utilizar un termostato para simular un ensamble a temperatura constante (como el NVT)?
+- ¿Cuáles son las principales diferencias, ventajas y desventajas al comparar los termostatos estocásticos (Andersen, Langevin) con los deterministas (Nosé-Hoover)?
+
+# 6. Control de Presión: Baróstatos
+- ¿Cuál es la función de un baróstato en una simulación de MD y por qué es indispensable para modelar sistemas bajo condiciones de presión constante (como en el ensamble NPT)?
+- Conceptualmente, ¿cómo logran los baróstatos mantener la presión constante? ¿Cuál es el papel del cambio de volumen de la celda de simulación en este proceso?
+- ¿Cómo se formula el baróstato de Berendsen?
+- ¿Cómo funciona el baróstato de Berendsen? ¿Qué similitudes comparte con su análogo termostático y por qué sufre de la misma crítica de no generar un ensamble NPT matemáticamente riguroso?
+- ¿Cómo se formula el baróstato de Parrinello-Rahman?
+¿Cuál es el principio del baróstato de Parrinello-Rahman? ¿Qué ventaja fundamental ofrece al permitir que la forma de la caja de simulación cambie, además de su volumen?
+- ¿Cómo se extiende el formalismo de la dinámica extendida para el control de la presión en el baróstato de Andersen-Hoover (a veces llamado Nosé-Hoover)?
+
+
+
+------------------------------ Anterior ----------------------------------
+
+# 2. Ecuaciones de Movimiento e Integración
+- ¿Cómo se derivan las ecuaciones de movimiento de Newton?
+- ¿Qué métodos de integración numérica existen?
+- ¿Cómo se formula el método de Verlet?
+- ¿Cómo se formula el método de Leap-Frog?
+- ¿Cómo se formula el método de Velocity-Verlet?
+- ¿Qué criterios determinan la elección del intervalo de tiempo?
+- ¿Qué condiciones de estabilidad deben cumplirse en la integración?
+
+# 3. Configuración del Sistema
+- ¿Qué son las condiciones iniciales?
+- ¿Qué es la asignación de velocidades iniciales y cómo se relaciona con la distribución de Maxwell-Boltzmann?
+- ¿Qué significa la minimización de energía previa a una simulación?
+- ¿Qué son las celdas de simulación?
+- ¿Qué son las condiciones de frontera?
+- ¿Qué son las condiciones periódicas?
+- ¿Cómo afecta el tamaño del sistema a la convergencia de las propiedades?
+---
+- ¿Cuáles son los dos enfoques principales para representar un sistema molecular en una simulación: el modelo de clúster aislado (o nanogota) y el modelo de sistema periódico (con caja de simulación)?
+- ¿Qué ventajas y desventajas presenta el modelo de clúster y para qué tipo de estudios es el más adecuado (ej. solvatación local, efectos cuánticos de corto alcance, sistemas donde no se desean artefactos periódicos)?
+- ¿Qué son las condiciones periódicas de frontera (PBC) y por qué son esenciales en el modelo de sistema periódico para simular propiedades de un líquido a granel (bulk) y evitar los efectos de superficie?
+
+# 4. Ensambles Termodinámicos
+- ¿Qué es un ensamble termodinámico?
+- ¿Cómo se formula el ensamble microcanónico (NVE)?
+- ¿Cómo se formula el ensamble canónico (NVT)?
+- ¿Cómo se formula el ensamble macrocanónico (NPT)?
+- ¿Cómo se relaciona la distribución de Maxwell-Boltzmann con la temperatura en un ensamble?
+- ¿Qué es la ergocidad?
+
+# 7. Interacciones y Potenciales
+- ¿Qué tipos de interacciones interatómicas e intraatómicas se consideran?
+- ¿Qué es la parametrización de potenciales?
+- ¿Qué formas funcionales típicas existen (Lennard-Jones, Coulomb, armónicos)?
+- ¿Cómo se representan enlaces, ángulos y torsiones?
+
+
+---------------------- Ingles ----------
+
+# 1. General Introduction to Molecular Dynamics
+- What is the fundamental objective of molecular modeling and simulation in chemistry and physics?
+- What intrinsic limitations of purely experimental methods justify the use of computational simulation as a "third way" of research?
+- How is the concept of a "bridge" provided by simulation between microscopic theory and observable macroscopic properties defined?
+- In molecular simulation, what are Stochastic Methods?
+- In molecular simulation, what are Deterministic Methods?
+- What is the key conceptual difference between Molecular Dynamics (MD), which follows temporal evolution, and Monte Carlo (MC) methods, which explore configuration space?
+- What is molecular dynamics (MD) as a simulation technique?
+- In what situations is the use of a classical force field inadequate or insufficient, making a quantum mechanical treatment necessary?
+- What is Classical Molecular Dynamics and what are its foundations?
+- What does the parameterization of classical force fields for simulation entail?
+- What are the fundamental differences, advantages, and disadvantages between Classical Molecular Dynamics (force-field based) and Ab Initio Molecular Dynamics (AIMD)?
+- What is the Born-Oppenheimer approximation, and why is it the fundamental pillar that allows for the practical implementation of most AIMD simulations (specifically BOMD)?
+- How does Born-Oppenheimer Molecular Dynamics (BOMD) conceptually differ from Car-Parrinello Molecular Dynamics (CPMD)?
+
+# 2. Equations of Motion and Integration
+- What is the role of Newton's equations of motion (F=ma) as the mathematical foundation of Molecular Dynamics?
+- Given that the N-body problem has no analytical solution, why is numerical integration indispensable for MD simulations and what is its main objective?
+- What properties should a good integration algorithm possess to be useful in MD?
+- How is the Verlet algorithm formulated, and what is its main advantage (simplicity, time-reversibility) and its major disadvantage (handling of velocities)?
+- How does the Leap-Frog algorithm work, and how does it solve the velocity problem present in the original Verlet algorithm?
+- Why is the Velocity-Verlet algorithm one of the most popular today? How is it formulated and what advantages does it offer over Verlet and Leap-Frog methods?
+- What physical and computational factors determine the choice of the time step (Δt) in a simulation?
+- What is the direct relationship between the choice of the time step (Δt) and the highest vibrational frequency of the system (e.g., O-H or C-H bond vibrations)?
+- What are the consequences for the simulation of choosing a Δt that is too large or too small?
+
+# 3. System Setup
+- In an MD simulation, what are the initial conditions?
+- How does the size of the molecular system in a simulation affect the convergence of properties?
+- In an MD simulation, what are boundary conditions?
+- What is the purpose of periodic boundary conditions in a simulation?
+- What does the process of constructing the initial coordinates of a molecular system before any energy or dynamics calculation consist of?
+- Why is performing an energy minimization (or geometry optimization) a critical step before starting the dynamics? What practical problems does this procedure prevent?
+- How are initial velocities assigned to atoms in an MD simulation, and why is the Maxwell-Boltzmann distribution used to ensure the system starts at the desired temperature?
+
+# 4. Thermodynamic Ensembles
+- In the framework of statistical mechanics, what is a thermodynamic ensemble and why is it an indispensable concept for connecting a microscopic system simulation with macroscopic thermodynamic properties?
+- What properties define the microcanonical (NVE) ensemble?
+- Why is the microcanonical (NVE) ensemble considered the "natural" or fundamental ensemble of molecular dynamics?
+- What properties define the canonical (NVT) ensemble?
+- What properties define the isothermal-isobaric (NPT) ensemble?
+- Since experiments are typically performed at constant temperature and/or pressure, what purpose do the canonical (NVT) and isothermal-isobaric (NPT) ensembles serve in simulations?
+- What is the fundamental difference in the quantities that are conserved versus those that fluctuate in the NVE, NVT, and NPT ensembles?
+- What does the ergodic hypothesis state in the context of statistical mechanics and simulations?
+- What does the Maxwell-Boltzmann distribution of velocities describe?
+- How does the Maxwell-Boltzmann distribution relate to the definition of temperature in a simulated system?
+
+# 5. Temperature Control: Thermostats
+- In an MD simulation, what is a thermostat and what is its purpose?
+- How is the Berendsen thermostat formulated and what is its working principle?
+- How is the Andersen thermostat formulated and what is its working principle?
+- How is the Nosé-Hoover thermostat formulated and what is its working principle?
+- How is the Langevin thermostat formulated and what is its working principle?
+- Why is it necessary to use a thermostat to simulate a constant temperature ensemble like NVT?
+- What are the main differences, advantages, and disadvantages when comparing stochastic thermostats (Andersen, Langevin) with deterministic ones (Nosé-Hoover)?
+
+# 6. Pressure Control: Barostats
+- What is the function of a barostat in an MD simulation and why is it essential for modeling systems under constant pressure conditions (like in the NPT ensemble)?
+- Conceptually, how do barostats maintain constant pressure? What is the role of the simulation cell's volume change in this process?
+- How is the Berendsen barostat formulated?
+- How does the Berendsen barostat work and why does it not generate a mathematically rigorous NPT ensemble?
+- How is the Parrinello-Rahman barostat formulated?
+- What fundamental advantage does the Parrinello-Rahman barostat offer by allowing the shape of the simulation box to change, in addition to its volume?
+- How is the extended dynamics formalism extended for pressure control in the Andersen-Hoover barostat?

@@ -1,0 +1,238 @@
+Según yo 
+
+Estudio computacional de la solvatación del ion Cu²⁺ en medios polares mediante dinámica molecular con DFT/M06-2X
+Aplicación a agua y metanol: RDF, ADF y número de coordinación
+
+-Objetivos
+	-General 
+	-Particulares
+-Solvatación de cationes
+-Cobre 2+
+	-Usos del cobre en la ingeniería química -> ¿Por qué estudiar el cobre en metanol? -> ¿Por qué estudiar el cobre en agua?
+	-Metanol -> Relevancia de el cobre en metanol
+	-Agua -> Relevancia del cobre en agua
+	-Estructura atómica
+	-Estudios previos alrededor del Cu 2+ en metanol y agua
+		-Clusters
+
+-Dinámica Molecular
+	-Baróstatos
+	-Condiciones iniciales
+	-Condiciones periódicas (condiciones en la frontera) en DM clásica
+	-Ensamble canónico
+	-Ensamble macrocanónico
+	-Ensamble microcanónico
+	-Leap-Frog
+	-Parametrización de campos de fuerza clásicos
+	-Potenciales interatómicos
+	-Potenciales intratómicos
+	-Termostatos
+-Simulaciones clásicas
+-Packmol
+-Orca
+-Density Functional Theory
+	-
+
+-EXAFS
+-Radial Distribution Function
+
+-Angular Distribution Function
+
+-Metodología
+
+
+-Resultados 
+
+-Conclusiones
+
+
+------
+
+Cosas que si o si deben ir:
+
+Titulo muy representativo
+Pequeño párrafo de - ¿Qué investigo? ¿Para qué? ¿Cuál es el gap que pretendo llenar? ¿Por qué estudiarlo también en agua? ->> buscar estudios dinámicos en agua
+Diagrama de cálculo -> dinámica molecular	
+Imagen 40 metanoles y Cu2+
+Imagen 4o aguas y Cu2+
+Gráfica RDF
+Gráfica ADF
+Conclusiones preeliminares
+Bibliografía
+
+
+---
+1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+
+
+Estudio de la solvatación de Cu 2+ en metanol mediante dinámica molecular utilizando DFT - M06-2X
+
+
+
+
+
+
+
+
+¿Cuál es el tema específico de tu tesis? 
+Estudio de solvatación de cationes en medios polares mediante dinámica molecular con DFT (Density Functional Theory)
+
+
+¿Qué problema o pregunta de investigación estás abordando?
+Estudio de la solvatación de Cu2+ en agua y metanol mediante dinámica molecular con el funcional M06-2X
+
+¿Qué metodología usaste? (Encuestas, análisis estadístico, estudio de caso, etc.)
+Utilicé Orca para una dinámica molecular utlilzando M06-2X a 300_K, timestep = 0.5_fs, thermostat NHC 300_K timecon 10.0_fs chain 4 yoshida 7 obteniendo RDF, ADF, número de coordinación con fortran y Python.
+
+¿Dónde se llevó a cabo tu investigación? (Contexto geográfico, demográfico o institucional)
+En la Facultad de Química de la UNAM.
+
+¿Cuál fue el hallazgo o resultado principal?
+Se reporta RDF (Radial Distribution Function), ADF (Angular Distribution Function) y NC (número de coordinación) por primera vez para el metanol hecho con dinámica molecular
+
+¿Hay algo que lo haga novedoso o diferente respecto a otras investigaciones?
+Hay estudios hechos para estructuras óptimas pero no obtenidas por DM
+
+¿A qué público va dirigido el póster? (Especialistas, comité académico, público general…)
+Dirigido a personas que les interese la solvatación de metales, cobre en metanol y agua. También a personas que trabajen con Teoría de los funcionales de la densidad (DTF) y M0G-2X
+
+
+
+
+Solvatación del ion Cu²⁺ en agua y metanol mediante dinámica molecular con DFT/M06-2X
+Caracterización estructural mediante funciones de distribución radial y angular
+
+" Entender la estructura de solvatación alrededor de un ion metálico es un primer paso importante para comprender muchas propiedades físicas y químicas del ion metálico en solución. Las energías de solvatación de los iones son parámetros útiles para evaluar desprotonación, potenciales de ionización, potencial redox y
+ muchas propiedades químicas de las moléculas. "
+-da2022str18
+
+Reacciones en Cu2+ metanol
+
+-------------
+
+PDB -> molden -> Óptimo -> Gráfica -> Elección de base
+
+Aproximación de Bohr Opeheimer -> Hartree-Fock -> DFT ->  -> MO62X -> Orca -> Dinámica molecular -> 
+
+
+Validación de base 
+Justificación 40 moléculas
+
+Gráficas clustering energy y bonding energy
+
+Número de coordinación
+
+
+
+
+
+----- INTRODUCCIÓN ----
+
+El ion \ce{Cu^{2+}} desempeña un papel fundamental en reacciones de oxidación-reducción, transporte electrónico y formación de complejos metaloproteicos, procesos estrechamente ligados a funciones fisiológicas clave y a enfermedades neurodegenerativas como el Alzheimer y el Parkinson. Tiene aplicaciones en el diseño racional de fármacos, catálisis homogénea, sensorización iónica, y en el análisis molecular de sistemas biológicos.
+
+Objetivo - Estudiar mediante un trabajo de dinámica molecular (22.5 ps a 300 K) los cúmulos Cu2+ (H2O)_40 y Cu2+ (CH4O)_40 utilizando el funcional MO6-2X/6-31G* caracterizando su estructura mediante funciones de distribución radial y angular. Así mismo determinar y comparar el número de coordinación reportado anteriormente para ambos solventes utilizando Orca v6.1
+
+
+---- Metodología --- 
+
+Se utiliza una dinámica molecular de Bohr Openheimmer … resolviendo la ecuación de shrodinger independiente del tiempo mediante el funcional meta-GGA híbrido global MO6 2X 6-31 G* que reproduce con éxito las énergías mínimas [Da-yang] obtenidas con MP2 debido a que tiene doble proporción de intercambio exacto Hartree Fock … etc 
+La base 6-31 G* se compara con 6-31 +G* y 6-31 ++ G ** para calibrar … y se decide utilizar 6-31 G* para el costo computacional 
+
+- Gráficas cluster energies, binding energies (comparativa con trabajos de Da-yang) 
+
+Encontrándose así que un cúmulo de Cu2+ (solvente)_40 es representativo ...
+
+3. FLUJO DE TRABAJO  
+
+Se siguió el siguiente esquema general:
+   ┌──────────────┐    ┌───────────────┐    ┌──────────────┐  
+   │  Benchmarks  │ →  │  BOMD (ORCA)  │ →  │ Post-proces │  
+   │  (estático)  │    │ M06-2X/6-31G* │    │  scripts    │  
+   └──────────────┘    └───────────────┘    └──────────────┘  
+
+
+Para la dinámica molecular se utiliza Orca v6.0 .. cuyo algoritmo de ejecución para cada paso es … y utliizando el clásico algoritmo de Verlet para cada paso de tiempo a x fs, con termostato NSH cadena 4 (Yoshida 7) y con posiciones y velocidades dadas por un optimo obtenido en Orca, dejándose 6,000 pasos para la estabilización … 
+
+- Figura Cúmulos
+
+----- Resultados----
+
+- Figura de ADF
+	Comparación con ADF reportado para agua y discusión. Coordinación casi octaédrica con ligera distorsión en MeOH (por ejemplo) 
+- Figura de RDF 
+	Comparativa con RDF reportado para agua y discutir diferencia en segunda esfera de solvatación respecto al metanol. Distancia Cu2+ - oxígeno  y nc = 
+- Número de coordinación 
+
+--- Conclusiones preliminares --- 
+
+
+
+
+
+
+
+
+
+El uso de supercómputo fue indispensable para este trabajo, ya que cada simulación implicó 45,000 pasos de cálculo. Para una se utilizó la supercomputadora Miztli (DGTIC-UNAM), utilizando 4 nodos g1 (64 núcleos, 256 GB RAM), red Infiniband y almacenamiento Lustre, bajo la cola q_hpc. Para la otra simulación local se utilizó un equipo Supermicro AS-5014A-TT, equipada con un procesador AMD Ryzen Threadripper Pro 3975WX (32 núcleos, 64 hilos) y 128 GB de RAM. La eficiencia computacional lograda permitió explorar fenómenos de solvatación con fidelidad cuántica, lo que posiciona este estudio como un ejemplo del impacto que el supercómputo tiene en la investigación científica teórica.
+
+
+
+
+\author{Jorge Angel Rosas Martínez\\ Facultad de Química UNAM\\ }
+\date{}
+
+\author{
+\underline{Jorge Angel Rosas Martínez}\\
+César Iván León Pimentel\\
+Facultad de Química, UNAM
+}
+\date{}
+
+
+\author[1]{\underline{Jorge Ángel Rosas Martínez}}
+\author[1]{César Iván León Pimentel}
+\affil[1]{Facultad de Química, UNAM, CDMX, México}
+\date{}
+
+\author[1]{\raggedright \underline{Jorge Ángel Rosas Martínez}, César Iván León Pimentel}
+\affil[1]{\raggedright Facultad de Química, Universidad Nacional Autónoma de México, CDMX}
+\date{}
+
+
+¿Qué es la dinámica molecular?
+¿Qué es la dinámica molecular clásica (MD)?
+¿Qué es la dinámica molecular Ab initio (Born-Oppenheimer y Car-Parrinello)
+Desarrolla las ecuaciones de movimiento de Newton con formalidad matemática
+¿Qué son los métodos de integración?
+Desarrolla el método de Verlet con formalidad matemática
+Desarrolla el método de Leap - Frog con formalidad matemática
+Desarrolla el método de Velocity - Verlet con formalidad matemática
+¿Qué es el intervalo de tiempo y cuáles son los criteerios de estabilidad?
+--------
+¿Qué son las condiciones iniciales? 
+¿Qué son las condiciones de frontera? 
+¿Qué son las condiciones periodicas?
+¿Qué son las celdas de simulación? 
+Desarrolla el tema de tamaño de sistema y convergencia
+Desarrolla el tema de minimización de energía previa a la simulación
+Desarrolla el tema de ensamble microcanónico con formalidad matemática
+Desarrolla el tema de ensamble macrocanonico con formalidad matemática
+Desarrolla el tema de ensamble canónico con formalidad matemática
+Desarrolla Distribución de Maxwell-Boltzmann con formalidad matemática
+-----
+¿Qué son los termostatos? 
+Desarrolla el termostato de Berendsen con formalidad matemática
+Desarrolla el termostato de Nosé-Hoove con formalidad matemática
+Desarrolla el termostato de Andersen con formalidad matemática
+Desarrolla el termostato de Langevin con formalidad matemática
+¿Qué son los barostatos? 
+Desarrolla el baróstato de Berendsen con formalidad matemática
+Desarrolla el baróstato de Parrinello-Rahman con formalidad matemática
+Desarrolla el baróstato de Nosé-Hoover con formalidad matemática
+----
