@@ -1,0 +1,2060 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.3)  8 AUG 2025 15:31
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**"d:/OneDrive/Facultad de Qu√≠mica/Titulaci√≥n/jr-tesis/main.tex"
+(d:/OneDrive/Facultad de Qu√≠mica/Titulaci√≥n/jr-tesis/main.tex
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+(C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/base\book.cls
+Document Class: book 2024/06/29 v1.4n Standard LaTeX document class
+(C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/base\bk12.clo
+File: bk12.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count196
+\c@chapter=\count197
+\c@section=\count198
+\c@subsection=\count199
+\c@subsubsection=\count266
+\c@paragraph=\count267
+\c@subparagraph=\count268
+\c@figure=\count269
+\c@table=\count270
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen141
+) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+Package: inputenc 2024/02/08 v1.3d Input encoding file
+\inpenc@prehook=\toks17
+\inpenc@posthook=\toks18
+) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2025/03/27 v25.6 The multilingual framework for pdfLaTeX, LuaLaTeX and XeLaTeX
+\babel@savecnt=\count271
+\U@D=\dimen142
+\l@unhyphenated=\language79
+ (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count272
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of babel
+) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/babel-spanish\spanish.ldf
+Language: spanish.ldf 2021/05/27 v5.0q Spanish support from the babel system
+\es@quottoks=\toks19
+\es@quotdepth=\count273
+Package babel Info: Making " an active character on input line 570.
+Package babel Info: Making < an active character on input line 722.
+Package babel Info: Making > an active character on input line 722.
+)) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/es\babel-spanish.tex
+Package babel Info: Importing font and identification data for spanish
+(babel)             from babel-es.ini. Reported on input line 11.
+) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks20
+) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+ (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+ (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen143
+\Gin@req@width=\dimen144
+) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+ (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+))
+\Gm@cnth=\count274
+\Gm@cntv=\count275
+\c@Gm@tempcnt=\count276
+\Gm@bindingoffset=\dimen145
+\Gm@wd@mp=\dimen146
+\Gm@odd@mp=\dimen147
+\Gm@even@mp=\dimen148
+\Gm@layoutwidth=\dimen149
+\Gm@layoutheight=\dimen150
+\Gm@layouthoffset=\dimen151
+\Gm@layoutvoffset=\dimen152
+\Gm@dimlist=\toks21
+ (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.sty (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-common.tex
+\pgfutil@everybye=\toks22
+\pgfutil@tempdima=\dimen153
+\pgfutil@tempdimb=\dimen154
+) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-latex.def
+\pgfutil@abb=\box52
+) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.code.tex (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+))
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+ (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.sty (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.sty (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys.code.tex
+Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
+ (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks23
+\pgfkeys@temptoks=\toks24
+ (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeyslibraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks25
+))
+\pgf@x=\dimen155
+\pgf@y=\dimen156
+\pgf@xa=\dimen157
+\pgf@ya=\dimen158
+\pgf@xb=\dimen159
+\pgf@yb=\dimen160
+\pgf@xc=\dimen161
+\pgf@yc=\dimen162
+\pgf@xd=\dimen163
+\pgf@yd=\dimen164
+\w@pgf@writea=\write3
+\r@pgf@reada=\read3
+\c@pgf@counta=\count277
+\c@pgf@countb=\count278
+\c@pgf@countc=\count279
+\c@pgf@countd=\count280
+\t@pgf@toka=\toks26
+\t@pgf@tokb=\toks27
+\t@pgf@tokc=\toks28
+\pgf@sys@id@count=\count281
+ (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.cfg
+File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
+)
+Driver file for pgf: pgfsys-pdftex.def
+ (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
+ (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
+))) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfsyssoftpath@smallbuffer@items=\count282
+\pgfsyssoftpath@bigbuffer@items=\count283
+) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+ (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+ (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore.code.tex
+Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
+ (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.code.tex) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparser.code.tex
+\pgfmath@dimen=\dimen165
+\pgfmath@count=\count284
+\pgfmath@box=\box53
+\pgfmath@toks=\toks29
+\pgfmath@stack@operand=\toks30
+\pgfmath@stack@operation=\toks31
+) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.code.tex) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.trigonometric.code.tex) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.random.code.tex) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.comparison.code.tex) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.base.code.tex) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.round.code.tex) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.misc.code.tex) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.integerarithmetics.code.tex) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.code.tex) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count285
+)) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.tex) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@picminx=\dimen166
+\pgf@picmaxx=\dimen167
+\pgf@picminy=\dimen168
+\pgf@picmaxy=\dimen169
+\pgf@pathminx=\dimen170
+\pgf@pathmaxx=\dimen171
+\pgf@pathminy=\dimen172
+\pgf@pathmaxy=\dimen173
+\pgf@xx=\dimen174
+\pgf@xy=\dimen175
+\pgf@yx=\dimen176
+\pgf@yy=\dimen177
+\pgf@zx=\dimen178
+\pgf@zy=\dimen179
+) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@path@lastx=\dimen180
+\pgf@path@lasty=\dimen181
+) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@shorten@end@additional=\dimen182
+\pgf@shorten@start@additional=\dimen183
+) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfpic=\box54
+\pgf@hbox=\box55
+\pgf@layerbox@main=\box56
+\pgf@picture@serial@count=\count286
+) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgflinewidth=\dimen184
+) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@pt@x=\dimen185
+\pgf@pt@y=\dimen186
+\pgf@pt@temp=\dimen187
+) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowsep=\dimen188
+) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@max=\dimen189
+\pgf@sys@shading@range@num=\count287
+\pgf@shadingcount=\count288
+) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfexternal@startupbox=\box57
+) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodeparttextbox=\box58
+) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
+\pgf@nodesepstart=\dimen190
+\pgf@nodesepend=\dimen191
+) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+)) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.sty (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.sty (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex)) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex)) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.code.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen192
+\pgffor@skip=\dimen193
+\pgffor@stack=\toks32
+\pgffor@toks=\toks33
+)) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+ (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count289
+\pgfplotmarksize=\dimen194
+)
+\tikz@lastx=\dimen195
+\tikz@lasty=\dimen196
+\tikz@lastxsaved=\dimen197
+\tikz@lastysaved=\dimen198
+\tikz@lastmovetox=\dimen199
+\tikz@lastmovetoy=\dimen256
+\tikzleveldistance=\dimen257
+\tikzsiblingdistance=\dimen258
+\tikz@figbox=\box59
+\tikz@figbox@bg=\box60
+\tikz@tempbox=\box61
+\tikz@tempbox@bg=\box62
+\tikztreelevel=\count290
+\tikznumberofchildren=\count291
+\tikznumberofcurrentchild=\count292
+\tikz@fig@count=\count293
+ (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count294
+\pgfmatrixcurrentcolumn=\count295
+\pgf@matrix@numberofcolumns=\count296
+)
+\tikz@expandcount=\count297
+ (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/tocloft\tocloft.sty
+Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
+Package tocloft Info: The document has chapter divisions on input line 51.
+\cftparskip=\skip51
+\cftbeforetoctitleskip=\skip52
+\cftaftertoctitleskip=\skip53
+\cftbeforepartskip=\skip54
+\cftpartnumwidth=\skip55
+\cftpartindent=\skip56
+\cftbeforechapskip=\skip57
+\cftchapindent=\skip58
+\cftchapnumwidth=\skip59
+\cftbeforesecskip=\skip60
+\cftsecindent=\skip61
+\cftsecnumwidth=\skip62
+\cftbeforesubsecskip=\skip63
+\cftsubsecindent=\skip64
+\cftsubsecnumwidth=\skip65
+\cftbeforesubsubsecskip=\skip66
+\cftsubsubsecindent=\skip67
+\cftsubsubsecnumwidth=\skip68
+\cftbeforeparaskip=\skip69
+\cftparaindent=\skip70
+\cftparanumwidth=\skip71
+\cftbeforesubparaskip=\skip72
+\cftsubparaindent=\skip73
+\cftsubparanumwidth=\skip74
+\cftbeforeloftitleskip=\skip75
+\cftafterloftitleskip=\skip76
+\cftbeforefigskip=\skip77
+\cftfigindent=\skip78
+\cftfignumwidth=\skip79
+\c@lofdepth=\count298
+\c@lotdepth=\count299
+\cftbeforelottitleskip=\skip80
+\cftafterlottitleskip=\skip81
+\cftbeforetabskip=\skip82
+\cfttabindent=\skip83
+\cfttabnumwidth=\skip84
+) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty
+Package: setspace 2022/12/04 v6.7b set line spacing
+) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.sty
+Package: biblatex 2024/03/21 v3.20 programmable bibliographies (PK/MW)
+ (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2025/02/11 v2.5l e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count300
+) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+ (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count301
+ (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+)) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+\c@tabx@nest=\count302
+\c@listtotal=\count303
+\c@listcount=\count304
+\c@liststart=\count305
+\c@liststop=\count306
+\c@citecount=\count307
+\c@citetotal=\count308
+\c@multicitecount=\count309
+\c@multicitetotal=\count310
+\c@instcount=\count311
+\c@maxnames=\count312
+\c@minnames=\count313
+\c@maxitems=\count314
+\c@minitems=\count315
+\c@citecounter=\count316
+\c@maxcitecounter=\count317
+\c@savedcitecounter=\count318
+\c@uniquelist=\count319
+\c@uniquename=\count320
+\c@refsection=\count321
+\c@refsegment=\count322
+\c@maxextratitle=\count323
+\c@maxextratitleyear=\count324
+\c@maxextraname=\count325
+\c@maxextradate=\count326
+\c@maxextraalpha=\count327
+\c@abbrvpenalty=\count328
+\c@highnamepenalty=\count329
+\c@lownamepenalty=\count330
+\c@maxparens=\count331
+\c@parenlevel=\count332
+\blx@tempcnta=\count333
+\blx@tempcntb=\count334
+\blx@tempcntc=\count335
+\c@blx@maxsection=\count336
+\blx@maxsegment@0=\count337
+\blx@notetype=\count338
+\blx@parenlevel@text=\count339
+\blx@parenlevel@foot=\count340
+\blx@sectionciteorder@0=\count341
+\blx@sectionciteorderinternal@0=\count342
+\blx@entrysetcounter=\count343
+\blx@biblioinstance=\count344
+\labelnumberwidth=\skip85
+\labelalphawidth=\skip86
+\biblabelsep=\skip87
+\bibitemsep=\skip88
+\bibnamesep=\skip89
+\bibinitsep=\skip90
+\bibparsep=\skip91
+\bibhang=\skip92
+\blx@bcfin=\read4
+\blx@bcfout=\write4
+\blx@langwohyphens=\language80
+\c@mincomprange=\count345
+\c@maxcomprange=\count346
+\c@mincompwidth=\count347
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+ (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-dm.def
+File: blx-dm.def 2024/03/21 v3.20 biblatex datamodel (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'numeric.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count348
+\c@savedafterword=\count349
+\c@annotator=\count350
+\c@savedannotator=\count351
+\c@author=\count352
+\c@savedauthor=\count353
+\c@bookauthor=\count354
+\c@savedbookauthor=\count355
+\c@commentator=\count356
+\c@savedcommentator=\count357
+\c@editor=\count358
+\c@savededitor=\count359
+\c@editora=\count360
+\c@savededitora=\count361
+\c@editorb=\count362
+\c@savededitorb=\count363
+\c@editorc=\count364
+\c@savededitorc=\count365
+\c@foreword=\count366
+\c@savedforeword=\count367
+\c@holder=\count368
+\c@savedholder=\count369
+\c@introduction=\count370
+\c@savedintroduction=\count371
+\c@namea=\count372
+\c@savednamea=\count373
+\c@nameb=\count374
+\c@savednameb=\count375
+\c@namec=\count376
+\c@savednamec=\count377
+\c@translator=\count378
+\c@savedtranslator=\count379
+\c@shortauthor=\count380
+\c@savedshortauthor=\count381
+\c@shorteditor=\count382
+\c@savedshorteditor=\count383
+\c@labelname=\count384
+\c@savedlabelname=\count385
+\c@institution=\count386
+\c@savedinstitution=\count387
+\c@lista=\count388
+\c@savedlista=\count389
+\c@listb=\count390
+\c@savedlistb=\count391
+\c@listc=\count392
+\c@savedlistc=\count393
+\c@listd=\count394
+\c@savedlistd=\count395
+\c@liste=\count396
+\c@savedliste=\count397
+\c@listf=\count398
+\c@savedlistf=\count399
+\c@location=\count400
+\c@savedlocation=\count401
+\c@organization=\count402
+\c@savedorganization=\count403
+\c@origlocation=\count404
+\c@savedoriglocation=\count405
+\c@origpublisher=\count406
+\c@savedorigpublisher=\count407
+\c@publisher=\count408
+\c@savedpublisher=\count409
+\c@language=\count410
+\c@savedlanguage=\count411
+\c@origlanguage=\count412
+\c@savedoriglanguage=\count413
+\c@pageref=\count414
+\c@savedpageref=\count415
+\shorthandwidth=\skip93
+\shortjournalwidth=\skip94
+\shortserieswidth=\skip95
+\shorttitlewidth=\skip96
+\shortauthorwidth=\skip97
+\shorteditorwidth=\skip98
+\locallabelnumberwidth=\skip99
+\locallabelalphawidth=\skip100
+\localshorthandwidth=\skip101
+\localshortjournalwidth=\skip102
+\localshortserieswidth=\skip103
+\localshorttitlewidth=\skip104
+\localshortauthorwidth=\skip105
+\localshorteditorwidth=\skip106
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+ (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-compat.def
+File: blx-compat.def 2024/03/21 v3.20 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+ (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.def
+File: biblatex.def 2024/03/21 v3.20 biblatex compatibility (PK/MW)
+\c@textcitecount=\count416
+\c@textcitetotal=\count417
+\c@textcitemaxnames=\count418
+\c@biburlbigbreakpenalty=\count419
+\c@biburlbreakpenalty=\count420
+\c@biburlnumpenalty=\count421
+\c@biburlucpenalty=\count422
+\c@biburllcpenalty=\count423
+\biburlbigskip=\muskip18
+\biburlnumskip=\muskip19
+\biburlucskip=\muskip20
+\biburllcskip=\muskip21
+\c@smartand=\count424
+)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+ (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\numeric.bbx
+File: numeric.bbx 2024/03/21 v3.20 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+ (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\standard.bbx
+File: standard.bbx 2024/03/21 v3.20 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count425
+\c@bbx:relatedtotal=\count426
+))
+Package biblatex Info: Trying to load citation style 'numeric'...
+Package biblatex Info: ... file 'numeric.cbx' found.
+ (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/cbx\numeric.cbx
+File: numeric.cbx 2024/03/21 v3.20 biblatex citation style (PK/MW)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+ (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.cfg
+File: biblatex.cfg 
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Document encoding is UTF8 ....
+ (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2025-01-18 L3 programming layer (loader) 
+ (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count427
+\l__pdf_internal_box=\box63
+))
+Package biblatex Info: ... and expl3
+(biblatex)             2025-01-18 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+ (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-case-expl3.sty (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xparse.sty
+Package: xparse 2024-08-16 L3 Experimental document command parser
+)
+Package: blx-case-expl3 2024/03/21 v3.20 expl3 case changing code for biblatex
+)) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.sty
+Package: csquotes 2024-04-04 v5.2o context-sensitive quotations (JAW)
+\csq@reset=\count428
+\csq@gtype=\count429
+\csq@glevel=\count430
+\csq@qlevel=\count431
+\csq@maxlvl=\count432
+\csq@tshold=\count433
+\csq@ltx@everypar=\toks34
+ (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.def
+File: csquotes.def 2024-04-04 v5.2o csquotes generic definitions (JAW)
+)
+Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
+Package csquotes Info: ... configuration file loaded successfully.
+ (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.cfg
+File: csquotes.cfg 
+)) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2024/11/05 v2.17t AMS math features
+\@mathmargin=\skip107
+
+For additional information on amsmath, use the `?' option.
+(C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+ (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks35
+\ex@=\dimen259
+)) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen260
+) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count434
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count435
+\leftroot@=\count436
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count437
+\DOTSCASE@=\count438
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box64
+\strutbox@=\box65
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen261
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count439
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count440
+\dotsspace@=\muskip22
+\c@parentequation=\count441
+\dspbrk@lvl=\count442
+\tag@help=\toks36
+\row@=\count443
+\column@=\count444
+\maxfields@=\count445
+\andhelp@=\toks37
+\eqnshift@=\dimen262
+\alignsep@=\dimen263
+\tagshift@=\dimen264
+\tagwidth@=\dimen265
+\totwidth@=\dimen266
+\lineht@=\dimen267
+\@envbody=\toks38
+\multlinegap=\skip108
+\multlinetaggap=\skip109
+\mathdisplay@stack=\toks39
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/mhchem\mhchem.sty
+Package: mhchem 2024/01/29 v4.10 for typesetting chemical formulae
+ (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/l3keys2e\l3keys2e.sty
+Package: l3keys2e 2024-08-16 LaTeX2e option processing using LaTeX3 keys
+) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
+Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count446
+\calc@Bcount=\count447
+\calc@Adimen=\dimen268
+\calc@Bdimen=\dimen269
+\calc@Askip=\skip110
+\calc@Bskip=\skip111
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count448
+\calc@Cskip=\skip112
+) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/chemgreek\chemgreek.sty
+Package: chemgreek 2020/01/16 v1.1a interface for upright Greek letters for use in chemistry (CN)
+\l__chemgreek_tmpa_int=\count449
+\g__chemgreek_tmpa_int=\count450
+)
+\l__mhchem_ce_distanceFromLastComma_int=\count451
+\__mhchem_arrow_extPgfLength_skip=\skip113
+\mhchem@minispace@tmp=\skip114
+\mhchem@minibackspace@tmp=\skip115
+\mhchem@bondwidth=\skip116
+\mhchem@bondheight=\skip117
+\mhchem@smallbondwidth@tmpA=\skip118
+\mhchem@smallbondwidth@tmpB=\skip119
+\mhchem@smallbondwidth=\skip120
+\mhchem@bondtmp@minussidebearingleft=\skip121
+\mhchem@bondtmp@minussidebearingright=\skip122
+\l__mhchem_option_version_int=\count452
+\mhchem@option@minusmathsidebearingleft=\dimen270
+\mhchem@option@minusmathsidebearingright=\dimen271
+\mhchem@option@minustextsidebearingleft=\dimen272
+\mhchem@option@minustextsidebearingright=\dimen273
+) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen274
+\lightrulewidth=\dimen275
+\cmidrulewidth=\dimen276
+\belowrulesep=\dimen277
+\belowbottomsep=\dimen278
+\aboverulesep=\dimen279
+\abovetopsep=\dimen280
+\cmidrulesep=\dimen281
+\cmidrulekern=\dimen282
+\defaultaddspace=\dimen283
+\@cmidla=\count453
+\@cmidlb=\count454
+\@aboverulesep=\dimen284
+\@belowrulesep=\dimen285
+\@thisruleclass=\count455
+\@lastruleclass=\count456
+\@thisrulewidth=\dimen286
+) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/siunitx\siunitx.sty
+Package: siunitx 2025-05-22 v3.4.12 A comprehensive (SI) units package
+\l__siunitx_number_uncert_offset_int=\count457
+\l__siunitx_number_exponent_fixed_int=\count458
+\l__siunitx_number_min_decimal_int=\count459
+\l__siunitx_number_min_integer_int=\count460
+\l__siunitx_number_round_precision_int=\count461
+\l__siunitx_number_lower_threshold_int=\count462
+\l__siunitx_number_upper_threshold_int=\count463
+\l__siunitx_number_group_first_int=\count464
+\l__siunitx_number_group_size_int=\count465
+\l__siunitx_number_group_minimum_int=\count466
+\l__siunitx_angle_tmp_dim=\dimen287
+\l__siunitx_angle_marker_box=\box66
+\l__siunitx_angle_unit_box=\box67
+\l__siunitx_compound_count_int=\count467
+ (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/translations\translations.sty
+Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages (CN)
+)
+\l__siunitx_table_tmp_box=\box68
+\l__siunitx_table_tmp_dim=\dimen288
+\l__siunitx_table_column_width_dim=\dimen289
+\l__siunitx_table_integer_box=\box69
+\l__siunitx_table_decimal_box=\box70
+\l__siunitx_table_uncert_box=\box71
+\l__siunitx_table_before_box=\box72
+\l__siunitx_table_after_box=\box73
+\l__siunitx_table_before_dim=\dimen290
+\l__siunitx_table_carry_dim=\dimen291
+\l__siunitx_unit_tmp_int=\count468
+\l__siunitx_unit_position_int=\count469
+\l__siunitx_unit_total_int=\count470
+ (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2024/10/17 v2.6g Tabular extension package (FMi)
+\col@sep=\dimen292
+\ar@mcellbox=\box74
+\extrarowheight=\dimen293
+\NC@list=\toks40
+\extratabsurround=\skip123
+\backup@length=\skip124
+\ar@cellbox=\box75
+))
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... found 'babel' package.
+Package csquotes Info: Adjusting default style.
+Package csquotes Info: Redefining alias 'default' -> 'spanish'.
+ (main.aux (Cap√≠tulos/Portada.aux)
+LaTeX Info: Redefining \. on input line 10.
+LaTeX Info: Redefining \% on input line 10.
+Package babel Info: 'spanish' activates 'spanish' shorthands.
+(babel)             Reported  on input line 10.
+ (Cap√≠tulos/Dedicatoria.aux) (Cap√≠tulos/Agradecimientos.aux) (Cap√≠tulos/Introducci√≥n.aux) (Cap√≠tulos/Fundamentos.aux) (Cap√≠tulos/DFT.aux))
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Info: Redefining \. on input line 26.
+LaTeX Info: Redefining \% on input line 26.
+ (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count471
+\scratchdimen=\dimen294
+\scratchbox=\box76
+\nofMPsegments=\count472
+\nofMParguments=\count473
+\everyMPshowfont=\toks41
+\MPscratchCnt=\count474
+\MPscratchDim=\dimen295
+\MPnumerator=\count475
+\makeMPintoPDFobject=\count476
+\everyMPtoPDFconversion=\toks42
+) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: letterpaper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(65.04256pt, 458.91495pt, 90.3375pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=458.91495pt
+* \textheight=650.43001pt
+* \oddsidemargin=-7.22743pt
+* \evensidemargin=-7.22743pt
+* \topmargin=-31.8738pt
+* \headheight=12.0pt
+* \headsep=19.8738pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=47.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package biblatex Info: Trying to load language 'spanish'...
+Package biblatex Info: ... file 'spanish.lbx' found.
+(C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\spanish.lbx
+File: spanish.lbx 2024/03/21 v3.20 biblatex localization (PK/MW)
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout4 = `main.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'main.bbl' found.
+ (main.bbl)
+Package biblatex Info: Reference section=0 on input line 26.
+Package biblatex Info: Reference segment=0 on input line 26.
+
+Package chemgreek Info: Activating mapping `default' on line 26.
+
+ (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-spanish.trsl
+File: translations-basic-dictionary-spanish.trsl (spanish translation file `translations-basic-dictionary')
+)
+Package translations Info: loading dictionary `translations-basic-dictionary' for `spanish'. on input line 26.
+\openout2 = `Cap√≠tulos/Portada.aux'.
+
+ (Cap√≠tulos/Portada.tex
+<./Im√°genes/Escudo-UNAM.pdf, id=4, 300.51309pt x 337.88977pt>
+File: ./Im√°genes/Escudo-UNAM.pdf Graphic file (type pdf)
+<use ./Im√°genes/Escudo-UNAM.pdf>
+Package pdftex.def Info: ./Im√°genes/Escudo-UNAM.pdf  used on input line 6.
+(pdftex.def)             Requested size: 99.5823pt x 99.58382pt.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 8.
+ (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 8.
+ (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+<./Im√°genes/logofq.jpeg, id=5, 407.6028pt x 406.1574pt>
+File: ./Im√°genes/logofq.jpeg Graphic file (type jpg)
+<use ./Im√°genes/logofq.jpeg>
+Package pdftex.def Info: ./Im√°genes/logofq.jpeg  used on input line 33.
+(pdftex.def)             Requested size: 91.3708pt x 91.04872pt.
+
+
+[1
+
+
+
+{C:/Users/jorge/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./Im√°genes/Escudo-UNAM.pdf> <./Im√°genes/logofq.jpeg>])
+\openout2 = `Cap√≠tulos/Dedicatoria.aux'.
+
+ (Cap√≠tulos/Dedicatoria.tex)
+
+[1
+
+
+
+
+
+]
+\openout2 = `Cap√≠tulos/Agradecimientos.aux'.
+
+ (Cap√≠tulos/Agradecimientos.tex)
+
+[2
+
+
+
+
+] (main.toc
+LaTeX Info: Redefining \sptext on input line 1.
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+
+
+[3
+
+
+]
+
+LaTeX Info: Redefining \sptext on input line 83.
+LaTeX Info: Redefining \. on input line 83.
+LaTeX Info: Redefining \% on input line 83.
+Package babel Info: 'spanish' activates 'spanish' shorthands.
+(babel)             Reported  on input line 83.
+[4]
+! Argument of \language@active@arg" has an extra }.
+<inserted text> 
+                \par 
+l.101 ...uncionales: "La Escalera de Jacob"}{53}{}
+                                                  %
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+! Paragraph ended before \language@active@arg" was complete.
+<to be read again> 
+                   \par 
+l.101 ...uncionales: "La Escalera de Jacob"}{53}{}
+                                                  %
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 101--101
+ [][] []\T1/cmr/m/n/12 La Je-rar-quÌa de Fun-cio-na-les: "La Es-ca-le-ra de Ja-cob  
+ []
+
+! Leaders not followed by proper glue.
+<to be read again> 
+                   \hfill 
+l.101 ...uncionales: "La Escalera de Jacob"}{53}{}
+                                                  %
+You should say `\leaders <box or rule><hskip or vskip>'.
+I found the <box or rule>, but there's no suitable
+<hskip or vskip>, so I'm ignoring these leaders.
+
+)
+\tf@toc=\write5
+\openout5 = `main.toc'.
+
+ (main.lof
+LaTeX Info: Redefining \sptext on input line 1.
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+)
+\tf@lof=\write6
+\openout6 = `main.lof'.
+
+
+
+[5]
+\openout2 = `Cap√≠tulos/Introducci√≥n.aux'.
+
+ (Cap√≠tulos/Introducci√≥n.tex
+Cap\'{\i }tulo 1.
+
+
+[1
+
+
+
+]
+
+LaTeX Info: Redefining \. on input line 29.
+LaTeX Info: Redefining \% on input line 29.
+[2]
+
+LaTeX Info: Redefining \. on input line 47.
+LaTeX Info: Redefining \% on input line 47.
+[3]
+
+LaTeX Info: Redefining \. on input line 64.
+LaTeX Info: Redefining \% on input line 64.
+[4]
+
+LaTeX Info: Redefining \. on input line 80.
+LaTeX Info: Redefining \% on input line 80.
+[5]
+
+LaTeX Info: Redefining \. on input line 95.
+LaTeX Info: Redefining \% on input line 95.
+[6]
+
+LaTeX Info: Redefining \. on input line 108.
+LaTeX Info: Redefining \% on input line 108.
+[7]
+
+LaTeX Info: Redefining \. on input line 121.
+LaTeX Info: Redefining \% on input line 121.
+[8]
+
+LaTeX Info: Redefining \. on input line 136.
+LaTeX Info: Redefining \% on input line 136.
+[9]
+
+LaTeX Info: Redefining \. on input line 150.
+LaTeX Info: Redefining \% on input line 150.
+[10]
+
+LaTeX Info: Redefining \. on input line 163.
+LaTeX Info: Redefining \% on input line 163.
+[11]
+
+LaTeX Info: Redefining \. on input line 179.
+LaTeX Info: Redefining \% on input line 179.
+[12]
+
+LaTeX Info: Redefining \. on input line 196.
+LaTeX Info: Redefining \% on input line 196.
+[13]
+
+LaTeX Info: Redefining \. on input line 208.
+LaTeX Info: Redefining \% on input line 208.
+[14])
+
+LaTeX Info: Redefining \. on input line 39.
+LaTeX Info: Redefining \% on input line 39.
+[15]
+\openout2 = `Cap√≠tulos/Fundamentos.aux'.
+
+ (Cap√≠tulos/Fundamentos.tex
+Cap\'{\i }tulo 2.
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 16 undefined on input line 7.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 16 undefined on input line 7.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 16 undefined on input line 7.
+
+
+LaTeX Warning: Citation 'haile1992molecular' on page 16 undefined on input line 9.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 16 undefined on input line 13.
+
+
+
+[16
+
+
+
+
+]
+
+LaTeX Warning: Citation 'haile1992molecular' on page 17 undefined on input line 15.
+
+
+LaTeX Warning: Citation 'haile1992molecular' on page 17 undefined on input line 15.
+
+
+LaTeX Warning: Citation 'frenkel2002understanding' on page 17 undefined on input line 19.
+
+
+LaTeX Warning: Citation 'frenkel2002understanding' on page 17 undefined on input line 21.
+
+
+LaTeX Warning: Citation 'MD-2001-01' on page 17 undefined on input line 21.
+
+
+LaTeX Warning: Citation 'MD-2001-01' on page 17 undefined on input line 21.
+
+
+
+LaTeX Info: Redefining \. on input line 26.
+LaTeX Info: Redefining \% on input line 26.
+[17]
+
+LaTeX Warning: Citation 'haile1992molecular' on page 18 undefined on input line 28.
+
+
+LaTeX Warning: Citation 'haile1992molecular' on page 18 undefined on input line 28.
+
+
+LaTeX Warning: Citation 'haile1992molecular' on page 18 undefined on input line 31.
+
+
+LaTeX Warning: Citation 'haile1992molecular' on page 18 undefined on input line 31.
+
+
+LaTeX Warning: Citation 'frenkel2002understanding' on page 18 undefined on input line 36.
+
+
+LaTeX Warning: Citation 'frenkel2002understanding' on page 18 undefined on input line 36.
+
+
+
+LaTeX Info: Redefining \. on input line 37.
+LaTeX Info: Redefining \% on input line 37.
+[18]
+
+LaTeX Warning: Citation 'frenkel2002understanding' on page 19 undefined on input line 38.
+
+
+LaTeX Warning: Citation 'frenkel2002understanding' on page 19 undefined on input line 38.
+
+
+LaTeX Warning: Citation 'MD-2001-01' on page 19 undefined on input line 42.
+
+
+LaTeX Warning: Citation 'MD-2001-01' on page 19 undefined on input line 42.
+
+
+LaTeX Warning: Citation 'frenkel2002understanding' on page 19 undefined on input line 42.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 19 undefined on input line 44.
+
+
+LaTeX Warning: Citation 'frenkel2002understanding' on page 19 undefined on input line 47.
+
+
+
+LaTeX Info: Redefining \. on input line 48.
+LaTeX Info: Redefining \% on input line 48.
+[19]
+
+LaTeX Warning: Citation 'jensen2017introduction' on page 20 undefined on input line 49.
+
+
+LaTeX Warning: Citation 'jensen2017introduction' on page 20 undefined on input line 49.
+
+
+LaTeX Warning: Citation 'frenkel2002understanding' on page 20 undefined on input line 52.
+
+
+LaTeX Warning: Citation 'frenkel2002understanding' on page 20 undefined on input line 54.
+
+
+LaTeX Warning: Citation 'frenkel2002understanding' on page 20 undefined on input line 55.
+
+
+LaTeX Warning: Citation 'MD-2002-01' on page 20 undefined on input line 56.
+
+
+LaTeX Warning: Citation 'MD-2002-01' on page 20 undefined on input line 61.
+
+
+LaTeX Warning: Citation 'MD-2002-01' on page 20 undefined on input line 64.
+
+
+
+LaTeX Info: Redefining \. on input line 65.
+LaTeX Info: Redefining \% on input line 65.
+[20]
+
+LaTeX Warning: Citation 'MD-2002-01' on page 21 undefined on input line 65.
+
+
+LaTeX Warning: Citation 'szabo1996modern' on page 21 undefined on input line 69.
+
+
+LaTeX Warning: Citation 'szabo1996modern' on page 21 undefined on input line 69.
+
+
+LaTeX Warning: Citation 'szabo1996modern' on page 21 undefined on input line 71.
+
+
+LaTeX Warning: Citation 'allen2012computer' on page 21 undefined on input line 71.
+
+
+LaTeX Warning: Citation 'MD-2002-01' on page 21 undefined on input line 71.
+
+
+
+LaTeX Info: Redefining \. on input line 77.
+LaTeX Info: Redefining \% on input line 77.
+[21]
+
+LaTeX Warning: Citation 'canuto2010solvation' on page 22 undefined on input line 77.
+
+
+LaTeX Warning: Citation 'jensen2017introduction' on page 22 undefined on input line 77.
+
+
+LaTeX Warning: Citation 'jensen2017introduction' on page 22 undefined on input line 79.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 22 undefined on input line 79.
+
+
+
+LaTeX Info: Redefining \. on input line 88.
+LaTeX Info: Redefining \% on input line 88.
+[22]
+
+LaTeX Warning: Citation 'allen2012computer' on page 23 undefined on input line 90.
+
+
+LaTeX Warning: Citation 'allen2012computer' on page 23 undefined on input line 90.
+
+
+LaTeX Warning: Citation 'haile1992molecular' on page 23 undefined on input line 90.
+
+
+LaTeX Warning: Citation 'haile1992molecular' on page 23 undefined on input line 100.
+
+
+LaTeX Warning: Citation 'jensen2017introduction' on page 23 undefined on input line 104.
+
+
+LaTeX Warning: Citation 'frenkel2002understanding' on page 23 undefined on input line 106.
+
+
+
+LaTeX Info: Redefining \. on input line 107.
+LaTeX Info: Redefining \% on input line 107.
+[23]
+
+LaTeX Warning: Citation 'frenkel2002understanding' on page 24 undefined on input line 113.
+
+
+LaTeX Warning: Citation 'frenkel2002understanding' on page 24 undefined on input line 115.
+
+
+Overfull \hbox (31.81648pt too wide) in paragraph at lines 115--116
+\T1/cmr/m/n/12 re-sul-ta en una ex-ce-len-te es-ta-bi-li-dad ener-gÈ-ti-ca a lar-go pla-zo [[]]. 
+ []
+
+
+LaTeX Warning: Citation 'frenkel2002understanding' on page 24 undefined on input line 117.
+
+
+LaTeX Warning: Citation 'haile1992molecular' on page 24 undefined on input line 119.
+
+
+
+LaTeX Info: Redefining \. on input line 127.
+LaTeX Info: Redefining \% on input line 127.
+[24]
+
+LaTeX Warning: Citation 'allen2012computer' on page 25 undefined on input line 131.
+
+
+LaTeX Warning: Citation 'haile1992molecular' on page 25 undefined on input line 136.
+
+
+LaTeX Warning: Citation 'allen2012computer' on page 25 undefined on input line 136.
+
+
+Overfull \hbox (30.10008pt too wide) in paragraph at lines 135--137
+\T1/cmr/m/n/12 tual y la an-te-rior, sin re-que-rir el co-no-ci-mien-to ex-plÌ-ci-to de las ve-lo-ci-da-des [[]].
+ []
+
+
+Overfull \hbox (48.91791pt too wide) in paragraph at lines 135--137
+\T1/cmr/m/n/12 Las ve-lo-ci-da-des pue-den ob-te-ner-se res-tan-do las mis-mas ex-pan-sio-nes de Tay-lor [[]]: 
+ []
+
+
+LaTeX Warning: Citation 'frenkel2002understanding' on page 25 undefined on input line 144.
+
+
+LaTeX Warning: Citation 'haile1992molecular' on page 25 undefined on input line 145.
+
+
+LaTeX Warning: Citation 'jensen2017introduction' on page 25 undefined on input line 145.
+
+
+LaTeX Warning: Citation 'jensen2017introduction' on page 25 undefined on input line 145.
+
+
+Overfull \hbox (41.09811pt too wide) in paragraph at lines 145--146
+\T1/cmr/m/n/12 tiem-po an-te-rio-res ($[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 )$ \T1/cmr/m/n/12 y $[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 ^^A\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 )$\T1/cmr/m/n/12 ) pa-ra co-men-zar [[]]haile1992molecular.
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 146.
+LaTeX Info: Redefining \% on input line 146.
+[25]
+
+LaTeX Warning: Citation 'frenkel2002understanding' on page 26 undefined on input line 150.
+
+
+LaTeX Warning: Citation 'frenkel2002understanding' on page 26 undefined on input line 150.
+
+
+LaTeX Warning: Citation 'jensen2017introduction' on page 26 undefined on input line 156.
+
+
+LaTeX Warning: Citation 'frenkel2002understanding' on page 26 undefined on input line 156.
+
+
+LaTeX Warning: Citation 'frenkel2002understanding' on page 26 undefined on input line 160.
+
+
+LaTeX Warning: Citation 'jensen2017introduction' on page 26 undefined on input line 160.
+
+
+
+LaTeX Info: Redefining \. on input line 168.
+LaTeX Info: Redefining \% on input line 168.
+[26]
+
+LaTeX Warning: Citation 'jensen2017introduction' on page 27 undefined on input line 175.
+
+
+LaTeX Warning: Citation 'jensen2017introduction' on page 27 undefined on input line 181.
+
+
+LaTeX Warning: Citation 'jensen2017introduction' on page 27 undefined on input line 181.
+
+
+
+LaTeX Info: Redefining \. on input line 186.
+LaTeX Info: Redefining \% on input line 186.
+[27]
+
+LaTeX Warning: Citation 'jensen2017introduction' on page 28 undefined on input line 186.
+
+
+LaTeX Warning: Citation 'haile1992molecular' on page 28 undefined on input line 186.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 28 undefined on input line 199.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 28 undefined on input line 203.
+
+
+
+LaTeX Info: Redefining \. on input line 204.
+LaTeX Info: Redefining \% on input line 204.
+[28]
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 29 undefined on input line 205.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 29 undefined on input line 205.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 29 undefined on input line 205.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 29 undefined on input line 213.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 29 undefined on input line 215.
+
+
+
+LaTeX Info: Redefining \. on input line 216.
+LaTeX Info: Redefining \% on input line 216.
+[29]
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 30 undefined on input line 219.
+
+
+LaTeX Warning: Citation 'frenkel2002understanding' on page 30 undefined on input line 225.
+
+
+LaTeX Warning: Citation 'frenkel2002understanding' on page 30 undefined on input line 225.
+
+
+LaTeX Warning: Citation 'haile1992molecular' on page 30 undefined on input line 225.
+
+
+LaTeX Warning: Citation 'haile1992molecular' on page 30 undefined on input line 229.
+
+
+LaTeX Warning: Citation 'frenkel2002understanding' on page 30 undefined on input line 229.
+
+
+
+LaTeX Info: Redefining \. on input line 231.
+LaTeX Info: Redefining \% on input line 231.
+[30]
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 31 undefined on input line 231.
+
+
+LaTeX Warning: Citation 'haile1992molecular' on page 31 undefined on input line 231.
+
+
+LaTeX Warning: Citation 'frenkel2002understanding' on page 31 undefined on input line 239.
+
+
+LaTeX Warning: Citation 'frenkel2002understanding' on page 31 undefined on input line 239.
+
+
+LaTeX Warning: Citation 'frenkel2002understanding' on page 31 undefined on input line 239.
+
+
+LaTeX Warning: Citation 'haile1992molecular' on page 31 undefined on input line 241.
+
+
+LaTeX Warning: Citation 'frenkel2002understanding' on page 31 undefined on input line 241.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 31 undefined on input line 246.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 31 undefined on input line 246.
+
+
+
+LaTeX Info: Redefining \. on input line 247.
+LaTeX Info: Redefining \% on input line 247.
+[31]
+
+LaTeX Warning: Citation 'frenkel2002understanding' on page 32 undefined on input line 248.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 32 undefined on input line 248.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 32 undefined on input line 248.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 32 undefined on input line 252.
+
+
+LaTeX Warning: Citation 'haile1992molecular' on page 32 undefined on input line 252.
+
+
+LaTeX Warning: Citation 'frenkel2002understanding' on page 32 undefined on input line 254.
+
+
+LaTeX Warning: Citation 'frenkel2002understanding' on page 32 undefined on input line 254.
+
+
+
+LaTeX Info: Redefining \. on input line 255.
+LaTeX Info: Redefining \% on input line 255.
+[32]
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 33 undefined on input line 258.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 33 undefined on input line 258.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 33 undefined on input line 262.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 33 undefined on input line 262.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 33 undefined on input line 262.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 33 undefined on input line 264.
+
+
+LaTeX Warning: Citation 'haile1992molecular' on page 33 undefined on input line 264.
+
+
+
+LaTeX Info: Redefining \. on input line 269.
+LaTeX Info: Redefining \% on input line 269.
+[33]
+
+LaTeX Warning: Citation 'allen2012computer' on page 34 undefined on input line 270.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 34 undefined on input line 274.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 34 undefined on input line 274.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 34 undefined on input line 274.
+
+
+Overfull \hbox (35.38254pt too wide) in paragraph at lines 274--275
+\T1/cmr/m/n/12 tÌ-cu-las (\T1/cmr/bx/n/12 N\T1/cmr/m/n/12 ), el vo-lu-men (\T1/cmr/bx/n/12 V\T1/cmr/m/n/12 ) y la tem-pe-ra-tu-ra (\T1/cmr/bx/n/12 T\T1/cmr/m/n/12 ) se man-tie-nen cons-tan-tes [[]].
+ []
+
+
+LaTeX Warning: Citation 'allen2012computer' on page 34 undefined on input line 280.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 34 undefined on input line 284.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 34 undefined on input line 284.
+
+
+
+LaTeX Info: Redefining \. on input line 285.
+LaTeX Info: Redefining \% on input line 285.
+[34]
+
+LaTeX Warning: Citation 'allen2012computer' on page 35 undefined on input line 292.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 35 undefined on input line 292.
+
+
+Overfull \hbox (108.01863pt too wide) in paragraph at lines 292--293
+\T1/cmr/m/n/12 ba-jo con-di-cio-nes de \T1/cmr/bx/n/12 tem-pe-ra-tu-ra y/o pre-siÛn con-tro-la-das \T1/cmr/m/n/12 [[]]frenkel2002understanding.
+ []
+
+
+LaTeX Warning: Citation 'frenkel2002understanding' on page 35 undefined on input line 296.
+
+
+LaTeX Warning: Citation 'frenkel2002understanding' on page 35 undefined on input line 297.
+
+
+
+LaTeX Info: Redefining \. on input line 298.
+LaTeX Info: Redefining \% on input line 298.
+[35]
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 36 undefined on input line 298.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 36 undefined on input line 300.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 36 undefined on input line 306.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 36 undefined on input line 308.
+
+
+LaTeX Warning: Citation 'haile1992molecular' on page 36 undefined on input line 308.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 36 undefined on input line 310.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 36 undefined on input line 311.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 36 undefined on input line 311.
+
+
+
+LaTeX Info: Redefining \. on input line 312.
+LaTeX Info: Redefining \% on input line 312.
+[36]
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 37 undefined on input line 318.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 37 undefined on input line 318.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 37 undefined on input line 318.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 37 undefined on input line 320.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 37 undefined on input line 320.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 37 undefined on input line 324.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 37 undefined on input line 325.
+
+
+Overfull \hbox (63.28651pt too wide) in paragraph at lines 325--326
+\T1/cmr/m/n/12 sur-gir de la acu-mu-la-ciÛn de erro-res nu-mÈ-ri-cos du-ran-te si-mu-la-cio-nes lar-gas [[]]. 
+ []
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 37 undefined on input line 326.
+
+
+Overfull \hbox (72.32335pt too wide) in paragraph at lines 326--327
+[]\T1/cmr/m/n/12 Puede me-jo-rar la efi-cien-cia del mues-treo del es-pa-cio de fa-ses en cier-tos ca-sos [[]]. 
+ []
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 37 undefined on input line 329.
+
+
+
+LaTeX Info: Redefining \. on input line 330.
+LaTeX Info: Redefining \% on input line 330.
+[37]
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 38 undefined on input line 336.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 38 undefined on input line 338.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 38 undefined on input line 342.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 38 undefined on input line 344.
+
+
+LaTeX Warning: Citation 'frenkel2002understanding' on page 38 undefined on input line 347.
+
+
+
+LaTeX Info: Redefining \. on input line 348.
+LaTeX Info: Redefining \% on input line 348.
+[38]
+
+LaTeX Warning: Citation 'frenkel2002understanding' on page 39 undefined on input line 351.
+
+
+LaTeX Warning: Citation 'frenkel2002understanding' on page 39 undefined on input line 352.
+
+
+LaTeX Warning: Citation 'frenkel2002understanding' on page 39 undefined on input line 353.
+
+
+LaTeX Warning: Citation 'frenkel2002understanding' on page 39 undefined on input line 355.
+
+
+Overfull \hbox (76.6445pt too wide) in paragraph at lines 355--356
+\T1/cmr/m/n/12 pa-ra ob-te-ner pro-pie-da-des es-t·-ti-cas y es re-la-ti-va-men-te f·-cil de im-ple-men-tar [[]]. 
+ []
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 39 undefined on input line 358.
+
+
+LaTeX Warning: Citation 'frenkel2002understanding' on page 39 undefined on input line 360.
+
+
+
+LaTeX Info: Redefining \. on input line 365.
+LaTeX Info: Redefining \% on input line 365.
+[39]
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 40 undefined on input line 368.
+
+
+LaTeX Warning: Citation 'frenkel2002understanding' on page 40 undefined on input line 368.
+
+
+LaTeX Warning: Citation 'frenkel2002understanding' on page 40 undefined on input line 368.
+
+
+LaTeX Warning: Citation 'frenkel2002understanding' on page 40 undefined on input line 371.
+
+
+Overfull \hbox (185.02899pt too wide) in paragraph at lines 371--372
+\T1/cmr/bx/n/12 za de fric-ciÛn \T1/cmr/m/n/12 que di-si-pa ener-gÌa y una \T1/cmr/bx/n/12 fuer-za alea-to-ria \T1/cmr/m/n/12 que la in-yec-ta [[]]jensen2017introduction.
+ []
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 40 undefined on input line 377.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 40 undefined on input line 377.
+
+
+
+LaTeX Info: Redefining \. on input line 378.
+LaTeX Info: Redefining \% on input line 378.
+[40]
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 41 undefined on input line 386.
+
+
+LaTeX Warning: Citation 'frenkel2002understanding' on page 41 undefined on input line 387.
+
+
+LaTeX Warning: Citation 'frenkel2002understanding' on page 41 undefined on input line 387.
+
+
+Overfull \hbox (20.53212pt too wide) in paragraph at lines 387--388
+\T1/cmr/m/n/12 mi-ca na-tu-ral del sis-te-ma al no con-ser-var el mo-men-to [[]].
+ []
+
+
+Overfull \hbox (102.89502pt too wide) in paragraph at lines 387--388
+\T1/cmr/m/n/12 pie-da-des de trans-por-te (di-fu-siÛn, vis-co-si-dad, con-duc-ti-vi-dad tÈr-mi-ca) [[]]. 
+ []
+
+
+LaTeX Warning: Citation 'frenkel2002understanding' on page 41 undefined on input line 391.
+
+
+Overfull \hbox (19.4226pt too wide) in paragraph at lines 391--392
+\T1/cmr/m/n/12 fe-ren-cia pa-ra los c·lcu-los de trans-por-te m·s pre-ci-sos [[]]. 
+ []
+
+
+LaTeX Warning: Citation 'frenkel2002understanding' on page 41 undefined on input line 392.
+
+
+Overfull \hbox (84.03185pt too wide) in paragraph at lines 392--393
+\T1/cmr/m/n/12 fÌ-si-cas si los pa-r·-me-tros de aco-pla-mien-to no se eli-gen con cui-da-do [[]]. 
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 393.
+LaTeX Info: Redefining \% on input line 393.
+[41]
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 42 undefined on input line 403.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 42 undefined on input line 403.
+
+
+Overfull \hbox (6.24069pt too wide) in paragraph at lines 403--404
+\T1/cmr/m/n/12 ne-ce-sa-rio im-po-ner res-tric-cio-nes ter-mo-di-n·-mi-cas al sis-te-ma si-mu-la-do [[]].
+ []
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 42 undefined on input line 406.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 42 undefined on input line 406.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 42 undefined on input line 408.
+
+
+
+LaTeX Info: Redefining \. on input line 409.
+LaTeX Info: Redefining \% on input line 409.
+[42]
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 43 undefined on input line 417.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 43 undefined on input line 417.
+
+
+Overfull \hbox (14.97644pt too wide) in paragraph at lines 417--418
+\T1/cmr/m/n/12 ins-tan-t·-nea fluc-t˙a cons-tan-te-men-te al-re-de-dor de un va-lor ob-je-ti-vo, $\OML/cmm/m/it/12 P[]$ \T1/cmr/m/n/12 [[]].
+ []
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 43 undefined on input line 422.
+
+
+Overfull \hbox (28.07162pt too wide) in paragraph at lines 422--423
+\T1/cmr/m/n/12 pre-siÛn, de ma-ne-ra an·-lo-ga a su con-tra-par-te, el ter-mos-ta-to de Be-rend-sen [[]].
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 423.
+LaTeX Info: Redefining \% on input line 423.
+[43]
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 44 undefined on input line 426.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 44 undefined on input line 432.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 44 undefined on input line 434.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 44 undefined on input line 434.
+
+
+LaTeX Warning: Citation 'frenkel2002understanding' on page 44 undefined on input line 437.
+
+
+LaTeX Warning: Citation 'allen2012computer' on page 44 undefined on input line 437.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 44 undefined on input line 437.
+
+
+
+LaTeX Info: Redefining \. on input line 442.
+LaTeX Info: Redefining \% on input line 442.
+[44]
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 45 undefined on input line 443.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 45 undefined on input line 443.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 45 undefined on input line 443.
+
+
+Overfull \hbox (22.5189pt too wide) in paragraph at lines 442--444
+\T1/cmr/m/n/12 donde $\OML/cmm/m/it/12 U\OT1/cmr/m/n/12 ([]\OML/cmm/m/it/12 ; V\OT1/cmr/m/n/12 )$ \T1/cmr/m/n/12 es la ener-gÌa po-ten-cial y $\OML/cmm/m/it/12 P[]$ \T1/cmr/m/n/12 es la pre-siÛn ex-ter-na ob-je-ti-vo [[]].
+ []
+
+
+LaTeX Warning: Citation 'allen2012computer' on page 45 undefined on input line 446.
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 45 undefined on input line 446.
+
+
+LaTeX Warning: Citation 'allen2012computer' on page 45 undefined on input line 448.
+
+
+Overfull \hbox (15.0817pt too wide) in paragraph at lines 448--449
+\T1/cmr/m/n/12 ra-les y ana-li-zar la es-ta-bi-li-dad de di-fe-ren-tes re-des cris-ta-li-nas ba-jo es-trÈs [[]]. 
+ []
+
+
+LaTeX Warning: Citation 'zhou2022molecular' on page 45 undefined on input line 451.
+
+
+
+LaTeX Info: Redefining \. on input line 452.
+LaTeX Info: Redefining \% on input line 452.
+[45])
+
+LaTeX Info: Redefining \. on input line 40.
+LaTeX Info: Redefining \% on input line 40.
+[46]
+\openout2 = `Cap√≠tulos/DFT.aux'.
+
+ (Cap√≠tulos/DFT.tex
+Cap\'{\i }tulo 3.
+
+LaTeX Warning: Citation 'szabo1996modern' on page 47 undefined on input line 5.
+
+
+LaTeX Warning: Citation 'koch2015chemist' on page 47 undefined on input line 5.
+
+
+Overfull \hbox (36.27808pt too wide) in paragraph at lines 9--9
+[]\T1/cmr/bx/n/17.28 Fundamentos: De la Ecua-ciÛn de Schrˆ-din-ger a Hartree-
+ []
+
+
+LaTeX Warning: Citation 'szabo1996modern' on page 47 undefined on input line 12.
+
+
+
+[47
+
+
+
+
+]
+
+LaTeX Warning: Citation 'szabo1996modern' on page 48 undefined on input line 14.
+
+
+LaTeX Warning: Citation 'jensen2017introduction' on page 48 undefined on input line 16.
+
+
+LaTeX Warning: Citation 'szabo1996modern' on page 48 undefined on input line 19.
+
+
+
+LaTeX Info: Redefining \. on input line 20.
+LaTeX Info: Redefining \% on input line 20.
+[48]
+
+LaTeX Warning: Citation 'szabo1996modern' on page 49 undefined on input line 21.
+
+
+LaTeX Warning: Citation 'szabo1996modern' on page 49 undefined on input line 23.
+
+
+LaTeX Warning: Citation 'szabo1996modern' on page 49 undefined on input line 23.
+
+
+LaTeX Warning: Citation 'ramachandran2008computational' on page 49 undefined on input line 26.
+
+
+LaTeX Warning: Citation 'szabo1996modern' on page 49 undefined on input line 28.
+
+
+LaTeX Warning: Citation 'ramachandran2008computational' on page 49 undefined on input line 28.
+
+
+
+LaTeX Info: Redefining \. on input line 29.
+LaTeX Info: Redefining \% on input line 29.
+[49]
+
+LaTeX Warning: Citation 'ramachandran2008computational' on page 50 undefined on input line 33.
+
+
+LaTeX Warning: Citation 'koch2015chemist' on page 50 undefined on input line 33.
+
+
+LaTeX Warning: Citation 'jensen2017introduction' on page 50 undefined on input line 35.
+
+
+Overfull \hbox (9.82326pt too wide) in paragraph at lines 34--36
+\T1/cmr/m/n/12 tro-nes, lo que la con-vier-te en una va-ria-ble mu-cho m·s ma-ne-ja-ble [[]]. 
+ []
+
+
+LaTeX Warning: Citation 'ramachandran2008computational' on page 50 undefined on input line 37.
+
+
+LaTeX Warning: Citation 'koch2015chemist' on page 50 undefined on input line 37.
+
+
+
+LaTeX Info: Redefining \. on input line 42.
+LaTeX Info: Redefining \% on input line 42.
+[50]
+
+LaTeX Warning: Citation 'koch2015chemist' on page 51 undefined on input line 42.
+
+
+LaTeX Warning: Citation 'jensen2017introduction' on page 51 undefined on input line 44.
+
+
+LaTeX Warning: Citation 'koch2015chemist' on page 51 undefined on input line 46.
+
+
+LaTeX Warning: Citation 'koch2015chemist' on page 51 undefined on input line 48.
+
+
+LaTeX Warning: Citation 'koch2015chemist' on page 51 undefined on input line 51.
+
+
+
+LaTeX Info: Redefining \. on input line 52.
+LaTeX Info: Redefining \% on input line 52.
+[51]
+
+LaTeX Warning: Citation 'ramachandran2008computational' on page 52 undefined on input line 58.
+
+
+LaTeX Warning: Citation 'koch2015chemist' on page 52 undefined on input line 60.
+
+
+
+LaTeX Info: Redefining \. on input line 65.
+LaTeX Info: Redefining \% on input line 65.
+[52]
+
+LaTeX Warning: Citation 'koch2015chemist' on page 53 undefined on input line 70.
+
+
+LaTeX Warning: Citation 'koch2015chemist' on page 53 undefined on input line 72.
+
+
+LaTeX Warning: Citation 'koch2015chemist' on page 53 undefined on input line 75.
+
+
+Overfull \hbox (1.27922pt too wide) in paragraph at lines 75--76
+\T1/cmr/m/n/12 si-de-ra la den-si-dad en un pun-to, $\OML/cmm/m/it/12 ^^Z\OT1/cmr/m/n/12 (\OT1/cmr/bx/n/12 r\OT1/cmr/m/n/12 )$\T1/cmr/m/n/12 , sino tam-biÈn su gra-dien-te, $\OMS/cmsy/m/n/12 r\OML/cmm/m/it/12 ^^Z\OT1/cmr/m/n/12 (\OT1/cmr/bx/n/12 r\OT1/cmr/m/n/12 )$ \T1/cmr/m/n/12 [[]].
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 76.
+LaTeX Info: Redefining \% on input line 76.
+[53]
+
+LaTeX Warning: Citation 'MD-2002-01' on page 54 undefined on input line 77.
+
+
+LaTeX Warning: Citation 'MD-2002-01' on page 54 undefined on input line 84.
+
+
+LaTeX Warning: Citation 'jensen2017introduction' on page 54 undefined on input line 87.
+
+
+
+LaTeX Info: Redefining \. on input line 88.
+LaTeX Info: Redefining \% on input line 88.
+[54]
+
+LaTeX Warning: Citation 'koch2015chemist' on page 55 undefined on input line 89.
+
+
+LaTeX Warning: Citation 'DFT-2008-01' on page 55 undefined on input line 92.
+
+
+LaTeX Warning: Citation 'Me-2025-01' on page 55 undefined on input line 98.
+
+
+LaTeX Warning: Citation 'DFT-2008-01' on page 55 undefined on input line 100.
+
+
+LaTeX Warning: Citation 'Me-2025-01' on page 55 undefined on input line 100.
+
+
+Overfull \hbox (9.24986pt too wide) in paragraph at lines 100--101
+\T1/cmr/m/n/12 da-tos de pro-pie-da-des ener-gÈ-ti-cas pa-ra ma-xi-mi-zar su pre-ci-siÛn en es-tas ·reas [[]].
+ []
+
+)
+
+LaTeX Info: Redefining \. on input line 41.
+LaTeX Info: Redefining \% on input line 41.
+[55]
+
+LaTeX Warning: Empty bibliography on input line 44.
+
+(main.aux (Cap√≠tulos/Portada.aux)
+LaTeX Info: Redefining \sptext on input line 10.
+LaTeX Info: Redefining \. on input line 10.
+LaTeX Info: Redefining \% on input line 10.
+ (Cap√≠tulos/Dedicatoria.aux) (Cap√≠tulos/Agradecimientos.aux) (Cap√≠tulos/Introducci√≥n.aux) (Cap√≠tulos/Fundamentos.aux) (Cap√≠tulos/DFT.aux))
+ ***********
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+ ***********
+
+
+LaTeX Warning: There were undefined references.
+
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                main
+(biblatex)                and rerun LaTeX afterwards.
+
+Package logreq Info: Writing requests to 'main.run.xml'.
+\openout1 = `main.run.xml'.
+
+ )
+(\end occurred inside a group at level 1)
+
+### semi simple group (level 1) entered at line 4 (\begingroup)
+### bottom level 
+Here is how much of TeX's memory you used:
+ 29449 strings out of 473523
+ 629810 string characters out of 5714631
+ 1427136 words of memory out of 5000000
+ 52214 multiletter control sequences out of 15000+600000
+ 586367 words of font info for 102 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 84i,10n,91p,1169b,2242s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\jorge\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\jorge\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbi1440.pk> <C:\Users\jorge\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0800.pk> <C:\Users\jorge\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\jorge\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\jorge\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsl1200.pk> <C:\Users\jorge\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\jorge\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecxc1200.pk> <C:\Users\jorge\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\jorge\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\jorge\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\jorge\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\jorge\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\jorge\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc2074.pk> <C:\Users\jorge\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1000.pk> <C:\Users\jorge\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\jorge\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1440.pk><C:/Users/jorge/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/jorge/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/jorge/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/jorge/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/jorge/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/jorge/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/jorge/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/jorge/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/jorge/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/jorge/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/jorge/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/jorge/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on main.pdf (61 pages, 657748 bytes).
+PDF statistics:
+ 838 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 23 words of extra memory for PDF output out of 10000 (max. 10000000)
+

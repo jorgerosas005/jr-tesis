@@ -1,124 +1,214 @@
-\chapter{Introducción a la Teoría de la Solvatación}
+\chapter{Introducción}
 
-\section{La Relevancia del Solvente en Procesos Químicos y Biológicos}
 
-El estudio de los sistemas químicos ha estado históricamente centrado en la estructura electrónica de las moléculas, ya que esta dicta de manera fundamental su comportamiento \cite[102]{hirata2003molecular}. Sin embargo, la gran mayoría de los procesos químicos y biológicos no ocurren en el vacío, sino en un medio líquido, comúnmente una disolución \cite[2]{canuto2010solvation}. En este contexto, la influencia del solvente no es un efecto menor o una simple perturbación; es un factor determinante que puede gobernar la dirección, la eficiencia y la velocidad de una reacción \cite[72]{hirata2003molecular}, \cite[4]{nishiyama2021molecular}. La energía asociada a la solvatación es, en muchos casos, de una magnitud comparable a la de los cambios en la energía electrónica de los reactivos, lo que subraya su papel central \cite[10]{hirata2003molecular}. Por tanto, una descripción teórica completa de cualquier proceso en disolución debe incluir de manera explícita los efectos del solvente \cite[1]{nishiyama2021molecular}.
+\section{Fundamentos de la Solvatación Iónica}
 
-Esta influencia es particularmente crítica en el campo de la bioquímica. La estabilidad conformacional de biomoléculas como las proteínas y el ADN está dominada por las interacciones con el solvente acuoso circundante \cite[6, 116]{hirata2003molecular}. Fenómenos como la desnaturalización de proteínas a bajas temperaturas no pueden ser explicados sin una comprensión detallada del rol del agua y los efectos hidrofóbicos \cite[12]{hirata2003molecular}. Del mismo modo, la función de muchas proteínas depende de la presencia de iones y de cómo estos interactúan con sus capas de solvatación \cite[2]{marcus2015ions}. La comprensión de la solvatación, por lo tanto, es indispensable no solo para la química fundamental, sino también para el diseño de fármacos, la ciencia de materiales y la biología molecular.
+La solvatación iónica es un fenómeno químico esencial que describe cómo los iones interactúan con las moléculas del disolvente que los rodean al disolverse. En fases condensadas, los iones no se encuentran en un estado aislado o "desnudo" , sino que están envueltos por moléculas del solvente. El proceso se rige por un delicado balance energético : para que un electrolito se disuelva, la energía ganada por la solvatación debe superar las fuerzas que mantienen unidos a los iones en su estado puro, como la energía reticular en sólidos cristalinos.
 
-\section{Fenómenos Físico-Químicos Dependientes del Entorno Solvatado}
+La organización de las moléculas de solvente alrededor de un ion da lugar a capas de solvatación. La capa en contacto directo con el ion se denomina capa de solvatación primaria, y el número de moléculas que la componen es el número de coordinación. El campo eléctrico del ion puede inducir un ordenamiento en capas subsecuentes (capa secundaria). Este arreglo es dinámico, con un intercambio constante de moléculas entre las capas y el seno del disolvente.
 
-La criticidad del entorno solvatado se manifiesta en una amplia gama de fenómenos. Las reacciones químicas y la estabilidad conformacional de proteínas son dos de los ejemplos más importantes en la química teórica, donde el solvente puede incluso revertir el equilibrio entre reactivos y productos \cite[8, 102]{hirata2003molecular}. Procesos fundamentales como los equilibrios ácido-base y la autoionización del agua están intrínsecamente ligados a la capacidad del solvente para estabilizar especies cargadas \cite[86, 89]{hirata2003molecular}.
+El proceso de solvatación iónica está regulado por una combinación de factores que incluyen la naturaleza del ion, las propiedades del solvente y las interacciones específicas entre ambos. La comprensión de estos elementos es fundamental para predecir el comportamiento de los iones en solución. A continuación se detallan las interacciones y factores más relevantes.
 
-Otros ejemplos notables incluyen:
+\subsection{Naturaleza de las interacciones intermoleculares}
+Las fuerzas que rigen la solvatación se pueden clasificar en varias categorías principales. La naturaleza de estas interacciones es multifacética, involucrando tanto contribuciones electrostáticas como no electrostáticas.
+
+\subsubsection{Interacciones Electrostáticas}
+Debido a la naturaleza cargada de los iones, las interacciones electrostáticas son el factor dominante en la solvatación. Se manifiestan de las siguientes maneras:
 \begin{itemize}
-    \item \textbf{Reacciones de Transferencia de Carga:} Procesos como las reacciones S\textsubscript{N}2 y la transferencia de electrones (ET) son extremadamente sensibles al medio, ya que la reorganización del solvente es un componente clave de la barrera de activación energética \cite[98, 102]{hirata2003molecular}, \cite[4]{nishiyama2021molecular}.
-    \item \textbf{Equilibrios Tautoméricos:} El equilibrio ceto-enol, por ejemplo, se desplaza significativamente hacia la forma ceto en solventes de alta polaridad debido a la estabilización diferencial de los tautómeros \cite[93]{hirata2003molecular}.
-    \item \textbf{Procesos Espectroscópicos:} El color de una molécula de colorante, un fenómeno conocido como solvatocromismo, puede cambiar drásticamente según el solvente, debido a cómo este estabiliza los estados electrónicos fundamental y excitado de la molécula \cite[12]{hirata2003molecular}, \cite[2]{canuto2010solvation}.
-    \item \textbf{Efectos Iónicos Específicos:} La adición de sales al agua puede alterar drásticamente la estabilidad y solubilidad de proteínas, un fenómeno conocido como la serie de Hofmeister, que depende de la identidad específica del ion y su interacción con el agua \cite[146]{hirata2003molecular}, \cite[3]{marcus2015ions}.
+    \item \textbf{Interacción Ion-Dipolo:} Es la manifestación principal. En solventes polares como el agua o el metanol, las moléculas con dipolos permanentes se orientan para interactuar favorablemente con el campo eléctrico del ion. Los átomos donadores de pares de electrones (como el oxígeno) se dirigen hacia los cationes, mientras que los hidrógenos de solventes próticos se orientan hacia los aniones.
+    \item \textbf{Densidad de Carga Iónica:} La magnitud de la interacción ion-solvente es directamente proporcional a la densidad de carga del ion. Iones con alta densidad de carga interactúan más intensamente con el solvente.
+    \item \textbf{Permitividad Dieléctrica del Solvente ($\varepsilon$):} Esta propiedad modula la fuerza de atracción entre iones de carga opuesta, facilitando su disociación. Los solventes con alta permitividad son más efectivos para disolver electrolitos.
+    \item \textbf{Polarización:} La presencia de un ion induce una polarización en las moléculas del solvente, fortaleciendo la interacción. A su vez, el ion también puede ser polarizado por el campo eléctrico del solvente.
 \end{itemize}
 
-\section{Naturaleza de las Interacciones Intermoleculares en Disolución}
+\subsubsection{Interacciones No Electrostáticas}
+Existen otras contribuciones energéticas relevantes más allá de las electrostáticas:
+\begin{itemize}
+    \item \textbf{Fuerzas de Van der Waals:} Son interacciones de atracción débiles entre el soluto y las moléculas del solvente que contribuyen favorablemente a la energía de solvatación.
+    \item \textbf{Energía de Cavitación:} Representa el trabajo termodinámicamente desfavorable que debe invertirse para crear una cavidad en el solvente que alojará al ion. Este proceso implica la ruptura de las fuerzas cohesivas del propio solvente. Mientras en solventes polares domina la contribución electrostática, en los no polares la energía de cavitación puede ser el factor principal.
+\end{itemize}
 
-La solvatación es el resultado macroscópico de un balance delicado de interacciones a nivel molecular. Estas interacciones pueden ser clasificadas en varias categorías. Las \textbf{fuerzas electrostáticas} de largo alcance, de naturaleza Coulombica, son fundamentales para describir la interacción entre iones y moléculas polares \cite[8]{hirata2003molecular}. En un medio denso, esta interacción se ve modificada por efectos de apantallamiento dieléctrico por parte del solvente \cite[26]{hirata2003molecular}.
+\subsubsection{Enlaces de Hidrógeno}
+En solventes próticos como el agua y el metanol, la formación de enlaces de hidrógeno es de especial relevancia. La introducción de iones puede alterar la red de enlaces de hidrógeno del solvente, clasificándose como \textit{cosmotrópicos} (formadores de estructura) o \textit{caotrópicos} (rompedores de estructura).
 
-A distancias más cortas, las interacciones de \textbf{van der Waals} se vuelven dominantes, consistiendo en una repulsión de corto alcance debida al principio de exclusión de Pauli y una atracción de rango intermedio (fuerzas de dispersión de London) \cite[57]{hirata2003molecular}, \cite[3]{canuto2010solvation}. Comúnmente, estas interacciones se modelan mediante potenciales sitio-sitio, como el potencial de Lennard-Jones (12-6), que se suma al término de Coulomb para describir la interacción total \cite[62, 106]{hirata2003molecular}.
+\subsection{Factores relacionados con las propiedades del Solvente}
+Las características intrínsecas del solvente determinan su capacidad para solvatar iones.
+\begin{itemize}
+    \item \textbf{Polaridad y Polarizabilidad:} Propiedades moleculares que describen la distribución de carga y la facilidad con que se deforma.
+    \item \textbf{Propiedades Donadoras-Aceptoras de Electrones:} La capacidad del solvente para donar un par de electrones (donicidad) o aceptar enlaces de hidrógeno (acidez) es a menudo muy significativa. Los cationes son estabilizados por solventes con alta donicidad y los aniones por solventes con alta acidez.
+    \item \textbf{Dureza y Blandura (Principio HSAB):} Los solventes duros (e.g., con átomos de oxígeno) solvatan preferentemente iones duros, y los blandos (e.g., con átomos de azufre) a iones blandos.
+    \item \textbf{Estructura y Autoasociación:} La densidad de energía cohesiva del solvente influye en la energía de cavitación. Solventes como el agua requieren una mayor inversión energética para acomodar un soluto.
+    \item \textbf{Tamaño y Forma Molecular:} Factores estéricos que afectan la eficiencia del empaquetamiento del solvente alrededor de un ion y, por tanto, el número de coordinación.
+\end{itemize}
 
-En solventes próticos como el agua o el metanol, el \textbf{enlace de hidrógeno} emerge como una interacción direccional y de corto alcance de importancia capital. Es responsable de las propiedades anómalas del agua y es crucial para la estructura y función de las biomoléculas \cite[10]{hirata2003molecular}. Un tratamiento teórico preciso del enlace de hidrógeno es uno de los mayores desafíos para los modelos de solvatación \cite[5]{canuto2010solvation}. Finalmente, los \textbf{efectos de inducción} describen la polarización de la nube electrónica de una molécula debido al campo eléctrico generado por las moléculas vecinas, lo que constituye un efecto de muchos cuerpos no aditivo \cite[4]{canuto2010solvation}.
+\subsection{Factores relacionados con las propiedades del Ion}
+Las características del soluto iónico son igualmente cruciales.
+\begin{itemize}
+    \item \textbf{Densidad de Carga:} Es un factor clave que determina la esfera de solvatación. Iones pequeños y altamente cargados se solvatan más fuertemente.
+    \item \textbf{Tamaño (Radio Iónico):} Afecta la fuerza de las interacciones, el número de coordinación y la tasa de intercambio de solvente.
+    \item \textbf{Dureza y Blandura del Ion:} Determina la especificidad de la interacción con solventes duros o blandos.
+\end{itemize}
 
-\section{Estructura y Organización en la Capa de Solvatación}
+\subsection{Consideraciones Termodinámicas}
+La solvatación es un proceso cuyo cambio energético se describe mediante funciones de estado termodinámicas.
+\begin{itemize}
+    \item \textbf{Energía Libre de Solvatación ($\Delta G_{\text{sol}}$):} Es la magnitud clave que cuantifica la transferencia de un ion desde la fase gaseosa a la solución. Se descompone en contribuciones electrostáticas ($\Delta G_{\text{ele}}$) y no electrostáticas ($\Delta G_{\text{n-ele}}$).
+    \item \textbf{Entalpía ($\Delta H_{\text{sol}}$) y Entropía ($\Delta S_{\text{sol}}$) de Solvatación:} Su análisis proporciona una visión más profunda de los cambios estructurales y energéticos del proceso. La "energía de reorganización del solvente" es una contribución significativa a la solvatación.
+\end{itemize}
 
-La manifestación estructural de estas interacciones es la formación de una región de solvente altamente organizada alrededor del soluto, conocida como la \textbf{capa de solvatación} o esfera de coordinación \cite[1]{canuto2010solvation}. La caracterización de esta estructura local es fundamental para entender la reactividad. La herramienta teórica y experimental más importante para este fin es la \textbf{Función de Distribución Radial (RDF)}, denotada como $g(r)$, que describe la probabilidad de encontrar una partícula a una distancia $r$ de una partícula de referencia \cite[13, 22]{hirata2003molecular}, \cite[7]{nishiyama2021molecular}. Los picos en la RDF corresponden a las capas de solvatación ordenadas, y su integración conduce al \textbf{número de coordinación}, que cuantifica el número de moléculas de solvente en la primera capa \cite[8]{canuto2010solvation}, \cite[18]{nishiyama2021molecular}.
 
-Mientras que la RDF proporciona información sobre la distancia, la \textbf{Función de Distribución Angular (ADF)} ofrece información sobre la orientación de las moléculas de solvente, lo cual es esencial para caracterizar interacciones direccionales como los enlaces de hidrógeno \cite[279]{hirata2003molecular}. Juntas, estas funciones permiten construir una imagen tridimensional detallada de la microestructura del solvente alrededor del soluto.
 
-\section{Modelos Teóricos para el Estudio de la Solvatación}
+\section{Relevancia y Ámbitos de Aplicación del Catión Cobre (II)}
 
-El tratamiento teórico de la solvatación ha evolucionado desde modelos macroscópicos hasta descripciones moleculares explícitas. Históricamente, los \textbf{modelos de continuo} han sido la piedra angular, representando al solvente como un medio dieléctrico continuo caracterizado por su permitividad estática, $\epsilon$ \cite[8]{hirata2003molecular}. La ecuación de Born para la energía libre de solvatación de un ion es un ejemplo arquetípico \cite[6]{nishiyama2021molecular}. Aunque son computacionalmente eficientes, estos modelos fallan en capturar la naturaleza molecular del solvente, omitiendo efectos como el empaquetamiento, los enlaces de hidrógeno y la estructura de capas \cite[5, 23]{canuto2010solvation}.
+El catión Cobre(II), \ce{Cu^{2+}}, participa en una amplia y diversa gama de fenómenos, abarcando desde procesos biológicos esenciales hasta complejas interacciones químicas y aplicaciones tecnológicas de vanguardia. Su particular configuración electrónica $d^9$ le confiere propiedades estructurales y redox únicas, convirtiéndolo en un objeto de profundo interés científico. La ubicuidad y funcionalidad de este ion pueden apreciarse en las siguientes áreas principales.
 
-Para superar estas limitaciones, se desarrollaron métodos basados en la \textbf{simulación molecular}, como la Dinámica Molecular (MD) y los métodos de Monte Carlo (MC) \cite[9]{hirata2003molecular}. Estos enfoques tratan tanto al soluto como a las moléculas de solvente de forma explícita, permitiendo un análisis detallado de la estructura y la dinámica. La MD, en particular, resuelve las ecuaciones de movimiento de Newton para un conjunto de partículas que interactúan a través de un campo de fuerza, generando trayectorias que representan la evolución temporal del sistema \cite[22]{nishiyama2021molecular}.
 
-Un tercer enfoque combina la precisión de la mecánica cuántica con la eficiencia de los modelos clásicos: los \textbf{métodos híbridos QM/MM} (Quantum Mechanics/Molecular Mechanics). En este formalismo, la región de interés (el soluto y su primera capa de solvatación) se trata con un método de alto nivel de química cuántica (QM), mientras que el resto del solvente se describe con un campo de fuerza clásico (MM) \cite[15]{canuto2010solvation}. Este enfoque permite estudiar procesos que involucran cambios en la estructura electrónica, como reacciones químicas y fenómenos espectroscópicos, dentro de un entorno solvatado realista \cite[10]{nishiyama2021molecular}. La combinación de estos métodos computacionales proporciona las herramientas necesarias para abordar la complejidad de los sistemas en disolución, un paso esencial para el avance de la química, la biología y la ciencia de materiales.
+\subsection{Implicaciones en Sistemas Biológicos y la Salud Humana}
 
-%%%%%%%%%
+En el dominio de la bioquímica, el \ce{Cu^{2+}} es un micronutriente vital. Su función más prominente es como componente clave de numerosas metaloenzimas que catalizan procesos críticos, tales como el \textbf{transporte de electrones y oxígeno} —ejemplificado por la hemocianina— y la \textbf{oxidación catalítica} de sustratos orgánicos como fenoles y aminas. Adicionalmente, es fundamental para la movilización del hierro durante la síntesis de hemoglobina.
 
-\section{Relevancia Biológica e Industrial del Ion Cúprico}
+No obstante, la homeostasis del cobre es delicada. Desequilibrios en su concentración están directamente implicados en patologías graves. La regulación deficiente del cobre se ha conectado con \textbf{trastornos neurodegenerativos} como las enfermedades de Parkinson y Alzheimer. Asimismo, una concentración celular elevada puede inducir toxicidad a través de la generación de especies reactivas de oxígeno, mientras que desórdenes en su transporte sistémico, mediados por la ceruloplasmina, conducen a enfermedades genéticas como el síndrome de Menkes y la enfermedad de Wilson.
 
-El estudio de la solvatación iónica adquiere una dimensión particular cuando se enfoca en cationes de metales de transición, debido a su papel ubicuo y fundamental en una vasta gama de procesos naturales y tecnológicos. Dentro de este grupo, el ion cobre(II) (\ce{Cu^{2+}}) emerge como un sistema de extraordinario interés, no solo por su complejidad inherente, sino también por su profunda implicación en la bioquímica y la industria \cite{Wa-2012-01}. El cobre es el tercer metal más abundante en el cuerpo humano, superado únicamente por el hierro y el zinc \cite{Me-2012-01}, y su correcta regulación es vital para la salud. La desregulación de la homeostasis del cobre, por ejemplo, ha sido directamente relacionada con el desarrollo de severas enfermedades neurodegenerativas, incluyendo las de Alzheimer y Parkinson \cite{Cu-2015-01, Me-2022-01, Wa-2018-01, Wa-2024-03}.
 
-La relevancia biológica del \ce{Cu^{2+}} radica en su versatilidad redox, que le permite participar como cofactor esencial en una multitud de metaloenzimas. Estas proteínas están involucradas en procesos críticos como el transporte de oxígeno, la transferencia de electrones en la cadena respiratoria y la catálisis de reacciones de óxido-reducción \cite{Cu-2015-01, Me-2022-01, Wa-2009-01, Wa-2016-01}. Además, se ha demostrado que el ion \ce{Cu^{2+}} puede catalizar la formación de enlaces peptídicos, pero su presencia incontrolada también puede inducir la agregación y el desplegamiento de proteínas, generando especies reactivas de oxígeno (ROS) con un alto potencial tóxico \cite{Wa-2009-01, Wa-2016-01}. Esta dualidad entre funcionalidad esencial y toxicidad potencial hace que la comprensión de su comportamiento en el entorno biológico—predominantemente acuoso—sea un objetivo primordial de la química bioinorgánica \cite{Wa-2018-01}.
+\subsection{Aplicaciones en Catálisis y Tecnología de Materiales}
 
-\section{El Desafío de la Hidratación del \ce{Cu^{2+}}: El Efecto Jahn-Teller}
+Más allá de su rol biológico, los complejos de cobre son herramientas poderosas en la síntesis química y la tecnología. En el campo de la \textbf{catálisis}, son ampliamente utilizados para la construcción de enlaces carbono-carbono y carbono-heteroátomo, y son indispensables en reacciones como el acoplamiento de Sonogashira-Hagihara y la activación de enlaces C-H. El objetivo actual se centra en el desarrollo de catalizadores basados en cobre que no solo sean eficientes y selectivos, sino también respetuosos con el medio ambiente.
 
-La aparente simplicidad del ion \ce{Cu^{2+}} en agua desmiente una complejidad estructural que ha sido objeto de un intenso y prolongado debate científico \cite{Cu-2011-01, Wa-2002-01}. La fuente de esta complejidad reside en su configuración electrónica $d^9$, la cual, en un campo de ligandos de simetría octaédrica, es susceptible a la distorsión de Jahn-Teller \cite{Cu-2011-01, Wa-2001-01, Cu-2004-01, Wa-2008-02, Wa-2009-02, Wa-2020-01}. Este efecto rompe la degeneración de los orbitales $e_g$, resultando típicamente en una elongación de los enlaces axiales del complejo hexacoordinado $[\ce{Cu(H2O)6}]^{2+}$, una imagen que fue aceptada durante muchos años como el modelo estándar \cite{Wa-2007-02, Wa-2018-02}.
+En el ámbito de la tecnología, las propiedades electrónicas del cobre se aprovechan en el diseño de \textbf{dispositivos optoelectrónicos}, como los diodos orgánicos emisores de luz (OLEDs) y las celdas electroquímicas emisoras de luz (LECs). También encuentran aplicación en esquemas de conversión de energía solar, sensores químicos y como electrocatalizadores en reacciones de evolución de hidrógeno.
 
-Sin embargo, esta visión ha sido desafiada por una creciente cantidad de evidencia teórica y experimental que sugiere un panorama más dinámico y heterogéneo. Lejos de ser un octaedro estático, la primera esfera de solvatación del \ce{Cu^{2+}} acuoso es altamente plástica \cite{Wa-2018-02}. Se ha propuesto que la barrera energética para la conversión entre diferentes geometrías es muy baja, permitiendo la coexistencia de múltiples especies en equilibrio dinámico. Las simulaciones de dinámica molecular ab initio (AIMD) han revelado que el ion puede fluctuar rápidamente entre geometrías de pirámide cuadrada (pentacoordinada) y bipirámide trigonal \cite{Wa-2001-01, Wa-2010-03}. Esta plasticidad estructural es la razón por la cual diferentes técnicas experimentales han arrojado resultados aparentemente contradictorios sobre el número de coordinación y la geometría preferida del ion.
 
-\section{Análisis Comparativo de la Estructura de Solvatación}
+\section{Fundamentos Fisicoquímicos: El Efecto Jahn-Teller}
 
-Para validar un nuevo método computacional, como el que se propone en este trabajo, es indispensable contrastar sus resultados con el cuerpo de conocimiento existente, que se ha construido a partir de una combinación de técnicas experimentales y teóricas. A continuación, se presenta una síntesis de los parámetros estructurales reportados en la literatura para el ion \ce{Cu^{2+}} en disolución acuosa y metanólica.
+La notable versatilidad del catión \ce{Cu^{2+}}, que le permite participar en una vasta gama de procesos biológicos y tecnológicos, se fundamenta en un conjunto de propiedades fisicoquímicas que emanan directamente de su estructura electrónica. El fenómeno central que gobierna su química de coordinación es la \textbf{distorsión de Jahn-Teller (JTE)}. Este efecto, de importancia capital para la química del cobre(II), se manifiesta como una deformación geométrica espontánea en cualquier molécula no lineal que posea un estado electrónico fundamental espacialmente degenerado. El teorema subyacente postula que el sistema se distorsionará para remover dicha degeneración, lo que resulta en una reducción de su simetría y, crucialmente, en una disminución de su energía total.
 
-\subsection{Número de Coordinación: Un Consenso Emergente}
+El origen del efecto no reside en la forma de un único orbital, sino que emerge de la diferencia en la concentración de densidad electrónica entre el metal y los ligandos. Para un complejo octaédrico como el \ce{Cu^{2+}} (con configuración $d^9$ y, por tanto, con los orbitales $e_g$ degenerados), esta distorsión se presenta de dos maneras:
+\begin{itemize}
+    \item \textbf{Elongación (z-out):} Ocurre cuando la densidad electrónica es mayor a lo largo del eje axial $z$. La repulsión resultante alarga los dos enlaces axiales y acorta los cuatro ecuatoriales.
+    \item \textbf{Compresión (z-in):} Sucede cuando la densidad electrónica es mayor en el plano ecuatorial $xy$, provocando el alargamiento de los cuatro enlaces ecuatoriales y la compresión de los dos axiales.
+\end{itemize}
 
-El número de coordinación (NC) del ion \ce{Cu^{2+}} ha sido el foco principal del debate. Mientras que los cationes divalentes de tamaño similar, como el \ce{Ni^{2+}}, exhiben una clara coordinación octaédrica (NC=6), el \ce{Cu^{2+}} es anómalo \cite{Wa-1982-01, Wa-2001-01}.
+La naturaleza de la distorsión en el ion \ce{Cu^{2+}} está ligada a la identidad del orbital molecular semiocupado (SOMO). Si el SOMO es el orbital $d_{x^2-y^2}$, se predice una elongación; si es el $d_{z^2}$, se predice una compresión. Aunque la elongación es la más común, estudios teóricos con DFT han demostrado que ambas geometrías son posibles para el catión hexaaquacobre(II), \ce{[Cu(OH2)6]^{2+}}.
 
-En **solución acuosa**, los primeros estudios de difracción de neutrones ya apuntaban a una coordinación no convencional \cite{Wa-1982-01}. Trabajos más recientes, que combinan múltiples técnicas experimentales como la espectroscopía de absorción de rayos X (XAS, EXAFS, XANES) y la dispersión de neutrones, junto con simulaciones teóricas, han consolidado la idea de que la coordinación no es estrictamente seis. En su lugar, predomina una visión de una coordinación promedio que fluctúa. Varios estudios concluyen que la especie pentacoordinada $[\ce{Cu(H2O)5}]^{2+}$ es la más prevalente o energéticamente favorable en disolución \cite{Wa-2002-01, Wa-2005-01, Wa-2005-02, Wa-2008-01, Wa-2010-03, Wa-2012-01, Wa-2024-01}. Sin embargo, también hay fuerte evidencia de la coexistencia de especies tetracoordinadas y hexacoordinadas \cite{Wa-2009-01, Wa-2017-01, Wa-2023-01}. En un estudio de 2018, se sugiere que los isómeros pentacoordinados son los más comunes, pero la contribución de los hexacoordinados aumenta con el número de moléculas de agua disponibles en el clúster \cite{Wa-2018-01}.
+\subsection{Consecuencias del JTE en la Química del Cobre(II)}
 
-En **metanol**, la evidencia es más escasa, lo que justifica la realización de nuevos estudios computacionales. Un estudio experimental de XAS concluyó inequívocamente que el NC promedio es 5 \cite{Me-2012-01}. No obstante, otros trabajos reportan valores diferentes, como 3.8 \cite{Me-2023-01}. Los estudios teóricos más recientes sugieren que, de manera similar al agua, coexisten múltiples estados de coordinación, con una preferencia por las geometrías pentacoordinada y hexacoordinada \cite{Me-2022-01, Me-2023-02}.
+El JTE no es un mero detalle estructural; es la causa directa de la química de coordinación excepcionalmente flexible y dinámica del \ce{Cu^{2+}}. Primero, dota al ion de una \textbf{plasticidad estructural} inusual, permitiéndole adoptar diversas geometrías (octaédrica distorsionada, piramidal cuadrada, cuadrado planar) con diferencias energéticas muy pequeñas entre ellas, en marcado contraste con iones de tamaño y carga similares como \ce{Ni(II)} o \ce{Mg(II)}.
 
-La siguiente tabla resume los hallazgos de varios estudios clave sobre el número de coordinación.
+Segundo, esta flexibilidad es \textbf{dinámica}. En disolución, el complejo interconvierte rápidamente entre configuraciones, lo que explica la alta labilidad (rápida tasa de intercambio) de sus ligandos y ha generado un prolongado debate sobre su número de coordinación preferido (4, 5 o 6). Complementariamente a esta flexibilidad, sus \textbf{propiedades redox}, manifestadas en la fácil interconversión entre los estados de oxidación +2 y +1 ($\ce{Cu^{2+}} \leftrightarrow \ce{Cu^+}$), son fundamentales para su rol en catálisis y en el transporte de electrones biológico.
 
-\begin{table}[h!]
-\centering
-\caption{Número de Coordinación (NC) del ion \ce{Cu^{2+}} reportado en la literatura.}
-\label{tab:coordination_number}
-\begin{tabular}{@{}llll@{}}
-\toprule
-Solvente & NC Reportado & Método & Referencia \\ \midrule
-Agua     & $4.1 \pm 0.3$ a $4.5 \pm 0.6$ & ND, XRD, EXAFS, EPSR & \cite{Wa-2013-01} \\
-Agua     & Predominantemente 5 (90\%)   & CPMD                      & \cite{Wa-2005-02} \\
-Agua     & 5 o 6 (fluctuante)           & AIMD                      & \cite{Wa-2004-02} \\
-Agua     & 6 (primera capa)             & QM/MM (MP2)               & \cite{Cu-2004-01} \\
-Agua     & 5 es el más estable          & DFT/COSMO                 & \cite{Wa-2008-01} \\
-Agua     & 5 y 6 (coexistencia)         & 3D-RISM-SCF               & \cite{Wa-2019-01} \\
-Metanol  & 5 (inequívocamente)          & XAS (EXAFS, XANES)        & \cite{Me-2012-01} \\
-Metanol  & 3.8                          & EXAFS                     & \cite{Me-2023-01} \\
-Metanol  & 6 (predominante)             & EXAFS                     & \cite{Wa-2020-01} \\
-Metanol  & 5 y 6 son relevantes         & DFT                       & \cite{Me-2022-01} \\ \bottomrule
-\end{tabular}
-\end{table}
+Por lo tanto, para descifrar la base de su funcionalidad, es imperativo estudiar el comportamiento de este ion en su estado más fundamental: la \textbf{interacción directa con su entorno inmediato}. El análisis de la solvatación del ion \ce{Cu^{2+}} constituye el primer paso indispensable, pues es en esta escala molecular donde la distorsión de Jahn-Teller y la dinámica de intercambio de ligandos dictan el comportamiento macroscópico del sistema. Esta complejidad presenta, además, un desafío significativo para la modelización teórica, invalidando los potenciales de la mecánica clásica y exigiendo el uso de métodos cuanto-mecánicos para su correcta descripción.
 
-\subsection{Geometría de Coordinación y Distancias de Enlace}
 
-La geometría de los complejos de solvatación del \ce{Cu^{2+}} está directamente ligada a su número de coordinación y al efecto Jahn-Teller. Para las especies acuosas, la discusión se ha centrado en distinguir entre un octaedro distorsionado (simetría $D_{4h}$), una pirámide cuadrada ($C_{4v}$) y una bipirámide trigonal ($D_{3h}$) \cite{Wa-2001-01, Wa-2010-03}.
+\section{Estudio del Arte de la Solvatación del Ion Cobre(II)}
 
-Los resultados más recientes favorecen una imagen donde la **pirámide cuadrada**, a menudo distorsionada, es una estructura central, ya sea como una especie estable de cinco ligandos o como un intermediario en la dinámica de un complejo de seis ligandos \cite{Wa-2002-01, Wa-2005-02, Wa-2008-01, Me-2012-01}. La evidencia experimental de alta resolución ha descartado la existencia de un octaedro elongado simétrico, favoreciendo en su lugar geometrías asimétricas y no centrosimétricas \cite{Wa-2015-01, Wa-2018-02}.
+La fenomenología de la solvatación del ion cobre(II), \ce{Cu^{2+}}, se rige por una compleja interacción de factores que trascienden el efecto de Jahn-Teller. La comprensión de su comportamiento en solución requiere un análisis detallado de su número de coordinación, la dinámica de sus ligandos, sus propiedades electrónicas intrínsecas y la influencia del entorno del disolvente.
 
-Un aspecto clave que caracteriza estas geometrías es la diferencia entre las distancias de enlace axiales y ecuatoriales. El efecto Jahn-Teller típicamente induce una elongación de los enlaces axiales. La Tabla \ref{tab:distances} recopila algunas de las distancias \ce{Cu-O} reportadas, mostrando una notable consistencia entre diferentes métodos. Las distancias ecuatoriales se agrupan consistentemente alrededor de \SI{1.95}{\angstrom} a \SI{2.00}{\angstrom}, mientras que las distancias axiales son más largas y variables, típicamente entre \SI{2.20}{\angstrom} y \SI{2.40}{\angstrom}. Esta diferencia es la huella digital de la distorsión electrónica del ion.
+\subsection{Número de Coordinación y Plasticidad Estructural}
 
-\begin{table}[h!]
-\centering
-\caption{Distancias de enlace \ce{Cu-O} reportadas en la literatura para la primera esfera de solvatación.}
-\label{tab:distances}
-\begin{tabular}{@{}lllll@{}}
-\toprule
-Solvente & \ce{Cu-O_{eq}} (\AA)           & \ce{Cu-O_{ax}} (\AA)           & Método          & Referencia \\ \midrule
-Agua     & $1.96 \pm 0.03$                & $\sim 2.3 - 2.4$               & ND, XRD         & \cite{Wa-1988-01, Wa-2005-01} \\
-Agua     & $2.03$                         & $2.30$                         & QM/MM (HF)      & \cite{Wa-2003-01} \\
-Agua     & $2.07$                         & $2.35$                         & QM/MM (MP2)     & \cite{Cu-2004-01} \\
-Agua     & $2.00$                         & $2.45$                         & CPMD (BLYP)     & \cite{Wa-2005-02} \\
-Agua     & $\sim 1.98$                    & $\sim 2.16$                    & DFT (BHLYP)     & \cite{Wa-2007-02} \\
-Metanol  & $1.96$                         & $2.28$  / $2.32$               & XAS             & \cite{Me-2012-01} \\
-Metanol  & $\sim 1.96$                    & $\sim 2.15 - 2.32$             & EXAFS           & \cite{Wa-2020-01} \\ \bottomrule
-\end{tabular}
-\end{table}
+Un aspecto central y objeto de continuo debate en la literatura es el número de coordinación (NC) preferido por el ion \ce{Cu^{2+}} en solución. Lejos de adoptar una estructura estática, la evidencia experimental y teórica apunta a una \textbf{coexistencia dinámica} de múltiples geometrías. El ion fluctúa rápidamente entre estructuras de 4, 5 y 6 coordenadas, con barreras energéticas entre ellas a menudo inferiores a la energía térmica disponible.
 
-\subsection{Métodos Teóricos y su Evolución}
+Entre las geometrías más relevantes se encuentran:
+\begin{itemize}
+    \item La \textbf{coordinación 6-fold} (octaédrica distorsionada), tradicionalmente aceptada como modelo de referencia.
+    \item La \textbf{coordinación 5-fold} (piramidal cuadrada), que numerosos estudios proponen como la estructura predominante o más estable en disolventes como el agua y el metanol.
+    \item La \textbf{coordinación 4-fold} (planar cuadrada), que es particularmente común en fase gaseosa y puede estabilizarse en solución gracias a una red favorable de puentes de hidrógeno en la segunda capa de solvatación.
+\end{itemize}
 
-La complejidad del ion \ce{Cu^{2+}} ha impulsado el desarrollo y la aplicación de métodos teóricos cada vez más sofisticados. Las simulaciones clásicas con campos de fuerza estándar fracasan en describir la distorsión de Jahn-Teller sin correcciones ad hoc \cite{Wa-2008-01}. Por ello, los enfoques basados en la mecánica cuántica se han vuelto indispensables.
+Esta capacidad de adoptar diversas geometrías con diferencias energéticas muy pequeñas se conoce como \textbf{plasticidad estructural}. Esta propiedad es crucial para la función biológica del \ce{Cu^{2+}}, ya que le permite adaptarse a los diversos requisitos de simetría de los sitios activos de las proteínas. Dada la proximidad energética de estos isómeros, se sugiere que la \textbf{entropía} juega un papel determinante en el establecimiento de sus poblaciones relativas en solución.
 
-Los estudios iniciales emplearon métodos de clúster en fase gaseosa, pero pronto se hizo evidente que para una descripción realista era necesario incluir los efectos del solvente a granel, ya sea implícitamente a través de modelos de continuo polarizable (PCM, COSMO) o explícitamente \cite{Wa-2008-01, Wa-2024-01}. Los modelos mixtos, que tratan un número definido de moléculas de solvente de manera explícita dentro de un campo de reacción de continuo, han demostrado ser una estrategia eficaz \cite{Wa-2009-01}.
+\subsection{Dinámica de Intercambio y Labilidad de Ligandos}
 
-La **Teoría del Funcional de la Densidad (DFT)**, especialmente en el marco de simulaciones de dinámica molecular ab initio (AIMD) como Car-Parrinello (CPMD) o Born-Oppenheimer (BOMD), se ha consolidado como la herramienta principal. La elección del funcional de intercambio-correlación es crítica. Funcionales como BLYP han sido utilizados con éxito para describir la dinámica de sistemas acuosos \cite{Wa-2004-02, Wa-2005-02}, mientras que funcionales híbridos como B3LYP o PBE0, que incluyen una porción de intercambio exacto de Hartree-Fock, han demostrado ser superiores para describir las propiedades estructurales y energéticas de los complejos de cobre \cite{Wa-2003-01, Wa-2009-01, Wa-2010-02}. Funcionales más modernos como M06-2X también han sido validados por su buen rendimiento en la descripción de interacciones no covalentes, cruciales en la segunda esfera de solvatación \cite{Me-2022-02, Me-2023-01}.
+Una consecuencia directa de la estructura electrónica del \ce{Cu^{2+}} y de la distorsión de Jahn-Teller es la excepcional movilidad de sus ligandos. La tasa de intercambio de las moléculas de agua en la primera esfera de solvatación es notablemente rápida, del orden de $4.4 \times 10^9 \text{ s}^{-1}$ a 298 K, siendo varias órdenes de magnitud superior a la de otros cationes divalentes de metales de transición. Esta alta labilidad se atribuye a que los ligandos en posiciones axiales están unidos de manera más débil que los ecuatoriales, lo que facilita su rápido intercambio con las moléculas del seno del disolvente.
 
-Finalmente, los métodos de teoría de perturbaciones de Møller-Plesset de segundo orden (MP2) y enfoques más avanzados como CCSD(T), aunque computacionalmente muy demandantes, sirven como un "estándar de oro" para calibrar la precisión de los métodos DFT \cite{Wa-2017-01}. La concordancia entre los resultados de DFT y estos métodos de alto nivel valida el uso de los primeros para sistemas de mayor tamaño y escalas de tiempo más largas, como las que se abordan en la presente investigación. La sinergia entre los avances en la teoría, los algoritmos y la potencia del supercómputo ha sido, por tanto, indispensable para alcanzar el nivel de comprensión actual sobre este fascinante ion.
+\subsection{Aspectos Electrónicos y Transferencia de Carga}
+
+La configuración electrónica $d^9$ no solo causa la distorsión geométrica, sino que también dicta interacciones más sutiles. La ocupación de orbitales específicos, como el $3d_{x^2-y^2}$, es crucial para minimizar la repulsión electrónica y estabilizar ciertas geometrías. Además, se produce una \textbf{transferencia de densidad electrónica} desde los orbitales de las moléculas del disolvente hacia los orbitales del \ce{Cu^{2+}}. Este fenómeno no solo modula la fuerza y naturaleza de los enlaces metal-ligando, sino que también puede incrementar la acidez de las moléculas de agua coordinadas y promover la transferencia de protones a la segunda capa de solvatación. La distribución de la \textbf{densidad de espín}, que puede deslocalizarse desde el ion metálico hacia los ligandos, sirve como un indicador importante de la naturaleza covalente de los enlaces.
+
+\subsection{Influencia del Entorno de Solvatación}
+
+El comportamiento del ion \ce{Cu^{2+}} es inseparable de las propiedades del medio. Las capas de solvatación más allá de la primera juegan un papel fundamental. La \textbf{segunda capa de solvatación} contribuye significativamente a la estabilidad del complejo a través de la formación de extensas redes de puentes de hidrógeno. Estas interacciones, a veces denominadas "mejoradas por la carga" (charge-enhanced), pueden ser tan fuertes como los propios enlaces metal-ligando. Asimismo, esta capa externa ayuda a redistribuir la energía de polarización, evitando una sobrepolarización de la primera esfera.
+
+Las propiedades intrínsecas del disolvente, como su \textbf{polaridad} o el \textbf{volumen estérico} de sus moléculas, también son determinantes. Ligandos voluminosos, por ejemplo, pueden impedir el acceso a las posiciones axiales, forzando una coordinación planar cuadrada. A pesar de estas sensibilidades, se ha observado una notable similitud en el comportamiento de solvatación del \ce{Cu^{2+}} en agua y metanol, particularmente en lo que respecta a las longitudes de enlace y los números de coordinación.
+
+
+\section{Métodos Experimentales para el Estudio de la Solvatación del \ce{Cu^{2+}}}
+
+En cobntraste con la presente tesis, la caracterización estructural de las esferas de coordincación se han estudiado por diversos métodos experimentales y teóricos, sobretodo para lo referente a la hidratació. A continuación se abordan a detalle. 
+
+\subsection{Técnicas Basadas en Rayos X}
+
+Las técnicas que emplean rayos X se encuentran entre las más poderosas para determinar la estructura local en soluciones.
+
+\subsubsection{Espectroscopía de Absorción de Rayos X (XAS)}
+La XAS es una sonda atómica específica que se divide en dos regiones de análisis principales:
+\begin{itemize}
+    \item \textbf{EXAFS (Extended X-ray Absorption Fine Structure):} Esta técnica es sumamente precisa para determinar las distancias de enlace entre el ion metálico y sus vecinos más cercanos. Para el \ce{Cu^{2+}}, ha permitido determinar consistentemente las distancias ecuatoriales Cu-O (entre 1.95 y 1.97 Å) y las axiales (entre 2.15 y 2.38 Å) en diversos disolventes. No obstante, su sensibilidad es limitada para determinar con certeza el número de coordinación (NC) exacto, pudiendo ajustar con precisión similar modelos de 5 y 6 coordenadas.
+    \item \textbf{XANES (X-ray Absorption Near-Edge Structure):} A diferencia de EXAFS, la región XANES es más sensible a la geometría poliédrica completa. Estudios cuantitativos de XANES, a menudo analizados con la teoría de dispersión múltiple (como en el método MXAN), han sugerido de manera consistente una coordinación pentacoordinada (piramidal cuadrada) como la estructura dominante para el \ce{Cu^{2+}} en agua, metanol y DMSO.
+\end{itemize}
+
+\subsubsection{Difracción y Dispersión de Rayos X (XRD)}
+Estas técnicas proporcionan información sobre la estructura a corto y largo alcance. Métodos como el Análisis Estructural de Rayos X (XRSA) y la Dispersión de Rayos X de Gran Ángulo (LAXS) han sido empleados para estudiar la capa de solvatación, sugiriendo a menudo una geometría octaédrica distorsionada del tipo (4+2). La difracción de rayos X de monocristal, aunque es una técnica de estado sólido, ofrece datos estructurales que sirven como una valiosa referencia comparativa para las especies en solución.
+
+\subsection{Difracción de Neutrones}
+
+La difracción de neutrones es una técnica particularmente poderosa para el estudio de la hidratación debido a su alta sensibilidad a los átomos de hidrógeno y deuterio. El método de \textbf{sustitución isotópica} (tanto H/D como de isótopos del metal, \textit{e.g.}, $^{63}\text{Cu}$ y $^{65}\text{Cu}$) es clave para aislar contribuciones de pares atómicos específicos (como Cu-O y Cu-D) y ha sido fundamental en el debate sobre la prevalencia de la coordinación quíntuple versus la séxtuple.
+
+Además, técnicas como la Dispersión Cuasi-Elástica de Neutrones (QENS) permiten estudiar la dinámica del sistema. Mediante QENS, se ha determinado el tiempo de residencia de una molécula de agua en la primera capa de solvatación del \ce{Cu^{2+}} en aproximadamente 230 ps, confirmando un intercambio de ligandos excepcionalmente rápido.
+
+\subsection{Métodos Espectroscópicos}
+
+Diversas formas de espectroscopía son empleadas para sondear el entorno electrónico y vibracional del ion.
+\begin{itemize}
+    \item \textbf{Resonancia Paramagnética Electrónica (EPR):} Al ser sensible al campo de ligandos, la EPR ha sido crucial. Históricamente, fue una de las primeras técnicas en indicar que los complejos de \ce{Cu(II)} disueltos carecen de la centrosimetría esperada para un octaedro, un hallazgo posteriormente corroborado. Su principal limitación es que a menudo requiere de soluciones congeladas para obtener una señal bien resuelta, lo que podría perturbar la estructura real en solución.
+    \item \textbf{Absorción UV/Vis/NIR:} Las transiciones electrónicas $d-d$ del \ce{Cu^{2+}} son altamente sensibles a la simetría de coordinación. La intensidad de la absorción (fuerza del oscilador) se ha revelado como un parámetro eficiente para explorar y distinguir entre diferentes geometrías de coordinación, como las especies CuO$_5$ y CuO$_6$.
+    \item \textbf{Espectroscopía Vibracional (IR y Raman):} La espectroscopía de infrarrojo (IR) se utiliza para estudiar los enlaces de hidrógeno y las vibraciones moleculares en la capa de solvatación. Técnicas más avanzadas como la Espectroscopía de Fotodisociación Infrarroja (IRPD) se aplican a clústeres en fase gaseosa para sondear la finalización de las capas de solvente con alta sensibilidad.
+\end{itemize}
+
+\subsection{Otras Técnicas Complementarias}
+
+Un conjunto diverso de métodos adicionales proporciona información termodinámica, cinética y de estabilidad.
+\begin{itemize}
+    \item \textbf{Resonancia Magnética Nuclear (NMR):} La RMN de $^{17}\text{O}$ se ha utilizado para determinar las tasas de intercambio de agua, corroborando la labilidad extremadamente alta del \ce{Cu^{2+}} con tasas del orden de $10^9 \text{ s}^{-1}$.
+    \item \textbf{Espectrometría de Masas (MS):} Técnicas como la Ionización por Electrospray (ESI-MS) son clave para producir clústeres de iones solvatados en fase gaseosa. Su estudio mediante Disociación Radiativa por Infrarrojo de Cuerpo Negro (BIRD) proporciona información sobre su estabilidad termodinámica y vías de fragmentación.
+    \item \textbf{Métodos Termodinámicos y Electroquímicos:} La calorimetría y la potenciometría se emplean para obtener datos sobre las energías de interacción y las constantes de estabilidad de los complejos, respectivamente.
+\end{itemize}
+
+
+\section{Métodos Teóricos y Computacionales}
+
+Para complementar los procedimientos experimentales y profundizar en la comprensión de la solvatación iónica, se ha empleado una amplia gama de métodos teóricos y computacionales. Estas herramientas son fundamentales para caracterizar las interacciones ion-solvente y las propiedades estructurales, electrónicas y termodinámicas de los complejos resultantes a nivel molecular.
+
+\subsection*{Métodos de Mecánica Cuántica (QM)}
+Los métodos basados en la mecánica cuántica son esenciales para describir con precisión los fenómenos electrónicos que gobiernan la química de coordinación.
+
+\subsubsection*{Teoría de Funcionales de la Densidad (DFT)}
+La DFT se ha establecido como una metodología destacada y una alternativa robusta para el estudio de compuestos inorgánicos. Es ampliamente utilizada para caracterizar la estructura y estabilidad de clústeres de \ce{Cu(II)} en diversas fases. La elección del funcional de intercambio y correlación es crucial y puede influir en los resultados; se ha empleado una gran variedad de funcionales, entre ellos B3LYP, M06-2X, MPWB1K y PBE, entre otros. Además, la DFT dependiente del tiempo (TDDFT) se utiliza específicamente para investigar las propiedades ópticas y los espectros de absorción.
+
+\subsubsection{Métodos Ab Initio Post-Hartree-Fock}
+Estos métodos, basados en primeros principios sin parametrización empírica, ofrecen un mayor nivel de precisión.
+\begin{itemize}
+    \item \textbf{MP2 (Teoría de Perturbación de Møller-Plesset):} Se ha aplicado extensamente para estudiar la estructura, estabilidad y energías de enlace de clústeres de \ce{Cu(II)}.
+    \item \textbf{CCSD(T) (Coupled Cluster con Triples Perturbativos):} Considerado un método de alta precisión o "gold standard", se emplea frecuentemente para validar y comparar los resultados obtenidos con métodos DFT y MP2.
+\end{itemize}
+
+\subsection{Simulaciones Dinámicas y Modelos Híbridos}
+Para explorar el comportamiento temporal de los sistemas y las transiciones entre diferentes estados, se recurre a las simulaciones de dinámica molecular.
+
+\subsubsection{Dinámica Molecular (MD)}
+\begin{itemize}
+    \item \textbf{Dinámica Molecular Ab Initio (AIMD):} En esta aproximación, las fuerzas interatómicas se calculan "al vuelo" mediante mecánica cuántica en cada paso de la simulación. Métodos como Car-Parrinello (implementado con PAW) y Born-Oppenheimer (BOMD) se han utilizado para estudiar los mecanismos de hidratación y las interconversiones dinámicas del \ce{Cu^{2+}}.
+    \item \textbf{Métodos Híbridos QM/MM:} Estos modelos ofrecen un compromiso eficiente para sistemas grandes, tratando una región central de interés (el ion y su primera esfera de solvatación) con mecánica cuántica, y el resto del sistema (el solvente a granel) con mecánica molecular clásica. Las simulaciones de dinámica molecular QM/MM (QM/MM MD) son particularmente importantes para describir correctamente el comportamiento del efecto Jahn-Teller del ion \ce{Cu^{2+}} solvatado.
+\end{itemize}
+
+\subsection{Tratamiento del Entorno de Solvatación}
+La influencia del disolvente es un factor crítico que se modela mediante diversas estrategias. El enfoque de \textbf{clúster-continuo} es una perspectiva general donde las primeras capas de solvatación se tratan de forma explícita y el resto del solvente se simula como un dieléctrico continuo. Para ello, se utilizan \textbf{Modelos de Solvente Continuo} como COSMO, PCM, CPCM y SMD, que son fundamentales para la evaluación precisa de la energía libre de hidratación y para estudiar cómo el medio polarizado relaja las estructuras y modifica las distancias de enlace en comparación con la fase gaseosa.
+
+\subsection{Técnicas de Análisis Estructural y de Propiedades}
+Una vez realizadas las simulaciones, se emplea un arsenal de herramientas de análisis para extraer información fisicoquímica detallada:
+\begin{itemize}
+    \item \textbf{Análisis Estructural:} Las Funciones de Distribución Radial (RDFs) se utilizan para analizar las distancias interatómicas y, a partir de ellas, determinar el número de coordinación (NC).
+    \item \textbf{Análisis del Enlace Químico:} Métodos como el Análisis de Población Natural (NPA), la Teoría Cuántica de Átomos en Moléculas (QTAIM), el Índice de Interacción No Covalente (NCI) y el Análisis de Descomposición de Energía (EDA) se usan para caracterizar la naturaleza de las interacciones metal-ligando (covalencia, contactos no covalentes, contribuciones electrostáticas y de polarización).
+    \item \textbf{Cálculo de Propiedades Espectroscópicas:} Se calculan espectros de IR, de absorción y parámetros de EPR (tensores g y constantes de acoplamiento hiperfino) para su comparación directa con datos experimentales. De forma análoga, se pueden simular señales EXAFS y XANES para ayudar en la interpretación de los espectros medidos.
+    \item \textbf{Análisis Termodinámico:} Se emplean ciclos termodinámicos para calcular magnitudes fundamentales como la energía libre de hidratación de los iones.
+\end{itemize}
+En resumen, la caracterización teórica de iones como el \ce{Cu^{2+}} requiere un enfoque multifacético que combina potentes métodos cuánticos, híbridos y dinámicos con sofisticadas herramientas de análisis para abordar la complejidad inherente a su flexible química de coordinación.
+
