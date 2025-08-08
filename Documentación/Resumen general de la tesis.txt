@@ -1,0 +1,6 @@
+En este estudio, se analizaron los sistemas \ce{[Cu(H2O)_{40}]^{2+}} y \ce{[Cu(CH3OH)_{40}]^{2+}}, con el objetivo de hacer un análisis estructural y energético mediante simulaciones de dinámica molecular a 300 K durante 22.5 ps.
+
+Las simulaciones de dinámica molecular de Born-Oppenheimer se llevaron a cabo en el programa ORCA v6.1 \cite{orca6.1}, utilizando condiciones de ensamble NVT y control de temperatura mediante un termostato de Nosé-Hoover en cadena. Las velocidades iniciales se generaron conforme a la distribución de Maxwell-Boltzmann a 300 K.
+
+ORCA integra el movimiento atómico empleando el algoritmo de Verlet de velocidad, y en cada paso temporal resuelve la ecuación de Schrödinger independiente del tiempo mediante el método de campo autoconsistente y teoría de los fucionales de la densidad (SCF-DFT por sus siglas en inglés), utilizando el funcional M06-2X y el nivel de teoría 6-31G$^\ast$. Este procedimiento permite obtener las fuerzas necesarias para la evolución del sistema conforme a las ecuaciones de movimiento de Newton.
+

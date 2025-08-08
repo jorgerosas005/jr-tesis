@@ -1,0 +1,101 @@
+
+\chapter{Teoría de los Funcionales de la Densidad}
+\label{chap:dft}
+
+La resolución de la ecuación de Schrödinger para sistemas polielectrónicos es uno de los desafíos centrales de la química cuántica \cite[68]{szabo1996modern}. Dado que una solución analítica exacta es inviable para sistemas de más de un electrón, se han desarrollado métodos aproximados para obtener soluciones numéricas de alta precisión. Históricamente, estos métodos se han basado en la aproximación de la función de onda. Sin embargo, en las últimas décadas, la Teoría de los Funcionales de la Densidad (DFT) ha emergido como una alternativa robusta y computacionalmente eficiente, posicionándose como una de las herramientas más utilizadas en la química computacional moderna \cite[6]{koch2015chemist}.
+
+Este capítulo establece el marco teórico que fundamenta los cálculos de DFT. Se parte de las aproximaciones fundamentales de la química cuántica, como la aproximación de Born-Oppenheimer, para luego introducir el método de Hartree-Fock y sus limitaciones inherentes. Posteriormente, se presenta la DFT como una solución elegante a estos desafíos, detallando sus pilares teóricos —los teoremas de Hohenberg-Kohn— y su implementación práctica a través del formalismo de Kohn-Sham. Finalmente, se discute la jerarquía de los funcionales de intercambio y correlación, culminando con una descripción del funcional M06-2X, empleado en este trabajo de tesis.
+
+\section{Fundamentos: De la Ecuación de Schrödinger a Hartree-Fock}
+
+\subsection{La Aproximación de Born-Oppenheimer}
+La aproximación de Born-Oppenheimer es un pilar fundamental en la química cuántica que permite desacoplar el movimiento de los electrones y los núcleos \cite[p. 58]{szabo1996modern}. Se fundamenta en la gran diferencia de masa entre los núcleos y los electrones; al ser los núcleos mucho más pesados, se mueven considerablemente más lento. Por lo tanto, es posible considerar que los electrones se mueven en un campo electrostático generado por núcleos en posiciones fijas.
+
+Dentro de esta aproximación, el término de energía cinética de los núcleos en el Hamiltoniano total se desprecia, y la repulsión internuclear se considera una constante para una configuración nuclear dada \cite[p. 58]{szabo1996modern}. Esto simplifica enormemente el problema, permitiendo resolver la ecuación de Schrödinger exclusivamente para los electrones, conocida como la ecuación de Schrödinger electrónica:
+$$ \hat{H}_{\text{elec}} \Psi_{\text{elec}} = E_{\text{elec}} \Psi_{\text{elec}} $$
+donde el Hamiltoniano electrónico, $\hat{H}_{\text{elec}}$, describe el movimiento de $N$ electrones en el campo de $M$ núcleos fijos y se compone de la energía cinética de los electrones, la atracción electrón-núcleo y la repulsión electrón-electrón. Aunque esta aproximación introduce errores pequeños, estos son generalmente insignificantes para la mayoría de los sistemas, excepto para aquellos con núcleos muy ligeros como el hidrógeno, donde pueden ser necesarias correcciones \cite[p. 107]{jensen2017introduction}.
+
+\subsection{La Aproximación de Hartree-Fock}
+La aproximación de Hartree-Fock (HF), también conocida como la aproximación de orbitales moleculares, es un concepto central en la química y a menudo constituye el punto de partida para métodos más sofisticados que incluyen la correlación electrónica \cite[p. 123]{szabo1996modern}. En este modelo, se asume que la función de onda de un sistema de $N$ electrones puede ser aproximada por un único determinante de Slater, construido a partir de un conjunto de $N$ espín-orbitales.
+$$ \Psi_{\text{HF}} = \frac{1}{\sqrt{N!}} \det[\chi_1(x_1) \chi_2(x_2) \dots \chi_N(x_N)] $$
+Este enfoque considera que cada electrón se mueve de forma independiente en un campo promedio generado por los demás electrones, en lugar de interactuar instantáneamente con cada uno de ellos. Las ecuaciones de Hartree-Fock se resuelven de manera iterativa mediante el procedimiento de campo autoconsistente (SCF, por sus siglas en inglés), hasta que los orbitales y el campo promedio que generan ya no cambian significativamente entre iteraciones \cite[p. 69]{szabo1996modern}.
+
+Sin embargo, la aproximación de HF tiene limitaciones importantes. Al promediar las interacciones electrón-electrón, ignora la correlación en el movimiento de los electrones. La diferencia entre la energía exacta no relativista y la energía obtenida en el límite de Hartree-Fock se define como la \textbf{energía de correlación} \cite[p. 246]{szabo1996modern}. Esta omisión causa que el método HF sea cualitativamente incorrecto para describir procesos como la disociación de moléculas en fragmentos de capa abierta (e.g., H$_2$ $\rightarrow$ 2H$\cdot$) \cite[p. 246]{szabo1996modern}.
+
+\subsection{Conjuntos de Bases (Basis Sets)}
+En la práctica computacional, los orbitales moleculares se describen matemáticamente como una combinación lineal de un conjunto de funciones predefinidas, conocidas como \textbf{conjunto de bases} (o *basis set*). Un conjunto de bases es, por tanto, una descripción matemática de los orbitales de un sistema que se utiliza para realizar cálculos teóricos aproximados \cite[131]{ramachandran2008computational}. La calidad de un cálculo depende críticamente de la flexibilidad y completitud de este conjunto de funciones.
+$$ \psi_i = \sum_{\mu=1}^{k} c_{\mu i} \phi_{\mu} $$
+donde $\psi_i$ es el orbital molecular, $\phi_{\mu}$ son las funciones de base y $c_{\mu i}$ son los coeficientes de la combinación lineal. Comúnmente se utilizan funciones de tipo Gaussiano (GTOs) en lugar de las de tipo Slater (STOs) por su eficiencia computacional en el cálculo de integrales. Existen jerarquías de conjuntos de bases, como los desarrollados por Pople (e.g., 6-31G*, 6-311+G**), que ofrecen un compromiso entre precisión y costo computacional al mejorar la descripción de la valencia y añadir funciones de polarización y difusas \cite[195]{szabo1996modern}, \cite[140]{ramachandran2008computational}.
+
+\section{La Revolución de DFT: El Paradigma de la Densidad}
+
+\subsection{La Densidad Electrónica y la Densidad de Pares}
+La Teoría de los Funcionales de la Densidad (DFT) se basa en el uso de la \textbf{densidad electrónica}, $\rho(\mathbf{r})$, como la variable fundamental, en lugar de la compleja función de onda de N-electrones \cite[187]{ramachandran2008computational}. La densidad electrónica es una función de solo tres variables espaciales $(x, y, z)$ y determina la probabilidad de encontrar cualquiera de los $N$ electrones en un elemento de volumen $d\mathbf{r}$ \cite[36]{koch2015chemist}.
+$$ \rho(\mathbf{r}_1) = N \int \dots \int |\Psi(x_1, x_2, \dots, x_N)|^2 \, ds_1 \, dx_2 \dots dx_N $$
+A diferencia de la función de onda, $\rho(\mathbf{r})$ es una cantidad observable experimentalmente, por ejemplo, mediante difracción de rayos X. Su complejidad no aumenta con el número de electrones, lo que la convierte en una variable mucho más manejable \cite[p. 253]{jensen2017introduction}.
+
+Un concepto relacionado es la \textbf{densidad de pares}, $\rho_2(\mathbf{r}_1, \mathbf{r}_2)$, que describe la probabilidad de encontrar simultáneamente un par de electrones en dos elementos de volumen, $d\mathbf{r}_1$ y $d\mathbf{r}_2$. Esta cantidad es de suma importancia, ya que contiene toda la información sobre la correlación electrónica, es decir, cómo el movimiento de un electrón afecta al de otro \cite[188]{ramachandran2008computational}, \cite[38]{koch2015chemist}.
+
+\subsection{Los Teoremas de Hohenberg-Kohn}
+La base formal de la DFT reside en dos teoremas fundamentales demostrados por Pierre Hohenberg y Walter Kohn en 1964.
+
+El \textbf{primer teorema de Hohenberg-Kohn} establece que el potencial externo, $V_{\text{ext}}(\mathbf{r})$, y por lo tanto el Hamiltoniano total, está determinado unívocamente (salvo una constante aditiva) por la densidad electrónica del estado fundamental, $\rho_0(\mathbf{r})$ \cite[50]{koch2015chemist}. Dado que el Hamiltoniano define todas las propiedades del sistema, se concluye que la energía del estado fundamental y todas las demás propiedades son funcionales únicos de la densidad del estado fundamental. En resumen:
+$$ \rho_0(\mathbf{r}) \implies \hat{H} \implies \Psi_0 \implies E_0 $$
+Esto establece una correspondencia uno a uno entre la densidad electrónica de un sistema y su energía \cite[253]{jensen2017introduction}.
+
+El \textbf{segundo teorema de Hohenberg-Kohn} introduce un principio variacional para la densidad. Afirma que el funcional que proporciona la energía del estado fundamental, $E_0$, a partir de la densidad, $E[\rho]$, alcanza su valor mínimo si y solo si la densidad de entrada es la verdadera densidad del estado fundamental, $\rho_0$ \cite[53]{koch2015chemist}. Para cualquier densidad de prueba, $\tilde{\rho}(\mathbf{r})$, que sea físicamente aceptable, la energía calculada será un límite superior a la energía verdadera del estado fundamental:
+$$ E_0 \le E[\tilde{\rho}] $$
+Esto proporciona una ruta para encontrar la densidad y la energía del estado fundamental: minimizar el funcional de la energía con respecto a la densidad \cite[53]{koch2015chemist}. El problema principal, sin embargo, es que la forma exacta del funcional universal de la energía, $F_{HK}[\rho]$, no se conoce.
+
+\section{La Implementación Práctica: El Método de Kohn-Sham}
+En 1965, Walter Kohn y Lu Jeu Sham propusieron un método ingenioso para aplicar los teoremas de Hohenberg-Kohn de manera práctica. La idea central es reemplazar el difícil problema de modelar el sistema real de electrones que interactúan, por un sistema ficticio de electrones \textbf{no interactuantes} que, por definición, produce la misma densidad electrónica que el sistema real \cite[58]{koch2015chemist}.
+
+La energía cinética de este sistema de referencia no interactuante, $T_s[\rho]$, puede calcularse de manera exacta a partir de sus orbitales, los llamados \textbf{orbitales de Kohn-Sham (KS)}. La energía total del sistema real se reescribe como:
+$$ E_{KS}[\rho] = T_s[\rho] + J[\rho] + E_{Ne}[\rho] + E_{XC}[\rho] $$
+donde $J[\rho]$ es la energía de repulsión de Coulomb clásica (interacción de la densidad consigo misma) y $E_{Ne}[\rho]$ es la energía de atracción núcleo-electrón. El término clave es el \textbf{funcional de intercambio y correlación}, $E_{XC}[\rho]$. Este funcional agrupa todas las complejidades cuánticas del problema:
+\begin{enumerate}
+    \item La diferencia entre la energía cinética real y la del sistema no interactuante ($T[\rho] - T_s[\rho]$).
+    \item Todos los efectos no clásicos de la repulsión electrón-electrón, incluyendo el intercambio y la correlación \cite[194]{ramachandran2008computational}.
+\end{enumerate}
+El gran logro del método de Kohn-Sham es que la mayor parte de la energía total se calcula de forma exacta o casi exacta, dejando solo una porción relativamente pequeña, $E_{XC}[\rho]$, que debe ser aproximada \cite[58]{koch2015chemist}.
+
+Los orbitales de KS se obtienen resolviendo un conjunto de ecuaciones de un solo electrón, similares a las de Hartree-Fock, conocidas como las \textbf{ecuaciones de Kohn-Sham}:
+$$ \left( -\frac{1}{2}\nabla^2 + V_{\text{eff}}(\mathbf{r}) \right) \phi_i(\mathbf{r}) = \varepsilon_i \phi_i(\mathbf{r}) $$
+donde el potencial efectivo, $V_{\text{eff}}$, incluye el potencial externo, el potencial de Coulomb clásico y el potencial de intercambio-correlación, $V_{XC}(\mathbf{r}) = \frac{\delta E_{XC}[\rho]}{\delta \rho(\mathbf{r})}$. Estas ecuaciones se resuelven de forma autoconsistente.
+
+\section{La Jerarquía de Funcionales: "La Escalera de Jacob"}
+Dado que la forma exacta de $E_{XC}[\rho]$ es desconocida, el desarrollo de la DFT se ha centrado en la creación de aproximaciones cada vez más precisas. Esta búsqueda ha dado lugar a una jerarquía de funcionales, a menudo denominada "La Escalera de Jacob", donde cada peldaño representa un mayor nivel de sofisticación y, generalmente, de precisión.
+
+\subsection{Aproximación de Densidad Local (LDA)}
+Es el peldaño más simple. La Aproximación de Densidad Local (LDA) asume que la densidad en cualquier punto $\mathbf{r}$ se comporta como un gas de electrones homogéneo (o uniforme) con esa misma densidad $\rho(\mathbf{r})$ \cite[90]{koch2015chemist}.
+$$ E_{XC}^{\text{LDA}}[\rho] = \int \rho(\mathbf{r}) \epsilon_{xc}^{\text{unif}}(\rho(\mathbf{r})) d\mathbf{r} $$
+donde $\epsilon_{xc}^{\text{unif}}$ es la energía de intercambio-correlación por partícula de un gas de electrones uniforme. A pesar de su simplicidad, la LDA proporciona resultados razonables para propiedades estructurales, pero tiende a sobreestimar significativamente las energías de enlace (problema de "overbinding") \cite[91]{koch2015chemist}.
+
+\subsection{Aproximación del Gradiente Generalizado (GGA)}
+Para mejorar la LDA, la Aproximación del Gradiente Generalizado (GGA) no solo considera la densidad en un punto, $\rho(\mathbf{r})$, sino también su gradiente, $\nabla\rho(\mathbf{r})$ \cite[92]{koch2015chemist}. Esto permite que el funcional tenga en cuenta la no homogeneidad de la densidad electrónica en moléculas y sólidos.
+$$ E_{XC}^{\text{GGA}}[\rho] = \int f(\rho(\mathbf{r}), \nabla\rho(\mathbf{r})) d\mathbf{r} $$
+Funcionales populares como B88 para el intercambio (de Becke) y LYP para la correlación (de Lee, Yang y Parr) pertenecen a esta categoría. Los funcionales GGA, como BLYP o PBE, representan una mejora sustancial sobre la LDA para el cálculo de energías de enlace y otras propiedades químicas \cite[p. 9]{MD-2002-01}.
+
+\subsection{Funcionales meta-GGA}
+El siguiente peldaño en la jerarquía introduce una dependencia adicional de la \textbf{densidad de energía cinética} de los orbitales de Kohn-Sham, $\tau(\mathbf{r})$:
+$$ \tau(\mathbf{r}) = \frac{1}{2} \sum_i^{occ} |\nabla\phi_i(\mathbf{r})|^2 $$
+Los funcionales meta-GGA utilizan $\rho$, $\nabla\rho$ y $\tau$ para construir el funcional de intercambio-correlación.
+$$ E_{XC}^{\text{meta-GGA}}[\rho] = \int g(\rho(\mathbf{r}), \nabla\rho(\mathbf{r}), \tau(\mathbf{r})) d\mathbf{r} $$
+Esta información adicional permite a los funcionales meta-GGA satisfacer más restricciones exactas y, en muchos casos, ofrecer una mayor precisión que los GGA, especialmente para barreras de reacción y sistemas metálicos \cite[p. 9]{MD-2002-01}.
+
+\subsection{Funcionales Híbridos}
+Los funcionales híbridos, propuestos por Becke, representan un avance conceptual significativo. Mezclan una porción de la energía de intercambio "exacta" calculada al estilo de Hartree-Fock con la energía de intercambio y correlación proveniente de un funcional GGA o meta-GGA \cite[273]{jensen2017introduction}. La justificación teórica se basa en el "teorema de la conexión adiabática". La forma general es:
+$$ E_{XC}^{\text{híbrido}} = a E_X^{\text{HF}} + (1-a) E_X^{\text{DFT}} + E_C^{\text{DFT}} $$
+donde $a$ es un parámetro que determina el porcentaje de intercambio exacto. El funcional B3LYP es el ejemplo más famoso y combina el intercambio de Becke (B88), la correlación de LYP y un 20\% de intercambio exacto de HF. Los funcionales híbridos suelen ofrecer una precisión muy alta para una amplia gama de propiedades termoquímicas y cinéticas en química del grupo principal \cite[99]{koch2015chemist}.
+
+\section{Justificación del Método: El Funcional M06-2X}
+El funcional M06-2X, desarrollado por el grupo de Truhlar en la Universidad de Minnesota, pertenece a la familia de los funcionales \textbf{híbridos meta-GGA} \cite[1]{DFT-2008-01}. Fue diseñado específicamente para ofrecer un alto rendimiento en aplicaciones de la química del grupo principal.
+
+El nombre "M06-2X" indica que es un miembro de la suite de funcionales M06 y que contiene una "doble" cantidad (2X) de intercambio no local (Hartree-Fock), con un 54\% de intercambio exacto. Esta alta no-localidad lo hace particularmente adecuado para el estudio de:
+\begin{itemize}
+    \item Termoquímica del grupo principal.
+    \item Cinética química (cálculo de barreras de reacción).
+    \item \textbf{Interacciones no covalentes}, como puentes de hidrógeno, interacciones de apilamiento $\pi-\pi$ y fuerzas de dispersión \cite[2]{Me-2025-01}.
+\end{itemize}
+El M06-2X es un funcional altamente parametrizado, optimizado contra extensas bases de datos de propiedades energéticas para maximizar su precisión en estas áreas \cite[3, 24]{DFT-2008-01}. Su buen desempeño demostrado en la descripción de sistemas moleculares con puentes de hidrógeno lo convierte en una elección robusta para el estudio de los sistemas solvatados que se abordan en esta tesis \cite[2]{Me-2025-01}.
+

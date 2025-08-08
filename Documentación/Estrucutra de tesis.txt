@@ -504,3 +504,32 @@ XII. JUSTIFICACIÓN DEL ANÁLISIS DE RESULTADOS
 - How is the Parrinello-Rahman barostat formulated?
 - What fundamental advantage does the Parrinello-Rahman barostat offer by allowing the shape of the simulation box to change, in addition to its volume?
 - How is the extended dynamics formalism extended for pressure control in the Andersen-Hoover barostat?
+
+
+
+----------------------------
+¿Qué es la aproximación de Born-Oppenheimer?
+¿Qué es el principio variacional? 
+¿Qué es la aproximación de Hartree-Fock?
+¿Cuáles son las limitaciones de Hartree-Fock?
+¿Qué son los basis set?
+¿Qué es proceso de campo auto consistente SCF? 
+¿Teoría de Funcionales de la densidad (DFT)?
+¿Qué es la densidad electrónica?
+¿Qué es la densidad de pares?
+¿Qué dice el primer teorema de Hohenberg-Kohn?
+¿Qué dice el segundo teorema de Hohenberg-Kohn?
+¿Cuál es el Método de Kohn-Sham?
+¿Qué es un funcional de la energía?
+¿Qué son los Orbitales de Kohn y Sham?
+¿Qué es el Funcional de Intercambio y Correlación?
+¿Qué es la energía de intercambio?
+¿Qué es la energía de correlación?
+¿Qué es la correlación dinámica?
+¿Qué es la correlación estática?
+¿Qué es Aproximación de la Densidad Local (LDA - Local Density Approximation?
+¿Qué es Aproximación del Gradiente Generalizado (GGA - Generalized Gradient Approximation)?
+¿Qué es meta (GGA - Generalized Gradient Approximation)?
+¿Qué es la densidad de energía cinética?
+¿Qué son los Funcionales Híbridos?
+¿Qué es el funcional MO6-2X?

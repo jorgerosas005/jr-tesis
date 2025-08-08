@@ -1,0 +1,35 @@
+\chapter{DFT}
+
+
+
+Instrucciones
+
+
+Redacta el capítulo en latex y en ESPAÑOL con la información que se proporciona en el archivo .md
+
+Usa los párrafos que consideres más relevantes y que mejor respondan las preguntas (no por el score, por tu criterio)
+
+Manten un lenguaje formal, académico y matemático.
+
+En el contenido del .md hay información de ecuaciones que no es de mucha fidelidad, por lo que deberás extender la leyenda de [Ecuación de .... ] según corresponda y solo si aplica. En caso de que estés seguro de qué ecuación debe ir en el párrafo (por tus conocimientos) añadela. En este capítulo se extensivo con las ecuaciones.
+
+En la redacción, apégate a la información que está en el md y no agregues información de tus conocimientos mas que para hilar las ideas y crear un texto natural.
+
+Para las citas utiliza el formato \cite[# página]{fuente} >> ejemplo: \cite[134,23]{zhou2022molecular} {jensen2017introduction} para dos ref y \cite[134] {jensen2017introduction} para una
+
+Realiza un promedio de las ideas y definiciones de las distintas fuentes para llegar a una definción propia.
+
+Manten una redacción lógica y natural, desde lo general hasta lo particular
+
+Sé tan extenso como sea necesario
+
+---------
+Please refer to the initial document containing my thesis summary. I require an introductory paragraph for the final report on my social service project within the faculty. This introduction should adhere to an academic-administrative format. The half-page introduction should cover the following points: the significance of studying copper solvation in both methanol and water, highlighting that while there is extensive information on solvation in water, data on methanol is lacking. The study aims to compare existing data on water with new findings in methanol, addressing this research gap
+
+
+Please provide the paragraph in .txt format, in Spanish, and in LaTeX code. For citation purposes, you'll find the reference in the .md file as "fuente: 'key'". In introduction.tex, it appears as \cite[page]{key}. In the final LaTeX paragraph, please cite the references as '\cite{key}', omitting the '[page]' from the citations found in introduction.tex.
+
+
+Excellent! That's exactly what I was looking for, thank you so much. Could you assist me in crafting a conclusion paragraph? It should highlight the advantages of implementing this social service for society. Consider including the following points: the importance of studying copper solvation in methanol for societal benefit, the significance of graduates engaging in chemistry research and computational projects within this domain for the technological industry, the value of developing skills in supercomputing, programming, and scientific data analysis to effectively interpret results, and any other relevant points you deem necessary.
+
+

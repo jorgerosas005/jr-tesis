@@ -236,3 +236,21 @@ Desarrolla el baróstato de Berendsen con formalidad matemática
 Desarrolla el baróstato de Parrinello-Rahman con formalidad matemática
 Desarrolla el baróstato de Nosé-Hoover con formalidad matemática
 ----
+
+
+- - - - - - - - D F T - - - - - - -
+
+Aproximación de Bohr Opeheimer
+Principio variacional
+Aproximación de Hartree Fock 
+Basis sets 
+Self Consistent Field
+Densidad de energía
+Teoremas de Hohenberg-Kohn
+Las Ecuaciones de Kohn-Sham
+Funcionales de energía 
+Funcional de intercambio
+Funcional de correlación
+Funcionales meta GGA híbridos 
+basis set 6-31G*
+Funcional MO6 -2X 
