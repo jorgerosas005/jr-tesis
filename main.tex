@@ -9,19 +9,25 @@
 \usepackage{tikz}                                                     % Para crear gráficos
 \usepackage{tocloft}                                                  % Para personalizar la tabla de contenido
 \usepackage{setspace}                                                 % Para el interlineado
-\usepackage[backend=biber,style=numeric]{biblatex}                    % Para la bibliografía
+\usepackage[backend=biber,style=numeric, sorting=none, doi=false, url=false]{biblatex}                    % Para la bibliografía
 \usepackage{csquotes}                                                 % Para citas bibliográficas
 \usepackage{amsmath}                                                  % Para ecuaciones matemáticas
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage[version=4]{mhchem}                                        % Para fórmulas químicas, especificando la versión
 \usepackage{booktabs}                                                 % Para mejores líneas en tablas
+\usepackage{longtable}                                                % Para tablas largas
 \usepackage{siunitx}                                                  % Para el comando \SI y manejo de unidades
+\usepackage{pdflscape} % Paquete para orientación horizontal
+\usepackage{graphicx}  % Necesario para \centering en algunos casos
+\usepackage{rotating} % Paquete para el entorno sidewaystable
+\usepackage{subcaption}
+\usepackage{float}
 \DeclareSIUnit\angstrom{\text {Å}}
 \graphicspath{{./Imágenes/}}                                          % Ruta de las imágenes
 
 % Archivo de bibliografía
-\addbibresource{../referencias.bib}
+\addbibresource{referencias.bib}
 
 \begin{document}
 
@@ -39,6 +45,7 @@
         \include{Capítulos/Introducción}
         \include{Capítulos/Fundamentos}
         \include{Capítulos/DFT}
+        \include{Capítulos/Anexos}
 
     % Bibliografía
     \printbibliography

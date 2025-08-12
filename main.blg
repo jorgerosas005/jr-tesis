@@ -1,5 +1,14 @@
 [0] Config.pm:308> INFO - This is Biber 2.20
-[3] Config.pm:311> INFO - Logfile is 'main.blg'
-[550] biber-MSWIN64:340> INFO - === 
-[913] Utils.pm:410> ERROR - Cannot find 'main.bcf'!
-[914] Biber.pm:136> INFO - ERRORS: 1
+[1] Config.pm:311> INFO - Logfile is 'main.blg'
+[197] biber-MSWIN64:340> INFO - === 
+[259] Biber.pm:420> INFO - Reading 'main.bcf'
+[452] Biber.pm:994> INFO - Found 23 citekeys in bib section 0
+[471] Biber.pm:4463> INFO - Processing section 0
+[495] Biber.pm:4654> INFO - Looking for bibtex file 'referencias.bib' for section 0
+[616] bibtex.pm:1713> INFO - LaTeX decoding ...
+[748] bibtex.pm:1519> INFO - Found BibTeX data source 'referencias.bib'
+[893] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[894] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[894] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'es-ES'
+[928] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[954] bbl.pm:779> INFO - Output to main.bbl
