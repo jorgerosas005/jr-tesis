@@ -86,6 +86,7 @@
       \strng{authornamehash}{17ccabc4105674f4141514be7c14764d}
       \strng{authorfullhash}{719e9a077216147d95fb17c32ae6a88f}
       \strng{authorfullhashraw}{719e9a077216147d95fb17c32ae6a88f}
+      \field{extraname}{1}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -444,342 +445,657 @@
       \field{pages}{193\bibrangedash 199}
       \range{pages}{7}
     \endentry
-    \entry{zhou2022molecular}{book}{}{}
-      \name{author}{2}{}{%
-        {{hash=09d5d500b34786c94a128e6f131300c6}{%
-           family={Zhou},
-           familyi={Z\bibinitperiod},
-           given={Kun},
-           giveni={K\bibinitperiod}}}%
-        {{hash=fa97927921a403cfe822973e31081dca}{%
-           family={Liu},
-           familyi={L\bibinitperiod},
-           given={Bo},
-           giveni={B\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Academic Press}%
-      }
-      \strng{namehash}{be7ed46df81e717cb92b538c92b67c4a}
-      \strng{fullhash}{be7ed46df81e717cb92b538c92b67c4a}
-      \strng{fullhashraw}{be7ed46df81e717cb92b538c92b67c4a}
-      \strng{bibnamehash}{be7ed46df81e717cb92b538c92b67c4a}
-      \strng{authorbibnamehash}{be7ed46df81e717cb92b538c92b67c4a}
-      \strng{authornamehash}{be7ed46df81e717cb92b538c92b67c4a}
-      \strng{authorfullhash}{be7ed46df81e717cb92b538c92b67c4a}
-      \strng{authorfullhashraw}{be7ed46df81e717cb92b538c92b67c4a}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Molecular dynamics simulation: Fundamentals and Applications}
-      \field{year}{2022}
-    \endentry
-    \entry{haile1992molecular}{book}{}{}
-      \name{author}{1}{}{%
-        {{hash=7aa1963698710bd52ea6e56ccaeb8567}{%
-           family={Haile},
-           familyi={H\bibinitperiod},
-           given={James\bibnamedelima M},
-           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {John Wiley \& Sons, Inc.}%
-      }
-      \strng{namehash}{7aa1963698710bd52ea6e56ccaeb8567}
-      \strng{fullhash}{7aa1963698710bd52ea6e56ccaeb8567}
-      \strng{fullhashraw}{7aa1963698710bd52ea6e56ccaeb8567}
-      \strng{bibnamehash}{7aa1963698710bd52ea6e56ccaeb8567}
-      \strng{authorbibnamehash}{7aa1963698710bd52ea6e56ccaeb8567}
-      \strng{authornamehash}{7aa1963698710bd52ea6e56ccaeb8567}
-      \strng{authorfullhash}{7aa1963698710bd52ea6e56ccaeb8567}
-      \strng{authorfullhashraw}{7aa1963698710bd52ea6e56ccaeb8567}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Molecular dynamics simulation: elementary methods}
-      \field{year}{1992}
-    \endentry
-    \entry{frenkel2002understanding}{book}{}{}
-      \name{author}{2}{}{%
-        {{hash=7191fa8dca47b12000be59cbab02be45}{%
-           family={Frenkel},
-           familyi={F\bibinitperiod},
-           given={Daan},
-           giveni={D\bibinitperiod}}}%
-        {{hash=cf1b6974a4d7bd013e533aea5fcda164}{%
-           family={Smit},
+    \entry{Wa-1988-01}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=e6db6532310d5c8307fa17fccfeecbd2}{%
+           family={Salmon},
            familyi={S\bibinitperiod},
-           given={Berend},
-           giveni={B\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Elsevier}%
-      }
-      \strng{namehash}{3bbfb81f9905414b41a8d83b8c6c6626}
-      \strng{fullhash}{3bbfb81f9905414b41a8d83b8c6c6626}
-      \strng{fullhashraw}{3bbfb81f9905414b41a8d83b8c6c6626}
-      \strng{bibnamehash}{3bbfb81f9905414b41a8d83b8c6c6626}
-      \strng{authorbibnamehash}{3bbfb81f9905414b41a8d83b8c6c6626}
-      \strng{authornamehash}{3bbfb81f9905414b41a8d83b8c6c6626}
-      \strng{authorfullhash}{3bbfb81f9905414b41a8d83b8c6c6626}
-      \strng{authorfullhashraw}{3bbfb81f9905414b41a8d83b8c6c6626}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Academic Press, San Diego,}
-      \field{number}{2.2}
-      \field{title}{Understanding molecular simulation}
-      \field{volume}{2}
-      \field{year}{2002}
-      \field{pages}{2\bibrangedash 5}
-      \range{pages}{4}
-    \endentry
-    \entry{MD-2001-01}{article}{}{}
-      \true{moreauthor}
-      \true{morelabelname}
-      \name{author}{1}{}{%
-        {{hash=75fcabf7826bd6870802fa74958a190c}{%
-           family={Meller},
-           familyi={M\bibinitperiod},
-           given={Jarosaw},
+           given={Philip\bibnamedelima S},
+           giveni={P\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=5192ddbd9413bd52bdfdd14311e44ec6}{%
+           family={Neilson},
+           familyi={N\bibinitperiod},
+           given={GW},
+           giveni={G\bibinitperiod}}}%
+        {{hash=23ebfc4501f507e238b53b1fe0ce9a90}{%
+           family={Enderby},
+           familyi={E\bibinitperiod},
+           given={JE},
            giveni={J\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Nature Publishing Group USA}%
-      }
-      \strng{namehash}{8a68a7ec16e23e4352437a2b7f2e4119}
-      \strng{fullhash}{8a68a7ec16e23e4352437a2b7f2e4119}
-      \strng{fullhashraw}{8a68a7ec16e23e4352437a2b7f2e4119}
-      \strng{bibnamehash}{8a68a7ec16e23e4352437a2b7f2e4119}
-      \strng{authorbibnamehash}{8a68a7ec16e23e4352437a2b7f2e4119}
-      \strng{authornamehash}{8a68a7ec16e23e4352437a2b7f2e4119}
-      \strng{authorfullhash}{8a68a7ec16e23e4352437a2b7f2e4119}
-      \strng{authorfullhashraw}{8a68a7ec16e23e4352437a2b7f2e4119}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Encyclopedia of life sciences}
-      \field{title}{Molecular dynamics}
-      \field{volume}{18}
-      \field{year}{2001}
-    \endentry
-    \entry{jensen2017introduction}{book}{}{}
-      \name{author}{1}{}{%
-        {{hash=07272f7b37bc95d4f9e9ac01efc83dcf}{%
-           family={Jensen},
-           familyi={J\bibinitperiod},
-           given={Frank},
-           giveni={F\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {John wiley \& sons}%
-      }
-      \strng{namehash}{07272f7b37bc95d4f9e9ac01efc83dcf}
-      \strng{fullhash}{07272f7b37bc95d4f9e9ac01efc83dcf}
-      \strng{fullhashraw}{07272f7b37bc95d4f9e9ac01efc83dcf}
-      \strng{bibnamehash}{07272f7b37bc95d4f9e9ac01efc83dcf}
-      \strng{authorbibnamehash}{07272f7b37bc95d4f9e9ac01efc83dcf}
-      \strng{authornamehash}{07272f7b37bc95d4f9e9ac01efc83dcf}
-      \strng{authorfullhash}{07272f7b37bc95d4f9e9ac01efc83dcf}
-      \strng{authorfullhashraw}{07272f7b37bc95d4f9e9ac01efc83dcf}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Introduction to computational chemistry}
-      \field{year}{2017}
-    \endentry
-    \entry{MD-2002-01}{article}{}{}
-      \name{author}{1}{}{%
-        {{hash=3dfd41d12a2896dd0ca93271e1d9e9cc}{%
-           family={Tuckerman},
-           familyi={T\bibinitperiod},
-           given={Mark\bibnamedelima E},
-           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {IOP Publishing}%
       }
-      \strng{namehash}{3dfd41d12a2896dd0ca93271e1d9e9cc}
-      \strng{fullhash}{3dfd41d12a2896dd0ca93271e1d9e9cc}
-      \strng{fullhashraw}{3dfd41d12a2896dd0ca93271e1d9e9cc}
-      \strng{bibnamehash}{3dfd41d12a2896dd0ca93271e1d9e9cc}
-      \strng{authorbibnamehash}{3dfd41d12a2896dd0ca93271e1d9e9cc}
-      \strng{authornamehash}{3dfd41d12a2896dd0ca93271e1d9e9cc}
-      \strng{authorfullhash}{3dfd41d12a2896dd0ca93271e1d9e9cc}
-      \strng{authorfullhashraw}{3dfd41d12a2896dd0ca93271e1d9e9cc}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \strng{namehash}{6cff380ebffec1d08c77a2a07edc74a1}
+      \strng{fullhash}{6cff380ebffec1d08c77a2a07edc74a1}
+      \strng{fullhashraw}{6cff380ebffec1d08c77a2a07edc74a1}
+      \strng{bibnamehash}{6cff380ebffec1d08c77a2a07edc74a1}
+      \strng{authorbibnamehash}{6cff380ebffec1d08c77a2a07edc74a1}
+      \strng{authornamehash}{6cff380ebffec1d08c77a2a07edc74a1}
+      \strng{authorfullhash}{6cff380ebffec1d08c77a2a07edc74a1}
+      \strng{authorfullhashraw}{6cff380ebffec1d08c77a2a07edc74a1}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Journal of Physics: Condensed Matter}
-      \field{number}{50}
-      \field{title}{Ab initio molecular dynamics: basic concepts, current trends and novelapplications}
-      \field{volume}{14}
-      \field{year}{2002}
-      \field{pages}{R1297}
-      \range{pages}{-1}
+      \field{journaltitle}{Journal of Physics C: Solid State Physics}
+      \field{number}{8}
+      \field{title}{The structure of Cu2+ aqueous solutions}
+      \field{volume}{21}
+      \field{year}{1988}
+      \field{pages}{1335}
+      \range{pages}{1}
     \endentry
-    \entry{szabo1996modern}{book}{}{}
-      \name{author}{2}{}{%
-        {{hash=dc52ed3315ff506a9d4fe6a0ab079ae2}{%
-           family={Szabo},
-           familyi={S\bibinitperiod},
-           given={Attila},
+    \entry{Wa-2001-01}{article}{}{}
+      \name{author}{10}{}{%
+        {{hash=f4341ab71cd5e1da6ebb75086dcdefd4}{%
+           family={Pasquarello},
+           familyi={P\bibinitperiod},
+           given={Alfredo},
            giveni={A\bibinitperiod}}}%
-        {{hash=977f18e68b981d3d80b363ccb7cbeab7}{%
-           family={Ostlund},
-           familyi={O\bibinitperiod},
-           given={Neil\bibnamedelima S},
-           giveni={N\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Courier Corporation}%
-      }
-      \strng{namehash}{7e4e963df06b39584349eaf439922455}
-      \strng{fullhash}{7e4e963df06b39584349eaf439922455}
-      \strng{fullhashraw}{7e4e963df06b39584349eaf439922455}
-      \strng{bibnamehash}{7e4e963df06b39584349eaf439922455}
-      \strng{authorbibnamehash}{7e4e963df06b39584349eaf439922455}
-      \strng{authornamehash}{7e4e963df06b39584349eaf439922455}
-      \strng{authorfullhash}{7e4e963df06b39584349eaf439922455}
-      \strng{authorfullhashraw}{7e4e963df06b39584349eaf439922455}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Modern quantum chemistry: introduction to advanced electronic structure theory}
-      \field{year}{1996}
-    \endentry
-    \entry{allen2012computer}{book}{}{}
-      \name{author}{2}{}{%
-        {{hash=e73ce85b6ae336bbe26cae16a6933a0a}{%
-           family={Allen},
-           familyi={A\bibinitperiod},
-           given={Michael\bibnamedelima P},
-           giveni={M\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
-        {{hash=ab3a1db3dbb265efade39f6ef37fa88c}{%
-           family={Tildesley},
-           familyi={T\bibinitperiod},
-           given={Dominic\bibnamedelima J},
-           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Springer Science \& Business Media}%
-      }
-      \strng{namehash}{5b8830545e1be1d1b7d074817a858cd7}
-      \strng{fullhash}{5b8830545e1be1d1b7d074817a858cd7}
-      \strng{fullhashraw}{5b8830545e1be1d1b7d074817a858cd7}
-      \strng{bibnamehash}{5b8830545e1be1d1b7d074817a858cd7}
-      \strng{authorbibnamehash}{5b8830545e1be1d1b7d074817a858cd7}
-      \strng{authornamehash}{5b8830545e1be1d1b7d074817a858cd7}
-      \strng{authorfullhash}{5b8830545e1be1d1b7d074817a858cd7}
-      \strng{authorfullhashraw}{5b8830545e1be1d1b7d074817a858cd7}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Computer simulation in chemical physics}
-      \field{volume}{397}
-      \field{year}{2012}
-    \endentry
-    \entry{canuto2010solvation}{book}{}{}
-      \name{author}{1}{}{%
-        {{hash=727fcaa62aed69b9b5aef256e83f6942}{%
-           family={Canuto},
+        {{hash=9039ffd92aeaa3cd1883c25587536f45}{%
+           family={Petri},
+           familyi={P\bibinitperiod},
+           given={Ingrid},
+           giveni={I\bibinitperiod}}}%
+        {{hash=e6db6532310d5c8307fa17fccfeecbd2}{%
+           family={Salmon},
+           familyi={S\bibinitperiod},
+           given={Philip\bibnamedelima S},
+           giveni={P\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=1d89cef27a01afa0c0c48e39eaafd33c}{%
+           family={Parisel},
+           familyi={P\bibinitperiod},
+           given={Olivier},
+           giveni={O\bibinitperiod}}}%
+        {{hash=5e1c0fa125a4b92f955ca3a5852af38f}{%
+           family={Car},
            familyi={C\bibinitperiod},
-           given={Sylvio},
-           giveni={S\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Springer Science \& Business Media}%
-      }
-      \strng{namehash}{727fcaa62aed69b9b5aef256e83f6942}
-      \strng{fullhash}{727fcaa62aed69b9b5aef256e83f6942}
-      \strng{fullhashraw}{727fcaa62aed69b9b5aef256e83f6942}
-      \strng{bibnamehash}{727fcaa62aed69b9b5aef256e83f6942}
-      \strng{authorbibnamehash}{727fcaa62aed69b9b5aef256e83f6942}
-      \strng{authornamehash}{727fcaa62aed69b9b5aef256e83f6942}
-      \strng{authorfullhash}{727fcaa62aed69b9b5aef256e83f6942}
-      \strng{authorfullhashraw}{727fcaa62aed69b9b5aef256e83f6942}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Solvation effects on molecules and biomolecules: computational methods and applications}
-      \field{volume}{6}
-      \field{year}{2010}
-    \endentry
-    \entry{koch2015chemist}{book}{}{}
-      \name{author}{2}{}{%
-        {{hash=c0157242ec3d36ff6ce05adac59c9278}{%
-           family={Koch},
-           familyi={K\bibinitperiod},
-           given={Wolfram},
-           giveni={W\bibinitperiod}}}%
-        {{hash=5d88d6b19f2d6c5dc133262168abab8e}{%
-           family={Holthausen},
+           given={Roberto},
+           giveni={R\bibinitperiod}}}%
+        {{hash=d7c9ba27892c7c17f2e5ce545fb394d0}{%
+           family={Tóth},
+           familyi={T\bibinitperiod},
+           given={Éva},
+           giveni={É\bibinitperiod}}}%
+        {{hash=c309d76ae09feb5f943492721be50d25}{%
+           family={Powell},
+           familyi={P\bibinitperiod},
+           given={D\bibnamedelima Hugh},
+           giveni={D\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=09c31fc2cd6db93b606d6daf851c2abc}{%
+           family={Fischer},
+           familyi={F\bibinitperiod},
+           given={Henry\bibnamedelima E},
+           giveni={H\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=743a0decd0a4bf993340d5cc98b4f3cc}{%
+           family={Helm},
            familyi={H\bibinitperiod},
-           given={Max\bibnamedelima C},
-           giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+           given={Lothar},
+           giveni={L\bibinitperiod}}}%
+        {{hash=65b141f917352d3e34cfbef65361abcd}{%
+           family={Merbach},
+           familyi={M\bibinitperiod},
+           given={André\bibnamedelima E},
+           giveni={A\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
-        {John Wiley \& Sons}%
+        {American Association for the Advancement of Science}%
       }
-      \strng{namehash}{5082f7a19ae2f8eda57ad46eda359079}
-      \strng{fullhash}{5082f7a19ae2f8eda57ad46eda359079}
-      \strng{fullhashraw}{5082f7a19ae2f8eda57ad46eda359079}
-      \strng{bibnamehash}{5082f7a19ae2f8eda57ad46eda359079}
-      \strng{authorbibnamehash}{5082f7a19ae2f8eda57ad46eda359079}
-      \strng{authornamehash}{5082f7a19ae2f8eda57ad46eda359079}
-      \strng{authorfullhash}{5082f7a19ae2f8eda57ad46eda359079}
-      \strng{authorfullhashraw}{5082f7a19ae2f8eda57ad46eda359079}
+      \strng{namehash}{32f5bd3b4ca67fbb0bd75484704a2c22}
+      \strng{fullhash}{9f5a886f1728e8511301aa47192f4faf}
+      \strng{fullhashraw}{9f5a886f1728e8511301aa47192f4faf}
+      \strng{bibnamehash}{32f5bd3b4ca67fbb0bd75484704a2c22}
+      \strng{authorbibnamehash}{32f5bd3b4ca67fbb0bd75484704a2c22}
+      \strng{authornamehash}{32f5bd3b4ca67fbb0bd75484704a2c22}
+      \strng{authorfullhash}{9f5a886f1728e8511301aa47192f4faf}
+      \strng{authorfullhashraw}{9f5a886f1728e8511301aa47192f4faf}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{A chemist's guide to density functional theory}
-      \field{year}{2015}
+      \field{journaltitle}{Science}
+      \field{number}{5505}
+      \field{title}{First solvation shell of the Cu (II) aqua ion: evidence for fivefold coordination}
+      \field{volume}{291}
+      \field{year}{2001}
+      \field{pages}{856\bibrangedash 859}
+      \range{pages}{4}
     \endentry
-    \entry{ramachandran2008computational}{book}{}{}
-      \name{author}{3}{}{%
-        {{hash=e650b95e9119c33fc9699827da4c51dc}{%
-           family={Ramachandran},
-           familyi={R\bibinitperiod},
-           given={KI},
-           giveni={K\bibinitperiod}}}%
-        {{hash=ec9a2d79c8b2abbd790c54b6977a29fd}{%
-           family={Gopakumar},
-           familyi={G\bibinitperiod},
-           given={Deepa},
-           giveni={D\bibinitperiod}}}%
-        {{hash=697d681d1dd891ca47c0b6c51e62eaf1}{%
-           family={Namboori},
-           familyi={N\bibinitperiod},
-           given={Krishnan},
-           giveni={K\bibinitperiod}}}%
+    \entry{Wa-2002-01}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=92c9e8130feef06ea31475471f01e26d}{%
+           family={Benfatto},
+           familyi={B\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod}}}%
+        {{hash=76ddb26abb033269ee6116fe22615441}{%
+           family={D’Angelo},
+           familyi={D\bibinitperiod},
+           given={Paola},
+           giveni={P\bibinitperiod}}}%
+        {{hash=ebfbf28959d735951d623313032b86f1}{%
+           family={Della\bibnamedelima Longa},
+           familyi={D\bibinitperiod\bibinitdelim L\bibinitperiod},
+           given={S},
+           giveni={S\bibinitperiod}}}%
+        {{hash=30c9fd407c430d2e2a93c9fa8a9a5b14}{%
+           family={Pavel},
+           familyi={P\bibinitperiod},
+           given={Nicolae\bibnamedelima Viorel},
+           giveni={N\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {APS}%
+      }
+      \strng{namehash}{c8bd3e3aaa8a56174425eac0926af0ab}
+      \strng{fullhash}{cc42674aa953c27b783f6d8be1fdddd2}
+      \strng{fullhashraw}{cc42674aa953c27b783f6d8be1fdddd2}
+      \strng{bibnamehash}{c8bd3e3aaa8a56174425eac0926af0ab}
+      \strng{authorbibnamehash}{c8bd3e3aaa8a56174425eac0926af0ab}
+      \strng{authornamehash}{c8bd3e3aaa8a56174425eac0926af0ab}
+      \strng{authorfullhash}{cc42674aa953c27b783f6d8be1fdddd2}
+      \strng{authorfullhashraw}{cc42674aa953c27b783f6d8be1fdddd2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Physical Review B}
+      \field{number}{17}
+      \field{title}{Evidence of distorted fivefold coordination of the Cu 2+ aqua ion from an x-ray-absorption spectroscopy quantitative analysis}
+      \field{volume}{65}
+      \field{year}{2002}
+      \field{pages}{174205}
+      \range{pages}{1}
+    \endentry
+    \entry{Wa-2008-01}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=df8f147a0551c92f18faac2bf2781047}{%
+           family={Bryantsev},
+           familyi={B\bibinitperiod},
+           given={Vyacheslav\bibnamedelima S},
+           giveni={V\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=aff3865367d1a4d82c6e626605dc4c56}{%
+           family={Diallo},
+           familyi={D\bibinitperiod},
+           given={Mamadou\bibnamedelima S},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=e55129516d9aff303a9ee6dadc8d5483}{%
+           family={Van\bibnamedelima Duin},
+           familyi={V\bibinitperiod\bibinitdelim D\bibinitperiod},
+           given={Adri\bibnamedelima CT},
+           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=a9e28a47770ec65de97f2a80203d5e0b}{%
+           family={Goddard\bibnamedelima III},
+           familyi={G\bibinitperiod\bibinitdelim I\bibinitperiod},
+           given={William\bibnamedelima A},
+           giveni={W\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {ACS Publications}%
+      }
+      \strng{namehash}{02a95e7016acce3bf2bf5d50d4f2c2de}
+      \strng{fullhash}{24b29eea1112c75e0fc534d686e1ec40}
+      \strng{fullhashraw}{24b29eea1112c75e0fc534d686e1ec40}
+      \strng{bibnamehash}{02a95e7016acce3bf2bf5d50d4f2c2de}
+      \strng{authorbibnamehash}{02a95e7016acce3bf2bf5d50d4f2c2de}
+      \strng{authornamehash}{02a95e7016acce3bf2bf5d50d4f2c2de}
+      \strng{authorfullhash}{24b29eea1112c75e0fc534d686e1ec40}
+      \strng{authorfullhashraw}{24b29eea1112c75e0fc534d686e1ec40}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Journal of Physical Chemistry A}
+      \field{number}{38}
+      \field{title}{Hydration of copper (II): new insights from density functional theory and the COSMO solvation model}
+      \field{volume}{112}
+      \field{year}{2008}
+      \field{pages}{9104\bibrangedash 9112}
+      \range{pages}{9}
+    \endentry
+    \entry{Wa-2009-02}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=2f8e7bd38061ca698b91c3ad08f2ac60}{%
+           family={Smirnov},
+           familyi={S\bibinitperiod},
+           given={PR},
+           giveni={P\bibinitperiod}}}%
+        {{hash=1c5343d6fcc4348665b8bb2a23b22d88}{%
+           family={Trostin},
+           familyi={T\bibinitperiod},
+           given={VN},
+           giveni={V\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {Springer}%
       }
-      \strng{namehash}{f9176b01ac84238f2c6624a290e7ee61}
-      \strng{fullhash}{f9176b01ac84238f2c6624a290e7ee61}
-      \strng{fullhashraw}{f9176b01ac84238f2c6624a290e7ee61}
-      \strng{bibnamehash}{f9176b01ac84238f2c6624a290e7ee61}
-      \strng{authorbibnamehash}{f9176b01ac84238f2c6624a290e7ee61}
-      \strng{authornamehash}{f9176b01ac84238f2c6624a290e7ee61}
-      \strng{authorfullhash}{f9176b01ac84238f2c6624a290e7ee61}
-      \strng{authorfullhashraw}{f9176b01ac84238f2c6624a290e7ee61}
+      \strng{namehash}{b16b4b5e17361d3ff640bfeaaa1f4889}
+      \strng{fullhash}{b16b4b5e17361d3ff640bfeaaa1f4889}
+      \strng{fullhashraw}{b16b4b5e17361d3ff640bfeaaa1f4889}
+      \strng{bibnamehash}{b16b4b5e17361d3ff640bfeaaa1f4889}
+      \strng{authorbibnamehash}{b16b4b5e17361d3ff640bfeaaa1f4889}
+      \strng{authornamehash}{b16b4b5e17361d3ff640bfeaaa1f4889}
+      \strng{authorfullhash}{b16b4b5e17361d3ff640bfeaaa1f4889}
+      \strng{authorfullhashraw}{b16b4b5e17361d3ff640bfeaaa1f4889}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Computational chemistry and molecular modeling: principles and applications}
-      \field{year}{2008}
+      \field{journaltitle}{Russian Journal of General Chemistry}
+      \field{title}{Structural parameters of Cu 2+ aqua complexes in aqueous solutions of its salts}
+      \field{volume}{79}
+      \field{year}{2009}
+      \field{pages}{1591\bibrangedash 1599}
+      \range{pages}{9}
+    \endentry
+    \entry{Wa-2007-03}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=c783936ca8d6f0458405a5aab2517439}{%
+           family={Sukrat},
+           familyi={S\bibinitperiod},
+           given={Kanjarat},
+           giveni={K\bibinitperiod}}}%
+        {{hash=7873829ff1f017fb0c7ae5584700e428}{%
+           family={Parasuk},
+           familyi={P\bibinitperiod},
+           given={Vudhichai},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{24b2556b951a0d44ac48523dc7cf3fbb}
+      \strng{fullhash}{24b2556b951a0d44ac48523dc7cf3fbb}
+      \strng{fullhashraw}{24b2556b951a0d44ac48523dc7cf3fbb}
+      \strng{bibnamehash}{24b2556b951a0d44ac48523dc7cf3fbb}
+      \strng{authorbibnamehash}{24b2556b951a0d44ac48523dc7cf3fbb}
+      \strng{authornamehash}{24b2556b951a0d44ac48523dc7cf3fbb}
+      \strng{authorfullhash}{24b2556b951a0d44ac48523dc7cf3fbb}
+      \strng{authorfullhashraw}{24b2556b951a0d44ac48523dc7cf3fbb}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Chemical Physics Letters}
+      \field{number}{1-3}
+      \field{title}{Importance of hydrogen bonds to stabilities of copper--water complexes}
+      \field{volume}{447}
+      \field{year}{2007}
+      \field{pages}{58\bibrangedash 64}
+      \range{pages}{7}
+    \endentry
+    \entry{Wa-2024-01}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=109d9ffb8dbfb1c190cef5dcda0ba425}{%
+           family={Da-yang},
+           familyi={D\bibinithyphendelim y\bibinitperiod},
+           given={Tabouli\bibnamedelima Eric},
+           giveni={T\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=e1504bc92d031056d8ae1414625e49bb}{%
+           family={Fifen},
+           familyi={F\bibinitperiod},
+           given={Jean\bibnamedelima Jules},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=68ca81858aa37c31a4dd92f9f183c848}{%
+           family={Nsangou},
+           familyi={N\bibinitperiod},
+           given={Mama},
+           giveni={M\bibinitperiod}}}%
+        {{hash=0409e8b2b9edd67ab3128aec778b13a2}{%
+           family={Conradie},
+           familyi={C\bibinitperiod},
+           given={Jeanet},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{17ccabc4105674f4141514be7c14764d}
+      \strng{fullhash}{0cecf9192c747c1aef64e39225ef486e}
+      \strng{fullhashraw}{0cecf9192c747c1aef64e39225ef486e}
+      \strng{bibnamehash}{17ccabc4105674f4141514be7c14764d}
+      \strng{authorbibnamehash}{17ccabc4105674f4141514be7c14764d}
+      \strng{authornamehash}{17ccabc4105674f4141514be7c14764d}
+      \strng{authorfullhash}{0cecf9192c747c1aef64e39225ef486e}
+      \strng{authorfullhashraw}{0cecf9192c747c1aef64e39225ef486e}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Molecular Liquids}
+      \field{title}{Solvent effects on the structures of the hydrated copper dication clusters}
+      \field{volume}{411}
+      \field{year}{2024}
+      \field{pages}{125693}
+      \range{pages}{1}
+    \endentry
+    \entry{Me-1980-01}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=16ce24b63541455c608f98f895c78a7d}{%
+           family={Ichikawa},
+           familyi={I\bibinitperiod},
+           given={Tsuneki},
+           giveni={T\bibinitperiod}}}%
+        {{hash=2ffc252bc147017653818192ba5ba4d4}{%
+           family={Kevan},
+           familyi={K\bibinitperiod},
+           given={Larry},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {ACS Publications}%
+      }
+      \strng{namehash}{5f05716095ab6473052c427b155a1708}
+      \strng{fullhash}{5f05716095ab6473052c427b155a1708}
+      \strng{fullhashraw}{5f05716095ab6473052c427b155a1708}
+      \strng{bibnamehash}{5f05716095ab6473052c427b155a1708}
+      \strng{authorbibnamehash}{5f05716095ab6473052c427b155a1708}
+      \strng{authornamehash}{5f05716095ab6473052c427b155a1708}
+      \strng{authorfullhash}{5f05716095ab6473052c427b155a1708}
+      \strng{authorfullhashraw}{5f05716095ab6473052c427b155a1708}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Journal of Physical Chemistry}
+      \field{number}{15}
+      \field{title}{Solvation-shell geometry of copper ion in methanol and in acetone and a molecular picture of preferential solvation of copper ion by methanol in methanol-acetone mixed solvent determined by electron spin-echo modulation analysis}
+      \field{volume}{84}
+      \field{year}{1980}
+      \field{pages}{1955\bibrangedash 1958}
+      \range{pages}{4}
+    \endentry
+    \entry{Me-1986-01}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=743a0decd0a4bf993340d5cc98b4f3cc}{%
+           family={Helm},
+           familyi={H\bibinitperiod},
+           given={Lothar},
+           giveni={L\bibinitperiod}}}%
+        {{hash=83cb651ed021547b1d5c548d15292ad1}{%
+           family={Lincoln},
+           familyi={L\bibinitperiod},
+           given={Stephen\bibnamedelima F},
+           giveni={S\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=e760a12de47838c0ba935d62b9b2ba17}{%
+           family={Merbach},
+           familyi={M\bibinitperiod},
+           given={Andre\bibnamedelima E},
+           giveni={A\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=0f1468c902e93aedde97b2694529d2b0}{%
+           family={Zbinden},
+           familyi={Z\bibinitperiod},
+           given={Donald},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {ACS Publications}%
+      }
+      \strng{namehash}{0fe30b1fe0bd204c91a87b9eee525f68}
+      \strng{fullhash}{3688bcc6f52696b838f3547b08048bb4}
+      \strng{fullhashraw}{3688bcc6f52696b838f3547b08048bb4}
+      \strng{bibnamehash}{0fe30b1fe0bd204c91a87b9eee525f68}
+      \strng{authorbibnamehash}{0fe30b1fe0bd204c91a87b9eee525f68}
+      \strng{authornamehash}{0fe30b1fe0bd204c91a87b9eee525f68}
+      \strng{authorfullhash}{3688bcc6f52696b838f3547b08048bb4}
+      \strng{authorfullhashraw}{3688bcc6f52696b838f3547b08048bb4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Inorganic Chemistry}
+      \field{number}{15}
+      \field{title}{Solvent exchange in hexakis (methanol) copper (II) ion. Oxygen-17 NMR variable-temperature, pressure, and frequency study}
+      \field{volume}{25}
+      \field{year}{1986}
+      \field{pages}{2550\bibrangedash 2552}
+      \range{pages}{3}
+    \endentry
+    \entry{Me-2012-01}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=ad1769bb25b7086f26bb257ccd34957b}{%
+           family={Zitolo},
+           familyi={Z\bibinitperiod},
+           given={Andrea},
+           giveni={A\bibinitperiod}}}%
+        {{hash=867a0d0b2e9ee957f74cf4a71f15db21}{%
+           family={Chillemi},
+           familyi={C\bibinitperiod},
+           given={Giovanni},
+           giveni={G\bibinitperiod}}}%
+        {{hash=76ddb26abb033269ee6116fe22615441}{%
+           family={D’Angelo},
+           familyi={D\bibinitperiod},
+           given={Paola},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {ACS Publications}%
+      }
+      \strng{namehash}{7fbf434c4cfef7bc0394535214ffef38}
+      \strng{fullhash}{7fbf434c4cfef7bc0394535214ffef38}
+      \strng{fullhashraw}{7fbf434c4cfef7bc0394535214ffef38}
+      \strng{bibnamehash}{7fbf434c4cfef7bc0394535214ffef38}
+      \strng{authorbibnamehash}{7fbf434c4cfef7bc0394535214ffef38}
+      \strng{authornamehash}{7fbf434c4cfef7bc0394535214ffef38}
+      \strng{authorfullhash}{7fbf434c4cfef7bc0394535214ffef38}
+      \strng{authorfullhashraw}{7fbf434c4cfef7bc0394535214ffef38}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Inorganic Chemistry}
+      \field{number}{16}
+      \field{title}{X-ray absorption study of the solvation structure of Cu2+ in methanol and dimethyl sulfoxide}
+      \field{volume}{51}
+      \field{year}{2012}
+      \field{pages}{8827\bibrangedash 8833}
+      \range{pages}{7}
+    \endentry
+    \entry{Wa-2020-01}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=a4653aba0541ed0861fbc6bbec14623f}{%
+           family={Persson},
+           familyi={P\bibinitperiod},
+           given={Ingmar},
+           giveni={I\bibinitperiod}}}%
+        {{hash=f37a32d40e533dee8a23d5eb2553649e}{%
+           family={Lundberg},
+           familyi={L\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=fd1de849f2b024fd8aaccc72b890035e}{%
+           family={Bajnóczi},
+           familyi={B\bibinitperiod},
+           given={Éva\bibnamedelima G},
+           giveni={É\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=1276bbbd9bb16d90039a83ac321bb75a}{%
+           family={Klementiev},
+           familyi={K\bibinitperiod},
+           given={Konstantin},
+           giveni={K\bibinitperiod}}}%
+        {{hash=d496f4b2f0999974b52c3644b5efd353}{%
+           family={Just},
+           familyi={J\bibinitperiod},
+           given={Justus},
+           giveni={J\bibinitperiod}}}%
+        {{hash=25556164d667b14b83ddc6599c9287f9}{%
+           family={Sigfridsson\bibnamedelima Clauss},
+           familyi={S\bibinitperiod\bibinitdelim C\bibinitperiod},
+           given={Kajsa\bibnamedelima GV},
+           giveni={K\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {ACS Publications}%
+      }
+      \strng{namehash}{761ec65240925e63dfa4a219dc48ea34}
+      \strng{fullhash}{52d91c35e0abc99c2c3225e40bf31f3f}
+      \strng{fullhashraw}{52d91c35e0abc99c2c3225e40bf31f3f}
+      \strng{bibnamehash}{761ec65240925e63dfa4a219dc48ea34}
+      \strng{authorbibnamehash}{761ec65240925e63dfa4a219dc48ea34}
+      \strng{authornamehash}{761ec65240925e63dfa4a219dc48ea34}
+      \strng{authorfullhash}{52d91c35e0abc99c2c3225e40bf31f3f}
+      \strng{authorfullhashraw}{52d91c35e0abc99c2c3225e40bf31f3f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Inorganic Chemistry}
+      \field{number}{14}
+      \field{title}{EXAFS study on the coordination chemistry of the solvated copper (II) ion in a series of oxygen donor solvents}
+      \field{volume}{59}
+      \field{year}{2020}
+      \field{pages}{9538\bibrangedash 9550}
+      \range{pages}{13}
+    \endentry
+    \entry{Me-2022-01}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=109d9ffb8dbfb1c190cef5dcda0ba425}{%
+           family={Da-yang},
+           familyi={D\bibinithyphendelim y\bibinitperiod},
+           given={Tabouli\bibnamedelima Eric},
+           giveni={T\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=e1504bc92d031056d8ae1414625e49bb}{%
+           family={Fifen},
+           familyi={F\bibinitperiod},
+           given={Jean\bibnamedelima Jules},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=0409e8b2b9edd67ab3128aec778b13a2}{%
+           family={Conradie},
+           familyi={C\bibinitperiod},
+           given={Jeanet},
+           giveni={J\bibinitperiod}}}%
+        {{hash=4fbdf3a45ce4530e7002618ca975303c}{%
+           family={Conradie},
+           familyi={C\bibinitperiod},
+           given={Marrigje\bibnamedelima M.},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{17ccabc4105674f4141514be7c14764d}
+      \strng{fullhash}{e64a525699079e268296fd35012d1717}
+      \strng{fullhashraw}{e64a525699079e268296fd35012d1717}
+      \strng{bibnamehash}{17ccabc4105674f4141514be7c14764d}
+      \strng{authorbibnamehash}{17ccabc4105674f4141514be7c14764d}
+      \strng{authornamehash}{17ccabc4105674f4141514be7c14764d}
+      \strng{authorfullhash}{e64a525699079e268296fd35012d1717}
+      \strng{authorfullhashraw}{e64a525699079e268296fd35012d1717}
+      \field{extraname}{3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Copper plays an important role in many physiological biochemical and biological processes. This work sets out to investigate structures, relative stabilities, temperature-dependence of the relative population, saturated binding and clustering energies of the solvated Cu2+ ion in methanol, using ab initio MP2 method associated with the 6-31++G** basis set. The isomers of the Cu2+(MeOH)n=1-8 clusters are reported here for the first time in the whole literature, and relative stability obeys a well-defined stability rule. It is worth mentioning that the solvated Cu2+ ion in methanol is tetra- or hexa-coordinated, depending on the temperature. The theoretical approach used in this work, combined with the structures pointed out and their corresponding relative populations leads to equatorial distances dCu2+-O in methanol, in excellent agreement with experimental results. As far as temperature dependence isomers distribution are concerned, compact and high coordinated structures dominate the population of the studied clusters at all temperatures. We also predicted binding and clustering energies as a function of the cluster size, up to n=∞. The convergence, called the saturation, happens around n=18 for clustering energies of Cu2+ ion in methanol. For the case as ammonia and water as solvent, this saturation is reached at n=20 and n=25, respectively. Thus, accurate solvation energies of Cu2+ ion in those media using cluster continuum model could be derived clustering at least up to n=18, 20 and 25 respectively for methanol, ammonia and water as solvent. The corresponding binding electronic energy, binding enthalpy and binding free energy per methanol molecule are respectively, −158.9, −166.2 and −134.6 kJ mol−1. As far as clustering energies per solvent molecule at the saturation are concerned, we reported −7.0, −6.5 and −2.9 kJ mol−1 for respectively the clustering electronic energy, clustering enthalpy and clustering free energy per methanol molecule of the solvated Cu2+ ion.}
+      \field{issn}{0167-7322}
+      \field{journaltitle}{Journal of Molecular Liquids}
+      \field{title}{Structures, temperature effect, binding and clustering energies of Cu2+(MeOH)n=1-8 clusters and extrapolations}
+      \field{volume}{360}
+      \field{year}{2022}
+      \field{pages}{119439}
+      \range{pages}{1}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.molliq.2022.119439
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0167732222009771
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0167732222009771
+      \endverb
+      \keyw{MP2,Temperature dependence,ion,Coordination number,Saturated binding energy,Saturated clustering energy}
+    \endentry
+    \entry{Me-2023-01}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=109d9ffb8dbfb1c190cef5dcda0ba425}{%
+           family={Da-yang},
+           familyi={D\bibinithyphendelim y\bibinitperiod},
+           given={Tabouli\bibnamedelima Eric},
+           giveni={T\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=04c983fd28f332d376b3c6c6aa54a4a4}{%
+           family={Alhameedi},
+           familyi={A\bibinitperiod},
+           given={Khidhir},
+           giveni={K\bibinitperiod}}}%
+        {{hash=e1504bc92d031056d8ae1414625e49bb}{%
+           family={Fifen},
+           familyi={F\bibinitperiod},
+           given={Jean\bibnamedelima Jules},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=68ca81858aa37c31a4dd92f9f183c848}{%
+           family={Nsangou},
+           familyi={N\bibinitperiod},
+           given={Mama},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{17ccabc4105674f4141514be7c14764d}
+      \strng{fullhash}{4114af91e81871df001eece4c218b1d4}
+      \strng{fullhashraw}{4114af91e81871df001eece4c218b1d4}
+      \strng{bibnamehash}{17ccabc4105674f4141514be7c14764d}
+      \strng{authorbibnamehash}{17ccabc4105674f4141514be7c14764d}
+      \strng{authornamehash}{17ccabc4105674f4141514be7c14764d}
+      \strng{authorfullhash}{4114af91e81871df001eece4c218b1d4}
+      \strng{authorfullhashraw}{4114af91e81871df001eece4c218b1d4}
+      \field{extraname}{4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Polyhedron}
+      \field{title}{Structures, binding and clustering energies of Cu2+ (MeOH) n= 1-8 clusters and temperature effects: A DFT study}
+      \field{volume}{234}
+      \field{year}{2023}
+      \field{pages}{116343}
+      \range{pages}{1}
+    \endentry
+    \entry{Me-2023-02}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=109d9ffb8dbfb1c190cef5dcda0ba425}{%
+           family={Da-yang},
+           familyi={D\bibinithyphendelim y\bibinitperiod},
+           given={Tabouli\bibnamedelima Eric},
+           giveni={T\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=e1504bc92d031056d8ae1414625e49bb}{%
+           family={Fifen},
+           familyi={F\bibinitperiod},
+           given={Jean\bibnamedelima Jules},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=68ca81858aa37c31a4dd92f9f183c848}{%
+           family={Nsangou},
+           familyi={N\bibinitperiod},
+           given={Mama},
+           giveni={M\bibinitperiod}}}%
+        {{hash=0409e8b2b9edd67ab3128aec778b13a2}{%
+           family={Conradie},
+           familyi={C\bibinitperiod},
+           given={Jeanet},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{17ccabc4105674f4141514be7c14764d}
+      \strng{fullhash}{0cecf9192c747c1aef64e39225ef486e}
+      \strng{fullhashraw}{0cecf9192c747c1aef64e39225ef486e}
+      \strng{bibnamehash}{17ccabc4105674f4141514be7c14764d}
+      \strng{authorbibnamehash}{17ccabc4105674f4141514be7c14764d}
+      \strng{authornamehash}{17ccabc4105674f4141514be7c14764d}
+      \strng{authorfullhash}{0cecf9192c747c1aef64e39225ef486e}
+      \strng{authorfullhashraw}{0cecf9192c747c1aef64e39225ef486e}
+      \field{extraname}{5}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Results in Chemistry}
+      \field{title}{Potential energy surfaces of the Cu2+ (MeOH) n= 1-8 clusters in solution phase}
+      \field{volume}{6}
+      \field{year}{2023}
+      \field{pages}{101168}
+      \range{pages}{1}
     \endentry
     \entry{DFT-2008-01}{article}{}{}
       \name{author}{2}{}{%
@@ -817,45 +1133,275 @@
       \field{pages}{215\bibrangedash 241}
       \range{pages}{27}
     \endentry
-    \entry{Me-2025-01}{article}{}{}
-      \name{author}{3}{}{%
-        {{hash=109d9ffb8dbfb1c190cef5dcda0ba425}{%
-           family={Da-yang},
-           familyi={D\bibinithyphendelim y\bibinitperiod},
-           given={Tabouli\bibnamedelima Eric},
-           giveni={T\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
-        {{hash=e1504bc92d031056d8ae1414625e49bb}{%
-           family={Fifen},
-           familyi={F\bibinitperiod},
-           given={Jean\bibnamedelima Jules},
-           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-        {{hash=0409e8b2b9edd67ab3128aec778b13a2}{%
-           family={Conradie},
-           familyi={C\bibinitperiod},
-           given={Jeanet},
-           giveni={J\bibinitperiod}}}%
+    \entry{zhou2022molecular}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=09d5d500b34786c94a128e6f131300c6}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Kun},
+           giveni={K\bibinitperiod}}}%
+        {{hash=fa97927921a403cfe822973e31081dca}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Bo},
+           giveni={B\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
-        {Elsevier}%
+        {Academic Press}%
       }
-      \strng{namehash}{07884d1d872c755963f1c44b4c063a9b}
-      \strng{fullhash}{07884d1d872c755963f1c44b4c063a9b}
-      \strng{fullhashraw}{07884d1d872c755963f1c44b4c063a9b}
-      \strng{bibnamehash}{07884d1d872c755963f1c44b4c063a9b}
-      \strng{authorbibnamehash}{07884d1d872c755963f1c44b4c063a9b}
-      \strng{authornamehash}{07884d1d872c755963f1c44b4c063a9b}
-      \strng{authorfullhash}{07884d1d872c755963f1c44b4c063a9b}
-      \strng{authorfullhashraw}{07884d1d872c755963f1c44b4c063a9b}
+      \strng{namehash}{be7ed46df81e717cb92b538c92b67c4a}
+      \strng{fullhash}{be7ed46df81e717cb92b538c92b67c4a}
+      \strng{fullhashraw}{be7ed46df81e717cb92b538c92b67c4a}
+      \strng{bibnamehash}{be7ed46df81e717cb92b538c92b67c4a}
+      \strng{authorbibnamehash}{be7ed46df81e717cb92b538c92b67c4a}
+      \strng{authornamehash}{be7ed46df81e717cb92b538c92b67c4a}
+      \strng{authorfullhash}{be7ed46df81e717cb92b538c92b67c4a}
+      \strng{authorfullhashraw}{be7ed46df81e717cb92b538c92b67c4a}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Chemical Physics}
-      \field{title}{Exploration of the potential energy surfaces of the Cu2+ (MeOH) n= 9, 10 clusters: Solvent phase vs gas phase}
-      \field{volume}{590}
-      \field{year}{2025}
-      \field{pages}{112536}
-      \range{pages}{1}
+      \field{title}{Molecular dynamics simulation: Fundamentals and Applications}
+      \field{year}{2022}
+    \endentry
+    \entry{haile1992molecular}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=7aa1963698710bd52ea6e56ccaeb8567}{%
+           family={Haile},
+           familyi={H\bibinitperiod},
+           given={James\bibnamedelima M},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley \& Sons, Inc.}%
+      }
+      \strng{namehash}{7aa1963698710bd52ea6e56ccaeb8567}
+      \strng{fullhash}{7aa1963698710bd52ea6e56ccaeb8567}
+      \strng{fullhashraw}{7aa1963698710bd52ea6e56ccaeb8567}
+      \strng{bibnamehash}{7aa1963698710bd52ea6e56ccaeb8567}
+      \strng{authorbibnamehash}{7aa1963698710bd52ea6e56ccaeb8567}
+      \strng{authornamehash}{7aa1963698710bd52ea6e56ccaeb8567}
+      \strng{authorfullhash}{7aa1963698710bd52ea6e56ccaeb8567}
+      \strng{authorfullhashraw}{7aa1963698710bd52ea6e56ccaeb8567}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Molecular dynamics simulation: elementary methods}
+      \field{year}{1992}
+    \endentry
+    \entry{frenkel2002understanding}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=7191fa8dca47b12000be59cbab02be45}{%
+           family={Frenkel},
+           familyi={F\bibinitperiod},
+           given={Daan},
+           giveni={D\bibinitperiod}}}%
+        {{hash=cf1b6974a4d7bd013e533aea5fcda164}{%
+           family={Smit},
+           familyi={S\bibinitperiod},
+           given={Berend},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{3bbfb81f9905414b41a8d83b8c6c6626}
+      \strng{fullhash}{3bbfb81f9905414b41a8d83b8c6c6626}
+      \strng{fullhashraw}{3bbfb81f9905414b41a8d83b8c6c6626}
+      \strng{bibnamehash}{3bbfb81f9905414b41a8d83b8c6c6626}
+      \strng{authorbibnamehash}{3bbfb81f9905414b41a8d83b8c6c6626}
+      \strng{authornamehash}{3bbfb81f9905414b41a8d83b8c6c6626}
+      \strng{authorfullhash}{3bbfb81f9905414b41a8d83b8c6c6626}
+      \strng{authorfullhashraw}{3bbfb81f9905414b41a8d83b8c6c6626}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Academic Press, San Diego,}
+      \field{number}{2.2}
+      \field{title}{Understanding molecular simulation}
+      \field{volume}{2}
+      \field{year}{2002}
+      \field{pages}{2\bibrangedash 5}
+      \range{pages}{4}
+    \endentry
+    \entry{MD-2001-01}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=75fcabf7826bd6870802fa74958a190c}{%
+           family={Meller},
+           familyi={M\bibinitperiod},
+           given={Jarosaw},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group USA}%
+      }
+      \strng{namehash}{8a68a7ec16e23e4352437a2b7f2e4119}
+      \strng{fullhash}{8a68a7ec16e23e4352437a2b7f2e4119}
+      \strng{fullhashraw}{8a68a7ec16e23e4352437a2b7f2e4119}
+      \strng{bibnamehash}{8a68a7ec16e23e4352437a2b7f2e4119}
+      \strng{authorbibnamehash}{8a68a7ec16e23e4352437a2b7f2e4119}
+      \strng{authornamehash}{8a68a7ec16e23e4352437a2b7f2e4119}
+      \strng{authorfullhash}{8a68a7ec16e23e4352437a2b7f2e4119}
+      \strng{authorfullhashraw}{8a68a7ec16e23e4352437a2b7f2e4119}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Encyclopedia of life sciences}
+      \field{title}{Molecular dynamics}
+      \field{volume}{18}
+      \field{year}{2001}
+    \endentry
+    \entry{jensen2017introduction}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=07272f7b37bc95d4f9e9ac01efc83dcf}{%
+           family={Jensen},
+           familyi={J\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {John wiley \& sons}%
+      }
+      \strng{namehash}{07272f7b37bc95d4f9e9ac01efc83dcf}
+      \strng{fullhash}{07272f7b37bc95d4f9e9ac01efc83dcf}
+      \strng{fullhashraw}{07272f7b37bc95d4f9e9ac01efc83dcf}
+      \strng{bibnamehash}{07272f7b37bc95d4f9e9ac01efc83dcf}
+      \strng{authorbibnamehash}{07272f7b37bc95d4f9e9ac01efc83dcf}
+      \strng{authornamehash}{07272f7b37bc95d4f9e9ac01efc83dcf}
+      \strng{authorfullhash}{07272f7b37bc95d4f9e9ac01efc83dcf}
+      \strng{authorfullhashraw}{07272f7b37bc95d4f9e9ac01efc83dcf}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Introduction to computational chemistry}
+      \field{year}{2017}
+    \endentry
+    \entry{MD-2002-01}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=3dfd41d12a2896dd0ca93271e1d9e9cc}{%
+           family={Tuckerman},
+           familyi={T\bibinitperiod},
+           given={Mark\bibnamedelima E},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IOP Publishing}%
+      }
+      \strng{namehash}{3dfd41d12a2896dd0ca93271e1d9e9cc}
+      \strng{fullhash}{3dfd41d12a2896dd0ca93271e1d9e9cc}
+      \strng{fullhashraw}{3dfd41d12a2896dd0ca93271e1d9e9cc}
+      \strng{bibnamehash}{3dfd41d12a2896dd0ca93271e1d9e9cc}
+      \strng{authorbibnamehash}{3dfd41d12a2896dd0ca93271e1d9e9cc}
+      \strng{authornamehash}{3dfd41d12a2896dd0ca93271e1d9e9cc}
+      \strng{authorfullhash}{3dfd41d12a2896dd0ca93271e1d9e9cc}
+      \strng{authorfullhashraw}{3dfd41d12a2896dd0ca93271e1d9e9cc}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Physics: Condensed Matter}
+      \field{number}{50}
+      \field{title}{Ab initio molecular dynamics: basic concepts, current trends and novelapplications}
+      \field{volume}{14}
+      \field{year}{2002}
+      \field{pages}{R1297}
+      \range{pages}{-1}
+    \endentry
+    \entry{szabo1996modern}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=dc52ed3315ff506a9d4fe6a0ab079ae2}{%
+           family={Szabo},
+           familyi={S\bibinitperiod},
+           given={Attila},
+           giveni={A\bibinitperiod}}}%
+        {{hash=977f18e68b981d3d80b363ccb7cbeab7}{%
+           family={Ostlund},
+           familyi={O\bibinitperiod},
+           given={Neil\bibnamedelima S},
+           giveni={N\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Courier Corporation}%
+      }
+      \strng{namehash}{7e4e963df06b39584349eaf439922455}
+      \strng{fullhash}{7e4e963df06b39584349eaf439922455}
+      \strng{fullhashraw}{7e4e963df06b39584349eaf439922455}
+      \strng{bibnamehash}{7e4e963df06b39584349eaf439922455}
+      \strng{authorbibnamehash}{7e4e963df06b39584349eaf439922455}
+      \strng{authornamehash}{7e4e963df06b39584349eaf439922455}
+      \strng{authorfullhash}{7e4e963df06b39584349eaf439922455}
+      \strng{authorfullhashraw}{7e4e963df06b39584349eaf439922455}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Modern quantum chemistry: introduction to advanced electronic structure theory}
+      \field{year}{1996}
+    \endentry
+    \entry{allen2012computer}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=e73ce85b6ae336bbe26cae16a6933a0a}{%
+           family={Allen},
+           familyi={A\bibinitperiod},
+           given={Michael\bibnamedelima P},
+           giveni={M\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=ab3a1db3dbb265efade39f6ef37fa88c}{%
+           family={Tildesley},
+           familyi={T\bibinitperiod},
+           given={Dominic\bibnamedelima J},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Science \& Business Media}%
+      }
+      \strng{namehash}{5b8830545e1be1d1b7d074817a858cd7}
+      \strng{fullhash}{5b8830545e1be1d1b7d074817a858cd7}
+      \strng{fullhashraw}{5b8830545e1be1d1b7d074817a858cd7}
+      \strng{bibnamehash}{5b8830545e1be1d1b7d074817a858cd7}
+      \strng{authorbibnamehash}{5b8830545e1be1d1b7d074817a858cd7}
+      \strng{authornamehash}{5b8830545e1be1d1b7d074817a858cd7}
+      \strng{authorfullhash}{5b8830545e1be1d1b7d074817a858cd7}
+      \strng{authorfullhashraw}{5b8830545e1be1d1b7d074817a858cd7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Computer simulation in chemical physics}
+      \field{volume}{397}
+      \field{year}{2012}
+    \endentry
+    \entry{canuto2010solvation}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=727fcaa62aed69b9b5aef256e83f6942}{%
+           family={Canuto},
+           familyi={C\bibinitperiod},
+           given={Sylvio},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Science \& Business Media}%
+      }
+      \strng{namehash}{727fcaa62aed69b9b5aef256e83f6942}
+      \strng{fullhash}{727fcaa62aed69b9b5aef256e83f6942}
+      \strng{fullhashraw}{727fcaa62aed69b9b5aef256e83f6942}
+      \strng{bibnamehash}{727fcaa62aed69b9b5aef256e83f6942}
+      \strng{authorbibnamehash}{727fcaa62aed69b9b5aef256e83f6942}
+      \strng{authornamehash}{727fcaa62aed69b9b5aef256e83f6942}
+      \strng{authorfullhash}{727fcaa62aed69b9b5aef256e83f6942}
+      \strng{authorfullhashraw}{727fcaa62aed69b9b5aef256e83f6942}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Solvation effects on molecules and biomolecules: computational methods and applications}
+      \field{volume}{6}
+      \field{year}{2010}
     \endentry
   \enddatalist
 \endrefsection

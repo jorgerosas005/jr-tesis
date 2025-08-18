@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.3)  12 AUG 2025 12:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.3)  16 AUG 2025 22:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -828,35 +828,40 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \float@box=\box82
 \@float@everytoks=\toks44
 \@floatcapt=\box83
+) (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\helvet.sty
+Package: helvet 2020/03/25 PSNFSS-v9.3 (WaS) 
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'spanish'.
- (main.aux (Capítulos/Portada.aux)
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 35.
+ (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1phv.fd
+File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
+) (main.aux (Capítulos/Portada.aux)
 LaTeX Info: Redefining \. on input line 10.
 LaTeX Info: Redefining \% on input line 10.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
 (babel)             Reported  on input line 10.
- (Capítulos/Dedicatoria.aux) (Capítulos/Agradecimientos.aux) (Capítulos/Introducción.aux) (Capítulos/Fundamentos.aux) (Capítulos/DFT.aux) (Capítulos/Anexos.aux))
+ (Capítulos/Dedicatoria.aux) (Capítulos/Agradecimientos.aux) (Capítulos/Introducción.aux) (Capítulos/Fundamentos.aux) (Capítulos/Anexos.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Info: Redefining \. on input line 32.
-LaTeX Info: Redefining \% on input line 32.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Info: Redefining \. on input line 35.
+LaTeX Info: Redefining \% on input line 35.
  (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count482
@@ -923,15 +928,15 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (main.bbl)
-Package biblatex Info: Reference section=0 on input line 32.
-Package biblatex Info: Reference segment=0 on input line 32.
+Package biblatex Info: Reference section=0 on input line 35.
+Package biblatex Info: Reference segment=0 on input line 35.
 
-Package chemgreek Info: Activating mapping `default' on line 32.
+Package chemgreek Info: Activating mapping `default' on line 35.
 
  (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-spanish.trsl
 File: translations-basic-dictionary-spanish.trsl (spanish translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `spanish'. on input line 32.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `spanish'. on input line 35.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
@@ -962,10 +967,13 @@ Package pdftex.def Info: ./Imágenes/logofq.jpeg  used on input line 33.
 
 
 
-{C:/Users/jorge/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./Imágenes/Escudo-UNAM.pdf> <./Imágenes/logofq.jpeg>])
+{C:/Users/jorge/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/jorge/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} <./Imágenes/Escudo-UNAM.pdf> <./Imágenes/logofq.jpeg>])
 \openout2 = `Capítulos/Dedicatoria.aux'.
 
- (Capítulos/Dedicatoria.tex)
+ (Capítulos/Dedicatoria.tex
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 3.
+)
 
 [1
 
@@ -992,51 +1000,7 @@ LaTeX Info: Redefining \% on input line 1.
 [3
 
 
-]
-! Argument of \language@active@arg" has an extra }.
-<inserted text> 
-                \par 
-l.74 ...Funcionales: "La Escalera de Jacob"}{46}{}
-                                                  %
-I've run across a `}' that doesn't seem to match anything.
-For example, `\def\a#1{...}' and `\a}' would produce
-this error. If you simply proceed now, the `\par' that
-I've just inserted will cause me to report a runaway
-argument that might be the root of the problem. But if
-your `}' was spurious, just type `2' and it will go away.
-
-Runaway argument?
-! Paragraph ended before \language@active@arg" was complete.
-<to be read again> 
-                   \par 
-l.74 ...Funcionales: "La Escalera de Jacob"}{46}{}
-                                                  %
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 74--74
- [][] []\T1/cmr/m/n/12 La Je-rar-qu�a de Fun-cio-na-les: "La Es-ca-le-ra de Ja-cob  
- []
-
-! Leaders not followed by proper glue.
-<to be read again> 
-                   \hfill 
-l.74 ...Funcionales: "La Escalera de Jacob"}{46}{}
-                                                  %
-You should say `\leaders <box or rule><hskip or vskip>'.
-I found the <box or rule>, but there's no suitable
-<hskip or vskip>, so I'm ignoring these leaders.
-
-
-
-LaTeX Info: Redefining \sptext on input line 79.
-LaTeX Info: Redefining \. on input line 79.
-LaTeX Info: Redefining \% on input line 79.
-Package babel Info: 'spanish' activates 'spanish' shorthands.
-(babel)             Reported  on input line 79.
-[4])
+])
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
@@ -1050,7 +1014,7 @@ LaTeX Info: Redefining \% on input line 1.
 
 
 
-[5]
+[4]
 \openout2 = `Capítulos/Introducción.aux'.
 
  (Capítulos/Introducción.tex
@@ -1062,11 +1026,299 @@ Cap\'{\i }tulo 1.
 
 
 ]
-<Imágenes/JTE-z-out-draw.png, id=47, 239.39438pt x 523.9575pt>
+Overfull \hbox (9.43417pt too wide) in paragraph at lines 15--15
+[]\T1/phv/b/n/17.28 La Qu�-mi-ca de Coor-di-na-ci�n �ni-ca del $[][][]$: El Efec-
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 23.
+LaTeX Info: Redefining \% on input line 23.
+Package babel Info: 'spanish' activates 'spanish' shorthands.
+(babel)             Reported  on input line 23.
+[2]
+<Imágenes/JTE-z-out-draw.png, id=40, 239.39438pt x 523.9575pt>
 File: Imágenes/JTE-z-out-draw.png Graphic file (type png)
 <use Imágenes/JTE-z-out-draw.png>
 Package pdftex.def Info: Imágenes/JTE-z-out-draw.png  used on input line 32.
 (pdftex.def)             Requested size: 45.8908pt x 100.4404pt.
-<Imágenes/JTE-z-out-orbitals.png, id=49, 251.43938pt x 573.64313pt>
+<Imágenes/JTE-z-out-orbitals.png, id=42, 251.43938pt x 573.64313pt>
 File: Imágenes/JTE-z-out-orbitals.png Graphic file (type png)
-<use
+<use Imágenes/JTE-z-out-orbitals.png>
+Package pdftex.def Info: Imágenes/JTE-z-out-orbitals.png  used on input line 38.
+(pdftex.def)             Requested size: 45.8908pt x 104.69556pt.
+<Imágenes/JTE-z-in-draw.png, id=43, 462.97969pt x 568.37344pt>
+File: Imágenes/JTE-z-in-draw.png Graphic file (type png)
+<use Imágenes/JTE-z-in-draw.png>
+Package pdftex.def Info: Imágenes/JTE-z-in-draw.png  used on input line 47.
+(pdftex.def)             Requested size: 68.83794pt x 84.50648pt.
+<Imágenes/JTE-z-in-orbitals.png, id=44, 246.1697pt x 532.23843pt>
+File: Imágenes/JTE-z-in-orbitals.png Graphic file (type png)
+<use Imágenes/JTE-z-in-orbitals.png>
+Package pdftex.def Info: Imágenes/JTE-z-in-orbitals.png  used on input line 53.
+(pdftex.def)             Requested size: 45.8908pt x 99.21783pt.
+
+
+LaTeX Info: Redefining \. on input line 66.
+LaTeX Info: Redefining \% on input line 66.
+[3 <./Imágenes/JTE-z-out-draw.png> <./Imágenes/JTE-z-out-orbitals.png> <./Imágenes/JTE-z-in-draw.png> <./Imágenes/JTE-z-in-orbitals.png>]
+
+LaTeX Info: Redefining \. on input line 80.
+LaTeX Info: Redefining \% on input line 80.
+[4]
+
+LaTeX Info: Redefining \. on input line 97.
+LaTeX Info: Redefining \% on input line 97.
+[5]
+
+LaTeX Info: Redefining \. on input line 111.
+LaTeX Info: Redefining \% on input line 111.
+[6]
+
+LaTeX Info: Redefining \. on input line 127.
+LaTeX Info: Redefining \% on input line 127.
+[7]
+
+LaTeX Info: Redefining \. on input line 137.
+LaTeX Info: Redefining \% on input line 137.
+[8])
+
+LaTeX Info: Redefining \. on input line 49.
+LaTeX Info: Redefining \% on input line 49.
+[9]
+
+LaTeX Info: Redefining \. on input line 49.
+LaTeX Info: Redefining \% on input line 49.
+[10]
+\openout2 = `Capítulos/Fundamentos.aux'.
+
+ (Capítulos/Fundamentos.tex
+Cap\'{\i }tulo 2.
+
+
+[11
+
+
+
+
+]
+
+LaTeX Info: Redefining \. on input line 22.
+LaTeX Info: Redefining \% on input line 22.
+[12]
+
+LaTeX Info: Redefining \. on input line 36.
+LaTeX Info: Redefining \% on input line 36.
+[13]
+
+LaTeX Info: Redefining \. on input line 46.
+LaTeX Info: Redefining \% on input line 46.
+[14]
+
+LaTeX Info: Redefining \. on input line 57.
+LaTeX Info: Redefining \% on input line 57.
+[15]
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <14.4> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 59.
+
+
+LaTeX Info: Redefining \. on input line 72.
+LaTeX Info: Redefining \% on input line 72.
+[16]
+
+LaTeX Info: Redefining \. on input line 80.
+LaTeX Info: Redefining \% on input line 80.
+[17]
+
+LaTeX Info: Redefining \. on input line 105.
+LaTeX Info: Redefining \% on input line 105.
+[18]
+
+LaTeX Info: Redefining \. on input line 116.
+LaTeX Info: Redefining \% on input line 116.
+[19]
+
+LaTeX Info: Redefining \. on input line 139.
+LaTeX Info: Redefining \% on input line 139.
+[20]
+
+LaTeX Info: Redefining \. on input line 157.
+LaTeX Info: Redefining \% on input line 157.
+[21]
+
+LaTeX Info: Redefining \. on input line 181.
+LaTeX Info: Redefining \% on input line 181.
+[22]
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 185.
+ (C:\Users\jorge\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1phv.fd
+File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
+)
+
+LaTeX Info: Redefining \. on input line 196.
+LaTeX Info: Redefining \% on input line 196.
+[23]
+
+LaTeX Info: Redefining \. on input line 206.
+LaTeX Info: Redefining \% on input line 206.
+[24]
+
+LaTeX Info: Redefining \. on input line 226.
+LaTeX Info: Redefining \% on input line 226.
+[25]
+
+LaTeX Info: Redefining \. on input line 240.
+LaTeX Info: Redefining \% on input line 240.
+[26]
+
+LaTeX Info: Redefining \. on input line 249.
+LaTeX Info: Redefining \% on input line 249.
+[27]
+
+LaTeX Info: Redefining \. on input line 263.
+LaTeX Info: Redefining \% on input line 263.
+[28]
+
+LaTeX Info: Redefining \. on input line 275.
+LaTeX Info: Redefining \% on input line 275.
+[29]
+
+LaTeX Info: Redefining \. on input line 287.
+LaTeX Info: Redefining \% on input line 287.
+[30]
+
+LaTeX Info: Redefining \. on input line 305.
+LaTeX Info: Redefining \% on input line 305.
+[31]
+
+LaTeX Info: Redefining \. on input line 319.
+LaTeX Info: Redefining \% on input line 319.
+[32]
+
+LaTeX Info: Redefining \. on input line 337.
+LaTeX Info: Redefining \% on input line 337.
+[33]
+
+LaTeX Info: Redefining \. on input line 353.
+LaTeX Info: Redefining \% on input line 353.
+[34]
+
+LaTeX Info: Redefining \. on input line 369.
+LaTeX Info: Redefining \% on input line 369.
+[35]
+
+LaTeX Info: Redefining \. on input line 386.
+LaTeX Info: Redefining \% on input line 386.
+[36]
+
+LaTeX Info: Redefining \. on input line 401.
+LaTeX Info: Redefining \% on input line 401.
+[37]
+
+LaTeX Info: Redefining \. on input line 412.
+LaTeX Info: Redefining \% on input line 412.
+[38]
+
+LaTeX Info: Redefining \. on input line 425.
+LaTeX Info: Redefining \% on input line 425.
+[39]
+
+LaTeX Info: Redefining \. on input line 442.
+LaTeX Info: Redefining \% on input line 442.
+[40]
+
+LaTeX Info: Redefining \. on input line 452.
+LaTeX Info: Redefining \% on input line 452.
+[41])
+
+LaTeX Info: Redefining \. on input line 50.
+LaTeX Info: Redefining \% on input line 50.
+[42]
+\openout2 = `Capítulos/Anexos.aux'.
+
+ (Capítulos/Anexos.tex
+Cap\'{\i }tulo 3.
+)
+
+[43
+
+
+
+
+]
+
+LaTeX Info: Redefining \. on input line 52.
+LaTeX Info: Redefining \% on input line 52.
+[44]
+
+LaTeX Info: Redefining \. on input line 52.
+LaTeX Info: Redefining \% on input line 52.
+[45]
+Overfull \hbox (6.96658pt too wide) in paragraph at lines 56--56
+\T1/phv/m/n/12 pho-tophy-sics of cop-per coor-di-na-tion com-pounds^^T. En: \T1/phv/m/sl/12 RSC Ad-van-ces \T1/phv/m/n/12 4.61 (2014),
+ []
+
+
+Overfull \hbox (0.2352pt too wide) in paragraph at lines 56--56
+[]\T1/phv/m/n/12 Tabouli Eric Da-yang et al. ^^S  Struc-tu-res, spec-tros-copy, bin-ding and clus-te-ring ener-
+ []
+
+
+
+[46
+
+
+
+]
+Overfull \hbox (3.17102pt too wide) in paragraph at lines 56--56
+[]\T1/phv/m/n/12 Tsuneki Ichi-ka-wa y Larry Ke-van. ^^S  Solvation-shell geo-metry of cop-per ion in metha-
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 55.
+LaTeX Info: Redefining \% on input line 55.
+[47]
+Overfull \hbox (9.1873pt too wide) in paragraph at lines 56--56
+[]\T1/phv/m/n/12 Lothar Helm et al. ^^S  Sol-vent ex-chan-ge in he-xa-kis (metha-nol) cop-per (II) ion. Oxygen-
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 55.
+LaTeX Info: Redefining \% on input line 55.
+[48]
+
+LaTeX Info: Redefining \. on input line 57.
+LaTeX Info: Redefining \% on input line 57.
+[49] (main.aux (Capítulos/Portada.aux)
+LaTeX Info: Redefining \sptext on input line 10.
+LaTeX Info: Redefining \. on input line 10.
+LaTeX Info: Redefining \% on input line 10.
+ (Capítulos/Dedicatoria.aux) (Capítulos/Agradecimientos.aux) (Capítulos/Introducción.aux) (Capítulos/Fundamentos.aux) (Capítulos/Anexos.aux))
+ ***********
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+ ***********
+Package logreq Info: Writing requests to 'main.run.xml'.
+\openout1 = `main.run.xml'.
+
+ )
+(\end occurred inside a group at level 1)
+
+### semi simple group (level 1) entered at line 3 (\begingroup)
+### bottom level 
+Here is how much of TeX's memory you used:
+ 31558 strings out of 473523
+ 673982 string characters out of 5714631
+ 1470576 words of memory out of 5000000
+ 54275 multiletter control sequences out of 15000+600000
+ 637250 words of font info for 123 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 84i,12n,91p,2191b,2218s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/jorge/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/jorge/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/jorge/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/jorge/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/jorge/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/jorge/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/jorge/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/jorge/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/jorge/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/jorge/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/jorge/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/jorge/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/jorge/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Users/jorge/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/jorge/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on main.pdf (54 pages, 550833 bytes).
+PDF statistics:
+ 268 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 43 words of extra memory for PDF output out of 10000 (max. 10000000)
+

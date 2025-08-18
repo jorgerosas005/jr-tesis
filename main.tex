@@ -23,14 +23,18 @@
 \usepackage{rotating} % Paquete para el entorno sidewaystable
 \usepackage{subcaption}
 \usepackage{float}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
 \DeclareSIUnit\angstrom{\text {Å}}
-\graphicspath{{./Imágenes/}}                                          % Ruta de las imágenes
+\graphicspath{{./Imágenes/}}     % Ruta de las imágenes
 
 % Archivo de bibliografía
 \addbibresource{referencias.bib}
 
 \begin{document}
-
+%\onehalfspacing % O \doublespacing, para doble espaciado
+%\doublespacing
     \include{Capítulos/Portada}
 
     \frontmatter % Páginas preliminares
@@ -44,7 +48,7 @@
     \mainmatter % Páginas principales
         \include{Capítulos/Introducción}
         \include{Capítulos/Fundamentos}
-        \include{Capítulos/DFT}
+        %\include{Capítulos/DFT}
         \include{Capítulos/Anexos}
 
     % Bibliografía
