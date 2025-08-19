@@ -1,0 +1,58 @@
+\chapter{Dinámica molecular}
+
+        Breve introducción, no es un libro de dinámica molecular
+
+
+    \section{?}
+
+        Esta sección debe mencionar todas las limitaciones (sin exagerar) que la literatura reporta para los métodos experimentales en el estudio de la solvatación (contemplemos agua y metanol) y resaltemos todas las virtudes de realizarlo con métodos teóricos.
+
+        Una vez establecido (sin exagerar) las limitaciones anteriores mencionemos lo que se gana al estudiarlo con métodos teóricos, de nuevo, con lo que dice la literatura. 
+
+        Posteriormente introducir por qué para estudiar estos sistemas hay que ir más allá de conocer las estructuras energéticamente estables para justificar por qué hacemos dinámica molecular
+
+        Archivos a utilizar: 
+            Experimental vs teórico según la literatura del ion cobre.txt
+            Experimental vs teórico según libros de DM.txt
+            DM vs cálculos estáticos según la literatura del ion cúprico.txt
+            DM vs cálculos estáticos según libros de DM.txt
+
+    \section{Dinámica molecular clásica}
+
+
+        \subsection{QM/MM}
+
+            Párrafo sobre QM/MM. Explicar cómo hacen una aproximación híbrida entre mecánica cuántica y mecánica molecular
+
+            itemize sobre los Campos de fuerza ysu parametrización (enlaces, ángulos, torsiones, interacciones no enlazadas etc), dar prioridad a los que se usaron para estudiar la solvatación del ion cúprico.
+
+            Aquí si hay que extenderse con todos los métodos QM/MM que se han realizado 
+
+            Archivos a utilizar:
+                Campos de fuerza utilizados en la literatura del ion cuprico.txt
+                QM-MM y force fields.txt
+
+        \subsection{Limitaciones}
+            Sección descriptiva de las limitaciones de QM/MM (sin exagerar) y de la dinámica molecular clásica en general. 
+
+    \section{Dinámica molecular ab initio}
+
+        Describir qué es la AIMD a groso modo
+
+        \subsection{Dinámica molecular de Car-Parrinelo}
+            Brevemente, explicar su idea de una dinámica extendida donde los orbitales tienen una masa ficticia y evolucionan junto con los núcleos. Es un método citado en muchos de los trabajos de referencia. Justificar por qué CPMD no describiría bien nuestro sistema (sin exagerar)
+            Archivos a utilizar: 
+            CPMD según libros.txt
+
+        \subsection{Dinámica molecular de Bohr Oppeheimer}
+
+            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+            Esta debe ser la sección más extensa de todo el capítulo, hay que hacerla con libros, no con IA. 
+            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+

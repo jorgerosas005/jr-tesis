@@ -1,0 +1,44 @@
+\chapter{Dinámica molecular}
+
+\section{Dinámica molecular clásica}
+
+La dinámica molecular (DM) clásica modela un sistema de átomos y moléculas resolviendo numéricamente las ecuaciones de movimiento de Newton. En este enfoque, los átomos son tratados como partículas clásicas que interactúan a través de un conjunto de funciones de energía potencial, conocido como campo de fuerza (\textit{force field}). Este método es computacionalmente eficiente y puede aplicarse a sistemas muy grandes, de hasta millones de átomos, y a escalas de tiempo de nanosegundos o más.
+
+\subsection{QM/MM}
+
+Para sistemas donde ocurren fenómenos cuánticos, como la ruptura o formación de enlaces, en una región específica de un sistema molecular grande, el enfoque híbrido de Mecánica Cuántica/Mecánica Molecular (QM/MM) es particularmente útil. El concepto central del método QM/MM es dividir el sistema en dos regiones. La parte donde los efectos electrónicos son críticos, como el ion \ce{Cu^{2+}} y su primera esfera de solvatación, se trata con métodos de mecánica cuántica (QM) de alta precisión. El entorno circundante, como el resto de las moléculas de disolvente, se describe mediante un campo de fuerza de mecánica molecular (MM), que es computacionalmente menos demandante.
+
+La interacción entre ambas regiones es un aspecto clave. En el esquema más común, llamado \textbf{inclusión electrónica} (\textit{electronic embedding}), las cargas parciales de los átomos de la región MM se incorporan al Hamiltoniano de la región QM, permitiendo que la región cuántica se polarice por su entorno clásico.
+
+Los campos de fuerza utilizados en la parte MM se basan en un modelo de "esferas y resortes", donde la energía total es una suma de términos que describen las interacciones atómicas. Para el estudio de la solvatación del ion cúprico se han empleado diversas aproximaciones:
+
+\begin{itemize}
+    \item \textbf{Energía de enlace y ángulo:} Términos que describen la energía asociada a la compresión o estiramiento de un enlace covalente (\textit{stretch}) y a la flexión del ángulo entre tres átomos (\textit{bend}).
+    
+    \item \textbf{Energía torsional:} Representa la energía relacionada con la rotación alrededor de un enlace, definida por un ángulo diedro.
+    
+    \item \textbf{Interacciones no enlazadas:} Modelan las interacciones entre átomos que no están directamente enlazados. Se componen de un término de van der Waals, que describe la repulsión y la atracción por dispersión (a menudo con un potencial de Lennard-Jones), y un término electrostático, que describe las interacciones de largo alcance basadas en cargas atómicas parciales. En simulaciones clásicas del ion \ce{Cu^{2+}}, este se ha descrito a menudo como una simple esfera de van der Waals, con parámetros de Lennard-Jones ajustados a partir de cálculos \textit{ab initio}. Se han utilizado campos de fuerza de todos los átomos como OPLS y modelos de agua no polarizables como TIP3P.
+    
+    \item \textbf{Campos de fuerza polarizables:} Para superar las limitaciones de los campos de fuerza clásicos, se han desarrollado modelos que tienen en cuenta explícitamente la polarización electrónica. Estos modelos permiten que las polarizabilidades atómicas o moleculares generen dipolos inducidos en respuesta al campo eléctrico del soluto, ofreciendo una descripción más precisa de las interacciones. Para el ion \ce{Cu(II)}, se ha aplicado el campo de fuerza polarizable AMOEBA y se han utilizado modelos de agua avanzados como SWM4-DP.
+    
+    \item \textbf{Métodos QM/MM específicos:} Se han realizado numerosas simulaciones de Dinámica Molecular QM/MM para investigar la hidratación del \ce{Cu^{2+}} y su efecto Jahn-Teller en solución. Se han empleado metodologías como el Campo de Carga Mecánico Cuántico (QMCF) y el método secuencial QM/MM, donde se realizan cálculos QM sobre configuraciones seleccionadas de una simulación MM.
+\end{itemize}
+
+\subsection{Limitaciones}
+A pesar de su utilidad, los métodos de DM clásica y QM/MM presentan limitaciones importantes, especialmente para un ion tan complejo como el \ce{Cu^{2+}}. Una de las principales deficiencias de los campos de fuerza clásicos es su incapacidad para describir correctamente la distorsión de Jahn-Teller, ya que esta es de origen puramente electrónico. Además, estos modelos a menudo ignoran efectos cruciales de muchos cuerpos, la polarización y la transferencia de carga entre el ion y las moléculas de disolvente. El uso de cargas parciales fijas, común en la mayoría de los campos de fuerza, puede ser inadecuado para un ion altamente polarizante como el \ce{Cu^{2+}}, lo que podría conducir a resultados incorrectos.
+
+Por su parte, los métodos QM/MM, aunque superiores, no son "cajas negras". No existe una forma única de decidir cómo dividir el sistema entre las regiones QM y MM, y la manera de "unir" ambas regiones no es única, lo que los convierte en métodos que aún se consideran "experimentales" en cierto grado.
+
+\section{Dinámica molecular ab initio}
+
+La dinámica molecular \textit{ab initio} (AIMD) supera muchas de las limitaciones de los métodos clásicos. En este enfoque, las fuerzas que actúan sobre los núcleos se calculan "al vuelo" en cada paso de la simulación a partir de un cálculo de estructura electrónica, generalmente basado en la Teoría del Funcional de la Densidad (DFT). Esto permite modelar explícitamente la polarización electrónica y los eventos reactivos como la ruptura y formación de enlaces.
+
+\subsection{Dinámica molecular de Car-Parrinelo}
+
+La Dinámica Molecular de Car-Parrinelo (CPMD), desarrollada en 1985, es un método de AIMD que trata simultáneamente los grados de libertad nucleares y electrónicos. Su idea fundamental es introducir una dinámica ficticia para los parámetros de la función de onda (los orbitales), a los que se les asigna una masa ficticia. De esta manera, los orbitales evolucionan en el tiempo junto con las posiciones nucleares dentro de un formalismo de Lagrange extendido.
+
+La gran ventaja de CPMD es que elimina la necesidad de converger completamente la función de onda en cada paso de tiempo, un proceso que es muy costoso en otros métodos de AIMD. El método funciona bajo la condición de que se mantenga una separación adiabática entre la dinámica nuclear, que es más lenta, y la dinámica electrónica ficticia, que es más rápida.
+
+A pesar de ser un método robusto y citado en muchos trabajos de referencia sobre la solvatación del \ce{Cu^{2+}} , puede enfrentar dificultades en sistemas con una brecha energética (\textit{gap}) pequeña o nula entre los estados electrónicos, donde la condición de adiabaticidad podría romperse. Estudios teóricos previos sobre el sistema acuoso del \ce{Cu^{2+}} han empleado CPMD con funcionales de tipo GGA, como BLYP y PBE. Sin embargo, se ha demostrado que funcionales como BLYP pueden subestimar la afinidad de enlace de la sexta molécula de agua al ion y sobrestimar la estabilidad de las estructuras de baja coordinación en comparación con métodos de mayor nivel, lo que limita su capacidad para describir con precisión la compleja estructura electrónica del cobre(II).
+
+\section{Dinámica Molecular de Bohr-Oppenheimer}
