@@ -1,0 +1,10 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {chapter}{Dedicatoria}{\es@scroman {i}}{}%
+\contentsline {chapter}{Agradecimientos}{\es@scroman {ii}}{}%
+\contentsline {chapter}{\numberline {1}Introducción}{1}{}%
+\contentsline {section}{\numberline {1.1}El Efecto Jahn-Teller}{2}{}%
+\contentsline {section}{\numberline {1.2}Hidratación}{4}{}%
+\contentsline {section}{\numberline {1.3}Solvatación en Metanol}{5}{}%
+\contentsline {section}{\numberline {1.4}Limitaciones Experimentales y Ventajas de los Métodos Teóricos}{8}{}%
+\contentsline {section}{\numberline {1.5}Enfoque Metodológico}{10}{}%
+\contentsline {chapter}{\numberline {2}Anexos}{12}{}%

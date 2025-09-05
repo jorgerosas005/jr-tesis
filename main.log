@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.3)  19 AUG 2025 11:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.3)  26 AUG 2025 14:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -843,7 +843,7 @@ LaTeX Info: Redefining \. on input line 10.
 LaTeX Info: Redefining \% on input line 10.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
 (babel)             Reported  on input line 10.
- (Capítulos/Dedicatoria.aux) (Capítulos/Agradecimientos.aux) (Capítulos/Introducción.aux) (Capítulos/Dinámica molecular.aux) (Capítulos/Anexos.aux))
+ (Capítulos/Dedicatoria.aux) (Capítulos/Agradecimientos.aux) (Capítulos/Introducción.aux) (Capítulos/Anexos.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
@@ -1054,4 +1054,134 @@ Package babel Info: 'spanish' activates 'spanish' shorthands.
 
 LaTeX Info: Redefining \. on input line 72.
 LaTeX Info: Redefining \% on input line 72.
-[3 <./Imágenes/JTE-z-out-draw.png> <./Imágenes
+[3 <./Imágenes/JTE-z-out-draw.png> <./Imágenes/JTE-z-out-orbitals.png> <./Imágenes/JTE-z-in-draw.png> <./Imágenes/JTE-z-in-orbitals.png>]
+
+LaTeX Info: Redefining \. on input line 83.
+LaTeX Info: Redefining \% on input line 83.
+[4]
+
+LaTeX Info: Redefining \. on input line 96.
+LaTeX Info: Redefining \% on input line 96.
+[5]
+
+LaTeX Info: Redefining \. on input line 111.
+LaTeX Info: Redefining \% on input line 111.
+[6]
+
+LaTeX Info: Redefining \. on input line 128.
+LaTeX Info: Redefining \% on input line 128.
+[7]
+
+LaTeX Info: Redefining \. on input line 136.
+LaTeX Info: Redefining \% on input line 136.
+[8]
+
+LaTeX Info: Redefining \. on input line 144.
+LaTeX Info: Redefining \% on input line 144.
+[9]
+
+LaTeX Info: Redefining \. on input line 151.
+LaTeX Info: Redefining \% on input line 151.
+[10])
+
+LaTeX Info: Redefining \. on input line 49.
+LaTeX Info: Redefining \% on input line 49.
+[11]
+\openout2 = `Capítulos/Anexos.aux'.
+
+ (Capítulos/Anexos.tex
+Cap\'{\i }tulo 2.
+)
+
+[12
+
+
+
+
+]
+
+LaTeX Info: Redefining \. on input line 52.
+LaTeX Info: Redefining \% on input line 52.
+[13]
+
+LaTeX Info: Redefining \. on input line 52.
+LaTeX Info: Redefining \% on input line 52.
+[14]
+Overfull \hbox (6.96658pt too wide) in paragraph at lines 56--56
+\T1/phv/m/n/12 pho-tophy-sics of cop-per coor-di-na-tion com-pounds^^T. En: \T1/phv/m/sl/12 RSC Ad-van-ces \T1/phv/m/n/12 4.61 (2014),
+ []
+
+
+Overfull \hbox (0.2352pt too wide) in paragraph at lines 56--56
+[]\T1/phv/m/n/12 Tabouli Eric Da-yang et al. ^^S  Struc-tu-res, spec-tros-copy, bin-ding and clus-te-ring ener-
+ []
+
+
+
+[15
+
+
+
+]
+Overfull \hbox (3.17102pt too wide) in paragraph at lines 56--56
+[]\T1/phv/m/n/12 Tsuneki Ichi-ka-wa y Larry Ke-van. ^^S  Solvation-shell geo-metry of cop-per ion in metha-
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 55.
+LaTeX Info: Redefining \% on input line 55.
+[16]
+Overfull \hbox (9.1873pt too wide) in paragraph at lines 56--56
+[]\T1/phv/m/n/12 Lothar Helm et al. ^^S  Sol-vent ex-chan-ge in he-xa-kis (metha-nol) cop-per (II) ion. Oxygen-
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 55.
+LaTeX Info: Redefining \% on input line 55.
+[17]
+
+LaTeX Info: Redefining \. on input line 57.
+LaTeX Info: Redefining \% on input line 57.
+[18] (main.aux (Capítulos/Portada.aux)
+LaTeX Info: Redefining \sptext on input line 10.
+LaTeX Info: Redefining \. on input line 10.
+LaTeX Info: Redefining \% on input line 10.
+ (Capítulos/Dedicatoria.aux) (Capítulos/Agradecimientos.aux) (Capítulos/Introducción.aux) (Capítulos/Anexos.aux))
+ ***********
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+ ***********
+
+
+LaTeX Warning: There were undefined references.
+
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                main
+(biblatex)                and rerun LaTeX afterwards.
+
+Package logreq Info: Writing requests to 'main.run.xml'.
+\openout1 = `main.run.xml'.
+
+ )
+(\end occurred inside a group at level 1)
+
+### semi simple group (level 1) entered at line 3 (\begingroup)
+### bottom level 
+Here is how much of TeX's memory you used:
+ 31433 strings out of 473523
+ 671120 string characters out of 5714631
+ 1467502 words of memory out of 5000000
+ 54174 multiletter control sequences out of 15000+600000
+ 627824 words of font info for 103 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 84i,12n,91p,2191b,2039s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/jorge/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/jorge/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/jorge/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/jorge/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/jorge/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/jorge/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/jorge/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/jorge/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/jorge/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/jorge/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on main.pdf (22 pages, 408424 bytes).
+PDF statistics:
+ 140 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 43 words of extra memory for PDF output out of 10000 (max. 10000000)
+

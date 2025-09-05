@@ -1133,6 +1133,201 @@
       \field{pages}{215\bibrangedash 241}
       \range{pages}{27}
     \endentry
+    \entry{szabo1996modern}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=dc52ed3315ff506a9d4fe6a0ab079ae2}{%
+           family={Szabo},
+           familyi={S\bibinitperiod},
+           given={Attila},
+           giveni={A\bibinitperiod}}}%
+        {{hash=977f18e68b981d3d80b363ccb7cbeab7}{%
+           family={Ostlund},
+           familyi={O\bibinitperiod},
+           given={Neil\bibnamedelima S},
+           giveni={N\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Courier Corporation}%
+      }
+      \strng{namehash}{7e4e963df06b39584349eaf439922455}
+      \strng{fullhash}{7e4e963df06b39584349eaf439922455}
+      \strng{fullhashraw}{7e4e963df06b39584349eaf439922455}
+      \strng{bibnamehash}{7e4e963df06b39584349eaf439922455}
+      \strng{authorbibnamehash}{7e4e963df06b39584349eaf439922455}
+      \strng{authornamehash}{7e4e963df06b39584349eaf439922455}
+      \strng{authorfullhash}{7e4e963df06b39584349eaf439922455}
+      \strng{authorfullhashraw}{7e4e963df06b39584349eaf439922455}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Modern quantum chemistry: introduction to advanced electronic structure theory}
+      \field{year}{1996}
+    \endentry
+    \entry{koch2015chemist}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=c0157242ec3d36ff6ce05adac59c9278}{%
+           family={Koch},
+           familyi={K\bibinitperiod},
+           given={Wolfram},
+           giveni={W\bibinitperiod}}}%
+        {{hash=5d88d6b19f2d6c5dc133262168abab8e}{%
+           family={Holthausen},
+           familyi={H\bibinitperiod},
+           given={Max\bibnamedelima C},
+           giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley \& Sons}%
+      }
+      \strng{namehash}{5082f7a19ae2f8eda57ad46eda359079}
+      \strng{fullhash}{5082f7a19ae2f8eda57ad46eda359079}
+      \strng{fullhashraw}{5082f7a19ae2f8eda57ad46eda359079}
+      \strng{bibnamehash}{5082f7a19ae2f8eda57ad46eda359079}
+      \strng{authorbibnamehash}{5082f7a19ae2f8eda57ad46eda359079}
+      \strng{authornamehash}{5082f7a19ae2f8eda57ad46eda359079}
+      \strng{authorfullhash}{5082f7a19ae2f8eda57ad46eda359079}
+      \strng{authorfullhashraw}{5082f7a19ae2f8eda57ad46eda359079}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A chemist's guide to density functional theory}
+      \field{year}{2015}
+    \endentry
+    \entry{jensen2017introduction}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=07272f7b37bc95d4f9e9ac01efc83dcf}{%
+           family={Jensen},
+           familyi={J\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {John wiley \& sons}%
+      }
+      \strng{namehash}{07272f7b37bc95d4f9e9ac01efc83dcf}
+      \strng{fullhash}{07272f7b37bc95d4f9e9ac01efc83dcf}
+      \strng{fullhashraw}{07272f7b37bc95d4f9e9ac01efc83dcf}
+      \strng{bibnamehash}{07272f7b37bc95d4f9e9ac01efc83dcf}
+      \strng{authorbibnamehash}{07272f7b37bc95d4f9e9ac01efc83dcf}
+      \strng{authornamehash}{07272f7b37bc95d4f9e9ac01efc83dcf}
+      \strng{authorfullhash}{07272f7b37bc95d4f9e9ac01efc83dcf}
+      \strng{authorfullhashraw}{07272f7b37bc95d4f9e9ac01efc83dcf}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Introduction to computational chemistry}
+      \field{year}{2017}
+    \endentry
+    \entry{ramachandran2008computational}{book}{}{}
+      \name{author}{3}{}{%
+        {{hash=e650b95e9119c33fc9699827da4c51dc}{%
+           family={Ramachandran},
+           familyi={R\bibinitperiod},
+           given={KI},
+           giveni={K\bibinitperiod}}}%
+        {{hash=ec9a2d79c8b2abbd790c54b6977a29fd}{%
+           family={Gopakumar},
+           familyi={G\bibinitperiod},
+           given={Deepa},
+           giveni={D\bibinitperiod}}}%
+        {{hash=697d681d1dd891ca47c0b6c51e62eaf1}{%
+           family={Namboori},
+           familyi={N\bibinitperiod},
+           given={Krishnan},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{f9176b01ac84238f2c6624a290e7ee61}
+      \strng{fullhash}{f9176b01ac84238f2c6624a290e7ee61}
+      \strng{fullhashraw}{f9176b01ac84238f2c6624a290e7ee61}
+      \strng{bibnamehash}{f9176b01ac84238f2c6624a290e7ee61}
+      \strng{authorbibnamehash}{f9176b01ac84238f2c6624a290e7ee61}
+      \strng{authornamehash}{f9176b01ac84238f2c6624a290e7ee61}
+      \strng{authorfullhash}{f9176b01ac84238f2c6624a290e7ee61}
+      \strng{authorfullhashraw}{f9176b01ac84238f2c6624a290e7ee61}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Computational chemistry and molecular modeling: principles and applications}
+      \field{year}{2008}
+    \endentry
+    \entry{MD-2002-01}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=3dfd41d12a2896dd0ca93271e1d9e9cc}{%
+           family={Tuckerman},
+           familyi={T\bibinitperiod},
+           given={Mark\bibnamedelima E},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IOP Publishing}%
+      }
+      \strng{namehash}{3dfd41d12a2896dd0ca93271e1d9e9cc}
+      \strng{fullhash}{3dfd41d12a2896dd0ca93271e1d9e9cc}
+      \strng{fullhashraw}{3dfd41d12a2896dd0ca93271e1d9e9cc}
+      \strng{bibnamehash}{3dfd41d12a2896dd0ca93271e1d9e9cc}
+      \strng{authorbibnamehash}{3dfd41d12a2896dd0ca93271e1d9e9cc}
+      \strng{authornamehash}{3dfd41d12a2896dd0ca93271e1d9e9cc}
+      \strng{authorfullhash}{3dfd41d12a2896dd0ca93271e1d9e9cc}
+      \strng{authorfullhashraw}{3dfd41d12a2896dd0ca93271e1d9e9cc}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Physics: Condensed Matter}
+      \field{number}{50}
+      \field{title}{Ab initio molecular dynamics: basic concepts, current trends and novelapplications}
+      \field{volume}{14}
+      \field{year}{2002}
+      \field{pages}{R1297}
+      \range{pages}{-1}
+    \endentry
+    \entry{Me-2025-01}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=109d9ffb8dbfb1c190cef5dcda0ba425}{%
+           family={Da-yang},
+           familyi={D\bibinithyphendelim y\bibinitperiod},
+           given={Tabouli\bibnamedelima Eric},
+           giveni={T\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=e1504bc92d031056d8ae1414625e49bb}{%
+           family={Fifen},
+           familyi={F\bibinitperiod},
+           given={Jean\bibnamedelima Jules},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=0409e8b2b9edd67ab3128aec778b13a2}{%
+           family={Conradie},
+           familyi={C\bibinitperiod},
+           given={Jeanet},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{07884d1d872c755963f1c44b4c063a9b}
+      \strng{fullhash}{07884d1d872c755963f1c44b4c063a9b}
+      \strng{fullhashraw}{07884d1d872c755963f1c44b4c063a9b}
+      \strng{bibnamehash}{07884d1d872c755963f1c44b4c063a9b}
+      \strng{authorbibnamehash}{07884d1d872c755963f1c44b4c063a9b}
+      \strng{authornamehash}{07884d1d872c755963f1c44b4c063a9b}
+      \strng{authorfullhash}{07884d1d872c755963f1c44b4c063a9b}
+      \strng{authorfullhashraw}{07884d1d872c755963f1c44b4c063a9b}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Chemical Physics}
+      \field{title}{Exploration of the potential energy surfaces of the Cu2+ (MeOH) n= 9, 10 clusters: Solvent phase vs gas phase}
+      \field{volume}{590}
+      \field{year}{2025}
+      \field{pages}{112536}
+      \range{pages}{1}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
