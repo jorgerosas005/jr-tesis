@@ -9,7 +9,8 @@
 \usepackage{tikz}                                                     % Para crear gráficos
 \usepackage{tocloft}                                                  % Para personalizar la tabla de contenido
 \usepackage{setspace}                                                 % Para el interlineado
-\usepackage[backend=biber,style=numeric, sorting=none, doi=false, url=false]{biblatex}                    % Para la bibliografía
+%\usepackage[backend=biber,style=numeric, sorting=none, doi=false, url=false]{biblatex}                    % Para la bibliografía
+\usepackage[backend=biber, style=nature, doi=false, url=false]{biblatex}
 \usepackage{csquotes}                                                 % Para citas bibliográficas
 \usepackage{amsmath}                                                  % Para ecuaciones matemáticas
 \usepackage{amsfonts}
@@ -24,9 +25,10 @@
 \usepackage{subcaption}
 \usepackage{float}
 \usepackage{helvet}
+\usepackage{multirow}
 \renewcommand{\familydefault}{\sfdefault}
 
-\DeclareSIUnit\angstrom{\text {Å}}
+\DeclareSIUnit\angstrom{\text{Å}}
 \graphicspath{{./Imágenes/}}     % Ruta de las imágenes
 
 % Archivo de bibliografía
@@ -45,15 +47,15 @@
         \tableofcontents
         \listoffigures
 
-    \mainmatter % Páginas principales
+    \mainmatter% Páginas principales
         \include{Capítulos/Introducción}
-        %\include{Capítulos/Dinámica molecular}
+        \include{Capítulos/Dinámica molecular}
         %\include{Capítulos/DFT}
-        \include{Capítulos/Anexos}
+        %\include{Capítulos/Anexos}
 
     % Bibliografía
     \printbibliography
     
-    \backmatter 
+    \backmatter
 
 \end{document}
