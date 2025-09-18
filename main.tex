@@ -19,17 +19,29 @@
 \usepackage{booktabs}                                                 % Para mejores líneas en tablas
 \usepackage{longtable}                                                % Para tablas largas
 \usepackage{siunitx}                                                  % Para el comando \SI y manejo de unidades
-\usepackage{pdflscape} % Paquete para orientación horizontal
-\usepackage{graphicx}  % Necesario para \centering en algunos casos
-\usepackage{rotating} % Paquete para el entorno sidewaystable
+\usepackage{pdflscape}                                                % Paquete para orientación horizontal
+\usepackage{rotating}                                                 % Paquete para el entorno sidewaystable
 \usepackage{subcaption}
 \usepackage{float}
 \usepackage{helvet}
 \usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{makecell}
+\usepackage{array} 
 \renewcommand{\familydefault}{\sfdefault}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
 \DeclareSIUnit\angstrom{\text{Å}}
 \graphicspath{{./Imágenes/}}     % Ruta de las imágenes
+
+% --- Bloque de compatibilidad ---
+\usepackage{newunicodechar}
+\newunicodechar{—}{---}
+\newunicodechar{’}{'}
+\newunicodechar{ı}{\i}
+\newunicodechar{´}{\'{}}
+% ---------------------------------
 
 % Archivo de bibliografía
 \addbibresource{referencias.bib}
@@ -47,15 +59,13 @@
         \tableofcontents
         \listoffigures
 
-    \mainmatter% Páginas principales
+    \mainmatter % Páginas principales
         \include{Capítulos/Introducción}
-        \include{Capítulos/Dinámica molecular}
+        %\include{Capítulos/Dinámica molecular}
         %\include{Capítulos/DFT}
         %\include{Capítulos/Anexos}
 
     % Bibliografía
     \printbibliography
-    
     \backmatter
-
 \end{document}
