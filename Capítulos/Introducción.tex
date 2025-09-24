@@ -74,39 +74,76 @@ El JTE no es un mero detalle, sino una de las principales causas de la química 
         \item Espectroscopia de Absorción de Rayos X (EXAFS y XANES)
     \end{itemize}
 
-    Los primeros trabajos de difracción en las décadas de 1970 y 1980 establecieron la idea de una coordinación octaédrica distorsionada, con una configuración denotada como 4 +2 que implica cuatro ligandos de agua en posiciones ecuatoriales y dos más distantes en posiciones axiales \cite{Wa-1988-01}. Sin embargo, a partir del año 2000, estudios más avanzados, que combinaban técnicas como la difracción de neutrones con dinámica molecular o emplean análisis de EXAFS y XANES más sofisticados, comenzaron a favorecer un modelo de coordinación quíntuple (NC=5) con una geometría de pirámide cuadrada \cite{Wa-2001-01, Wa-2002-01}.
+    Los primeros trabajos de difracción en las décadas de 1970 y 1980 establecieron la idea de una coordinación octaédrica distorsionada, con una configuración denotada como 4 +2 que implica cuatro ligandos de agua en posiciones ecuatoriales y dos más distantes en posiciones axiales \cite{Wa-1988-01}. Sin embargo, a partir del año 2000, estudios más avanzados, que combinaban técnicas como la difracción de neutrones con dinámica molecular o emplean análisis de EXAFS y XANES más sofisticados, comenzaron a favorecer un modelo de coordinación quíntuple con una geometría de pirámide cuadrada \cite{Wa-2001-01, Wa-2002-01}.
 
     Actualmente, existe un consenso experimental sobre las distancias de enlace ecuatoriales (\ce{Cu} - \ce{O_{eq}}), que se reportan consistentemente en el rango de 1.93 - 2.01 \AA. Por el contrario, las distancias axiales ({Cu} - \ce{O_{ax}}) son más difíciles de medir y presentan una mayor variabilidad, con valores que oscilan entre 2.15 \AA \ y 2.60 \AA. Investigaciones recientes de alta resolución sugieren incluso la existencia de dos distancias axiales distintas, lo que apunta a un octaedro no centrosimétrico. Algunos estudios que emplean un enfoque experimental y teórico han llegado a proponer un número de coordinación promedio de 4.5, lo que refuerza la idea de una mezcla dinámica de geometrías en solución. La imagen moderna, por tanto, describe una "plasticidad estructural'' donde múltiples estados de coordinación coexisten en un equilibrio dinámico. El resumen de todos estos trabajos se encuentra en la tabla\ref{tab:trabajos_experimentales_agua}.
 
-\begin{table}[h!]
-    \centering
-    \small
-    \caption{Parámetros estructurales reportados en trabajos experimentales para agua.}
-    \label{tab:trabajos_experimentales_agua}
-    
-    % Usamos 'm{ancho}' para centrado vertical. 
-    % La suma de anchos debe ser cercana a \linewidth.
-    \begin{tabular}{| C{0.7cm} | C{1.5cm} | C{0.6cm} | C{2.5cm} | C{1.8cm} | C{1.8cm} | C{1.8cm} | C{1.8cm} |}
-        \hline
-        \textbf{Ref} & \textbf{Técnica} & \textbf{NC} & \textbf{Geometría} & \textbf{\ce{O_{eq1}} (\AA)} & \textbf{\ce{O_{eq2}} (\AA)} & \textbf{\ce{O_{ax1}} (\AA)} & \textbf{\ce{O_{ax2}} (\AA)} \\ 
-        \hline
+
+    \begin{table}[h!]
+        \centering
+        \small
+        \begin{threeparttable}
+        \caption{Parámetros estructurales del ion Cu(II) reportados en trabajos experimentales.}
+        \label{tab:trabajos_experimentales_agua}
         
-        \cite{Wa-2020-01} & EXAFS & 6 & Octaédrica distorsionada & $1.975 \pm 0.003$ & & $2.14 \pm 0.02$ & $2.32 \pm 0.02$ \\ 
-        \hline
+        \begin{tabular}{| C{0.7cm} | C{2.5cm} | C{0.75cm} | C{2.5cm} | C{2.1cm} | C{2.1cm} | C{2.1cm} |}
+            \hline
+            \textbf{Ref} & \textbf{Técnica} & \textbf{NC} & \textbf{Geometría} & \textbf{\ce{Cu-O_{eq}} (\AA)} & \textbf{\ce{Cu-O_{ax1}} (\AA)} & \textbf{\ce{Cu-O_{ax2}} (\AA)} \\ 
+            \hline
+
+            \cite{Wa-1982-01} & Difracción de neutrones & 2+4 & & $2.05$   &  & \\
+            \hline
         
-        \multirow{4}{*}{\cite{Wa-2018-02}} & EXAFS & 6 & Asimétrica axial & $1.97$ & & $2.22$ & $2.34$ \\ 
-        \cline{2-8}
-        
-        & \multirow{3}{*}{MXAN} & 5 & Pirámide cuadrada & $1.95$ & & $2.23$ & \\ 
-        \cline{3-8} 
-        
-        & & 6 & Asimétrica axial & $1.94$ & $1.94$ & $2.22$ & \\ 
-        \cline{3-8} 
-        
-        & & 6 & Asimétrica axial & $1.94$ & $2.14$ & $2.28$ & \\ 
-        \hline
-    \end{tabular}
-\end{table}
+            \cite{Wa-1981-01} & EXAFS & 6 & Octaédrica distorsionada & $1.955 \pm 0.03$ & $2.60 \pm 0.05$ & \\
+            \hline
+
+            \cite{Wa-1987-01} & Difracción de neutrones  & 6 & Octaédrica distorsionada & $1.96 \pm 0.03$ & & \\
+            \hline
+
+
+            \multirow{2}{*}{\cite{Wa-2001-01}} & \multirow{2}{2.5cm}{Difracción de neutrones CPMD / BYLP} & \multirow{2}{*}{5} & Pirámide cuadrada & \multirow{2}{*}{$1.96$} & \multirow{2}{*}{$1.96$} & \multirow{2}{*}{} \\
+            & & & Bipirámide trigonal & & & \\
+            \hline
+
+            \cite{Wa-2002-01} & XANES / MXAN /XAS & 5 & Pirámide cuadrada & $1.97 \pm 0.01$ & $2.39 \pm 0.06$ & \\
+            \hline
+            
+            \multirow{2}{*}{\cite{Wa-2005-01}} & \multirow{2}{2.5cm}{MXAN / XAS DFT / B(38HF)P86} & 4 & Distorsión D$_{2\text{d}}$ & $1.96 \pm 0.02$ & & \\
+            \cline{3-7}
+            & & 5 & Pirámide cuadrada C$_{2\text{v}}$ & $1.98 \pm 0.03$ $1.95 \pm 0.03$ & $2.35 \pm 0.05$ & \\
+            \hline
+
+            \cite{Wa-2009-02} & Análisis estructural por rayos X & 6 & Octaédrica distorsionada & $2.00$ & $2.10 - 2.30$ & $2.10 - 2.30$ \\
+            \hline
+
+            \multirow{3}{*}{\cite{Wa-2015-01}} & \multirow{3}{*}{MXAN} & 5 & Pirámide cuadrada & $1.95 \pm 0.02$ & $2.23 \pm 0.11$ & \\
+            \cline{3-7}
+            & & 5+1 & Pirámide cuadrada & $1.94 \pm 0.02$ & $2.06 \pm 0.07$ & $2.99 \pm 0.22$ \\
+            \cline{3-7}
+            & & 5+1  & Pirámide cuadrada \tnote{b} & $1.97 \pm 0.02$ & $2.44 \pm 0.13$ & $3.0 \pm 0.1$ \\
+            \hline
+
+            \multirow{4}{*}{\cite{Wa-2018-02}} & EXAFS \tnote{a} & 6 & Asimétrica axial & $1.97$ & \makecell{$2.22$ \\ $2.24$} & \makecell{$2.37$ \\ $2.38$} \\
+            \cline{2-2} \cline{3-7}
+            & \multirow{3}{*}{MXAN \tnote{a}} & 5 & Pirámide cuadrada & $1.95 \pm 0.01$ $1.95 \pm 0.01$ & $2.23 \pm 0.08$ $2.24 \pm 0.06$ & \\
+            \cline{3-7}
+            & & 6 & Asimétrica axial & $1.95 \pm 0.01$ $1.94 \pm 0.01$ & $1.93 \pm 0.03$ $2.14 \pm 0.11$ & $2.22 \pm 0.04$ $2.28 \pm 0.10$\\
+            \cline{3-7}
+            \hline
+
+            \cite{Wa-2020-01} & EXAFS & 6 & Octaédrica distorsionada & $1.957 \pm 0.003$ & $2.14 \pm 0.02$ & $2.32 \pm 0.02$ \\ 
+            \hline
+
+        \end{tabular}
+        \begin{tablenotes}
+            \small % Puedes ajustar el tamaño de la fuente de las notas
+            % 5. Define cada nota usando \item
+            \item[a] Realizado en vidrios acuosos congelados con 1,3-propanodiol (arriba) y 1,5-pentanodiol (abajo).
+            \item[b] Realizado en solución congelada
+        \end{tablenotes}
+        \end{threeparttable}
+    \end{table}
+
    
     \subsection*{Estudios Teóricos}
 
