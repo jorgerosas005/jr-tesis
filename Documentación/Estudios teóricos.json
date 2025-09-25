@@ -1,0 +1,785 @@
+[
+{
+  "autor": "Bérces",
+  "ano": 1999,
+  "clasificacion": "Teórico",
+  "fase_estudiada": "Fase gaseosa",
+  "metodologia": "El estudio utiliza cálculos estáticos y simulaciones de dinámica molecular ab initio (específicamente, Car-Parrinello Molecular Dynamics) basados en la Teoría del Funcional de la Densidad (DFT). Para los cálculos estáticos se empleó el programa Amsterdam Density Functional (ADF) con la aproximación de densidad local (LDA) y correcciones de gradiente para el intercambio (Becke) y la correlación (Perdew). Se usaron conjuntos de bases de funciones de tipo Slater triple-zeta para el Cu y doble-zeta para N, O y H. Para la dinámica se usó el método proyector de ondas aumentadas (PAW) con un 'cutoff' de energía de 30 Ry y funcionales de la aproximación de gradiente generalizado (GGA) de Becke y Perdew.",
+  "coordinacion": [
+    {
+      "numero": 4,
+      "geometria": "Plana (para el complejo con agua)",
+      "distancias_ecuatoriales_A": [
+        1.923,
+        1.927,
+        1.983,
+        1.997
+      ],
+      "distancias_axiales_A": null
+    },
+    {
+      "numero": 4,
+      "geometria": "Tetraédrica distorsionada (para el complejo con amoniaco)",
+      "distancias_ecuatoriales_A": [
+        2.064,
+        2.065,
+        2.067,
+        2.068
+      ],
+      "distancias_axiales_A": null
+    },
+    {
+      "numero": 5,
+      "geometria": "Pirámide tetragonal (para el complejo con agua)",
+      "distancias_ecuatoriales_A": [
+        1.995,
+        2.007,
+        2.044,
+        2.053
+      ],
+      "distancias_axiales_A": [
+        2.250
+      ]
+    },
+    {
+      "numero": 5,
+      "geometria": "Pirámide tetragonal (para el complejo con amoniaco)",
+      "distancias_ecuatoriales_A": [
+        2.104,
+        2.105,
+        2.106,
+        2.112
+      ],
+      "distancias_axiales_A": [
+        2.294
+      ]
+    },
+    {
+      "numero": 6,
+      "geometria": "Bipirámide tetragonal (Octaedro distorsionado, para el complejo con agua)",
+      "distancias_ecuatoriales_A": [
+        2.019,
+        2.029,
+        2.034,
+        2.034
+      ],
+      "distancias_axiales_A": [
+        2.342,
+        2.398
+      ]
+    },
+    {
+      "numero": 6,
+      "geometria": "Octaedro con enlaces axiales largos (para el complejo con amoniaco)",
+      "distancias_ecuatoriales_A": [
+        2.087,
+        2.095,
+        2.102,
+        2.102
+      ],
+      "distancias_axiales_A": [
+        2.477,
+        2.896
+      ]
+    }
+  ]
+},
+{
+  "autor": "Burda",
+  "ano": 2004,
+  "clasificacion": "Teórico",
+  "fase_estudiada": "Fase gaseosa",
+  "metodologia": "El estudio utiliza cálculos de química cuántica estáticos basados en la Teoría del Funcional de la Densidad (DFT). La optimización de geometría se realizó con el funcional B3PW91 y el conjunto de bases 6-31+G(d). Los cálculos de energía de punto único se realizaron con el funcional B3LYP y el conjunto de bases 6-311++G(2df,2pd). Para el átomo de cobre se utilizó un pseudopotencial relativista efectivo promediado (AREP). El análisis de descomposición de energía de Morokuma se realizó con el programa GAMESS-Us y los demás cálculos con GAUSSIAN 98.",
+  "coordinacion": [
+    {
+      "numero": 2,
+      "geometria": "Lineal (para Cu(I))",
+      "distancias_ecuatoriales_A": [
+        1.899,
+        1.899
+      ],
+      "distancias_axiales_A": null
+    },
+    {
+      "numero": 4,
+      "geometria": "Plana cuadrada (para Cu(II))",
+      "distancias_ecuatoriales_A": [
+        1.959,
+        1.960,
+        1.960,
+        1.963
+      ],
+      "distancias_axiales_A": null
+    },
+    {
+      "numero": 5,
+      "geometria": "Pirámide de base cuadrada (para Cu(II))",
+      "distancias_ecuatoriales_A": [
+        1.974,
+        1.974,
+        2.013,
+        2.013
+      ],
+      "distancias_axiales_A": [
+        2.170
+      ]
+    },
+    {
+      "numero": 6,
+      "geometria": "Octaedro con distorsión Jahn-Teller (para Cu(II))",
+      "distancias_ecuatoriales_A": [
+        2.003,
+        2.003,
+        2.026,
+        2.026
+      ],
+      "distancias_axiales_A": [
+        2.281,
+        2.281
+      ]
+    }
+  ]
+},
+{
+  "autor": "Pavelka",
+  "ano": 2005,
+  "clasificacion": "Teórico",
+  "fase_estudiada": "Fase gaseosa",
+  "metodologia": "El estudio utiliza un enfoque de química cuántica. La optimización de las geometrías de los complejos se realizó con la Teoría del Funcional de la Densidad (DFT) usando el funcional híbrido B3PW91 y un conjunto de bases 6-31+G(d). Los cálculos de energía de punto único para determinar las energías de estabilización se realizaron a un nivel de teoría B3LYP/6-311++G(2df,2pd). Para el átomo de cobre se empleó un pseudopotencial relativista efectivo promediado (AREP). Los cálculos se llevaron a cabo con el programa Gaussian 98, y el análisis de descomposición de energía de Morokuma se realizó con GAMESS-US.",
+  "coordinacion": [
+    {
+      "numero": 2,
+      "geometria": "Lineal (para [Cu(NH₃)₄]⁺)",
+      "distancias_ecuatoriales_A": [
+        1.91,
+        1.91
+      ],
+      "distancias_axiales_A": null
+    },
+    {
+      "numero": 4,
+      "geometria": "Tetraédrica (para [Cu(NH₃)₄]⁺)",
+      "distancias_ecuatoriales_A": [
+        2.14,
+        2.14,
+        2.14,
+        2.14
+      ],
+      "distancias_axiales_A": null
+    },
+    {
+      "numero": 4,
+      "geometria": "Plana cuadrada (para [Cu(NH₃)₄]²⁺)",
+      "distancias_ecuatoriales_A": [
+        2.05,
+        2.05,
+        2.05,
+        2.05
+      ],
+      "distancias_axiales_A": null
+    },
+    {
+      "numero": 4,
+      "geometria": "Plana cuadrada (para [Cu(H₂O)₄]²⁺)",
+      "distancias_ecuatoriales_A": [
+        1.96,
+        1.96,
+        1.96,
+        1.96
+      ],
+      "distancias_axiales_A": null
+    },
+    {
+      "numero": 5,
+      "geometria": "Pirámide de base cuadrada (para [Cu(NH₃)₆]²⁺)",
+      "distancias_ecuatoriales_A": [
+        2.07,
+        2.07,
+        2.10,
+        2.10
+      ],
+      "distancias_axiales_A": [
+        2.28
+      ]
+    },
+    {
+      "numero": 6,
+      "geometria": "Octaedro con distorsión Jahn-Teller (para [Cu(NH₃)₆]²⁺)",
+      "distancias_ecuatoriales_A": [
+        2.17,
+        2.17,
+        2.17,
+        2.17
+      ],
+      "distancias_axiales_A": [
+        2.51,
+        2.51
+      ]
+    },
+    {
+      "numero": 6,
+      "geometria": "Octaedro con distorsión Jahn-Teller (para [Cu(H₂O)₆]²⁺)",
+      "distancias_ecuatoriales_A": [
+        1.98,
+        1.98,
+        2.01,
+        2.01
+      ],
+      "distancias_axiales_A": [
+        2.24,
+        2.24
+      ]
+    }
+  ]
+},
+{
+  "autor": "de Almeida",
+  "ano": 2007,
+  "clasificacion": "Teórico",
+  "fase_estudiada": "Fase gaseosa",
+  "metodologia": "El estudio se basa en la Teoría del Funcional de la Densidad (DFT) para calcular parámetros de Resonancia Paramagnética Electrónica (EPR), específicamente el tensor-g y las constantes de acoplamiento hiperfino. La optimización de geometría se realizó a nivel B3LYP con conjuntos de bases 6-31G(d) para el cobre y 6-311G** para oxígeno e hidrógeno, utilizando el programa GAMESS-US. Los parámetros EPR se calcularon con el paquete DALTON 2.0, empleando un funcional B3LYP modificado y reparametrizado, junto con los conjuntos de bases IGLO-II (O, H) y CP(PPP) (Cu).",
+  "coordinacion": [
+    {
+      "numero": 6,
+      "geometria": "Octaedro con distorsión Jahn-Teller (simetría D₂h)",
+      "distancias_ecuatoriales_A": [
+        1.97,
+        2.05
+      ],
+      "distancias_axiales_A": [
+        2.30
+      ]
+    },
+    {
+      "numero": 5,
+      "geometria": "Pirámide de base cuadrada (Modelo I)",
+      "distancias_ecuatoriales_A": [
+        1.975,
+        1.995
+      ],
+      "distancias_axiales_A": [
+        2.162
+      ]
+    },
+    {
+      "numero": 5,
+      "geometria": "Bipirámide trigonal (Modelo IV)",
+      "distancias_ecuatoriales_A": [
+        1.971,
+        2.078
+      ],
+      "distancias_axiales_A": [
+        2.052
+      ]
+    }
+  ]
+},
+{
+  "autor": "Sukrat",
+  "ano": 2007,
+  "clasificacion": "Teórico",
+  "fase_estudiada": "Fase gaseosa",
+  "metodologia": "El estudio utiliza cálculos de química cuántica. Las geometrías de los complejos [Cu(H₂O)ₙ]²⁺ para n=1-8 se optimizaron inicialmente a nivel de teoría Hartree-Fock (HF) con el conjunto de bases 6-31G(d,p). Las energías se determinaron mediante cálculos de punto único a los niveles MP2/6-31G(d,p) y DFT con el funcional B3LYP/6-31G(d,p). Para los complejos con n=6, 7 y 8, se realizaron optimizaciones de geometría adicionales a nivel MP2/6-311G(d,p). El efecto del conjunto de bases en las energías se investigó con cálculos de punto único MP2 utilizando 6-31++G(d,p), 6-311G(d,p) y 6-311G(2df,p). Todos los cálculos se realizaron con el programa GAUSSIAN 98.",
+  "coordinacion": [
+    {
+      "numero": 4,
+      "geometria": "Tetraédrica",
+      "distancias_ecuatoriales_A": [
+        1.99,
+        1.99,
+        1.99,
+        1.99
+      ],
+      "distancias_axiales_A": null
+    },
+    {
+      "numero": 5,
+      "geometria": "Pirámide de base cuadrada",
+      "distancias_ecuatoriales_A": [
+        2.02,
+        2.02,
+        2.04,
+        2.04
+      ],
+      "distancias_axiales_A": [
+        2.15
+      ]
+    },
+    {
+      "numero": 6,
+      "geometria": "Octaedro con distorsión Jahn-Teller",
+      "distancias_ecuatoriales_A": [
+        2.06,
+        2.06,
+        2.06,
+        2.06
+      ],
+      "distancias_axiales_A": [
+        2.24,
+        2.24
+      ]
+    }
+  ]
+},
+{
+  "autor": "Bryantsev",
+  "ano": 2008,
+  "clasificacion": "Teórico",
+  "fase_estudiada": "Fase gaseosa y fase acuosa (modelo de continuo)",
+  "metodologia": "El estudio utiliza la Teoría del Funcional de la Densidad (DFT) con el funcional B3LYP para caracterizar clústeres de [Cu(H₂O)ₙ]²⁺. Las geometrías se optimizaron con el conjunto de bases 6-311G++(d,p) para los átomos ligeros y un potencial de núcleo efectivo (ECP) LACV3P+ para el Cu. Se realizaron cálculos de energía de punto único con conjuntos de bases más extensos (aug-cc-pVTZ(-f) y LACV3P+(2f)). El efecto del solvente acuoso se modeló utilizando el modelo de continuo COSMO. Los cálculos en fase gaseosa se realizaron con el programa Jaguar 7.0 y los cálculos de solvatación con Turbomole.",
+  "coordinacion": [
+    {
+      "numero": 4,
+      "geometria": "Plana cuadrada (fase gaseosa)",
+      "distancias_ecuatoriales_A": [
+        1.976
+      ],
+      "distancias_axiales_A": null
+    },
+    {
+      "numero": 5,
+      "geometria": "Pirámide de base cuadrada (fase gaseosa)",
+      "distancias_ecuatoriales_A": [
+        2.011
+      ],
+      "distancias_axiales_A": [
+        2.181
+      ]
+    },
+    {
+      "numero": 6,
+      "geometria": "Octaedro con distorsión Jahn-Teller (fase gaseosa)",
+      "distancias_ecuatoriales_A": [
+        2.033
+      ],
+      "distancias_axiales_A": [
+        2.225,
+        2.255
+      ]
+    },
+    {
+      "numero": 5,
+      "geometria": "Pirámide de base cuadrada (fase acuosa)",
+      "distancias_ecuatoriales_A": [
+        1.994
+      ],
+      "distancias_axiales_A": [
+        2.171
+      ]
+    },
+    {
+      "numero": 6,
+      "geometria": "Octaedro con distorsión Jahn-Teller (fase acuosa)",
+      "distancias_ecuatoriales_A": [
+        2.020
+      ],
+      "distancias_axiales_A": [
+        2.247,
+        2.250
+      ]
+    }
+  ]
+},
+{
+  "autor": "O'Brien",
+  "ano": 2008,
+  "clasificacion": "Híbrido",
+  "fase_estudiada": "Fase gaseosa",
+  "metodologia": "El estudio combina técnicas experimentales con cálculos teóricos. La parte experimental utiliza espectroscopía de fotodisociación infrarroja (IRPD) y disociación radiativa infrarroja de cuerpo negro (BIRD) en un espectrómetro de masas de resonancia de ciclotrón de iones por transformada de Fourier (FT-ICR). La parte teórica emplea la Teoría del Funcional de la Densidad (DFT) con el funcional B3LYP y el conjunto de bases LACV3P**++. Las búsquedas conformacionales iniciales se realizaron con un método de Monte Carlo usando el campo de fuerza MMFF94 en Macromodel, y las optimizaciones de geometría y cálculos de frecuencia se realizaron con el programa Jaguar v. 6.5.",
+  "coordinacion": [
+    {
+      "numero": 4,
+      "geometria": "Plana cuadrada con moléculas de agua en la segunda capa de solvatación",
+      "distancias_ecuatoriales_A": null,
+      "distancias_axiales_A": null
+    },
+    {
+      "numero": 5,
+      "geometria": "Pirámide de base cuadrada con moléculas de agua en la segunda capa de solvatación",
+      "distancias_ecuatoriales_A": null,
+      "distancias_axiales_A": null
+    },
+    {
+      "numero": 6,
+      "geometria": "Octaedro",
+      "distancias_ecuatoriales_A": null,
+      "distancias_axiales_A": null
+    }
+  ]
+},
+{
+  "autor": "Bryantsev",
+  "ano": 2009,
+  "clasificacion": "Teórico",
+  "fase_estudiada": "Solución acuosa (modelo de continuo)",
+  "metodologia": "El estudio utiliza la Teoría del Funcional de la Densidad (DFT) con el funcional B3LYP y el modelo de solvente continuo COSMO. Las optimizaciones de geometría se realizaron con el conjunto de bases 6-311++G(d,p) para los átomos ligeros y un potencial de núcleo efectivo (ECP) LACV3P+ para el cobre, utilizando el programa Turbomole 5.7. Se realizaron cálculos de energía de punto único con funcionales adicionales (PBE, BP86, BLYP) y conjuntos de bases más grandes (LACV3P+(2f)/6-311++G(3df,3pd)). Los cálculos de frecuencia se realizaron con el programa Jaguar 7.5.",
+  "coordinacion": [
+    {
+      "numero": 5,
+      "geometria": "Pirámide de base cuadrada ([Cu(H₂O)₁₈]²⁺)",
+      "distancias_ecuatoriales_A": [
+        2.001
+      ],
+      "distancias_axiales_A": [
+        2.272
+      ]
+    },
+    {
+      "numero": 5,
+      "geometria": "Pirámide de base cuadrada ([Cu(MeNH₂)(H₂O)₁₇]²⁺)",
+      "distancias_ecuatoriales_A": [
+        2.017,
+        2.029
+      ],
+      "distancias_axiales_A": [
+        2.272
+      ]
+    },
+    {
+      "numero": 5,
+      "geometria": "Pirámide de base cuadrada ([Cu(OH)(H₂O)₁₇]⁺)",
+      "distancias_ecuatoriales_A": [
+        1.918,
+        2.033
+      ],
+      "distancias_axiales_A": [
+        2.361
+      ]
+    },
+    {
+      "numero": 4,
+      "geometria": "Plana cuadrada ([Cu(OH)₂(H₂O)₁₆])",
+      "distancias_ecuatoriales_A": [
+        1.930,
+        2.026
+      ],
+      "distancias_axiales_A": null
+    },
+    {
+      "numero": 4,
+      "geometria": "Plana cuadrada ([Cu(OH)₃(H₂O)₁₅]⁻)",
+      "distancias_ecuatoriales_A": [
+        1.951,
+        2.062
+      ],
+      "distancias_axiales_A": null
+    }
+  ]
+},
+{
+  "autor": "Rios-Font",
+  "ano": 2010,
+  "clasificacion": "Teórico",
+  "fase_estudiada": "Fase gaseosa",
+  "metodologia": "El estudio utiliza la Teoría del Funcional de la Densidad (DFT) y cálculos ab initio de alto nivel (CCSD(T)). Se realizaron optimizaciones de geometría y cálculos de frecuencia con cuatro funcionales DFT que contienen diferentes porcentajes de intercambio exacto: BLYP (0%), B3LYP (20%), MPWB1K (44%) y BHLYP (50%). Se utilizó el conjunto de bases 6-31++G(d,p) para H y O, y un conjunto de bases de Wachters extendido para Cu. Se realizaron cálculos de energía de punto único a nivel CCSD(T) con un conjunto de bases ANO para Cu y cc-pVTZ no contraído para H y O. Todos los cálculos se realizaron con el programa Gaussian 03.",
+  "coordinacion": [
+    {
+      "numero": 2,
+      "geometria": "Lineal",
+      "distancias_ecuatoriales_A": [
+        1.855
+      ],
+      "distancias_axiales_A": null
+    },
+    {
+      "numero": 3,
+      "geometria": "Trigonal plana",
+      "distancias_ecuatoriales_A": [
+        1.906,
+        1.921
+      ],
+      "distancias_axiales_A": null
+    },
+    {
+      "numero": 4,
+      "geometria": "Plana cuadrada",
+      "distancias_ecuatoriales_A": [
+        1.963,
+        1.967
+      ],
+      "distancias_axiales_A": null
+    },
+    {
+      "numero": 5,
+      "geometria": "Pirámide de base cuadrada",
+      "distancias_ecuatoriales_A": [
+        1.980,
+        2.022
+      ],
+      "distancias_axiales_A": [
+        2.160
+      ]
+    },
+    {
+      "numero": 6,
+      "geometria": "Octaedro con distorsión Jahn-Teller",
+      "distancias_ecuatoriales_A": [
+        2.002,
+        2.020
+      ],
+      "distancias_axiales_A": [
+        2.254
+      ]
+    }
+  ]
+},
+{
+  "autor": "Liu",
+  "ano": 2010,
+  "clasificacion": "Teórico",
+  "fase_estudiada": "Fase gaseosa y fase acuosa",
+  "metodologia": "El estudio utiliza la técnica de dinámica molecular ab initio (AIMD), específicamente Car-Parrinello Molecular Dynamics (CPMD), combinada con el método de restricción para calcular superficies de energía libre. La estructura electrónica se calcula con la Teoría del Funcional de la Densidad (DFT) utilizando principalmente el funcional BLYP, con una comparación con el funcional PBE. Se empleó un conjunto de bases de ondas planas con un 'cutoff' de energía de 70 Ry y pseudopotenciales de Martins-Trouillier. Todas las simulaciones se realizaron con el paquete de software CPMD.",
+  "coordinacion": [
+    {
+      "numero": 4,
+      "geometria": "Plana cuadrada distorsionada",
+      "distancias_ecuatoriales_A": [
+        1.93,
+        1.94,
+        2.05,
+        2.06
+      ],
+      "distancias_axiales_A": null
+    },
+    {
+      "numero": 5,
+      "geometria": "Pirámide de base cuadrada",
+      "distancias_ecuatoriales_A": [
+        2.03,
+        2.05,
+        2.09,
+        2.09
+      ],
+      "distancias_axiales_A": [
+        2.31
+      ]
+    },
+    {
+      "numero": 5,
+      "geometria": "Bipirámide trigonal",
+      "distancias_ecuatoriales_A": [
+        2.04,
+        2.07,
+        2.14
+      ],
+      "distancias_axiales_A": [
+        1.95,
+        2.14
+      ]
+    },
+    {
+      "numero": 6,
+      "geometria": "Octaedro con distorsión Jahn-Teller",
+      "distancias_ecuatoriales_A": [
+        1.97,
+        1.99,
+        2.07,
+        2.09
+      ],
+      "distancias_axiales_A": [
+        2.46,
+        2.58
+      ]
+    }
+  ]
+},
+{
+  "autor": "Gómez-Salces",
+  "ano": 2012,
+  "clasificacion": "Híbrido",
+  "fase_estudiada": "Solución acuosa, sales hidratadas (cristales) y vidrio",
+  "metodologia": "El estudio combina espectroscopía de absorción óptica experimental en función de la temperatura con un modelo teórico. Se midió la intensidad de absorción (fuerza del oscilador) de la transición d-d del ion Cu(II) en diferentes medios. El trabajo propone un modelo fenomenológico de Jahn-Teller dinámico que se apoya en cálculos de energía total de la literatura (incluyendo DFT y COSMO) para explicar la geometría de coordinación en solución acuosa, interpretando la dependencia de la fuerza del oscilador con la temperatura.",
+  "coordinacion": [
+    {
+      "numero": 6,
+      "geometria": "Octaedro con distorsión no centrosimétrica (promedio de simulaciones QM/MM citadas)",
+      "distancias_ecuatoriales_A": [
+        2.03,
+        2.03,
+        2.03,
+        2.03
+      ],
+      "distancias_axiales_A": [
+        2.15,
+        2.30
+      ]
+    }
+  ]
+},
+{
+  "autor": "Galván-García",
+  "ano": 2017,
+  "clasificacion": "Teórico",
+  "fase_estudiada": "Fase gaseosa y solución acuosa (modelo de continuo)",
+  "metodologia": "El estudio utiliza cálculos de estructura electrónica basados en la Teoría del Funcional de la Densidad (DFT) y la teoría de perturbaciones de Møller-Plesset de segundo orden (MP2). Se optimizaron las geometrías con cinco funcionales DFT (PBE, RevTPSS, TPSSh, B3LYP, BHLYP) y MP2, usando el conjunto de bases def-SVP. Los efectos del solvente se modelaron con los protocolos CPCM y SMD. Las energías de estabilización se calcularon a nivel MP2/aug-cc-pVTZ. Todos los cálculos se realizaron con el paquete de programas Gaussian 09.",
+  "coordinacion": [
+    {
+      "numero": 2,
+      "geometria": "Lineal",
+      "distancias_ecuatoriales_A": [
+        1.898,
+        1.898
+      ],
+      "distancias_axiales_A": null
+    },
+    {
+      "numero": 3,
+      "geometria": "Trigonal plana",
+      "distancias_ecuatoriales_A": [
+        1.944,
+        1.944,
+        1.948
+      ],
+      "distancias_axiales_A": null
+    },
+    {
+      "numero": 4,
+      "geometria": "Plana cuadrada",
+      "distancias_ecuatoriales_A": [
+        1.991,
+        1.991,
+        1.991,
+        1.991
+      ],
+      "distancias_axiales_A": null
+    },
+    {
+      "numero": 5,
+      "geometria": "Pirámide de base cuadrada",
+      "distancias_ecuatoriales_A": [
+        2.008,
+        2.008,
+        2.040,
+        2.040
+      ],
+      "distancias_axiales_A": [
+        2.143
+      ]
+    },
+    {
+      "numero": 6,
+      "geometria": "Octaedro con distorsión Jahn-Teller",
+      "distancias_ecuatoriales_A": [
+        2.047,
+        2.047,
+        2.049,
+        2.049
+      ],
+      "distancias_axiales_A": [
+        2.215,
+        2.215
+      ]
+    }
+  ]
+},
+{
+  "autor": "Monjaraz-Rodríguez",
+  "ano": 2018,
+  "clasificacion": "Teórico",
+  "fase_estudiada": "Fase gaseosa",
+  "metodologia": "El estudio explora la superficie de energía potencial de clústeres [Cu(H₂O)ₙ]²⁺ (n=12, 16, 18) utilizando una versión modificada del método de recocido simulado (implementado en el código ASCEC) con el método semiempírico PM7. Los isómeros candidatos se optimizaron con la Teoría del Funcional de la Densidad (DFT) utilizando los funcionales PBE0-D3, M06-2X y BHLYP, junto con el conjunto de bases 6-311++G**. Las optimizaciones se realizaron con NWChem v.6.3 y los análisis de frecuencia con Gaussian 09. La naturaleza de los enlaces se analizó con la Teoría Cuántica de Átomos en Moléculas (QTAIM) y el índice de Interacciones No Covalentes (NCI).",
+  "coordinacion": [
+    {
+      "numero": 5,
+      "geometria": "Pirámide cuadrada distorsionada",
+      "distancias_ecuatoriales_A": "1.982 (0.010)",
+      "distancias_axiales_A": "2.232 (0.078)"
+    },
+    {
+      "numero": 6,
+      "geometria": "Octaedro distorsionado",
+      "distancias_ecuatoriales_A": "1.999 (0.007)",
+      "distancias_axiales_A": "2.391 (0.031)"
+    }
+  ]
+},
+{
+  "autor": "Christensen",
+  "ano": 2023,
+  "clasificacion": "Teórico",
+  "fase_estudiada": "Fase gaseosa",
+  "metodologia": "El estudio utiliza química cuántica ab initio. Se emplearon métodos estocásticos (Monte Carlo tipo 'basin-hopping' y muestreo basado en Dinámica Molecular) para explorar el espacio conformacional. Las optimizaciones de geometría se realizaron con el funcional DFT MPW1K y el conjunto de bases cc-pVTZ. Se realizaron cálculos de energía de punto único de mayor nivel con el método EOM-IP-CCSD utilizando un conjunto de bases mixto (cc-pVDZ para Cu y cc-pVTZ para O, H). Los cálculos se llevaron a cabo con el paquete de software Q-Chem 5.2.",
+  "coordinacion": [
+    {
+      "numero": 2,
+      "geometria": "Lineal (simetría D₂d)",
+      "distancias_ecuatoriales_A": [
+        1.844,
+        1.844
+      ],
+      "distancias_axiales_A": null
+    },
+    {
+      "numero": 3,
+      "geometria": "Trigonal plana distorsionada (simetría C₂ᵥ)",
+      "distancias_ecuatoriales_A": null,
+      "distancias_axiales_A": null
+    },
+    {
+      "numero": 4,
+      "geometria": "Plana cuadrada",
+      "distancias_ecuatoriales_A": null,
+      "distancias_axiales_A": null
+    },
+    {
+      "numero": 5,
+      "geometria": "Pirámide de base cuadrada",
+      "distancias_ecuatoriales_A": null,
+      "distancias_axiales_A": null
+    },
+    {
+      "numero": 6,
+      "geometria": "Octaedro",
+      "distancias_ecuatoriales_A": null,
+      "distancias_axiales_A": null
+    }
+  ]
+},
+{
+  "autor": "Da-yang",
+  "ano": 2024,
+  "clasificacion": "Teórico",
+  "fase_estudiada": "Fase gaseosa",
+  "metodologia": "El estudio utiliza cálculos de estructura electrónica ab initio a nivel de teoría de perturbaciones de Møller-Plesset de segundo orden (MP2) y CCSD(T) para energías de punto único. Las optimizaciones de geometría y los cálculos de frecuencia se realizaron con el método MP2 y el conjunto de bases 6-31++G(d,p). Los cálculos se llevaron a cabo con el paquete de programas Gaussian 16. Se empleó un código FORTRAN propio llamado Tempo para obtener las propiedades termodinámicas en función de la temperatura.",
+  "coordinacion": [
+    {
+      "numero": 1,
+      "geometria": "Lineal (simetría C₂ᵥ)",
+      "distancias_ecuatoriales_A": [
+        1.860
+      ],
+      "distancias_axiales_A": null
+    },
+    {
+      "numero": 2,
+      "geometria": "Lineal (simetría D₂d)",
+      "distancias_ecuatoriales_A": null,
+      "distancias_axiales_A": null
+    },
+    {
+      "numero": 3,
+      "geometria": "Trigonal plana (simetría C₂ᵥ)",
+      "distancias_ecuatoriales_A": null,
+      "distancias_axiales_A": null
+    },
+    {
+      "numero": 4,
+      "geometria": "Plana cuadrada",
+      "distancias_ecuatoriales_A": null,
+      "distancias_axiales_A": null
+    },
+    {
+      "numero": 5,
+      "geometria": "Pirámide de base cuadrada",
+      "distancias_ecuatoriales_A": null,
+      "distancias_axiales_A": null
+    },
+    {
+      "numero": 6,
+      "geometria": "Octaedro con distorsión Jahn-Teller",
+      "distancias_ecuatoriales_A": null,
+      "distancias_axiales_A": null
+    }
+  ]
+}    
+]
