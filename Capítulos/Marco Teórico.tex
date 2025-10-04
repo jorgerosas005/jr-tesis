@@ -2,7 +2,7 @@
 
 \section{Fundamentos de Dinámica molecular}
 
-La dinamica molecular (MD, por sus síglas en inglés) es una técnica de simulación por computadora que ha sido utilizada para analizar el comportamiento y evolución de diversos sistemas a nivel atomístico. Su esencia consiste en resolver numéricamente las ecuaciones clásicas del movimiento, típicamente las de Newton, para un conjunto $R^N$ de $N$ partículas con masas $m_i$ y posiciones $r_i$
+La dinamica molecular (MD, por sus síglas en inglés) es una técnica de simulación por computadora que ha sido utilizada para analizar el comportamiento y evolución de diversos sistemas a nivel atomístico. Su esencia consiste en resolver numéricamente las ecuaciones clásicas del movimiento, típicamente las de Newton, para un conjunto $R^N = \{ r_1, r_2, r_3, \ldots, r_N \}$ de $N$ partículas con masas $m_i$.
 
 \begin{equation}
     \label{eq:newton_segunda_ley}
@@ -19,40 +19,111 @@ Donde las fuerzas $F_i$ son obtenidas a partir del gradiente negativo del potenc
 
 Este método calcula las fuerzas, velocidades y posiciones de las partículas a lo largo de determinado tiempo (trayectoria) a partir de la cuál es posible derivar propiedades de interés mediante su análisis o experimentos computacionales posteriores.
 
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[node distance=1.5cm]
+
+        % --- Definición de los nodos (los bloques del diagrama) ---
+        % Se colocan uno debajo del otro usando 'below=of...'
+        \node (step1) [process] {Paso 1: Inicialización del sistema};
+
+        \node (step2) [process, below=of step1] {Paso 2: Optimización de la geometría y minimización de energia};
+
+        \node (step3) [process, below=of step2] {Paso 3: Cálculo de fuerzas};
+
+        % Para este paso, usamos un ancho de texto mayor para que quepa bien el contenido
+        \node (step4) [process, below=of step3] {
+            Paso 4: Integración de las ecuaciones de movimiento en el paso del tiempo $\Delta t$ \\
+            $r_i(t) \rightarrow r_i(t+\Delta t)$; \quad $v_i(t) \rightarrow v_i(t+\Delta t)$;
+        };
+
+        \node (step5) [process, below=of step4] {Paso 5: Cálculo de propiedades físicas};
+
+        % Se usa 'yshift' para aumentar la distancia vertical antes del rombo
+        \node (decide) [decision, below=of step5, yshift=-0.75cm] {$t > t_{\max}$?};
+
+        \node (stop) [process, below=of decide, yshift=-0.75cm] {Fin};
+
+
+        % --- Conexión de los nodos con flechas ---
+        \draw [arrow] (step1) -- (step2);
+        \draw [arrow] (step2) -- (step3);
+        \draw [arrow] (step3) -- (step4);
+        \draw [arrow] (step4) -- (step5);
+        \draw [arrow] (step5) -- (decide);
+        \draw [arrow] (decide) -- node[anchor=west, xshift=0.2cm] {Si} (stop);
+
+        % La flecha de retroalimentación ("No")
+        % Va desde el lado izquierdo ('west') del rombo, se desplaza 2cm a la izquierda,
+        % y luego sube y se conecta al lado izquierdo del bloque del Step 3.
+        \draw [arrow] (decide.west) -- node[above, pos=0.25] {No} ++(-5,0) |- (step3.west);
+
+    \end{tikzpicture}
+    \caption{Diagrama de flujo típico de una MD.}
+    \label{fig:md_flowchart}
+\end{figure}
+
+
+
 
 \subsection{Integración numérica}
 El objetivo principal de la integración numérica es discretizar las ecuaciones diferenciales y resolverlas de forma aproximada para generar las trayectorias de las partículas. En esencia, se busca encontrar una expresión que defina las posiciones en un tiempo futuro $r_i (t +\Delta t)$ a partir de las posiciones ya conocidas en el tiempo $t$, usando un pequeño intervalo de tiempo finito $(\Delta t)$. 
 
-El algoritmo de Velocity-Verlet es actualmente uno de los más populares y ampliamente utilizados en las simulaciones de MD. Se obtiene a partir de una expansión de Taylor de las posiciones y velocidades 
+El algoritmo de Velocity-Verlet es actualmente uno de los más populares y ampliamente utilizados en las simulaciones de MD. Se obtiene a partir de una reformulación equivalente al algoritmo de Verlet original y al Leap-Frog, pero resuelve el problema del desfase temporal. Las ecuaciones para actualizar las posiciones y velocidades son:
 
 \begin{equation}
     \label{eq:velocity_verlet_posiciones}
-    r(t + \Delta t) = r(t) + \Delta t v(t) + \frac{\Delta t^2}{2m} F(t) + O(\Delta t^3),
+    r(t + \Delta t) = r(t) + \Delta t v(t) + \frac{\Delta t^2}{2m} F(t) + O(\Delta t^3)
 \end{equation}
 
 \begin{equation}
     \label{eq:velocity_verlet_velocidades}
-    v(t + \Delta t) = v(t) + \frac{\Delta t}{2m} \left( F(t + \Delta t) + F(t) \right) + O(\Delta t^3).
+    v(t + \Delta t) = v(t) + \frac{\Delta t}{2m} \left( F(t + \Delta t) + F(t) \right) + O(\Delta t^3)
 \end{equation}
 
-
+Nótese que en este algoritmo, las velocidades se actualizan después de calcular las nuevas posiciones y con ello las fuerzas correspondientes. Esto permite que las velocidades y posiciones estén sincronizadas en el mismo instante de tiempo, lo que permite calcular propiedades dependientes de la velocidad, como la temperatura y la presión. Debido a esto, es el esquema más comúnmente utilizado como base para la integración de sistemas dinámicos extendidos, como termostatos (Nosé-Hoover) y barostatos (NPT) \cite{Hoover-1992-01,frenkel2002understanding}.
 
 
 \subsection{Condiciones iniciales}
 
-Las condiciones iniciales en una simulación de dinámica molecular (MD) son el conjunto de posiciones $R^N (t = 0)$ y velocidades $V^N (t = 0)$ de todos los átomos del sistema en el instante de tiempo cero. Es el punto en el espacio de fases del sistema a partir del cual el algoritmo de integración calcula la trayectoria futura de cada partícula. 
+Las condiciones iniciales en una simulación de dinámica molecular (MD) son el conjunto de posiciones $R^N (t = 0)$ y velocidades $V^N (t = 0)$ de todos los átomos del sistema en el instante de tiempo cero. Es el punto en el espacio de fases del sistema a partir del cual el algoritmo de integración comienza a calcular la trayectoria futura de cada partícula. 
+
+\subsubsection*{Asignación de posiciones}
 
 La etapa de construcción de las coordenadas iniciales es el primer paso práctico para definir la configuración de partida del sistema. Para un sistema no periódico, como un clúster molecular o una proteína aislada, esta etapa consiste en obtener datos experimentales (si se dipsone de ellos) ya que son una excelente fuente para las posiciones iniciales o en su defecto, se pueden construir utilizando software de modelado molecular.
 
-La calidad de las coordenadas iniciales es crucial, ya que una mala estructura de partida puede llevar a problemas de inestabilidad o a un tiempo de equilibrado muy largo. Por lo que es importante realizar una minimización de energía (también llamada optimización de geometría) antes de iniciar la dinámica para asegurar la estabilidad y la viabilidad de la simulación.  Este paso evita problemas asociados con fuerzas repulsivas enormes, inestabilidad numérica y oscilaciones de temperatura grandes. La minimización de energía coloca a la estructura en un mínimo local de energía potencial cercano $R_{\text{min}}^N = \{ r_1^{\text{min}}, r_2^{\text{min}}, r_3^{\text{min}}, \ldots, r_N^{\text{min}} \}$ donde 
+La calidad de las coordenadas iniciales es crucial, ya que una mala estructura de partida puede llevar a problemas de inestabilidad o a un tiempo de equilibrado muy largo. Por lo que es importante realizar una minimización de energía (también llamada optimización de geometría) antes de iniciar la dinámica para asegurar la estabilidad y la viabilidad de la simulación.  Este paso evita problemas asociados con fuerzas repulsivas enormes, inestabilidad numérica y oscilaciones de temperatura grandes \cite{haile1992molecular}. La minimización de energía coloca a la estructura en un mínimo local de energía potencial cercano $R_{\text{min}}^N = \{ r_1^{\text{min}}, r_2^{\text{min}}, r_3^{\text{min}}, \ldots, r_N^{\text{min}} \}$ donde:
 
 \begin{equation}
     \label{eq:minimizacion_energia}
 \left.\frac{\partial U(R^N)}{\partial r_{i,\alpha}}\right|_{R^N = R^N_{\text{min}}} = 0, \left.\frac{\partial^2 U(R^N)}{\partial r_{i,\alpha}^2}\right|_{R^N = R^N_{\text{min}}} > 0, \quad i = 1, 2, 3, \ldots, N; \quad a = x, y, z.
 \end{equation}
 
+\subsubsection*{Asignación de velocidades}
 
-Esto garantiza que la simulación comience desde una configuración físicamente razonable, con fuerzas moderadas, permitiendo un inicio de la dinámica estable. 
+En principio, las velocidades iniciales de los átomos en una simulación de dinámica molecular pueden tomar valores arbitrarios, siempre que se mantenga la estabilidad del sistema. Con el tiempo, la propia simulación refinará automáticamente estas velocidades para que se ajusten a las condiciones y restricciones asignadas.
+
+Sin embargo, para acelerar la simulación y asegurar un rendimiento fluido, es muy recomendable que las velocidades atómicas iniciales sigan ciertas distribuciones específicas.
+
+Para simulaciones que se llevan a cabo a una temperatura superior a 0 K, una buena práctica es establecer velocidades iniciales que cumplan con este requisito de temperatura. La elección más común es la distribución de Maxwell-Boltzmann, que garantiza una rápida relajación (equilibrio) del sistema inicial.
+
+La distribución de Maxwell-Boltzmann es un caso de la distribución Gaussiana, cuya forma general es:
+\begin{equation}
+    P(x) = \frac{1}{\sigma\sqrt{2\pi}} \exp\left[-\frac{(x-\mu)^2}{2\sigma^2}\right]
+\end{equation}
+donde $\mu$ es la media y $\sigma^2$ es la varianza.
+
+
+Según la mecánica estadística, la temperatura ($T$) de un sistema molecular está directamente relacionada con el promedio de la energía cinética de sus átomos. Para una componente de la velocidad ($v_{i,\alpha}$), esta relación se expresa como:
+\begin{equation}
+    \langle v_{i,\alpha}^2 \rangle = \frac{k_B T}{m_i}
+\end{equation}
+donde $v_{i,\alpha}$ es una componente de la velocidad (en la dirección $\alpha = x, y, z$) del átomo $i$, $k_B$ es la constante de Boltzmann, $T$ es la temperatura y $m_i$ es la masa del átomo $i$.
+
+Utilizando esta relación, se puede generar una distribución de velocidades iniciales que se corresponde con la temperatura deseada. La distribución de probabilidad resultante para una componente de la velocidad es:
+\begin{equation}
+    P(v_{i,\alpha}) = \left(\frac{m_i}{2\pi k_B T}\right)^{1/2} \exp\left(-\frac{m_i v_{i,\alpha}^2}{2 k_B T}\right)
+\end{equation}
 
 
 
@@ -98,3 +169,55 @@ La gran ventaja de CPMD es que elimina la necesidad de converger completamente l
 A pesar de ser un método robusto y citado en muchos trabajos de referencia sobre la solvatación del \ce{Cu^{2+}} , puede enfrentar dificultades en sistemas con una brecha energética (\textit{gap}) pequeña o nula entre los estados electrónicos, donde la condición de adiabaticidad podría romperse. Estudios teóricos previos sobre el sistema acuoso del \ce{Cu^{2+}} han empleado CPMD con funcionales de tipo GGA, como BLYP y PBE. Sin embargo, se ha demostrado que funcionales como BLYP pueden subestimar la afinidad de enlace de la sexta molécula de agua al ion y sobrestimar la estabilidad de las estructuras de baja coordinación en comparación con métodos de mayor nivel, lo que limita su capacidad para describir con precisión la compleja estructura electrónica del cobre(II).
 
 \section{Dinámica Molecular de Bohr-Oppenheimer}
+
+\section{El Efecto Jahn-Teller}
+
+    La versatilidad fisicoquímica del \ce{Cu^{2+}} emana directamente de su estructura electrónica \ce{[Ar]}$d^9$ , siendo el fenómeno central que gobierna su comportamiento el efecto de Jahn-Teller (JTE, por sus siglas en inglés). Este efecto se manifiesta como una deformación geométrica espontánea que ocurre en moléculas no lineales con un estado electrónico fundamental degenerado. El teorema postula que el sistema reduce su simetría para eliminar dicha degeneración, lo que resulta en una disminución de su energía total \cite{Cu-2019-01}.
+
+    En el particular caso del complejo octaédrico de \ce{Cu^{2+}}, la configuración \ce{[Ar]}$d^9$ presenta orbitales $e_g$ degenerados. La distorsión para resolver esta degeneración emerge de la diferencia en la densidad electrónica entre el metal y los ligandos  y puede presentarse de dos maneras:
+
+    \begin{itemize}
+        \item \textbf{Elongación (z-out):} Los dos enlaces axiales se alargan y los cuatro ecuatoriales se acortan. Esto ocurre cuando la densidad electrónica es mayor en el eje $z$ y el orbital molecular semiocupado (SOMO, por sus siglas en inglés) es el $d_{x^2-y^2}$.
+        \item \textbf{Compresión (z-in):} Los cuatro enlaces ecuatoriales se alargan y los dos axiales se acortan. Sucede cuando la densidad electrónica es mayor en el plano $xy$ y el SOMO es el $d_{z^2}$.
+    \end{itemize}
+
+
+\begin{figure}[H]
+    \centering
+    
+    % Fila superior: Distorsión z-out (Elongación)
+    \begin{subfigure}{0.2\textwidth}
+        \centering
+        \includegraphics[width=0.5\linewidth]{Imágenes/JTE-z-out-draw.png}
+        \caption{}
+    \end{subfigure}
+    %\hfill % Espacio horizontal entre imágenes
+    \begin{subfigure}{0.2\textwidth}
+        \centering
+        \includegraphics[width=0.5\linewidth]{Imágenes/JTE-z-out-orbitals.png}
+        \caption{}
+    \end{subfigure}
+    
+    \vspace{0.5cm} % Espacio vertical entre filas
+    
+    % Fila inferior: Distorsión z-in (Compresión)
+    \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=0.5\linewidth]{Imágenes/JTE-z-in-draw.png}
+        \caption{}
+    \end{subfigure}
+    %\hfill % Espacio horizontal entre imágenes
+    \begin{subfigure}{0.2\textwidth}
+        \centering
+        \includegraphics[width=0.5\linewidth]{Imágenes/JTE-z-in-orbitals.png}
+        \caption{}
+    \end{subfigure}
+    
+    \caption[Ilustración del efecto Jahn-Teller ]{Ilustración  del efecto Jahn-Teller para un complejo octaédrico del ion Cu(II) con configuración electrónica $d^9$. Arriba se muestra la distorsión por elongación axial (z-out), donde los enlaces axiales se alargan (a), y su correspondiente desdoblamiento de orbitales (b). Abajo se presenta la distorsión por compresión axial (z-in), con el acortamiento de los enlaces axiales (c) y su respectivo desdoblamiento energético (d). La distorsión z-out es la observada más comúnmente en la experimentación. Figura tomada y editada de la referencia \cite{Cu-2019-01}.}
+    \label{fig:jahn_teller_d9}
+\end{figure}
+
+
+Aunque la elongación es la geometría más común, estudios teóricos han demostrado que ambas son posibles para el catión \ce{[Cu(OH2)6]^{2+}} \cite{Cu-2019-01}.
+
+El JTE no es un mero detalle, sino una de las principales causas de la química de coordinación excepcionalmente flexible y dinámica del \ce{Cu^{2+}}. Dota al ion de una plasticidad estructural inusual, permitiéndole adoptar múltiples geometrías (octaédrica distorsionada, piramidal cuadrada, planar cuadrada) con diferencias energéticas muy pequeñas entre ellas. Esta flexibilidad es inherentemente dinámica; en solución, el complejo alterna rápidamente entre estas configuraciones. Esto explica la alta labilidad de sus ligandos, cuya tasa de intercambio es órdenes de magnitud superior a la de otros cationes divalentes. La debilidad de los enlaces axiales facilita este rápido intercambio y ha generado un prolongado debate sobre el número de coordinación preferido (4, 5 o 6) del ion en solución.

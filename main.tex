@@ -33,6 +33,34 @@
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows, positioning}
+% --- Estilos para los bloques y flechas ---
+% 'process' es para los rectángulos de pasos
+% 'decision' es para el rombo de decisión
+% 'arrow' es para las flechas de conexión
+\tikzstyle{process} = [
+    rectangle, 
+    rounded corners, 
+    minimum width=5cm, 
+    minimum height=1cm, 
+    text centered, 
+    text width=8cm, 
+    draw=black, 
+    fill=cyan!20
+]
+\tikzstyle{decision} = [
+    diamond, 
+    minimum width=2.5cm, 
+    minimum height=1cm, 
+    text centered, 
+    draw=black, 
+    fill=yellow!30, 
+    aspect=2
+]
+\tikzstyle{arrow} = [thick, ->, >=stealth]
+
+
 \DeclareSIUnit\angstrom{\text{Å}}
 \graphicspath{{./Imágenes/}}     % Ruta de las imágenes
 
