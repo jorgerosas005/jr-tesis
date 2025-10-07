@@ -33,6 +33,16 @@
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
+% --- Formato personalizado para los títulos de capítulo ---
+\usepackage{titlesec}                                               % Para personalizar títulos de capítulos y secciones
+\titleformat{\chapter}[display]
+  {\normalfont\sffamily\huge\bfseries} % Formato del título
+  {}                                    % Elimina el prefijo "Capítulo X"
+  {0pt}                                 % Espacio entre prefijo y título (no aplica aquí)
+  {}                                    % Código antes del título
+
+\titlespacing*{\chapter}{0pt}{1pt}{40pt} % Espaciado vertical antes y después del título
+
 \usepackage{tikz}
 \usetikzlibrary{shapes.geometric, arrows, positioning}
 % --- Estilos para los bloques y flechas ---

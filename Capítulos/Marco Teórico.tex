@@ -19,52 +19,6 @@ Donde las fuerzas $F_i$ son obtenidas a partir del gradiente negativo del potenc
 
 Este método calcula las fuerzas, velocidades y posiciones de las partículas a lo largo de determinado tiempo (trayectoria) a partir de la cuál es posible derivar propiedades de interés mediante su análisis o experimentos computacionales posteriores.
 
-\begin{figure}[H]
-    \centering
-    \begin{tikzpicture}[node distance=1.5cm]
-
-        % --- Definición de los nodos (los bloques del diagrama) ---
-        % Se colocan uno debajo del otro usando 'below=of...'
-        \node (step1) [process] {Paso 1: Inicialización del sistema};
-
-        \node (step2) [process, below=of step1] {Paso 2: Optimización de la geometría y minimización de energia};
-
-        \node (step3) [process, below=of step2] {Paso 3: Cálculo de fuerzas};
-
-        % Para este paso, usamos un ancho de texto mayor para que quepa bien el contenido
-        \node (step4) [process, below=of step3] {
-            Paso 4: Integración de las ecuaciones de movimiento en el paso del tiempo $\Delta t$ \\
-            $r_i(t) \rightarrow r_i(t+\Delta t)$; \quad $v_i(t) \rightarrow v_i(t+\Delta t)$;
-        };
-
-        \node (step5) [process, below=of step4] {Paso 5: Cálculo de propiedades físicas};
-
-        % Se usa 'yshift' para aumentar la distancia vertical antes del rombo
-        \node (decide) [decision, below=of step5, yshift=-0.75cm] {$t > t_{\max}$?};
-
-        \node (stop) [process, below=of decide, yshift=-0.75cm] {Fin};
-
-
-        % --- Conexión de los nodos con flechas ---
-        \draw [arrow] (step1) -- (step2);
-        \draw [arrow] (step2) -- (step3);
-        \draw [arrow] (step3) -- (step4);
-        \draw [arrow] (step4) -- (step5);
-        \draw [arrow] (step5) -- (decide);
-        \draw [arrow] (decide) -- node[anchor=west, xshift=0.2cm] {Si} (stop);
-
-        % La flecha de retroalimentación ("No")
-        % Va desde el lado izquierdo ('west') del rombo, se desplaza 2cm a la izquierda,
-        % y luego sube y se conecta al lado izquierdo del bloque del Step 3.
-        \draw [arrow] (decide.west) -- node[above, pos=0.25] {No} ++(-5,0) |- (step3.west);
-
-    \end{tikzpicture}
-    \caption{Diagrama de flujo típico de una MD.}
-    \label{fig:md_flowchart}
-\end{figure}
-
-
-
 
 \subsection{Integración numérica}
 El objetivo principal de la integración numérica es discretizar las ecuaciones diferenciales y resolverlas de forma aproximada para generar las trayectorias de las partículas. En esencia, se busca encontrar una expresión que defina las posiciones en un tiempo futuro $r_i (t +\Delta t)$ a partir de las posiciones ya conocidas en el tiempo $t$, usando un pequeño intervalo de tiempo finito $(\Delta t)$. 
@@ -125,6 +79,107 @@ Utilizando esta relación, se puede generar una distribución de velocidades ini
     P(v_{i,\alpha}) = \left(\frac{m_i}{2\pi k_B T}\right)^{1/2} \exp\left(-\frac{m_i v_{i,\alpha}^2}{2 k_B T}\right)
 \end{equation}
 
+
+Tras la asignación aleatoria de velocidades, es probable que el sistema presente un momento lineal total no nulo ($P_{\alpha} \neq 0$), lo que causaría un desplazamiento de su centro de masa. Para corregirlo, se calcula el momento total en cada dirección, $P_{\alpha} = \sum_i m_i v_{i, \alpha}$, y con él la velocidad promedio del centro de masa, $\langle v_{i, \alpha} \rangle = P_{\alpha} / \sum_i m_i$. Subsecuentemente, se ajustan las velocidades individuales $v'_{i, \alpha} = v_{i, \alpha} - \langle v_{i, \alpha} \rangle$ para anular el momento total ($P'_{\alpha} = 0$).
+
+Posteriormente, se ajusta la temperatura. La temperatura instantánea inicial ($T_{\text{inst}}$), calculada a partir de la energía cinética, 
+\begin{equation}
+    k_B T_{\text{inst}} \equiv (\sum m_i v_i'^2) / N_f, 
+    \label{eq:temp_instantanea} 
+\end{equation}
+
+donde $N_f$ son los grados de libertad (usualmente $3N-3$), puede no coincidir con la temperatura objetivo ($T_{\text{deseada}}$). Por ello, todas las velocidades se re-escalan mediante un factor $f_s$ para establecer la temperatura correcta:
+
+\begin{equation}
+    v''_{i, \alpha} = v'_{i, \alpha} \times f_s, \qquad \text{donde} \qquad f_s = \sqrt{\frac{T_{\text{deseada}}}{T_{\text{inst}}}}
+    \label{eq:temp_scaling} % Etiqueta opcional para referenciar la ecuación
+\end{equation}
+
+
+\subsection{Ensambles Termodinámicos y Control de Temperatura}
+
+En mecánica estadística, un \textbf{ensamble termodinámico} es una colección idealizada de un número muy grande de copias virtuales de un sistema, todas sujetas a las mismas condiciones macroscópicas. Cada copia representa un microestado accesible para el sistema, y las propiedades termodinámicas se obtienen promediando sobre todos los miembros del ensamble.
+
+Una simulación de dinámica molecular estándar, al resolver las ecuaciones de movimiento de Newton para un sistema aislado, conserva de forma natural el número de partículas ($N$), el volumen ($V$) y la energía total ($E$). Este conjunto de condiciones define el \textbf{ensamble microcanónico (NVE)}. Sin embargo, la mayoría de los experimentos en el laboratorio no se realizan a energía constante, sino a temperatura y presión controladas. Para replicar estas condiciones y obtener resultados comparables, es necesario realizar simulaciones en otros ensambles termodinámicos.
+
+
+\subsubsection*{El Ensamble Canónico (NVT)}
+
+El ensamble más relevante para el control de temperatura es el \textbf{ensamble canónico}, donde el número de partículas ($N$), el volumen ($V$) y la temperatura ($T$) se mantienen constantes. Este ensamble describe un sistema cerrado que puede intercambiar energía con un baño térmico externo, lo que permite que su energía total ($E$) fluctúe.
+
+El propósito fundamental de simular en el ensamble NVT es modelar sistemas bajo condiciones isotérmicas, lo que permite el cálculo de propiedades de equilibrio como la energía libre de Helmholtz ($F$) y asegura un muestreo adecuado del espacio de fases correspondiente a la temperatura de interés. La función de partición canónica clásica, $Q(N, V, T)$, que fundamenta la termodinámica de este ensamble, está dada por:
+\begin{equation}
+    Q_{N,V,T} = \frac{1}{h^{3N}N!} \int d\mathbf{p}^N d\mathbf{r}^N \exp[-\beta H(\mathbf{p}^N, \mathbf{r}^N)]
+\end{equation}
+donde $H(\mathbf{p}^N, \mathbf{r}^N)$ es el Hamiltoniano clásico del sistema, $\beta = 1/(k_B T)$, $h$ es la constante de Planck, y la integración se realiza sobre todas las coordenadas de posición $\mathbf{r}^N$ y momento $\mathbf{p}^N$.
+
+Para mantener una temperatura constante en una simulación de MD y así generar una trayectoria que explore los microestados del ensamble NVT, es necesario modificar las ecuaciones de movimiento. Esto se logra mediante el uso de algoritmos conocidos como \textbf{termostatos}.
+
+\subsubsection{Termostatos: El Termostato de Nosé-Hoover}
+
+Un termostato es un algoritmo que modifica las velocidades de las partículas para simular el efecto de un baño térmico, permitiendo que la energía fluya hacia adentro o hacia afuera del sistema para mantener constante la temperatura promedio. Su uso es crucial para prevenir la deriva de energía por errores numéricos y para asegurar que la distribución de velocidades se ajuste a la de Maxwell-Boltzmann para la temperatura deseada.
+
+Uno de los termostatos más robustos y teóricamente fundamentados es el de \textbf{Nosé-Hoover}. Este método introduce un grado de libertad ficticio adicional ($\eta$) que actúa como el reservorio de calor. La idea original de Nosé se basa en un Hamiltoniano extendido que, al evolucionar en el tiempo, genera una trayectoria en el espacio de fases canónico. Hoover reformuló estas ecuaciones de una manera más directa y computacionalmente eficiente. Las ecuaciones de movimiento de Nosé-Hoover para las partículas del sistema son:
+
+\begin{equation}
+    \dot{\mathbf{q}}_i = \frac{\mathbf{p}_i}{m_i} \qquad \text{y} \qquad \dot{\mathbf{p}}_i = \mathbf{F}_i - \frac{p_{\eta}}{Q} \mathbf{p}_i
+\end{equation}
+donde $\mathbf{q}_i$, $\mathbf{p}_i$ y $\mathbf{F}_i$ son la posición, el momento y la fuerza de la partícula $i$, respectivamente. El término adicional de fricción, $-\frac{p_{\eta}}{Q} \mathbf{p}_i$, acopla el sistema al termostato. La dinámica de la variable del termostato, $p_\eta$, está gobernada por:
+\begin{equation}
+    \dot{p}_\eta = \sum_{i=1}^{N} \frac{\mathbf{p}_i^2}{m_i} - N_f k_B T
+\end{equation}
+donde $N_f$ es el número de grados de libertad del sistema y $Q$ es una "masa" ficticia asociada al termostato, que determina la escala de tiempo de las fluctuaciones de temperatura. Un valor de $Q$ adecuado permite un acoplamiento suave sin introducir oscilaciones indeseadas.
+
+El funcionamiento de este termostato depende de la \textbf{hipótesis ergódica}, que postula que el promedio temporal de una propiedad a lo largo de una trayectoria suficientemente larga es equivalente al promedio de esa propiedad sobre el ensamble.
+\begin{equation}
+ \langle A \rangle_{\text{tiempo}} = \lim_{t_{\text{sim}} \to \infty} \frac{1}{t_{\text{sim}}} \int_{0}^{t_{\text{sim}}} A(t) dt = \langle A \rangle_{\text{ensamble}}
+\end{equation}
+Se ha demostrado que el termostato de Nosé-Hoover simple no es ergódico para ciertos sistemas, como osciladores armónicos o sistemas muy rígidos. Para solucionar este problema, se introdujeron las \textbf{cadenas de Nosé-Hoover (NHC)}, donde se acopla una cadena de termostatos entre sí. El primer termostato de la cadena interactúa con el sistema físico, mientras que los siguientes termostatos actúan sobre el anterior, mejorando el muestreo del espacio de fases y garantizando la ergodicidad.
+
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[node distance=1.5cm]
+
+        % --- Definición de los nodos (los bloques del diagrama) ---
+        % Se colocan uno debajo del otro usando 'below=of...'
+        \node (step1) [process] {Paso 1: Inicialización del sistema};
+
+        \node (step2) [process, below=of step1] {Paso 2: Optimización de la geometría y minimización de energia};
+
+        \node (step3) [process, below=of step2] {Paso 3: Cálculo de fuerzas};
+
+        % Para este paso, usamos un ancho de texto mayor para que quepa bien el contenido
+        \node (step4) [process, below=of step3] {
+            Paso 4: Integración de las ecuaciones de movimiento en el paso del tiempo $\Delta t$ \\
+            $r_i(t) \rightarrow r_i(t+\Delta t)$; \quad $v_i(t) \rightarrow v_i(t+\Delta t)$;
+        };
+
+        \node (step5) [process, below=of step4] {Paso 5: Cálculo de propiedades físicas};
+
+        % Se usa 'yshift' para aumentar la distancia vertical antes del rombo
+        \node (decide) [decision, below=of step5, yshift=-0.75cm] {$t > t_{\max}$?};
+
+        \node (stop) [process, below=of decide, yshift=-0.75cm] {Fin};
+
+
+        % --- Conexión de los nodos con flechas ---
+        \draw [arrow] (step1) -- (step2);
+        \draw [arrow] (step2) -- (step3);
+        \draw [arrow] (step3) -- (step4);
+        \draw [arrow] (step4) -- (step5);
+        \draw [arrow] (step5) -- (decide);
+        \draw [arrow] (decide) -- node[anchor=west, xshift=0.2cm] {Si} (stop);
+
+        % La flecha de retroalimentación ("No")
+        % Va desde el lado izquierdo ('west') del rombo, se desplaza 2cm a la izquierda,
+        % y luego sube y se conecta al lado izquierdo del bloque del Step 3.
+        \draw [arrow] (decide.west) -- node[above, pos=0.25] {No} ++(-5,0) |- (step3.west);
+
+    \end{tikzpicture}
+    \caption{Diagrama de flujo típico de una MD.}
+    \label{fig:md_flowchart}
+\end{figure}
 
 
 \section{Dinámica molecular clásica}
