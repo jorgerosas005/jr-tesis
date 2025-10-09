@@ -98,43 +98,67 @@ donde $N_f$ son los grados de libertad (usualmente $3N-3$), puede no coincidir c
 
 \subsection{Ensambles Termodinámicos y Control de Temperatura}
 
-En mecánica estadística, un \textbf{ensamble termodinámico} es una colección idealizada de un número muy grande de copias virtuales de un sistema, todas sujetas a las mismas condiciones macroscópicas. Cada copia representa un microestado accesible para el sistema, y las propiedades termodinámicas se obtienen promediando sobre todos los miembros del ensamble.
+En mecánica estadística, un ensamble termodinámico es una colección de un número muy grande de copias virtuales de un sistema, todas sujetas a las mismas condiciones macroscópicas. Cada copia representa un microestado accesible para el sistema, y las propiedades termodinámicas se obtienen promediando sobre todos los miembros del ensamble \Cite{zhou2022molecular}.
 
-Una simulación de dinámica molecular estándar, al resolver las ecuaciones de movimiento de Newton para un sistema aislado, conserva de forma natural el número de partículas ($N$), el volumen ($V$) y la energía total ($E$). Este conjunto de condiciones define el \textbf{ensamble microcanónico (NVE)}. Sin embargo, la mayoría de los experimentos en el laboratorio no se realizan a energía constante, sino a temperatura y presión controladas. Para replicar estas condiciones y obtener resultados comparables, es necesario realizar simulaciones en otros ensambles termodinámicos.
+Una simulación de dinámica molecular estándar, al resolver las ecuaciones de movimiento de Newton para un sistema aislado, conserva de forma natural el número de partículas ($N$), el volumen ($V$) y la energía total ($E$). Este conjunto de condiciones define el ensamble microcanónico (NVE). Sin embargo, la mayoría de los experimentos en el laboratorio no se realizan a energía constante, sino a temperatura y presión controladas. Para replicar estas condiciones y obtener resultados comparables, es necesario realizar simulaciones en otros ensambles termodinámicos.
 
 
 \subsubsection*{El Ensamble Canónico (NVT)}
 
-El ensamble más relevante para el control de temperatura es el \textbf{ensamble canónico}, donde el número de partículas ($N$), el volumen ($V$) y la temperatura ($T$) se mantienen constantes. Este ensamble describe un sistema cerrado que puede intercambiar energía con un baño térmico externo, lo que permite que su energía total ($E$) fluctúe.
+El ensamble más relevante para el control de temperatura es el ensamble canónico, donde el número de partículas ($N$), el volumen ($V$) y la temperatura ($T$) se mantienen constantes. Este ensamble describe un sistema cerrado que puede intercambiar energía con un baño térmico externo, lo que permite que su energía total ($E$) fluctúe.
 
-El propósito fundamental de simular en el ensamble NVT es modelar sistemas bajo condiciones isotérmicas, lo que permite el cálculo de propiedades de equilibrio como la energía libre de Helmholtz ($F$) y asegura un muestreo adecuado del espacio de fases correspondiente a la temperatura de interés. La función de partición canónica clásica, $Q(N, V, T)$, que fundamenta la termodinámica de este ensamble, está dada por:
+El propósito fundamental de simular en el ensamble NVT es modelar sistemas bajo condiciones isotérmicas, lo que permite el cálculo de propiedades de equilibrio como la energía libre de Helmholtz ($F$) y asegura un muestreo adecuado del espacio de fases correspondiente a la temperatura de interés
+
+\begin{equation}
+    \beta F = -\ln Q(N, V, T), 
+    \label{eq:helmholtz_free_energy}
+\end{equation}
+
+donde $\beta = 1/(k_B T)$, $h$ es la constante de Planck y $Q(N, V, T)$ es la función de partición del ensamble canónico, que fundamenta la termodinámica de este ensamble: 
+
 \begin{equation}
     Q_{N,V,T} = \frac{1}{h^{3N}N!} \int d\mathbf{p}^N d\mathbf{r}^N \exp[-\beta H(\mathbf{p}^N, \mathbf{r}^N)]
+    \label{eq:canonical_partition_function}
 \end{equation}
-donde $H(\mathbf{p}^N, \mathbf{r}^N)$ es el Hamiltoniano clásico del sistema, $\beta = 1/(k_B T)$, $h$ es la constante de Planck, y la integración se realiza sobre todas las coordenadas de posición $\mathbf{r}^N$ y momento $\mathbf{p}^N$.
 
-Para mantener una temperatura constante en una simulación de MD y así generar una trayectoria que explore los microestados del ensamble NVT, es necesario modificar las ecuaciones de movimiento. Esto se logra mediante el uso de algoritmos conocidos como \textbf{termostatos}.
+donde $H$ es el Hamiltoniano clásico del sistema,
+
+\begin{equation}
+    H(\mathbf{p}^N, \mathbf{r}^N) = \sum_{i=1}^{N} \frac{\mathbf{p}_i^2}{2m} + U\left(\mathbf{r}^N\right)
+    \label{eq:classical_hamiltonian}
+\end{equation}
+
+La integración se realiza sobre todas las coordenadas de posición $\mathbf{r}^N$ y momento $\mathbf{p}^N$ del espacio de fases.
+
+Para mantener una temperatura constante en una simulación de MD y así generar una trayectoria que explore los microestados del ensamble NVT, es necesario modificar las ecuaciones de movimiento. Esto se logra mediante el uso de algoritmos conocidos como termostatos.
+
+
+
 
 \subsubsection{Termostatos: El Termostato de Nosé-Hoover}
 
 Un termostato es un algoritmo que modifica las velocidades de las partículas para simular el efecto de un baño térmico, permitiendo que la energía fluya hacia adentro o hacia afuera del sistema para mantener constante la temperatura promedio. Su uso es crucial para prevenir la deriva de energía por errores numéricos y para asegurar que la distribución de velocidades se ajuste a la de Maxwell-Boltzmann para la temperatura deseada.
 
-Uno de los termostatos más robustos y teóricamente fundamentados es el de \textbf{Nosé-Hoover}. Este método introduce un grado de libertad ficticio adicional ($\eta$) que actúa como el reservorio de calor. La idea original de Nosé se basa en un Hamiltoniano extendido que, al evolucionar en el tiempo, genera una trayectoria en el espacio de fases canónico. Hoover reformuló estas ecuaciones de una manera más directa y computacionalmente eficiente. Las ecuaciones de movimiento de Nosé-Hoover para las partículas del sistema son:
+Uno de los termostatos más robustos y teóricamente fundamentados es el de Nosé-Hoover. Este método introduce un grado de libertad ficticio adicional ($\eta$) que actúa como el reservorio de calor. La idea original de Nosé se basa en un Hamiltoniano extendido que, al evolucionar en el tiempo, genera una trayectoria en el espacio de fases canónico. Hoover reformuló estas ecuaciones de una manera más directa y computacionalmente eficiente. Las ecuaciones de movimiento de Nosé-Hoover para las partículas del sistema son:
 
 \begin{equation}
-    \dot{\mathbf{q}}_i = \frac{\mathbf{p}_i}{m_i} \qquad \text{y} \qquad \dot{\mathbf{p}}_i = \mathbf{F}_i - \frac{p_{\eta}}{Q} \mathbf{p}_i
+m_i \ddot{r}_i = -\frac{\partial U(\mathbf{R}^N)}{\partial r_i} - \gamma_i m_i \dot{r}_i,
 \end{equation}
-donde $\mathbf{q}_i$, $\mathbf{p}_i$ y $\mathbf{F}_i$ son la posición, el momento y la fuerza de la partícula $i$, respectivamente. El término adicional de fricción, $-\frac{p_{\eta}}{Q} \mathbf{p}_i$, acopla el sistema al termostato. La dinámica de la variable del termostato, $p_\eta$, está gobernada por:
-\begin{equation}
-    \dot{p}_\eta = \sum_{i=1}^{N} \frac{\mathbf{p}_i^2}{m_i} - N_f k_B T
-\end{equation}
-donde $N_f$ es el número de grados de libertad del sistema y $Q$ es una "masa" ficticia asociada al termostato, que determina la escala de tiempo de las fluctuaciones de temperatura. Un valor de $Q$ adecuado permite un acoplamiento suave sin introducir oscilaciones indeseadas.
 
-El funcionamiento de este termostato depende de la \textbf{hipótesis ergódica}, que postula que el promedio temporal de una propiedad a lo largo de una trayectoria suficientemente larga es equivalente al promedio de esa propiedad sobre el ensamble.
 \begin{equation}
- \langle A \rangle_{\text{tiempo}} = \lim_{t_{\text{sim}} \to \infty} \frac{1}{t_{\text{sim}}} \int_{0}^{t_{\text{sim}}} A(t) dt = \langle A \rangle_{\text{ensamble}}
+    \frac{\mathrm{d}\gamma_{i}(t)}{\mathrm{d}t} = \frac{1}{Q} \left[ \sum_{i=1}^{N} m_{i} \frac{v_i^2}{2} - \frac{3N + 1}{2} k_{B} T \right]
 \end{equation}
-Se ha demostrado que el termostato de Nosé-Hoover simple no es ergódico para ciertos sistemas, como osciladores armónicos o sistemas muy rígidos. Para solucionar este problema, se introdujeron las \textbf{cadenas de Nosé-Hoover (NHC)}, donde se acopla una cadena de termostatos entre sí. El primer termostato de la cadena interactúa con el sistema físico, mientras que los siguientes termostatos actúan sobre el anterior, mejorando el muestreo del espacio de fases y garantizando la ergodicidad.
+
+En estas ecuaciones, el término $\gamma_i$ representa el coeficiente de fricción dinámico que acopla el sistema al baño térmico. Su evolución temporal, descrita en la segunda ecuación, depende de la diferencia entre la energía cinética instantánea del sistema ($\sum m_i v_i^2 / 2$) y la energía cinética objetivo, que es proporcional a la temperatura deseada $T$. El parámetro $Q$, conocido como la "masa" del termostato, modula la intensidad de este acoplamiento: un valor pequeño de $Q$ resulta en una respuesta rápida y oscilaciones de temperatura, mientras que un valor grande produce un acoplamiento más suave pero fluctuaciones más lentas.
+
+
+El funcionamiento de este termostato depende de la hipótesis ergódica, que postula que en el límite de una evolución temporal infinita, un sistema dinámico muestreará todos los microestados accesibles de su espacio de fases. Consecuentemente, se establece una equivalencia formal entre los promedios de ensamble de un observable $O(P, R)$ y los promedios temporales calculados a lo largo de una trayectoria de dinámica molecular \cite{MD-2002-01}. 
+
+\begin{equation}
+    \langle O(P, R) \rangle = \lim_{T \to \infty} \frac{1}{T} \int_{0}^{T} dt \, O(P(t), R(t));
+    \label{eq:ergodic_hypothesis}
+\end{equation}
+
 
 
 \begin{figure}[H]
@@ -182,40 +206,10 @@ Se ha demostrado que el termostato de Nosé-Hoover simple no es ergódico para c
 \end{figure}
 
 
-\section{Dinámica molecular clásica}
-
-La dinámica molecular (DM) clásica modela un sistema de átomos y moléculas resolviendo numéricamente las ecuaciones de movimiento de Newton. En este enfoque, los átomos son tratados como partículas clásicas que interactúan a través de un conjunto de funciones de energía potencial, conocido como campo de fuerza (\textit{force field}). Este método es computacionalmente eficiente y puede aplicarse a sistemas muy grandes, de hasta millones de átomos, y a escalas de tiempo de nanosegundos o más.
-
-\subsection{QM/MM}
-
-Para sistemas donde ocurren fenómenos cuánticos, como la ruptura o formación de enlaces, en una región específica de un sistema molecular grande, el enfoque híbrido de Mecánica Cuántica/Mecánica Molecular (QM/MM) es particularmente útil. El concepto central del método QM/MM es dividir el sistema en dos regiones. La parte donde los efectos electrónicos son críticos, como el ion \ce{Cu^{2+}} y su primera esfera de solvatación, se trata con métodos de mecánica cuántica (QM) de alta precisión. El entorno circundante, como el resto de las moléculas de disolvente, se describe mediante un campo de fuerza de mecánica molecular (MM), que es computacionalmente menos demandante.
-
-La interacción entre ambas regiones es un aspecto clave. En el esquema más común, llamado \textbf{inclusión electrónica} (\textit{electronic embedding}), las cargas parciales de los átomos de la región MM se incorporan al Hamiltoniano de la región QM, permitiendo que la región cuántica se polarice por su entorno clásico.
-
-Los campos de fuerza utilizados en la parte MM se basan en un modelo de "esferas y resortes", donde la energía total es una suma de términos que describen las interacciones atómicas. Para el estudio de la solvatación del ion cúprico se han empleado diversas aproximaciones:
-
-\begin{itemize}
-    \item \textbf{Energía de enlace y ángulo:} Términos que describen la energía asociada a la compresión o estiramiento de un enlace covalente (\textit{stretch}) y a la flexión del ángulo entre tres átomos (\textit{bend}).
-    
-    \item \textbf{Energía torsional:} Representa la energía relacionada con la rotación alrededor de un enlace, definida por un ángulo diedro.
-    
-    \item \textbf{Interacciones no enlazadas:} Modelan las interacciones entre átomos que no están directamente enlazados. Se componen de un término de van der Waals, que describe la repulsión y la atracción por dispersión (a menudo con un potencial de Lennard-Jones), y un término electrostático, que describe las interacciones de largo alcance basadas en cargas atómicas parciales. En simulaciones clásicas del ion \ce{Cu^{2+}}, este se ha descrito a menudo como una simple esfera de van der Waals, con parámetros de Lennard-Jones ajustados a partir de cálculos \textit{ab initio}. Se han utilizado campos de fuerza de todos los átomos como OPLS y modelos de agua no polarizables como TIP3P.
-    
-    \item \textbf{Campos de fuerza polarizables:} Para superar las limitaciones de los campos de fuerza clásicos, se han desarrollado modelos que tienen en cuenta explícitamente la polarización electrónica. Estos modelos permiten que las polarizabilidades atómicas o moleculares generen dipolos inducidos en respuesta al campo eléctrico del soluto, ofreciendo una descripción más precisa de las interacciones. Para el ion \ce{Cu(II)}, se ha aplicado el campo de fuerza polarizable AMOEBA y se han utilizado modelos de agua avanzados como SWM4-DP.
-    
-    \item \textbf{Métodos QM/MM específicos:} Se han realizado numerosas simulaciones de Dinámica Molecular QM/MM para investigar la hidratación del \ce{Cu^{2+}} y su efecto Jahn-Teller en solución. Se han empleado metodologías como el Campo de Carga Mecánico Cuántico (QMCF) y el método secuencial QM/MM, donde se realizan cálculos QM sobre configuraciones seleccionadas de una simulación MM.
-\end{itemize}
-
-\subsection{Limitaciones}
-A pesar de su utilidad, los métodos de DM clásica y QM/MM presentan limitaciones importantes, especialmente para un ion tan complejo como el \ce{Cu^{2+}}. Una de las principales deficiencias de los campos de fuerza clásicos es su incapacidad para describir correctamente la distorsión de Jahn-Teller, ya que esta es de origen puramente electrónico. Además, estos modelos a menudo ignoran efectos cruciales de muchos cuerpos, la polarización y la transferencia de carga entre el ion y las moléculas de disolvente. El uso de cargas parciales fijas, común en la mayoría de los campos de fuerza, puede ser inadecuado para un ion altamente polarizante como el \ce{Cu^{2+}}, lo que podría conducir a resultados incorrectos.
-
-Por su parte, los métodos QM/MM, aunque superiores, no son "cajas negras". No existe una forma única de decidir cómo dividir el sistema entre las regiones QM y MM, y la manera de "unir" ambas regiones no es única, lo que los convierte en métodos que aún se consideran "experimentales" en cierto grado.
 
 \section{Dinámica molecular ab initio}
 
-La dinámica molecular \textit{ab initio} (AIMD) supera muchas de las limitaciones de los métodos clásicos. En este enfoque, las fuerzas que actúan sobre los núcleos se calculan "al vuelo" en cada paso de la simulación a partir de un cálculo de estructura electrónica, generalmente basado en la Teoría del Funcional de la Densidad (DFT). Esto permite modelar explícitamente la polarización electrónica y los eventos reactivos como la ruptura y formación de enlaces.
-
-\subsection{Dinámica molecular de Car-Parrinelo}
+La dinámica molecular \textit{ab initio} (AIMD) supera muchas de las limitaciones de los métodos clásicos. En este enfoque, las fuerzas que actúan sobre los núcleos se calculan "al vuelo" en cada paso de la simulación a partir de un cálculo de estructura electrónica, generalmente basado en DFT. Esto permite modelar explícitamente la polarización electrónica y los eventos reactivos como la ruptura y formación de enlaces.
 
 La Dinámica Molecular de Car-Parrinelo (CPMD), desarrollada en 1985, es un método de AIMD que trata simultáneamente los grados de libertad nucleares y electrónicos. Su idea fundamental es introducir una dinámica ficticia para los parámetros de la función de onda (los orbitales), a los que se les asigna una masa ficticia. De esta manera, los orbitales evolucionan en el tiempo junto con las posiciones nucleares dentro de un formalismo de Lagrange extendido.
 
@@ -223,56 +217,82 @@ La gran ventaja de CPMD es que elimina la necesidad de converger completamente l
 
 A pesar de ser un método robusto y citado en muchos trabajos de referencia sobre la solvatación del \ce{Cu^{2+}} , puede enfrentar dificultades en sistemas con una brecha energética (\textit{gap}) pequeña o nula entre los estados electrónicos, donde la condición de adiabaticidad podría romperse. Estudios teóricos previos sobre el sistema acuoso del \ce{Cu^{2+}} han empleado CPMD con funcionales de tipo GGA, como BLYP y PBE. Sin embargo, se ha demostrado que funcionales como BLYP pueden subestimar la afinidad de enlace de la sexta molécula de agua al ion y sobrestimar la estabilidad de las estructuras de baja coordinación en comparación con métodos de mayor nivel, lo que limita su capacidad para describir con precisión la compleja estructura electrónica del cobre(II).
 
-\section{Dinámica Molecular de Bohr-Oppenheimer}
-
-\section{El Efecto Jahn-Teller}
-
-    La versatilidad fisicoquímica del \ce{Cu^{2+}} emana directamente de su estructura electrónica \ce{[Ar]}$d^9$ , siendo el fenómeno central que gobierna su comportamiento el efecto de Jahn-Teller (JTE, por sus siglas en inglés). Este efecto se manifiesta como una deformación geométrica espontánea que ocurre en moléculas no lineales con un estado electrónico fundamental degenerado. El teorema postula que el sistema reduce su simetría para eliminar dicha degeneración, lo que resulta en una disminución de su energía total \cite{Cu-2019-01}.
-
-    En el particular caso del complejo octaédrico de \ce{Cu^{2+}}, la configuración \ce{[Ar]}$d^9$ presenta orbitales $e_g$ degenerados. La distorsión para resolver esta degeneración emerge de la diferencia en la densidad electrónica entre el metal y los ligandos  y puede presentarse de dos maneras:
-
-    \begin{itemize}
-        \item \textbf{Elongación (z-out):} Los dos enlaces axiales se alargan y los cuatro ecuatoriales se acortan. Esto ocurre cuando la densidad electrónica es mayor en el eje $z$ y el orbital molecular semiocupado (SOMO, por sus siglas en inglés) es el $d_{x^2-y^2}$.
-        \item \textbf{Compresión (z-in):} Los cuatro enlaces ecuatoriales se alargan y los dos axiales se acortan. Sucede cuando la densidad electrónica es mayor en el plano $xy$ y el SOMO es el $d_{z^2}$.
-    \end{itemize}
+\subsection{Dinámica Molecular de Bohr-Oppenheimer}
 
 
-\begin{figure}[H]
-    \centering
-    
-    % Fila superior: Distorsión z-out (Elongación)
-    \begin{subfigure}{0.2\textwidth}
-        \centering
-        \includegraphics[width=0.5\linewidth]{Imágenes/JTE-z-out-draw.png}
-        \caption{}
-    \end{subfigure}
-    %\hfill % Espacio horizontal entre imágenes
-    \begin{subfigure}{0.2\textwidth}
-        \centering
-        \includegraphics[width=0.5\linewidth]{Imágenes/JTE-z-out-orbitals.png}
-        \caption{}
-    \end{subfigure}
-    
-    \vspace{0.5cm} % Espacio vertical entre filas
-    
-    % Fila inferior: Distorsión z-in (Compresión)
-    \begin{subfigure}{0.3\textwidth}
-        \centering
-        \includegraphics[width=0.5\linewidth]{Imágenes/JTE-z-in-draw.png}
-        \caption{}
-    \end{subfigure}
-    %\hfill % Espacio horizontal entre imágenes
-    \begin{subfigure}{0.2\textwidth}
-        \centering
-        \includegraphics[width=0.5\linewidth]{Imágenes/JTE-z-in-orbitals.png}
-        \caption{}
-    \end{subfigure}
-    
-    \caption[Ilustración del efecto Jahn-Teller ]{Ilustración  del efecto Jahn-Teller para un complejo octaédrico del ion Cu(II) con configuración electrónica $d^9$. Arriba se muestra la distorsión por elongación axial (z-out), donde los enlaces axiales se alargan (a), y su correspondiente desdoblamiento de orbitales (b). Abajo se presenta la distorsión por compresión axial (z-in), con el acortamiento de los enlaces axiales (c) y su respectivo desdoblamiento energético (d). La distorsión z-out es la observada más comúnmente en la experimentación. Figura tomada y editada de la referencia \cite{Cu-2019-01}.}
-    \label{fig:jahn_teller_d9}
-\end{figure}
+Para describir la evolución temporal de los núcleos atómicos, se puede adoptar un marco de trabajo semiclásico. Este enfoque parte de la premisa de que la función de onda nuclear, $\Psi_{Nk}$, puede ser representada de una forma análoga a la notación polar de un número complejo. Específicamente, se descompone en el producto de una amplitud $B_k$ y una fase $S_k$, ambas funciones reales y positivas:
+\begin{equation}
+    \Psi_{Nk}(\{\mathbf{R}_I\};t) = B_k(\{\mathbf{R}_I\};t) \exp[iS_k(\{\mathbf{R}_I\};t)/\hbar]
+    \label{eq:ansatz_semiclasico} \tag{2.48}
+\end{equation}
+donde $\{\mathbf{R}_I\}$ representa el conjunto de coordenadas nucleares.
+
+Al sustituir este \textit{ansatz} en la ecuación de Schrödinger dependiente del tiempo y realizar la separación de las componentes real e imaginaria, se obtienen dos ecuaciones acopladas que gobiernan la evolución de la amplitud y la fase de manera independiente. Tras aplicar el operador Laplaciano , las ecuaciones resultantes son:
+
+\begin{equation}
+    \frac{\partial S_k}{\partial t} + \sum_I \frac{1}{2M_I}(\nabla_I S_k)^2 + E_k = \hbar^2 \sum_I \frac{1}{2M_I} \frac{\nabla_I^2 B_k}{B_k}
+    \label{eq:fase} \tag{2.51}
+\end{equation}
+
+\begin{equation}
+    \frac{\partial B_k}{\partial t} + \sum_I \frac{1}{M_I}(\nabla_I B_k)(\nabla_I S_k) + \sum_I \frac{1}{2M_I} B_k (\nabla_I^2 S_k) = 0
+    \label{eq:amplitud} \tag{2.52}
+\end{equation}
 
 
-Aunque la elongación es la geometría más común, estudios teóricos han demostrado que ambas son posibles para el catión \ce{[Cu(OH2)6]^{2+}} \cite{Cu-2019-01}.
+Estas dos ecuaciones poseen una profunda interpretación física. La ecuación para la amplitud, ec. \eqref{eq:amplitud}, al ser multiplicada por un factor de $2B_k$, puede ser reexpresada de forma compacta como una ecuación de continuidad:
+\begin{equation}
+    \frac{\partial B_k^2}{\partial t} + \sum_A \frac{1}{M_I} \nabla_I(B_k^2 \nabla_I S_k) = 0
+    \label{eq:continuidad_reescrita} 
+\end{equation}
+Esta forma es análoga a la ecuación de continuidad general $\frac{\partial \rho_k}{\partial t} + \nabla \cdot \mathbf{J}_k = 0$, donde la densidad de probabilidad se define como $\rho_k = |\Psi_{Nk}|^2 = B_k^2$ y la corriente de probabilidad es $\mathbf{J}_{k,I} = B_k^2(\nabla_I S_k)/M_I$. Físicamente, esto garantiza la conservación local de la probabilidad, un pilar fundamental de la mecánica cuántica.
 
-El JTE no es un mero detalle, sino una de las principales causas de la química de coordinación excepcionalmente flexible y dinámica del \ce{Cu^{2+}}. Dota al ion de una plasticidad estructural inusual, permitiéndole adoptar múltiples geometrías (octaédrica distorsionada, piramidal cuadrada, planar cuadrada) con diferencias energéticas muy pequeñas entre ellas. Esta flexibilidad es inherentemente dinámica; en solución, el complejo alterna rápidamente entre estas configuraciones. Esto explica la alta labilidad de sus ligandos, cuya tasa de intercambio es órdenes de magnitud superior a la de otros cationes divalentes. La debilidad de los enlaces axiales facilita este rápido intercambio y ha generado un prolongado debate sobre el número de coordinación preferido (4, 5 o 6) del ion en solución.
+Por otro lado, la ecuación para la fase, ec. \eqref{eq:fase}, revela la conexión con la mecánica clásica. El término en el lado derecho es a menudo denominado ''potencial cuántico'' y es el único que depende explícitamente de $\hbar$. En el límite clásico ($\hbar \to 0$), este término se anula, simplificando la ecuación a:
+\begin{equation}
+    \frac{\partial S_k}{\partial t} + \sum_I \frac{1}{2M_I}(\nabla_I S_k)^2 + E_k = 0
+    \label{eq:hamilton_jacobi}
+\end{equation}
+Esta expresión es idéntica a la ecuación de Hamilton-Jacobi de la mecánica clásica. Si se define el momento conjugado como $\mathbf{P}_I = \nabla_I S_k$, la ecuación puede escribirse en términos del Hamiltoniano clásico $H_k$:
+\begin{equation}
+    \frac{\partial S_k}{\partial t} + H_k(\{\mathbf{R}_I\}, \{\nabla_I S_k\}) = 0
+    \label{eq:hamiltoniano} 
+\end{equation}
+Esto demuestra que, en este formalismo, los núcleos se propagan de acuerdo a la mecánica clásica sobre una superficie de energía potencial efectiva.
+
+
+El marco teórico anterior sustenta la metodología de la Dinámica Molecular Born-Oppenheimer (BOMD). En esta técnica, la energía $E(\{\Psi_i\}; \mathbf{R}) = E_{el}[\{\Psi_i[\rho(r)]\};\mathbf{R}] + V_{NN}(\mathbf{R})$ se minimiza en cada paso de la dinámica con respecto a los orbitales de la función de onda electrónica $\{\Psi_i\}$, sujeta a la restricción de ortonormalidad $\langle\Psi_i|\Psi_j\rangle = \delta_{ij}$.
+
+Para derivar las ecuaciones de movimiento, se construye el siguiente Lagrangiano:
+\begin{equation}
+    \mathcal{L}_{BO} = \frac{1}{2} \sum_{A=1}^{M} M_A \dot{\mathbf{R}}_A^2 - \min_{\{\Psi_i\}} E[\{\Psi_i\};\mathbf{R}] + \sum_{ij} \Lambda_{ij} (\langle\Psi_i|\Psi_j\rangle - \delta_{ij})
+    \label{eq:lagrangiano_bo} 
+\end{equation}
+donde $\Lambda_{ij}$ son los multiplicadores de Lagrange que imponen la restricción.
+
+Las ecuaciones de movimiento se obtienen aplicando la ecuación de Euler-Lagrange:
+\begin{equation}
+    \frac{d}{dt} \frac{\partial \mathcal{L}}{\partial \dot{\mathbf{R}}_A} = \frac{\partial \mathcal{L}}{\partial \mathbf{R}_A}
+    \label{eq:euler_lagrange} 
+\end{equation}
+Al resolverla, se obtiene la expresión para las fuerzas que actúan sobre los núcleos, que es una forma de la segunda ley de Newton ($M_A\ddot{\mathbf{R}}_A = \mathbf{F}_A$):
+\begin{equation}
+    M_A \ddot{\mathbf{R}}_A = -\left\langle\Psi\left|\frac{\partial H}{\partial \mathbf{R}_A}\right|\Psi\right\rangle - 2 \sum_{i} \left\langle\frac{\partial \Psi_i}{\partial \mathbf{R}_A}\left|H\right|\Psi_i\right\rangle + \sum_{ij} \Lambda_{ij} \frac{\partial}{\partial \mathbf{R}_A} \langle\Psi_i|\Psi_j\rangle
+    \label{eq:fuerzas_1} 
+\end{equation}
+Una forma más explícita y comúnmente utilizada es:
+\begin{equation}
+    M_A \ddot{\mathbf{R}}_A = -\frac{\partial E}{\partial \mathbf{R}_A} - 2 \sum_i \left\langle\frac{\partial \Psi_i}{\partial \mathbf{R}_A}\left|\frac{\delta E}{\delta \Psi_i}\right.\right\rangle + \sum_{ij} \Lambda_{ij} \frac{\partial}{\partial \mathbf{R}_A} \langle\Psi_i|\Psi_j\rangle
+    \label{eq:fuerzas_2}
+\end{equation}
+
+La fuerza total sobre cada núcleo, descrita en la ec. \eqref{eq:fuerzas_2}, se descompone en varios términos con un claro origen físico:
+\begin{itemize}
+    \item \textbf{Fuerza de Hellmann-Feynman:} El primer término, $-\frac{\partial E}{\partial \mathbf{R}_A}$, es la fuerza que se esperaría clásicamente, calculada como el gradiente negativo de la superficie de energía potencial.
+    \item \textbf{Fuerza de Pulay:} El segundo término es una corrección conocida como fuerza de Pulay o fuerza holonómica. Surge porque la base de funciones utilizada para describir los orbitales electrónicos $\{\Psi_i\}$ depende de las posiciones nucleares y, por lo tanto, se mueve junto con los átomos. Este término asegura que la fuerza total sea consistente incluso con una base incompleta.
+    \item \textbf{Fuerza de constricción:} El tercer término está asociado a la restricción de ortonormalidad impuesta por los multiplicadores de Lagrange.
+\end{itemize}
+
+Una vez calculadas estas fuerzas, la trayectoria de los núcleos se integra en el tiempo, comúnmente mediante algoritmos como el de Verlet. Es crucial notar que, aunque teóricamente robustas, las simulaciones BOMD poseen un valor predictivo que está intrínsecamente ligado a un alto coste computacional, el cual escala con el método de estructura electrónica elegido y el tamaño del sistema.
+
+\section{Teoría de los Funcionales de la Densidad}
+

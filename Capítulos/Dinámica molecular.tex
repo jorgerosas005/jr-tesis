@@ -1,2 +1,83 @@
 \chapter{Dinámica molecular}
 
+
+\section{Dinámica molecular clásica}
+
+La dinámica molecular (DM) clásica modela un sistema de átomos y moléculas resolviendo numéricamente las ecuaciones de movimiento de Newton. En este enfoque, los átomos son tratados como partículas clásicas que interactúan a través de un conjunto de funciones de energía potencial, conocido como campo de fuerza (\textit{force field}). Este método es computacionalmente eficiente y puede aplicarse a sistemas muy grandes, de hasta millones de átomos, y a escalas de tiempo de nanosegundos o más.
+
+\subsection{QM/MM}
+
+Para sistemas donde ocurren fenómenos cuánticos, como la ruptura o formación de enlaces, en una región específica de un sistema molecular grande, el enfoque híbrido de Mecánica Cuántica/Mecánica Molecular (QM/MM) es particularmente útil. El concepto central del método QM/MM es dividir el sistema en dos regiones. La parte donde los efectos electrónicos son críticos, como el ion \ce{Cu^{2+}} y su primera esfera de solvatación, se trata con métodos de mecánica cuántica (QM) de alta precisión. El entorno circundante, como el resto de las moléculas de disolvente, se describe mediante un campo de fuerza de mecánica molecular (MM), que es computacionalmente menos demandante.
+
+La interacción entre ambas regiones es un aspecto clave. En el esquema más común, llamado \textbf{inclusión electrónica} (\textit{electronic embedding}), las cargas parciales de los átomos de la región MM se incorporan al Hamiltoniano de la región QM, permitiendo que la región cuántica se polarice por su entorno clásico.
+
+Los campos de fuerza utilizados en la parte MM se basan en un modelo de "esferas y resortes", donde la energía total es una suma de términos que describen las interacciones atómicas. Para el estudio de la solvatación del ion cúprico se han empleado diversas aproximaciones:
+
+\begin{itemize}
+    \item \textbf{Energía de enlace y ángulo:} Términos que describen la energía asociada a la compresión o estiramiento de un enlace covalente (\textit{stretch}) y a la flexión del ángulo entre tres átomos (\textit{bend}).
+    
+    \item \textbf{Energía torsional:} Representa la energía relacionada con la rotación alrededor de un enlace, definida por un ángulo diedro.
+    
+    \item \textbf{Interacciones no enlazadas:} Modelan las interacciones entre átomos que no están directamente enlazados. Se componen de un término de van der Waals, que describe la repulsión y la atracción por dispersión (a menudo con un potencial de Lennard-Jones), y un término electrostático, que describe las interacciones de largo alcance basadas en cargas atómicas parciales. En simulaciones clásicas del ion \ce{Cu^{2+}}, este se ha descrito a menudo como una simple esfera de van der Waals, con parámetros de Lennard-Jones ajustados a partir de cálculos \textit{ab initio}. Se han utilizado campos de fuerza de todos los átomos como OPLS y modelos de agua no polarizables como TIP3P.
+    
+    \item \textbf{Campos de fuerza polarizables:} Para superar las limitaciones de los campos de fuerza clásicos, se han desarrollado modelos que tienen en cuenta explícitamente la polarización electrónica. Estos modelos permiten que las polarizabilidades atómicas o moleculares generen dipolos inducidos en respuesta al campo eléctrico del soluto, ofreciendo una descripción más precisa de las interacciones. Para el ion \ce{Cu(II)}, se ha aplicado el campo de fuerza polarizable AMOEBA y se han utilizado modelos de agua avanzados como SWM4-DP.
+    
+    \item \textbf{Métodos QM/MM específicos:} Se han realizado numerosas simulaciones de Dinámica Molecular QM/MM para investigar la hidratación del \ce{Cu^{2+}} y su efecto Jahn-Teller en solución. Se han empleado metodologías como el Campo de Carga Mecánico Cuántico (QMCF) y el método secuencial QM/MM, donde se realizan cálculos QM sobre configuraciones seleccionadas de una simulación MM.
+\end{itemize}
+
+\subsection{Limitaciones}
+A pesar de su utilidad, los métodos de DM clásica y QM/MM presentan limitaciones importantes, especialmente para un ion tan complejo como el \ce{Cu^{2+}}. Una de las principales deficiencias de los campos de fuerza clásicos es su incapacidad para describir correctamente la distorsión de Jahn-Teller, ya que esta es de origen puramente electrónico. Además, estos modelos a menudo ignoran efectos cruciales de muchos cuerpos, la polarización y la transferencia de carga entre el ion y las moléculas de disolvente. El uso de cargas parciales fijas, común en la mayoría de los campos de fuerza, puede ser inadecuado para un ion altamente polarizante como el \ce{Cu^{2+}}, lo que podría conducir a resultados incorrectos.
+
+Por su parte, los métodos QM/MM, aunque superiores, no son "cajas negras". No existe una forma única de decidir cómo dividir el sistema entre las regiones QM y MM, y la manera de "unir" ambas regiones no es única, lo que los convierte en métodos que aún se consideran "experimentales" en cierto grado.
+
+\section{El Efecto Jahn-Teller}
+
+    La versatilidad fisicoquímica del \ce{Cu^{2+}} emana directamente de su estructura electrónica \ce{[Ar]}$d^9$ , siendo el fenómeno central que gobierna su comportamiento el efecto de Jahn-Teller (JTE, por sus siglas en inglés). Este efecto se manifiesta como una deformación geométrica espontánea que ocurre en moléculas no lineales con un estado electrónico fundamental degenerado. El teorema postula que el sistema reduce su simetría para eliminar dicha degeneración, lo que resulta en una disminución de su energía total \cite{Cu-2019-01}.
+
+    En el particular caso del complejo octaédrico de \ce{Cu^{2+}}, la configuración \ce{[Ar]}$d^9$ presenta orbitales $e_g$ degenerados. La distorsión para resolver esta degeneración emerge de la diferencia en la densidad electrónica entre el metal y los ligandos  y puede presentarse de dos maneras:
+
+    \begin{itemize}
+        \item \textbf{Elongación (z-out):} Los dos enlaces axiales se alargan y los cuatro ecuatoriales se acortan. Esto ocurre cuando la densidad electrónica es mayor en el eje $z$ y el orbital molecular semiocupado (SOMO, por sus siglas en inglés) es el $d_{x^2-y^2}$.
+        \item \textbf{Compresión (z-in):} Los cuatro enlaces ecuatoriales se alargan y los dos axiales se acortan. Sucede cuando la densidad electrónica es mayor en el plano $xy$ y el SOMO es el $d_{z^2}$.
+    \end{itemize}
+
+
+\begin{figure}[H]
+    \centering
+    
+    % Fila superior: Distorsión z-out (Elongación)
+    \begin{subfigure}{0.2\textwidth}
+        \centering
+        \includegraphics[width=0.5\linewidth]{Imágenes/JTE-z-out-draw.png}
+        \caption{}
+    \end{subfigure}
+    %\hfill % Espacio horizontal entre imágenes
+    \begin{subfigure}{0.2\textwidth}
+        \centering
+        \includegraphics[width=0.5\linewidth]{Imágenes/JTE-z-out-orbitals.png}
+        \caption{}
+    \end{subfigure}
+    
+    \vspace{0.5cm} % Espacio vertical entre filas
+    
+    % Fila inferior: Distorsión z-in (Compresión)
+    \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=0.5\linewidth]{Imágenes/JTE-z-in-draw.png}
+        \caption{}
+    \end{subfigure}
+    %\hfill % Espacio horizontal entre imágenes
+    \begin{subfigure}{0.2\textwidth}
+        \centering
+        \includegraphics[width=0.5\linewidth]{Imágenes/JTE-z-in-orbitals.png}
+        \caption{}
+    \end{subfigure}
+    
+    \caption[Ilustración del efecto Jahn-Teller ]{Ilustración  del efecto Jahn-Teller para un complejo octaédrico del ion Cu(II) con configuración electrónica $d^9$. Arriba se muestra la distorsión por elongación axial (z-out), donde los enlaces axiales se alargan (a), y su correspondiente desdoblamiento de orbitales (b). Abajo se presenta la distorsión por compresión axial (z-in), con el acortamiento de los enlaces axiales (c) y su respectivo desdoblamiento energético (d). La distorsión z-out es la observada más comúnmente en la experimentación. Figura tomada y editada de la referencia \cite{Cu-2019-01}.}
+    \label{fig:jahn_teller_d9}
+\end{figure}
+
+
+Aunque la elongación es la geometría más común, estudios teóricos han demostrado que ambas son posibles para el catión \ce{[Cu(OH2)6]^{2+}} \cite{Cu-2019-01}.
+
+El JTE no es un mero detalle, sino una de las principales causas de la química de coordinación excepcionalmente flexible y dinámica del \ce{Cu^{2+}}. Dota al ion de una plasticidad estructural inusual, permitiéndole adoptar múltiples geometrías (octaédrica distorsionada, piramidal cuadrada, planar cuadrada) con diferencias energéticas muy pequeñas entre ellas. Esta flexibilidad es inherentemente dinámica; en solución, el complejo alterna rápidamente entre estas configuraciones. Esto explica la alta labilidad de sus ligandos, cuya tasa de intercambio es órdenes de magnitud superior a la de otros cationes divalentes. La debilidad de los enlaces axiales facilita este rápido intercambio y ha generado un prolongado debate sobre el número de coordinación preferido (4, 5 o 6) del ion en solución.
