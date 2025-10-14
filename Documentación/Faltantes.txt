@@ -1,0 +1,219 @@
+Claro, aquí tienes una lista concisa con la información que solicitaste para cada una de las referencias seleccionadas, extraída directamente de las fuentes proporcionadas.
+
+***
+
+### **Archivo: Cu-2002-01.pdf**
+*   **Autor, año:** Funahashi et al., 2002.
+*   **Estudia la solvatación del cobre:** Sí.
+*   **Solventes estudiados:** Agua, metanol y otros solventes.
+*   **Tipo de estudio:** Revisión.
+*   **Fase de estudio:** Líquida/Solución.
+*   **Reporta número de coordinación:** Sí.
+*   **Reporta distancias de enlace:** Sí.
+
+### **Archivo: Cu-2004-01.pdf**
+*   **Autor, año:** Schwenk y Rode, 2004.
+*   **Estudia la solvatación del cobre:** Sí.
+*   **Solventes estudiados:** Agua.
+*   **Tipo de estudio:** Teórico (simulaciones QM/MM MD).
+*   **Fase de estudio:** Líquida/Solución.
+*   **Reporta número de coordinación:** Sí.
+*   **Reporta distancias de enlace:** Sí, reporta las distancias Cu-O.
+
+### **Archivo: Cu-2011-01.pdf**
+*   **Autor, año:** Wawer et al., 2011.
+*   **Estudia la solvatación del cobre:** Sí, como parte de un estudio sobre cationes divalentes.
+*   **Solventes estudiados:** Agua y metanol (el foco es metanol, con datos de agua para comparación).
+*   **Tipo de estudio:** Experimental.
+*   **Fase de estudio:** Líquida/Solución.
+*   **Reporta número de coordinación:** Sí.
+*   **Reporta distancias de enlace:** No.
+
+### **Archivo: Cu-2011-02.pdf**
+*   **Autor, año:** Dudzik et al., 2011.
+*   **Estudia la solvatación del cobre:** Sí, estudia la coordinación del Cu2+ con la proteína R-sinucleína en un medio acuoso.
+*   **Solventes estudiados:** Agua y otros solventes (solución acuosa con la proteína como ligando).
+*   **Tipo de estudio:** Experimental (EPR, ESEEM).
+*   **Fase de estudio:** Líquida/Solución.
+*   **Reporta número de coordinación:** Sí, propone una esfera de coordinación específica.
+*   **Reporta distancias de enlace:** No, pero define los ligandos que participan en la coordinación (amina N-terminal, amida y carboxilato de Asp2, e imidazol de His50).
+
+### **Archivo: Cu-2012-01.pdf**
+*   **Autor, año:** Eskici y Axelsen, 2012.
+*   **Estudia la solvatación del cobre:** Sí, en el contexto de la enfermedad de Alzheimer y su interacción con péptidos.
+*   **Solventes estudiados:** Agua.
+*   **Tipo de estudio:** Revisión.
+*   **Fase de estudio:** Líquida/Solución (discusión de procesos biológicos).
+*   **Reporta número de coordinación:** Sí, discute varias geometrías de coordinación.
+*   **Reporta distancias de enlace:** Sí, menciona distancias de enlace de Cu(II) en la APP.
+
+### **Archivo: Cu-2013-01.pdf**
+*   **Autor, año:** Smirnov, 2013.
+*   **Estudia la solvatación del cobre:** Sí.
+*   **Solventes estudiados:** Agua y metanol.
+*   **Tipo de estudio:** Revisión.
+*   **Fase de estudio:** Líquida/Solución y fase gaseosa (para algunos complejos).
+*   **Reporta número de coordinación:** Sí.
+*   **Reporta distancias de enlace:** Sí.
+
+### **Archivo: Cu-2014-01.pdf**
+*   **Autor, año:** Tsipis, 2014.
+*   **Estudia la solvatación del cobre:** Sí, revisa estudios teóricos sobre compuestos de coordinación de cobre, incluyendo complejos acuosos.
+*   **Solventes estudiados:** Agua y otros solventes/ligandos.
+*   **Tipo de estudio:** Revisión (enfocada en DFT/TDDFT).
+*   **Fase de estudio:** Líquida/Solución y fase gaseosa.
+*   **Reporta número de coordinación:** Sí, discute el número de coordinación en complejos acuosos.
+*   **Reporta distancias de enlace:** Sí, menciona distancias de enlace Cu-N y Cu-O en complejos modelo.
+
+### **Archivo: Cu-2014-02.pdf**
+*   **Autor, año:** Stelmashook et al., 2014.
+*   **Estudia la solvatación del cobre:** Sí, en el contexto de enfermedades neurodegenerativas.
+*   **Solventes estudiados:** Agua y otros solventes (ambiente biológico).
+*   **Tipo de estudio:** Revisión.
+*   **Fase de estudio:** Líquida/Solución (discusión de procesos biológicos).
+*   **Reporta número de coordinación:** No de forma explícita, pero discute la formación de complejos con proteínas.
+*   **Reporta distancias de enlace:** No.
+
+### **Archivo: Cu-2015-01.pdf**
+*   **Autor, año:** Liao et al., 2015.
+*   **Estudia la solvatación del cobre:** Sí, desarrolla un modelo para simulaciones de Cu2+.
+*   **Solventes estudiados:** Agua y otros solventes (ambiente proteico).
+*   **Tipo de estudio:** Teórico (desarrollo de campo de fuerza y simulaciones MD).
+*   **Fase de estudio:** Líquida/Solución.
+*   **Reporta número de coordinación:** Sí.
+*   **Reporta distancias de enlace:** Sí.
+
+### **Archivo: Me-1982-01.pdf**
+*   **Autor, año:** Ichikawa y Kevan, 1981.
+*   **Estudia la solvatación del cobre:** Sí.
+*   **Solventes estudiados:** Otros solventes (etanol).
+*   **Tipo de estudio:** Experimental (análisis de modulación de espín-eco electrónico).
+*   **Fase de estudio:** Líquida/Sólida (vidrios de etanol congelados).
+*   **Reporta número de coordinación:** Sí.
+*   **Reporta distancias de enlace:** Sí, reporta distancias de Cu2+ a O, H y C del etanol.
+
+### **Archivo: Me-2022-02.pdf**
+*   **Autor, año:** Da-yang y Alhameedi, 2022.
+*   **Estudia la solvatación del cobre:** Sí.
+*   **Solventes estudiados:** Metanol.
+*   **Tipo de estudio:** Teórico (DFT).
+*   **Fase de estudio:** Gaseosa (clústeres).
+*   **Reporta número de coordinación:** Sí.
+*   **Reporta distancias de enlace:** Sí.
+
+### **Archivo: Wa-1988-01.pdf**
+*   **Autor, año:** Salmon et al., 1988.
+*   **Estudia la solvatación del cobre:** Sí.
+*   **Solventes estudiados:** Agua.
+*   **Tipo de estudio:** Experimental (difracción de neutrones).
+*   **Fase de estudio:** Líquida/Solución.
+*   **Reporta número de coordinación:** Sí.
+*   **Reporta distancias de enlace:** Sí.
+
+### **Archivo: Wa-2003-01.pdf**
+*   **Autor, año:** Schwenk y Rode, 2003.
+*   **Estudia la solvatación del cobre:** Sí.
+*   **Solventes estudiados:** Agua.
+*   **Tipo de estudio:** Teórico (simulaciones QM/MM MD).
+*   **Fase de estudio:** Líquida/Solución.
+*   **Reporta número de coordinación:** Sí.
+*   **Reporta distancias de enlace:** Sí, reporta distancias Cu-O.
+
+### **Archivo: Wa-2005-02.pdf**
+*   **Autor, año:** Amira et al., 2005.
+*   **Estudia la solvatación del cobre:** Sí.
+*   **Solventes estudiados:** Agua.
+*   **Tipo de estudio:** Teórico (simulaciones Car-Parrinello MD).
+*   **Fase de estudio:** Líquida/Solución.
+*   **Reporta número de coordinación:** Sí.
+*   **Reporta distancias de enlace:** Sí.
+
+### **Archivo: Wa-2006-01.pdf**
+*   **Autor, año:** Mesu et al., 2006.
+*   **Estudia la solvatación del cobre:** Sí, estudia la coordinación con histidina en solución acuosa.
+*   **Solventes estudiados:** Agua y otros solventes (agua con histidina como ligando).
+*   **Tipo de estudio:** Experimental (IR, Raman, UV/vis/NIR, ESR, XAS).
+*   **Fase de estudio:** Líquida/Solución.
+*   **Reporta número de coordinación:** Sí, propone diferentes geometrías de coordinación según el pH.
+*   **Reporta distancias de enlace:** Sí, a través de análisis EXAFS (Cu-O y Cu-N).
+
+### **Archivo: Wa-2006-02.pdf**
+*   **Autor, año:** Iino et al., 2006.
+*   **Estudia la solvatación del cobre:** Sí, del ion Cu+.
+*   **Solventes estudiados:** Agua.
+*   **Tipo de estudio:** Híbrido (espectroscopia IR experimental y cálculos DFT).
+*   **Fase de estudio:** Gaseosa (clústeres).
+*   **Reporta número de coordinación:** Sí.
+*   **Reporta distancias de enlace:** Sí.
+
+### **Archivo: Wa-2007-01.pdf**
+*   **Autor, año:** Duncombe et al., 2007.
+*   **Estudia la solvatación del cobre:** Sí.
+*   **Solventes estudiados:** Agua y otros solventes (amoníaco).
+*   **Tipo de estudio:** Experimental (espectrometría de masas).
+*   **Fase de estudio:** Gaseosa (clústeres).
+*   **Reporta número de coordinación:** Sí, discute la estabilidad especial del número de coordinación 8.
+*   **Reporta distancias de enlace:** No directamente, pero discute la estructura propuesta por otros autores.
+
+### **Archivo: Wa-2010-01.pdf**
+*   **Autor, año:** Li et al., 2010.
+*   **Estudia la solvatación del cobre:** Sí, como parte del desarrollo de un campo de fuerza para varios iones metálicos.
+*   **Solventes estudiados:** Agua.
+*   **Tipo de estudio:** Teórico (simulaciones MD y cálculos QM).
+*   **Fase de estudio:** Líquida/Solución.
+*   **Reporta número de coordinación:** Sí (implícito en la reproducción de datos experimentales, Tabla III ausente en los extractos).
+*   **Reporta distancias de enlace:** Sí (implícito en la reproducción de datos experimentales, Tabla III ausente en los extractos).
+
+### **Archivo: Wa-2012-02.pdf**
+*   **Autor, año:** Frank et al., 2012.
+*   **Estudia la solvatación del cobre:** Sí, en complejo con imidazol en solución acuosa.
+*   **Solventes estudiados:** Agua y otros solventes (agua con imidazol como ligando).
+*   **Tipo de estudio:** Híbrido (EXAFS y MXAN experimental y teórico).
+*   **Fase de estudio:** Líquida/Solución.
+*   **Reporta número de coordinación:** Sí.
+*   **Reporta distancias de enlace:** Sí.
+
+### **Archivo: Wa-2014-01.pdf**
+*   **Autor, año:** Xiang y Ponder, 2014.
+*   **Estudia la solvatación del cobre:** Sí, como sistema de prueba para un nuevo campo de fuerza.
+*   **Solventes estudiados:** Agua y otros solventes (ambiente proteico).
+*   **Tipo de estudio:** Teórico (desarrollo de campo de fuerza y simulaciones MD).
+*   **Fase de estudio:** Líquida/Solución.
+*   **Reporta número de coordinación:** Sí.
+*   **Reporta distancias de enlace:** Sí.
+
+### **Archivo: Wa-2015-02.pdf**
+*   **Autor, año:** La Penna et al., 2015.
+*   **Estudia la solvatación del cobre:** Sí.
+*   **Solventes estudiados:** Agua.
+*   **Tipo de estudio:** Teórico (cálculos DFT y MD para espectros XANES).
+*   **Fase de estudio:** Líquida/Solución.
+*   **Reporta número de coordinación:** Sí.
+*   **Reporta distancias de enlace:** Sí, presenta distancias Cu-O en las estructuras modelo.
+
+### **Archivo: Wa-2016-01.pdf**
+*   **Autor, año:** Jin et al., 2015 (publicado en 2016).
+*   **Estudia la solvatación del cobre:** Sí.
+*   **Solventes estudiados:** Agua y otros solventes (agua, amoníaco y entorno proteico).
+*   **Tipo de estudio:** Teórico (DFTB3/MM y VALBOND MD).
+*   **Fase de estudio:** Líquida/Solución.
+*   **Reporta número de coordinación:** Sí.
+*   **Reporta distancias de enlace:** Sí.
+
+### **Archivo: Wa-2019-01.pdf**
+*   **Autor, año:** Yang et al., 2019.
+*   **Estudia la solvatación del cobre:** Sí.
+*   **Solventes estudiados:** Agua.
+*   **Tipo de estudio:** Teórico (DFT/3D-RISM-SCF).
+*   **Fase de estudio:** Líquida/Solución.
+*   **Reporta número de coordinación:** Sí.
+*   **Reporta distancias de enlace:** Sí.
+
+### **Archivo: Wa-2024-01.pdf**
+*   **Autor, año:** Da-yang et al., 2024.
+*   **Estudia la solvatación del cobre:** Sí.
+*   **Solventes estudiados:** Agua.
+*   **Tipo de estudio:** Teórico (MP2/IEF-PCM).
+*   **Fase de estudio:** Líquida/Solución (fase solvente) y Gaseosa (comparativa).
+*   **Reporta número de coordinación:** Sí.
+*   **Reporta distancias de enlace:** Sí.
