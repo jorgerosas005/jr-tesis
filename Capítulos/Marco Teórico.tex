@@ -2,7 +2,7 @@
 
 \section{Fundamentos de Dinámica molecular}
 
-La dinamica molecular (MD, por sus síglas en inglés) es una técnica de simulación por computadora que ha sido utilizada para analizar el comportamiento y evolución de diversos sistemas a nivel atomístico. Su esencia consiste en resolver numéricamente las ecuaciones clásicas del movimiento, típicamente las de Newton, para un conjunto $R^N = \{ r_1, r_2, r_3, \ldots, r_N \}$ de $N$ partículas con masas $m_i$.
+La dinámica molecular (MD, por sus siglas en inglés) es una técnica de simulación por computadora que ha sido utilizada para analizar el comportamiento y evolución de diversos sistemas a nivel atomístico. Su esencia consiste en resolver numéricamente las ecuaciones clásicas del movimiento, típicamente las de Newton, para un conjunto $R^N = \{ r_1, r_2, r_3, \ldots, r_N \}$ de $N$ partículas con masas $m_i$.
 
 \begin{equation}
     \label{eq:newton_segunda_ley}
@@ -17,7 +17,7 @@ Donde las fuerzas $F_i$ son obtenidas a partir del gradiente negativo del potenc
 \end{equation}
 
 
-Este método calcula las fuerzas, velocidades y posiciones de las partículas a lo largo de determinado tiempo (trayectoria) a partir de la cuál es posible derivar propiedades de interés mediante su análisis o experimentos computacionales posteriores.
+Este método calcula las fuerzas, velocidades y posiciones de las partículas a lo largo de determinado tiempo (trayectoria) a partir de la cual es posible derivar propiedades de interés mediante su análisis o experimentos computacionales posteriores.
 
 
 \subsection{Integración numérica}
@@ -44,9 +44,9 @@ Las condiciones iniciales en una simulación de dinámica molecular (MD) son el 
 
 \subsubsection*{Asignación de posiciones}
 
-La etapa de construcción de las coordenadas iniciales es el primer paso práctico para definir la configuración de partida del sistema. Para un sistema no periódico, como un clúster molecular o una proteína aislada, esta etapa consiste en obtener datos experimentales (si se dipsone de ellos) ya que son una excelente fuente para las posiciones iniciales o en su defecto, se pueden construir utilizando software de modelado molecular.
+La etapa de construcción de las coordenadas iniciales es el primer paso práctico para definir la configuración de partida del sistema. Para un sistema no periódico, como un clúster molecular o una proteína aislada, esta etapa consiste en obtener datos experimentales (si se dispone de ellos) ya que son una excelente fuente para las posiciones iniciales o en su defecto, se pueden construir utilizando software de modelado molecular.
 
-La calidad de las coordenadas iniciales es crucial, ya que una mala estructura de partida puede llevar a problemas de inestabilidad o a un tiempo de equilibrado muy largo. Por lo que es importante realizar una minimización de energía (también llamada optimización de geometría) antes de iniciar la dinámica para asegurar la estabilidad y la viabilidad de la simulación.  Este paso evita problemas asociados con fuerzas repulsivas enormes, inestabilidad numérica y oscilaciones de temperatura grandes \cite{haile1992molecular}. La minimización de energía coloca a la estructura en un mínimo local de energía potencial cercano $R_{\text{min}}^N = \{ r_1^{\text{min}}, r_2^{\text{min}}, r_3^{\text{min}}, \ldots, r_N^{\text{min}} \}$ donde:
+La calidad de las coordenadas iniciales es crucial, ya que una mala estructura de partida puede llevar a problemas de inestabilidad o a un tiempo de equilibrado muy largo por lo que es importante realizar una minimización de energía (también llamada optimización de geometría) antes de iniciar la dinámica para asegurar la estabilidad y la viabilidad de la simulación.  Este paso evita problemas asociados con fuerzas repulsivas enormes, inestabilidad numérica y oscilaciones de temperatura grandes \cite{haile1992molecular}. La minimización de energía coloca a la estructura en un mínimo local de energía potencial cercano $R_{\text{min}}^N = \{ r_1^{\text{min}}, r_2^{\text{min}}, r_3^{\text{min}}, \ldots, r_N^{\text{min}} \}$ donde:
 
 \begin{equation}
     \label{eq:minimizacion_energia}
