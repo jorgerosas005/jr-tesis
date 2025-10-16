@@ -149,7 +149,7 @@ m_i \ddot{r}_i = -\frac{\partial U(\mathbf{R}^N)}{\partial r_i} - \gamma_i m_i \
     \frac{\mathrm{d}\gamma_{i}(t)}{\mathrm{d}t} = \frac{1}{Q} \left[ \sum_{i=1}^{N} m_{i} \frac{v_i^2}{2} - \frac{3N + 1}{2} k_{B} T \right]
 \end{equation}
 
-En estas ecuaciones, el término $\gamma_i$ representa el coeficiente de fricción dinámico que acopla el sistema al baño térmico. Su evolución temporal, descrita en la segunda ecuación, depende de la diferencia entre la energía cinética instantánea del sistema ($\sum m_i v_i^2 / 2$) y la energía cinética objetivo, que es proporcional a la temperatura deseada $T$. El parámetro $Q$, conocido como la "masa" del termostato, modula la intensidad de este acoplamiento: un valor pequeño de $Q$ resulta en una respuesta rápida y oscilaciones de temperatura, mientras que un valor grande produce un acoplamiento más suave pero fluctuaciones más lentas.
+En estas ecuaciones, el término $\gamma_i$ representa el coeficiente de fricción dinámico que acopla el sistema al baño térmico. Su evolución temporal, descrita en la segunda ecuación, depende de la diferencia entre la energía cinética instantánea del sistema ($\sum m_i v_i^2 / 2$) y la energía cinética objetivo, que es proporcional a la temperatura deseada $T$. El parámetro $Q$, conocido como la ''masa'' del termostato, modula la intensidad de este acoplamiento: un valor pequeño de $Q$ resulta en una respuesta rápida y oscilaciones de temperatura, mientras que un valor grande produce un acoplamiento más suave pero fluctuaciones más lentas.
 
 
 El funcionamiento de este termostato depende de la hipótesis ergódica, que postula que en el límite de una evolución temporal infinita, un sistema dinámico muestreará todos los microestados accesibles de su espacio de fases. Consecuentemente, se establece una equivalencia formal entre los promedios de ensamble de un observable $O(P, R)$ y los promedios temporales calculados a lo largo de una trayectoria de dinámica molecular \cite{MD-2002-01}. 
@@ -209,13 +209,8 @@ El funcionamiento de este termostato depende de la hipótesis ergódica, que pos
 
 \section{Dinámica molecular ab initio}
 
-La dinámica molecular \textit{ab initio} (AIMD) supera muchas de las limitaciones de los métodos clásicos. En este enfoque, las fuerzas que actúan sobre los núcleos se calculan "al vuelo" en cada paso de la simulación a partir de un cálculo de estructura electrónica, generalmente basado en DFT. Esto permite modelar explícitamente la polarización electrónica y los eventos reactivos como la ruptura y formación de enlaces.
+\subsection{La aproximación de Bohr-Oppenheimer}
 
-La Dinámica Molecular de Car-Parrinelo (CPMD), desarrollada en 1985, es un método de AIMD que trata simultáneamente los grados de libertad nucleares y electrónicos. Su idea fundamental es introducir una dinámica ficticia para los parámetros de la función de onda (los orbitales), a los que se les asigna una masa ficticia. De esta manera, los orbitales evolucionan en el tiempo junto con las posiciones nucleares dentro de un formalismo de Lagrange extendido.
-
-La gran ventaja de CPMD es que elimina la necesidad de converger completamente la función de onda en cada paso de tiempo, un proceso que es muy costoso en otros métodos de AIMD. El método funciona bajo la condición de que se mantenga una separación adiabática entre la dinámica nuclear, que es más lenta, y la dinámica electrónica ficticia, que es más rápida.
-
-A pesar de ser un método robusto y citado en muchos trabajos de referencia sobre la solvatación del \ce{Cu^{2+}} , puede enfrentar dificultades en sistemas con una brecha energética (\textit{gap}) pequeña o nula entre los estados electrónicos, donde la condición de adiabaticidad podría romperse. Estudios teóricos previos sobre el sistema acuoso del \ce{Cu^{2+}} han empleado CPMD con funcionales de tipo GGA, como BLYP y PBE. Sin embargo, se ha demostrado que funcionales como BLYP pueden subestimar la afinidad de enlace de la sexta molécula de agua al ion y sobrestimar la estabilidad de las estructuras de baja coordinación en comparación con métodos de mayor nivel, lo que limita su capacidad para describir con precisión la compleja estructura electrónica del cobre(II).
 
 \subsection{Dinámica Molecular de Bohr-Oppenheimer}
 
