@@ -211,6 +211,75 @@ El funcionamiento de este termostato depende de la hipótesis ergódica, que pos
 
 \subsection{La aproximación de Bohr-Oppenheimer}
 
+La aproximación de Born-Oppenheimer, también conocida como la aproximación adiabática, es una de las suposiciones más  importantes y fundamentales en la química cuántica y la dinámica molecular. Esta simplificación permite desacoplar el movimiento de los electrones y los núcleos en un sistema molecular. Esta aproximación se fundamenta en la gran diferencia de masas entre los núcleos y los electrones; la masa del núcleo más ligero (un protón) es aproximadamente 1840 veces más grande que la de un electrón. De manera que los núcleos se mueven en una escala de tiempo tres ordenes de magnitud más lenta que los electrones por lo que se puede considerar que los electrones se ajustan instantáneamente a la posición de los núcleos en movimiento. 
+
+Consideremos un sistema molecular compuesto por $M$ núcleos y $N$ electrones. Los núcleos están descritos por sus coordenadas $R$ y sus masas $M$ y los electrones están por sus coordenadas $r$ y masas $m$. El objetivo principal es resolver la ecuación de Schrödinger independiente del tiempo
+
+\begin{equation}
+    H \Psi = E \Psi,
+    \label{eq:schrodinger_independiente_tiempo}
+\end{equation}
+
+en donde el Hamiltoniano no relativista del sistema está dado por:
+
+\begin{equation}
+\begin{split}
+H &= - \sum_{I=1}^{M} \frac{\hbar^2}{2M_I} \nabla^2_I
+    - \sum_{i=1}^{N} \frac{\hbar^2}{2m_e} \nabla^2_i 
+    \quad - \frac{1}{4\pi\varepsilon_0} \sum_{i=1}^{N} \sum_{I=1}^{M} \frac{Z_A e^2}{\left| \mathbf{R}_I - \mathbf{r}_i \right|} \\
+  &\quad + \frac{1}{4\pi\varepsilon_0} \sum_{I=1}^{M} \sum_{J>I}^M \frac{Z_I Z_J e^2}{\left| \mathbf{R}_J  - \mathbf{R}_I \right|} 
+  \quad + \frac{1}{4\pi\varepsilon_0} \sum_{i=1}^{N} \sum_{j>i}^{N} \frac{e^2}{\left| \mathbf{r}_i - \mathbf{r}_j \right|}. 
+\end{split}
+\label{eq:hamiltoniano_completo}
+\end{equation}
+
+Para simplificar la ecuación \ref{eq:hamiltoniano_completo} se puede escribir en unidadedes atómicas donde $\hbar = e = m_e = 4\pi\varepsilon_0 = 1$. Así, el Hamiltoniano se expresa como:
+
+\begin{equation} \label{eq:hamiltoniano_au}
+\begin{split}
+    H = & - \sum_{I=1}^{M} \frac{1}{2M_I} \nabla^2_I - \sum_{i=1}^{N} \frac{1}{2} \nabla^2_i - \sum_{i=1}^{N} \sum_{I=1}^{M} \frac{Z_I}{|R_I - r_i|} \\
+    & + \sum_{I=1}^{M} \sum_{J>I}^{M} \frac{Z_I Z_J}{|R_J - R_I|} + \sum_{i=1}^{N} \sum_{j>i}^{N} \frac{1}{|r_i - r_j|} \\
+    = & T_N + T_e + V_{Ne} + V_{ee} + V_{NN}
+\end{split}
+\end{equation}
+
+donde $T_N$ y $T_e$ son los operadores de energía cinética nuclear y electrónica; $V_{Ne}$ es el potencial de atracción núcleo electrón; $V_{ee}$ es el potencial de repulsión electrón electrón; y $V_{NN}$ es el potencial de repulsión núcleo núcleo.
+
+El Hamiltoniano total (Ecuación \ref{eq:hamiltoniano_au}) se puede reagrupar como $H = T_N + H_e$, donde $H_e$ se define como el \textbf{Hamiltoniano electrónico}:
+
+\begin{equation}
+H_e = T_e + V_{Ne} + V_{ee} + V_{NN}
+\label{eq:hamiltoniano_electronico_res}
+\end{equation}
+
+Este operador depende paramétricamente de las coordenadas nucleares $\mathbf{R}$. La aproximación inicia resolviendo la ecuación de Schrödinger electrónica para una geometría nuclear fija:
+
+\begin{equation}
+H_e(\mathbf{r}; \mathbf{R}) \Psi_k(\mathbf{r}; \mathbf{R}) = E_k(\mathbf{R}) \Psi_k(\mathbf{r}; \mathbf{R})
+\label{eq:schrodinger_electronica_res}
+\end{equation}
+
+donde los eigenvalores $E_k(\mathbf{R})$ definen la $k$-ésima \textbf{Superficie de Energía Potencial (PES)}.
+
+La función de onda molecular total $\Psi_{tot}$ se puede expandir de forma exacta en la base completa de las eigenfunciones electrónicas $\Psi_k$:
+
+\begin{equation}
+\Psi_{tot}(\mathbf{R}, \mathbf{r}) = \sum_{k=1}^{\infty} \Psi_{Nk}(\mathbf{R}) \Psi_k(\mathbf{r}; \mathbf{R})
+\label{eq:ansatz_BO_res}
+\end{equation}
+
+donde los coeficientes $\Psi_{Nk}(\mathbf{R})$ son las funciones de onda nucleares.
+
+Sustituir esta expansión en la ecuación de Schrödinger total (Ecuación \ref{eq:schrodinger_independiente_tiempo}), proyectar sobre un estado $\Psi_j^*$ e integrar sobre $\mathbf{r}$ genera un conjunto de ecuaciones \textit{exactas pero acopladas} para $\Psi_{Nj}$, donde aparecen los términos de acoplamiento no adiabático $\Lambda_{jk}$.
+
+La \textbf{Aproximación de Born-Oppenheimer} consiste en despreciar dichos acoplamientos ($\Lambda_{jk} \approx 0$). Esta suposición desacopla el sistema, simplificando el problema a la \textbf{ecuación de Schrödinger nuclear} independiente para cada estado $j$:
+
+\begin{equation}
+\left[ -\sum_{I=1}^{M} \frac{1}{2M_I} \nabla^2_I + E_j(\mathbf{R}) \right] \Psi_{Nj}(\mathbf{R}) = E \Psi_{Nj}(\mathbf{R})
+\label{eq:schrodinger_nuclear_res}
+\end{equation}
+
+Así, el movimiento nuclear (gobernado por $T_N = -\sum_{I} \frac{1}{2M_I} \nabla^2_I$) se describe sobre una única PES, $E_j(\mathbf{R})$, que actúa como el potencial efectivo generado por los electrones.
 
 \subsection{Dinámica Molecular de Bohr-Oppenheimer}
 
