@@ -209,9 +209,19 @@ El funcionamiento de este termostato depende de la hipótesis ergódica, que pos
 
 \section{Dinámica molecular ab initio}
 
+La dinámica molecular clásica ha sido ampliamente utilizada para simular sistemas de gran tamaño, cuyo estudio mediante métodos de primeros principios resultaría prohibitivo en términos de costo computacional. Sin embargo, el alcance y la precisión de la MD clásica dependen de la calidad de los potenciales empíricos parametrizados que emplea para describir las interacciones atómicas. Estos potenciales, aunque eficientes, limitan la capacidad del método para describir fenómenos químicamente complejos, como la formación y ruptura de enlaces, la polarización electrónica o las fuerzas de muchos cuerpos.
+
+Para abordar estas limitaciones, se emplea la dinámica molecular ab initio (AIMD, por sus siglas en inglés), donde las fuerzas que actúan sobre las partículas se calculan directamente a partir de la estructura electrónica. La AIMD se fundamenta en una aproximación semi clásica que permite desacoplar el movimiento de los núcleos y los electrones, conocida como la aproximación de Born-Oppenheimer.
+
+Esta aproximación permite tratar el problema electrónico de forma independiente, resolviéndolo para un conjunto de posiciones nucleares fijas y obteniendo así la Superficie de Energía Potencial (SEP, por sus siglas en inglés) del estado fundamental. En la AIMD, los núcleos se propagan clásicamente sobre esta SEP, y las fuerzas ($F_I$) que dictan su movimiento se calculan en cada paso como el gradiente de esta energía electrónica ($E_0(R)$) respecto a las posiciones nucleares ($F_I = -\nabla_I E_0(R)$).
+
+En la práctica, los principales enfoques de la AIMD radican en la dinámica molecular de Born-Oppenheimer, que resuelve explícitamente el estado fundamental electrónico en cada paso, y la dinámica de Car-Parrinello (CPMD, por sus siglas en inglés). Esta última reformula el problema introduciendo un Lagrangiano extendido que incluye los grados de libertad electrónicos como variables clásicas con una ''masa ficticia'' ($\mu$). CPMD emplea una dinámica ficticia acoplada en la que los electrones siguen adiabáticamente el movimiento nuclear, eliminando la necesidad del ciclo de autoconsistencia en cada paso y permitiendo, en general, una mayor eficiencia computacional.
+
+A pesar de que la AIMD es significativamente más costosa que la MD clásica, limitando las simulaciones a sistemas de decenas o cientos de átomos y a escalas de tiempo de picosegundos, su aplicación permite el acceso a detalles microscópicos y observables electrónicos (como espectros IR o RMN). Es una herramienta relevante para investigar la dinámica de líquidos y soluciones, la catálisis o procesos bioquímicos complejos donde la descripción cuántica de las interacciones es fundamental.
+
 \subsection{La aproximación de Bohr-Oppenheimer}
 
-La aproximación de Born-Oppenheimer, también conocida como la aproximación adiabática, es una de las suposiciones más  importantes y fundamentales en la química cuántica y la dinámica molecular. Esta simplificación permite desacoplar el movimiento de los electrones y los núcleos en un sistema molecular. Esta aproximación se fundamenta en la gran diferencia de masas entre los núcleos y los electrones; la masa del núcleo más ligero (un protón) es aproximadamente 1840 veces más grande que la de un electrón. De manera que los núcleos se mueven en una escala de tiempo tres ordenes de magnitud más lenta que los electrones por lo que se puede considerar que los electrones se ajustan instantáneamente a la posición de los núcleos en movimiento. 
+La aproximación de Born-Oppenheimer, también conocida como la aproximación adiabática, es una de las suposiciones más  importantes y fundamentales en la química cuántica y la dinámica molecular. Esta simplificación permite desacoplar el movimiento de los electrones y los núcleos en un sistema molecular. Se fundamenta en la gran diferencia de masas entre los núcleos y los electrones; la masa del núcleo más ligero (un protón) es aproximadamente 1840 veces más grande que la de un electrón. De manera que los núcleos se mueven en una escala de tiempo tres ordenes de magnitud más lenta que los electrones por lo que se puede considerar que los electrones se ajustan instantáneamente a la posición de los núcleos en movimiento. 
 
 Consideremos un sistema molecular compuesto por $M$ núcleos y $N$ electrones. Los núcleos están descritos por sus coordenadas $R$ y sus masas $M$ y los electrones están por sus coordenadas $r$ y masas $m$. El objetivo principal es resolver la ecuación de Schrödinger independiente del tiempo
 
@@ -245,7 +255,7 @@ Para simplificar la ecuación \ref{eq:hamiltoniano_completo} se puede escribir e
 
 donde $T_N$ y $T_e$ son los operadores de energía cinética nuclear y electrónica; $V_{Ne}$ es el potencial de atracción núcleo electrón; $V_{ee}$ es el potencial de repulsión electrón electrón; y $V_{NN}$ es el potencial de repulsión núcleo núcleo.
 
-El Hamiltoniano total (Ecuación \ref{eq:hamiltoniano_au}) se puede reagrupar como $H = T_N + H_e$, donde $H_e$ se define como el \textbf{Hamiltoniano electrónico}:
+El Hamiltoniano total (Ecuación \ref{eq:hamiltoniano_au}) se puede reagrupar como $H = T_N + H_e$, donde $H_e$ se define como el Hamiltoniano electrónico:
 
 \begin{equation}
 H_e = T_e + V_{Ne} + V_{ee} + V_{NN}
@@ -254,32 +264,32 @@ H_e = T_e + V_{Ne} + V_{ee} + V_{NN}
 
 Este operador depende paramétricamente de las coordenadas nucleares $\mathbf{R}$. La aproximación inicia resolviendo la ecuación de Schrödinger electrónica para una geometría nuclear fija:
 
-\begin{equation}
-H_e(\mathbf{r}; \mathbf{R}) \Psi_k(\mathbf{r}; \mathbf{R}) = E_k(\mathbf{R}) \Psi_k(\mathbf{r}; \mathbf{R})
+\begin{equation} 
+H_e\left(\{r\}; \{R\}\right) \Psi_k = E_K \Psi_k\left(\{r\}; \{R\}\right), 
 \label{eq:schrodinger_electronica_res}
 \end{equation}
 
-donde los eigenvalores $E_k(\mathbf{R})$ definen la $k$-ésima \textbf{Superficie de Energía Potencial (PES)}.
+donde los eigenvalores $E_k(\mathbf{R})$ definen la $k$-ésima Superficie de Energía Potencial.
 
 La función de onda molecular total $\Psi_{tot}$ se puede expandir de forma exacta en la base completa de las eigenfunciones electrónicas $\Psi_k$:
 
 \begin{equation}
-\Psi_{tot}(\mathbf{R}, \mathbf{r}) = \sum_{k=1}^{\infty} \Psi_{Nk}(\mathbf{R}) \Psi_k(\mathbf{r}; \mathbf{R})
+\Psi_{tot}(\mathbf{R}, \mathbf{r}) = \sum_{k=1}^{\infty} \Psi_{Nk}(\mathbf{R}) \Psi_k(\mathbf{r}, \mathbf{R})
 \label{eq:ansatz_BO_res}
 \end{equation}
 
 donde los coeficientes $\Psi_{Nk}(\mathbf{R})$ son las funciones de onda nucleares.
 
-Sustituir esta expansión en la ecuación de Schrödinger total (Ecuación \ref{eq:schrodinger_independiente_tiempo}), proyectar sobre un estado $\Psi_j^*$ e integrar sobre $\mathbf{r}$ genera un conjunto de ecuaciones \textit{exactas pero acopladas} para $\Psi_{Nj}$, donde aparecen los términos de acoplamiento no adiabático $\Lambda_{jk}$.
+Sustituir esta expansión en la ecuación de Schrödinger total (Ecuación \ref{eq:schrodinger_independiente_tiempo}), proyectar sobre un estado $\Psi_j^*$ e integrar sobre $\mathbf{r}$ genera un conjunto de ecuaciones \textit{exactas pero acopladas} para $\Psi_{Nj}$, donde aparecen los términos de acoplamiento no adiabático $A_{jk}$.
 
-La \textbf{Aproximación de Born-Oppenheimer} consiste en despreciar dichos acoplamientos ($\Lambda_{jk} \approx 0$). Esta suposición desacopla el sistema, simplificando el problema a la \textbf{ecuación de Schrödinger nuclear} independiente para cada estado $j$:
+La Aproximación de Born-Oppenheimer consiste en despreciar dichos acoplamientos ($\Lambda_{jk} \approx 0$). Esta suposición desacopla el sistema, simplificando el problema a la ecuación de Schrödinger nuclear independiente para cada estado $j$:
 
 \begin{equation}
 \left[ -\sum_{I=1}^{M} \frac{1}{2M_I} \nabla^2_I + E_j(\mathbf{R}) \right] \Psi_{Nj}(\mathbf{R}) = E \Psi_{Nj}(\mathbf{R})
 \label{eq:schrodinger_nuclear_res}
 \end{equation}
 
-Así, el movimiento nuclear (gobernado por $T_N = -\sum_{I} \frac{1}{2M_I} \nabla^2_I$) se describe sobre una única PES, $E_j(\mathbf{R})$, que actúa como el potencial efectivo generado por los electrones.
+Así, el movimiento nuclear (gobernado por $T_N = -\sum_{I=1}^M \frac{1}{2M_I} \nabla^2_I$) se describe sobre una única PES, $E_j(\mathbf{R})$, que actúa como el potencial efectivo generado por los electrones.
 
 \subsection{Dinámica Molecular de Bohr-Oppenheimer}
 
