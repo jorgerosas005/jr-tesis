@@ -206,7 +206,6 @@ El funcionamiento de este termostato depende de la hipótesis ergódica, que pos
 \end{figure}
 
 
-
 \section{Dinámica molecular ab initio}
 
 La dinámica molecular clásica ha sido ampliamente utilizada para simular sistemas de gran tamaño, cuyo estudio mediante métodos de primeros principios resultaría prohibitivo en términos de costo computacional. Sin embargo, el alcance y la precisión de la MD clásica dependen de la calidad de los potenciales empíricos parametrizados que emplea para describir las interacciones atómicas. Estos potenciales, aunque eficientes, limitan la capacidad del método para describir fenómenos químicamente complejos, como la formación y ruptura de enlaces, la polarización electrónica o las fuerzas de muchos cuerpos.
@@ -215,7 +214,7 @@ Para abordar estas limitaciones, se emplea la dinámica molecular ab initio (AIM
 
 Esta aproximación permite tratar el problema electrónico de forma independiente, resolviéndolo para un conjunto de posiciones nucleares fijas y obteniendo así la Superficie de Energía Potencial (SEP, por sus siglas en inglés) del estado fundamental. En la AIMD, los núcleos se propagan clásicamente sobre esta SEP, y las fuerzas ($F_I$) que dictan su movimiento se calculan en cada paso como el gradiente de esta energía electrónica ($E_0(R)$) respecto a las posiciones nucleares ($F_I = -\nabla_I E_0(R)$).
 
-En la práctica, los principales enfoques de la AIMD radican en la dinámica molecular de Born-Oppenheimer, que resuelve explícitamente el estado fundamental electrónico en cada paso, y la dinámica de Car-Parrinello (CPMD, por sus siglas en inglés). Esta última reformula el problema introduciendo un Lagrangiano extendido que incluye los grados de libertad electrónicos como variables clásicas con una ''masa ficticia'' ($\mu$). CPMD emplea una dinámica ficticia acoplada en la que los electrones siguen adiabáticamente el movimiento nuclear, eliminando la necesidad del ciclo de autoconsistencia en cada paso y permitiendo, en general, una mayor eficiencia computacional.
+En la práctica, los principales enfoques de la AIMD radican en la dinámica molecular de Born-Oppenheimer, que resuelve explícitamente el estado fundamental electrónico en cada paso, y la dinámica de Car-Parrinello (CPMD, por sus siglas en inglés). Esta última reformula el problema introduciendo un Lagrangiano extendido que incluye los grados de libertad electrónicos como variables clásicas con una ''masa ficticia'' ($\mu$). CPMD emplea una dinámica ficticia acoplada en la que los electrones siguen adiabáticamente el movimiento nuclear, eliminando la necesidad del ciclo de campo autoconsistente en cada paso y permitiendo, en general, una mayor eficiencia computacional.
 
 A pesar de que la AIMD es significativamente más costosa que la MD clásica, limitando las simulaciones a sistemas de decenas o cientos de átomos y a escalas de tiempo de picosegundos, su aplicación permite el acceso a detalles microscópicos y observables electrónicos (como espectros IR o RMN). Es una herramienta relevante para investigar la dinámica de líquidos y soluciones, la catálisis o procesos bioquímicos complejos donde la descripción cuántica de las interacciones es fundamental.
 
@@ -282,7 +281,7 @@ donde los coeficientes $\Psi_{Nk}(\mathbf{R})$ son las funciones de onda nuclear
 
 Sustituir esta expansión en la ecuación de Schrödinger total (Ecuación \ref{eq:schrodinger_independiente_tiempo}), proyectar sobre un estado $\Psi_j^*$ e integrar sobre $\mathbf{r}$ genera un conjunto de ecuaciones \textit{exactas pero acopladas} para $\Psi_{Nj}$, donde aparecen los términos de acoplamiento no adiabático $A_{jk}$.
 
-La Aproximación de Born-Oppenheimer consiste en despreciar dichos acoplamientos ($\Lambda_{jk} \approx 0$). Esta suposición desacopla el sistema, simplificando el problema a la ecuación de Schrödinger nuclear independiente para cada estado $j$:
+La Aproximación de Born-Oppenheimer consiste en despreciar dichos acoplamientos ($A_{jk} \approx 0$). Esta suposición desacopla el sistema, simplificando el problema a la ecuación de Schrödinger nuclear independiente para cada estado $j$:
 
 \begin{equation}
 \left[ -\sum_{I=1}^{M} \frac{1}{2M_I} \nabla^2_I + E_j(\mathbf{R}) \right] \Psi_{Nj}(\mathbf{R}) = E \Psi_{Nj}(\mathbf{R})
@@ -291,37 +290,44 @@ La Aproximación de Born-Oppenheimer consiste en despreciar dichos acoplamientos
 
 Así, el movimiento nuclear (gobernado por $T_N = -\sum_{I=1}^M \frac{1}{2M_I} \nabla^2_I$) se describe sobre una única PES, $E_j(\mathbf{R})$, que actúa como el potencial efectivo generado por los electrones.
 
-\subsection{Dinámica Molecular de Bohr-Oppenheimer}
 
 
-Para describir la evolución temporal de los núcleos atómicos, se puede adoptar un marco de trabajo semiclásico. Este enfoque parte de la premisa de que la función de onda nuclear, $\Psi_{Nk}$, puede ser representada de una forma análoga a la notación polar de un número complejo. Específicamente, se descompone en el producto de una amplitud $B_k$ y una fase $S_k$, ambas funciones reales y positivas:
+\subsubsection{Tratamiento semiclásico de los núcleos}
+
+Dado que los núcleos son partículas de naturaleza cuántica, debemos justificar su tratamiento con una aproximación semiclásica dentro del marco de la dinámica molecular de Born-Oppenheimer. Para ello, se puede seguir una ruta conocida para extraer las ecuaciones clásicas de movimiento a partir de la mecánica cuántica, reescribiendo la función de onda con el siguiente ansatz: 
+
+
 \begin{equation}
     \Psi_{Nk}(\{\mathbf{R}_I\};t) = B_k(\{\mathbf{R}_I\};t) \exp[iS_k(\{\mathbf{R}_I\};t)/\hbar]
-    \label{eq:ansatz_semiclasico} \tag{2.48}
+    \label{eq:ansatz_semiclasico} 
 \end{equation}
-donde $\{\mathbf{R}_I\}$ representa el conjunto de coordenadas nucleares.
 
-Al sustituir este \textit{ansatz} en la ecuación de Schrödinger dependiente del tiempo y realizar la separación de las componentes real e imaginaria, se obtienen dos ecuaciones acopladas que gobiernan la evolución de la amplitud y la fase de manera independiente. Tras aplicar el operador Laplaciano , las ecuaciones resultantes son:
+donde $B_k(\{\mathbf{R}_I\};t)$ y $S_k(\{\mathbf{R}_I\};t)$ son funciones reales y positivos que representan la amplitud y la fase de la función de onda nuclear, respectivamente.
+
+Al sustituir este ansatz en la ecuación de Schrödinger dependiente del tiempo y realizar la separación de las componentes real e imaginaria, se obtienen dos ecuaciones acopladas que gobiernan la evolución de la amplitud y la fase de manera independiente. Tras aplicar el operador Laplaciano , las ecuaciones resultantes son:
 
 \begin{equation}
     \frac{\partial S_k}{\partial t} + \sum_I \frac{1}{2M_I}(\nabla_I S_k)^2 + E_k = \hbar^2 \sum_I \frac{1}{2M_I} \frac{\nabla_I^2 B_k}{B_k}
-    \label{eq:fase} \tag{2.51}
+    \label{eq:fase} 
 \end{equation}
 
 \begin{equation}
     \frac{\partial B_k}{\partial t} + \sum_I \frac{1}{M_I}(\nabla_I B_k)(\nabla_I S_k) + \sum_I \frac{1}{2M_I} B_k (\nabla_I^2 S_k) = 0
-    \label{eq:amplitud} \tag{2.52}
+    \label{eq:amplitud} 
 \end{equation}
 
 
-Estas dos ecuaciones poseen una profunda interpretación física. La ecuación para la amplitud, ec. \eqref{eq:amplitud}, al ser multiplicada por un factor de $2B_k$, puede ser reexpresada de forma compacta como una ecuación de continuidad:
+La ecuación para la amplitud, ec. \eqref{eq:amplitud} describe la evolución temporal de la amplitud ($B_k$) de la función de onda. Al ser multiplicada por un factor de $2B_k$, puede ser reexpresada de forma compacta como una ecuación de continuidad:
+
 \begin{equation}
     \frac{\partial B_k^2}{\partial t} + \sum_A \frac{1}{M_I} \nabla_I(B_k^2 \nabla_I S_k) = 0
     \label{eq:continuidad_reescrita} 
 \end{equation}
-Esta forma es análoga a la ecuación de continuidad general $\frac{\partial \rho_k}{\partial t} + \nabla \cdot \mathbf{J}_k = 0$, donde la densidad de probabilidad se define como $\rho_k = |\Psi_{Nk}|^2 = B_k^2$ y la corriente de probabilidad es $\mathbf{J}_{k,I} = B_k^2(\nabla_I S_k)/M_I$. Físicamente, esto garantiza la conservación local de la probabilidad, un pilar fundamental de la mecánica cuántica.
 
-Por otro lado, la ecuación para la fase, ec. \eqref{eq:fase}, revela la conexión con la mecánica clásica. El término en el lado derecho es a menudo denominado ''potencial cuántico'' y es el único que depende explícitamente de $\hbar$. En el límite clásico ($\hbar \to 0$), este término se anula, simplificando la ecuación a:
+Esta forma es análoga a la ecuación de continuidad general $\frac{\partial \rho_k}{\partial t} + \nabla \cdot \mathbf{J}_k = 0$, donde la densidad de probabilidad se define como $\rho_k = |\Psi_{Nk}|^2 = B_k^2$ y la corriente de probabilidad es $\mathbf{J}_{k,I} = B_k^2(\nabla_I S_k)/M_I$. Esto garantiza la conservación de la densidad de probabilidad del núcleo. 
+
+Por otro lado, la ecuación \eqref{eq:fase} describe la evolución temporal de la fase $S_k$ de la función de onda. El término en el lado derecho es a menudo denominado ''potencial cuántico'' y es el único que depende explícitamente de $\hbar$. En el límite clásico ($\hbar \to 0$), este término se anula, simplificando la ecuación a:
+
 \begin{equation}
     \frac{\partial S_k}{\partial t} + \sum_I \frac{1}{2M_I}(\nabla_I S_k)^2 + E_k = 0
     \label{eq:hamilton_jacobi}
@@ -331,10 +337,10 @@ Esta expresión es idéntica a la ecuación de Hamilton-Jacobi de la mecánica c
     \frac{\partial S_k}{\partial t} + H_k(\{\mathbf{R}_I\}, \{\nabla_I S_k\}) = 0
     \label{eq:hamiltoniano} 
 \end{equation}
-Esto demuestra que, en este formalismo, los núcleos se propagan de acuerdo a la mecánica clásica sobre una superficie de energía potencial efectiva.
+Esto demuestra que, en este formalismo, los núcleos se propagan de acuerdo a la mecánica clásica sobre una superficie de energía potencial.
+\section{Dinámica molecular de Born-Oppenheimer} 
 
-
-El marco teórico anterior sustenta la metodología de la Dinámica Molecular Born-Oppenheimer (BOMD). En esta técnica, la energía $E(\{\Psi_i\}; \mathbf{R}) = E_{el}[\{\Psi_i[\rho(r)]\};\mathbf{R}] + V_{NN}(\mathbf{R})$ se minimiza en cada paso de la dinámica con respecto a los orbitales de la función de onda electrónica $\{\Psi_i\}$, sujeta a la restricción de ortonormalidad $\langle\Psi_i|\Psi_j\rangle = \delta_{ij}$.
+El marco teórico anterior sustenta la metodología BOMD. En esta técnica, la energía $E(\{\Psi_i\}; \mathbf{R}) = E_{el}[\{\Psi_i[\rho(r)]\};\mathbf{R}] + V_{NN}(\mathbf{R})$ se minimiza en cada paso de la dinámica con respecto a los orbitales de la función de onda electrónica $\{\Psi_i\}$, sujeta a la restricción de ortonormalidad $\langle\Psi_i|\Psi_j\rangle = \delta_{ij}$.
 
 Para derivar las ecuaciones de movimiento, se construye el siguiente Lagrangiano:
 \begin{equation}
