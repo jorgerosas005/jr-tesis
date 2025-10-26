@@ -99,6 +99,7 @@
     \subsection{Estudios Teóricos}
 
     Los estudios computacionales han sido fundamentales para interpretar la evidencia experimental y proporcionar una visión dinámica del proceso de solvatación. Los principales métodos teóricos empleados son:
+
     \begin{itemize}
         \item Teoría del Funcional de la Densidad (DFT)
         \item Dinámica Molecular, tanto clásica como \textit{ab initio} (AIMD)
@@ -107,7 +108,64 @@
 
     Las simulaciones teóricas corroboran la naturaleza dinámica del efecto Jahn-Teller, mostrando transformaciones rápidas entre diferentes configuraciones en escalas de tiempo de femtosegundos. Gran parte de los modelos teóricos indican que la geometría de pirámide cuadrada, con número de coordinación (NC) de 5, es la más estable en solución acuosa, aunque la diferencia de energía con la forma hexa-coordinada (NC=6) es muy pequeña ($\sim$1.4 kcal/mol) \cite{Wa-2008-01, Wa-2009-02}. Esto sugiere que ambas especies pueden coexistir en solución, lo cual está en línea con los hallazgos experimentales.
 
-    Un aporte crucial de los estudios teóricos ha sido resaltar el papel de la segunda capa de solvatación. Se ha demostrado que la formación de enlaces de hidrógeno entre las moléculas de agua de la primera y segunda esfera de hidratación es un factor de estabilización que puede competir energéticamente con la coordinación de una molécula de agua en la posición axial \cite{Wa-2007-03, Wa-2008-01,Wa-2024-01}. Las distancias de enlace calculadas concuerdan con los datos experimentales, con valores promedio para \ce{Cu-O_{eq}} de alrededor de 2.00--2.03 \AA \ y para \ce{Cu-O_{ax}} de 2.15--2.30 \AA. El resumen de todos estos trabajos también se encuentra en la tabla XXXXXXXXXX.
+    Un aporte crucial de los estudios teóricos ha sido resaltar el papel de la segunda capa de solvatación. Se ha demostrado que la formación de enlaces de hidrógeno entre las moléculas de agua de la primera y segunda esfera de hidratación es un factor de estabilización que puede competir energéticamente con la coordinación de una molécula de agua en la posición axial \cite{Wa-2007-03, Wa-2008-01,Wa-2024-01}. Las distancias de enlace calculadas concuerdan con los datos experimentales, con valores promedio para \ce{Cu-O_{eq}} de alrededor de 2.00--2.03 \AA \ y para \ce{Cu-O_{ax}} de 2.15--2.30 \AA. El resumen de todos estos trabajos también se encuentra en la tabla \ref{tab:trabajos_teoricos_agua}.
+
+
+ \begin{table}[h!]
+    \centering
+    \small
+    \begin{threeparttable}
+    % Te sugiero un caption para esta tabla, similar al de tu ejemplo
+    \caption{Parámetros estructurales del ion Cu(II) solvatado en agua reportados en trabajos teóricos y de simulación.}
+    \label{tab:trabajos_teoricos_agua} % Es importante usar un label único
+    
+    % Definición de las 7 columnas con anchos ajustados
+    \begin{tabular}{| C{0.7cm} | C{2.5cm} | C{2.7cm} | C{0.7cm} | C{2.5cm} | C{1.8cm} | C{1.8cm} |}
+        \hline
+        \textbf{Ref} & \textbf{Técnica} & \textbf{Funcional \& Base} & \textbf{NC} & \textbf{Geometría} & \textbf{\ce{Cu-O_{eq}} (\AA)} & \textbf{\ce{Cu-O_{ax}} (\AA)} \\
+        \hline
+        
+        % Fila 1: Wa-1999-01 (abarca 3 sub-filas)
+        \multirow{3}{2.0cm}{\cite{Wa-1999-01}} & \multirow{3}{2.5cm}{CPMD / Optimización / DFT} & \multirow{3}{3.0cm}{LDA / Becke y Perdew Base DZ y TZ} & 4 & CP y T distorsionada & 1.967 - 2.011 & - \\ \cline{4-7}
+        & & & 5 & Pirámide tetragonal & 1.982 - 2.053 & 2.250 - 2.370 \\ \cline{4-7}
+        & & & 6 & OD & 2.019 - 2.037 & 2.342  2.398 \\ \hline
+        
+        % Fila 2: Wa-2010-03 (abarca 4 sub-filas)
+        \multirow{4}{2.0cm}{\cite{Wa-2010-03}} & \multirow{4}{2.5cm}{CPMD / DFT} & \multirow{4}{3.0cm}{BLYP, PBE} & 4 & CP & 1.93 - 2.06 & - \\ \cline{4-7}
+        & & & 5 & PC & 2.03 - 2.09 & 2.31 \\ \cline{4-7}
+        & & & 5 & BT & 2.04 - 2.14 & 1.95  2.14 \\ \cline{4-7}
+        & & & 6 & OD & 1.97 - 2.09 & 2.46  2.58 \\ \hline
+        
+        % Fila 3: Wa-2001-01 (fila única)
+        \cite{Wa-2001-01} & Difracción de neutrones / CPMD & BLYP funcional polarizado en espín & 5 & PC / BT & 1.96 & - \\ \hline
+        
+        % Fila 4: Wa-2003-01 (abarca 3 sub-filas)
+        \multirow{3}{2.0cm}{\cite{Wa-2003-01}} & \multirow{3}{2.5cm}{QM/MM MD} & \multirow{3}{3.0cm}{HF, B3LYP, y RIDFT} & \multirow{3}{0.7cm}{6} & \multirow{3}{3.5cm}{OD} & 2.02 (HF) & 2.15 / 2.30 (HF) \\ \cline{6-7}
+        & & & & & 2.03 (B3LYP) & 2.29 (B3LYP) \\ \cline{6-7}
+        & & & & & 1.99 (RIDFT) & 2.30 (RIDFT) \\ \hline
+        
+        % Fila 5: Wa-2004-02 (fila única)
+        \cite{Wa-2004-02} & CPMD / DFT & BLYP & 5.7 & OD, PC y BT & 2.0 & - \\ \hline
+        
+        % Fila 6: Wa-2005-02 (fila única)
+        \cite{Wa-2005-02} & CPMD / DFT & BLYP y LSDA & 5 & PC distorsionada y BT & 2.0 & 2.45 \\ \hline
+        
+        % Fila 7: Wa-2013-02 (fila única)
+        \cite{Wa-2013-02} & QM/MM MD & HF & 6 & OD & 2.06 & 2.21 \\ \hline
+        
+        % Fila 8: Wa-2016-01 (fila única)
+        \cite{Wa-2016-01} & QM/MM MD & DFTB3 / VALBOND & 6 & OD & 2.0 & 2.35 \\ \hline
+        
+    \end{tabular}
+    \begin{tablenotes}
+            \small % Puedes ajustar el tamaño de la fuente de las notas
+            % 5. Define cada nota usando \item
+            \item[] La notación para la geometría es la siguiente: CP = cuadrangular plana, PC = pirámide cuadrada, T = tetraédrica, BT = bipirámide trigonal, OD = octaedro distorsionado.
+        \end{tablenotes}
+    \end{threeparttable}
+\end{table}   
+
+
 
 
 
@@ -130,42 +188,45 @@ Al igual que en el agua, la estructura de solvatación del ion \ce{Cu^{2+}} en m
 
     A pesar de la discrepancia en el número de coordinación, hay un mayor consenso en las distancias de enlace ecuatoriales (\ce{Cu-O_{eq}}), reportadas consistentemente en el rango de 1.95 -- 1.98 \AA. Las distancias axiales (\ce{Cu-O_{ax}}), sin embargo, varían más, con valores reportados de 2.23 \AA \ para el modelo de NC=5 y dos distancias distintas de aproximadamente 2.20 \AA \ y 2.34 \AA \ para el modelo de NC=6. El resumen de dichos trabajos se encuentra en la tabla \ref{tab:trabajos_experimentales_metanol}.
 
+
     \begin{table}[h!]
     \centering
     \small
     \begin{threeparttable}
     \caption{Parámetros estructurales del ion Cu(II) solvatado en metanol reportados en trabajos de carácter experimental.}
     \label{tab:trabajos_experimentales_metanol}
-    
-    \begin{tabular}{| C{0.7cm} | C{2cm} | C{0.75cm} | C{2.1cm} | C{2.0cm} | C{2.0cm} | C{2.0cm} | C{2.0cm} |}
+
+
+    \begin{tabular}{| C{0.7cm} | C{2cm} | C{0.75cm} | C{2.1cm} | C{2.0cm} | C{2.0cm} | C{2.0cm} |}
         \hline
-        \textbf{Ref} & \textbf{Técnica} & \textbf{NC} & \textbf{Geometría} & \textbf{\ce{Cu-O_{eq1}} (\AA)} & \textbf{\ce{Cu-O_{eq2}} (\AA)} & \textbf{\ce{Cu-O_{ax1}} (\AA)} & \textbf{\ce{Cu-O_{ax2}} (\AA)} \\ 
+        \textbf{Ref} & \textbf{Técnica} & \textbf{NC} & \textbf{Geometría} & \textbf{\ce{Cu-O_{eq1}} (\AA)} & \textbf{\ce{Cu-O_{eq2}} (\AA)} & \textbf{\ce{Cu-O_{ax1}} (\AA)} \\ 
         \hline
 
-        \cite{Me-1980-01} & \makecell{Análisis} & 6 & Octaédrica & & & & 2.1 \\
+        \cite{Me-1980-01} & \makecell{Análisis} & 6 & Octaédrica & & & 2.1 \\
         \hline
 
-        \cite{Me-1986-01} & Oxygen-17 NMR & 6 & & & & & \\
+        \cite{Me-1986-01} & Oxygen-17 NMR & 6 & & & & \\
         \hline
 
-        \cite{Me-1999-01} & EXAFS & 3.8 & & $1.97 \pm 0.01$ & & & \\
+        \cite{Me-1999-01} & EXAFS & 3.8 & & $1.97 \pm 0.01$ & & \\
         \hline
 
-        \multirow{7}{*}{\cite{Me-2012-01}} & \multirow{2}{*}{EXAFS} & 5 & & $1.96 \pm 0.01$ & & $2.28 \pm 0.02$ & \\
-        \cline{3-8} 
-        & & 6 & & $1.96 \pm 0.01$ & & $2.32 \pm 0.02$ & \\ 
-        \cline{2-8} 
-        & \multirow{4}{*}{XANES} & 4 & Tetraédrica & $1.99 \pm 0.02$ & $1.99 \pm 0.02$ & & \\ 
-        \cline{3-8} 
-        & & 4 & \makecell{Cuadrangular\\ plana} & $2.00 \pm 0.02$ & $2.00 \pm 0.02$ & & \\ 
-        \cline{3-8} 
-        & & 5 & & $1.95 \pm 0.02$ & $2.01 \pm 0.02$ & $2.23 \pm 0.05$ & \\ 
-        \cline{3-8} 
-        & & 6 & & $1.95 \pm 0.02$ & $1.95 \pm 0.02$ & $2.23 \pm 0.04$ & \\ 
+        \multirow{7}{*}{\cite{Me-2012-01}} & \multirow{2}{*}{EXAFS} & 5 & & $1.96 \pm 0.01$ & & $2.28 \pm 0.02$ \\
+        \cline{3-7} 
+        & & 6 & & $1.96 \pm 0.01$ & & $2.32 \pm 0.02$ \\ 
+        \cline{2-7} 
+        & \multirow{4}{*}{XANES} & 4 & Tetraédrica & $1.99 \pm 0.02$ & $1.99 \pm 0.02$ & \\ 
+        \cline{3-7} 
+        & & 4 & \makecell{Cuadrangular\\ plana} & $2.00 \pm 0.02$ & $2.00 \pm 0.02$ & \\ 
+        \cline{3-7} 
+        & & 5 & & $1.95 \pm 0.02$ & $2.01 \pm 0.02$ & $2.23 \pm 0.05$ \\ 
+        \cline{3-7} 
+        & & 6 & & $1.95 \pm 0.02$ & $1.95 \pm 0.02$ & $2.23 \pm 0.04$ \\ 
         \hline
         % Esta última fila parece ser de otra referencia, puedes añadirla aquí
-         & EXAFS & 6 & \makecell{Octaédrica\\ distorsionada} & $1.975 \pm 0.003$ & & $2.202 \pm 0.008$ & $2.34 \pm 0.01$ \\
+         & EXAFS & 6 & \makecell{Octaédrica\\ distorsionada} & $1.975 \pm 0.003$ & & $2.202 \pm 0.008$ $2.34 \pm 0.01$ \\
         \hline
+
 
     \end{tabular}
      \begin{tablenotes}
@@ -174,6 +235,11 @@ Al igual que en el agua, la estructura de solvatación del ion \ce{Cu^{2+}} en m
      \end{tablenotes}
     \end{threeparttable}
 \end{table}
+
+
+
+
+
     \subsection{Estudios Teóricos}
 
     Los métodos computacionales han sido cruciales para explorar el complejo panorama energético de la solvatación del Cu\textsuperscript{2+} en metanol. Las principales técnicas utilizadas incluyen:
