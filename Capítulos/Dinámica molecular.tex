@@ -30,54 +30,44 @@ A pesar de su utilidad, los métodos de DM clásica y QM/MM presentan limitacion
 
 Por su parte, los métodos QM/MM, aunque superiores, no son "cajas negras". No existe una forma única de decidir cómo dividir el sistema entre las regiones QM y MM, y la manera de "unir" ambas regiones no es única, lo que los convierte en métodos que aún se consideran "experimentales" en cierto grado.
 
-\section{El Efecto Jahn-Teller}
-
-    La versatilidad fisicoquímica del \ce{Cu^{2+}} emana directamente de su estructura electrónica \ce{[Ar]}$d^9$ , siendo el fenómeno central que gobierna su comportamiento el efecto de Jahn-Teller (JTE, por sus siglas en inglés). Este efecto se manifiesta como una deformación geométrica espontánea que ocurre en moléculas no lineales con un estado electrónico fundamental degenerado. El teorema postula que el sistema reduce su simetría para eliminar dicha degeneración, lo que resulta en una disminución de su energía total \cite{Cu-2019-01}.
-
-    En el particular caso del complejo octaédrico de \ce{Cu^{2+}}, la configuración \ce{[Ar]}$d^9$ presenta orbitales $e_g$ degenerados. La distorsión para resolver esta degeneración emerge de la diferencia en la densidad electrónica entre el metal y los ligandos  y puede presentarse de dos maneras:
-
-    \begin{itemize}
-        \item \textbf{Elongación (z-out):} Los dos enlaces axiales se alargan y los cuatro ecuatoriales se acortan. Esto ocurre cuando la densidad electrónica es mayor en el eje $z$ y el orbital molecular semiocupado (SOMO, por sus siglas en inglés) es el $d_{x^2-y^2}$.
-        \item \textbf{Compresión (z-in):} Los cuatro enlaces ecuatoriales se alargan y los dos axiales se acortan. Sucede cuando la densidad electrónica es mayor en el plano $xy$ y el SOMO es el $d_{z^2}$.
-    \end{itemize}
 
 
-\begin{figure}[H]
-    \centering
-    
-    % Fila superior: Distorsión z-out (Elongación)
-    \begin{subfigure}{0.2\textwidth}
-        \centering
-        \includegraphics[width=0.5\linewidth]{Imágenes/JTE-z-out-draw.png}
-        \caption{}
-    \end{subfigure}
-    %\hfill % Espacio horizontal entre imágenes
-    \begin{subfigure}{0.2\textwidth}
-        \centering
-        \includegraphics[width=0.5\linewidth]{Imágenes/JTE-z-out-orbitals.png}
-        \caption{}
-    \end{subfigure}
-    
-    \vspace{0.5cm} % Espacio vertical entre filas
-    
-    % Fila inferior: Distorsión z-in (Compresión)
-    \begin{subfigure}{0.3\textwidth}
-        \centering
-        \includegraphics[width=0.5\linewidth]{Imágenes/JTE-z-in-draw.png}
-        \caption{}
-    \end{subfigure}
-    %\hfill % Espacio horizontal entre imágenes
-    \begin{subfigure}{0.2\textwidth}
-        \centering
-        \includegraphics[width=0.5\linewidth]{Imágenes/JTE-z-in-orbitals.png}
-        \caption{}
-    \end{subfigure}
-    
-    \caption[Ilustración del efecto Jahn-Teller ]{Ilustración  del efecto Jahn-Teller para un complejo octaédrico del ion Cu(II) con configuración electrónica $d^9$. Arriba se muestra la distorsión por elongación axial (z-out), donde los enlaces axiales se alargan (a), y su correspondiente desdoblamiento de orbitales (b). Abajo se presenta la distorsión por compresión axial (z-in), con el acortamiento de los enlaces axiales (c) y su respectivo desdoblamiento energético (d). La distorsión z-out es la observada más comúnmente en la experimentación. Figura tomada y editada de la referencia \cite{Cu-2019-01}.}
-    \label{fig:jahn_teller_d9}
-\end{figure}
 
+\section{Dinámica molecular de Born-Oppenheimer} 
 
-Aunque la elongación es la geometría más común, estudios teóricos han demostrado que ambas son posibles para el catión \ce{[Cu(OH2)6]^{2+}} \cite{Cu-2019-01}.
+El marco teórico anterior sustenta la metodología BOMD. En esta técnica, la energía $E(\{\Psi_i\}; \mathbf{R}) = E_{el}[\{\Psi_i[\rho(r)]\};\mathbf{R}] + V_{NN}(\mathbf{R})$ se minimiza en cada paso de la dinámica con respecto a los orbitales de la función de onda electrónica $\{\Psi_i\}$, sujeta a la restricción de ortonormalidad $\langle\Psi_i|\Psi_j\rangle = \delta_{ij}$.
 
-El JTE no es un mero detalle, sino una de las principales causas de la química de coordinación excepcionalmente flexible y dinámica del \ce{Cu^{2+}}. Dota al ion de una plasticidad estructural inusual, permitiéndole adoptar múltiples geometrías (octaédrica distorsionada, piramidal cuadrada, planar cuadrada) con diferencias energéticas muy pequeñas entre ellas. Esta flexibilidad es inherentemente dinámica; en solución, el complejo alterna rápidamente entre estas configuraciones. Esto explica la alta labilidad de sus ligandos, cuya tasa de intercambio es órdenes de magnitud superior a la de otros cationes divalentes. La debilidad de los enlaces axiales facilita este rápido intercambio y ha generado un prolongado debate sobre el número de coordinación preferido (4, 5 o 6) del ion en solución.
+Para derivar las ecuaciones de movimiento, se construye el siguiente Lagrangiano:
+\begin{equation}
+    \mathcal{L}_{BO} = \frac{1}{2} \sum_{A=1}^{M} M_A \dot{\mathbf{R}}_A^2 - \min_{\{\Psi_i\}} E[\{\Psi_i\};\mathbf{R}] + \sum_{ij} \Lambda_{ij} (\langle\Psi_i|\Psi_j\rangle - \delta_{ij})
+    \label{eq:lagrangiano_bo} 
+\end{equation}
+donde $\Lambda_{ij}$ son los multiplicadores de Lagrange que imponen la restricción.
+
+Las ecuaciones de movimiento se obtienen aplicando la ecuación de Euler-Lagrange:
+\begin{equation}
+    \frac{d}{dt} \frac{\partial \mathcal{L}}{\partial \dot{\mathbf{R}}_A} = \frac{\partial \mathcal{L}}{\partial \mathbf{R}_A}
+    \label{eq:euler_lagrange} 
+\end{equation}
+Al resolverla, se obtiene la expresión para las fuerzas que actúan sobre los núcleos, que es una forma de la segunda ley de Newton ($M_A\ddot{\mathbf{R}}_A = \mathbf{F}_A$):
+\begin{equation}
+    M_A \ddot{\mathbf{R}}_A = -\left\langle\Psi\left|\frac{\partial H}{\partial \mathbf{R}_A}\right|\Psi\right\rangle - 2 \sum_{i} \left\langle\frac{\partial \Psi_i}{\partial \mathbf{R}_A}\left|H\right|\Psi_i\right\rangle + \sum_{ij} \Lambda_{ij} \frac{\partial}{\partial \mathbf{R}_A} \langle\Psi_i|\Psi_j\rangle
+    \label{eq:fuerzas_1} 
+\end{equation}
+Una forma más explícita y comúnmente utilizada es:
+\begin{equation}
+    M_A \ddot{\mathbf{R}}_A = -\frac{\partial E}{\partial \mathbf{R}_A} - 2 \sum_i \left\langle\frac{\partial \Psi_i}{\partial \mathbf{R}_A}\left|\frac{\delta E}{\delta \Psi_i}\right.\right\rangle + \sum_{ij} \Lambda_{ij} \frac{\partial}{\partial \mathbf{R}_A} \langle\Psi_i|\Psi_j\rangle
+    \label{eq:fuerzas_2}
+\end{equation}
+
+La fuerza total sobre cada núcleo, descrita en la ec. \eqref{eq:fuerzas_2}, se descompone en varios términos con un claro origen físico:
+\begin{itemize}
+    \item \textbf{Fuerza de Hellmann-Feynman:} El primer término, $-\frac{\partial E}{\partial \mathbf{R}_A}$, es la fuerza que se esperaría clásicamente, calculada como el gradiente negativo de la superficie de energía potencial.
+    \item \textbf{Fuerza de Pulay:} El segundo término es una corrección conocida como fuerza de Pulay o fuerza holonómica. Surge porque la base de funciones utilizada para describir los orbitales electrónicos $\{\Psi_i\}$ depende de las posiciones nucleares y, por lo tanto, se mueve junto con los átomos. Este término asegura que la fuerza total sea consistente incluso con una base incompleta.
+    \item \textbf{Fuerza de constricción:} El tercer término está asociado a la restricción de ortonormalidad impuesta por los multiplicadores de Lagrange.
+\end{itemize}
+
+Una vez calculadas estas fuerzas, la trayectoria de los núcleos se integra en el tiempo, comúnmente mediante algoritmos como el de Verlet. Es crucial notar que, aunque teóricamente robustas, las simulaciones BOMD poseen un valor predictivo que está intrínsecamente ligado a un alto coste computacional, el cual escala con el método de estructura electrónica elegido y el tamaño del sistema.
+
+\section{Teoría de los Funcionales de la Densidad}
+

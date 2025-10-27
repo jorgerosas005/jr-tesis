@@ -338,41 +338,5 @@ Esta expresión es idéntica a la ecuación de Hamilton-Jacobi de la mecánica c
     \label{eq:hamiltoniano} 
 \end{equation}
 Esto demuestra que, en este formalismo, los núcleos se propagan de acuerdo a la mecánica clásica sobre una superficie de energía potencial.
-\section{Dinámica molecular de Born-Oppenheimer} 
 
-El marco teórico anterior sustenta la metodología BOMD. En esta técnica, la energía $E(\{\Psi_i\}; \mathbf{R}) = E_{el}[\{\Psi_i[\rho(r)]\};\mathbf{R}] + V_{NN}(\mathbf{R})$ se minimiza en cada paso de la dinámica con respecto a los orbitales de la función de onda electrónica $\{\Psi_i\}$, sujeta a la restricción de ortonormalidad $\langle\Psi_i|\Psi_j\rangle = \delta_{ij}$.
-
-Para derivar las ecuaciones de movimiento, se construye el siguiente Lagrangiano:
-\begin{equation}
-    \mathcal{L}_{BO} = \frac{1}{2} \sum_{A=1}^{M} M_A \dot{\mathbf{R}}_A^2 - \min_{\{\Psi_i\}} E[\{\Psi_i\};\mathbf{R}] + \sum_{ij} \Lambda_{ij} (\langle\Psi_i|\Psi_j\rangle - \delta_{ij})
-    \label{eq:lagrangiano_bo} 
-\end{equation}
-donde $\Lambda_{ij}$ son los multiplicadores de Lagrange que imponen la restricción.
-
-Las ecuaciones de movimiento se obtienen aplicando la ecuación de Euler-Lagrange:
-\begin{equation}
-    \frac{d}{dt} \frac{\partial \mathcal{L}}{\partial \dot{\mathbf{R}}_A} = \frac{\partial \mathcal{L}}{\partial \mathbf{R}_A}
-    \label{eq:euler_lagrange} 
-\end{equation}
-Al resolverla, se obtiene la expresión para las fuerzas que actúan sobre los núcleos, que es una forma de la segunda ley de Newton ($M_A\ddot{\mathbf{R}}_A = \mathbf{F}_A$):
-\begin{equation}
-    M_A \ddot{\mathbf{R}}_A = -\left\langle\Psi\left|\frac{\partial H}{\partial \mathbf{R}_A}\right|\Psi\right\rangle - 2 \sum_{i} \left\langle\frac{\partial \Psi_i}{\partial \mathbf{R}_A}\left|H\right|\Psi_i\right\rangle + \sum_{ij} \Lambda_{ij} \frac{\partial}{\partial \mathbf{R}_A} \langle\Psi_i|\Psi_j\rangle
-    \label{eq:fuerzas_1} 
-\end{equation}
-Una forma más explícita y comúnmente utilizada es:
-\begin{equation}
-    M_A \ddot{\mathbf{R}}_A = -\frac{\partial E}{\partial \mathbf{R}_A} - 2 \sum_i \left\langle\frac{\partial \Psi_i}{\partial \mathbf{R}_A}\left|\frac{\delta E}{\delta \Psi_i}\right.\right\rangle + \sum_{ij} \Lambda_{ij} \frac{\partial}{\partial \mathbf{R}_A} \langle\Psi_i|\Psi_j\rangle
-    \label{eq:fuerzas_2}
-\end{equation}
-
-La fuerza total sobre cada núcleo, descrita en la ec. \eqref{eq:fuerzas_2}, se descompone en varios términos con un claro origen físico:
-\begin{itemize}
-    \item \textbf{Fuerza de Hellmann-Feynman:} El primer término, $-\frac{\partial E}{\partial \mathbf{R}_A}$, es la fuerza que se esperaría clásicamente, calculada como el gradiente negativo de la superficie de energía potencial.
-    \item \textbf{Fuerza de Pulay:} El segundo término es una corrección conocida como fuerza de Pulay o fuerza holonómica. Surge porque la base de funciones utilizada para describir los orbitales electrónicos $\{\Psi_i\}$ depende de las posiciones nucleares y, por lo tanto, se mueve junto con los átomos. Este término asegura que la fuerza total sea consistente incluso con una base incompleta.
-    \item \textbf{Fuerza de constricción:} El tercer término está asociado a la restricción de ortonormalidad impuesta por los multiplicadores de Lagrange.
-\end{itemize}
-
-Una vez calculadas estas fuerzas, la trayectoria de los núcleos se integra en el tiempo, comúnmente mediante algoritmos como el de Verlet. Es crucial notar que, aunque teóricamente robustas, las simulaciones BOMD poseen un valor predictivo que está intrínsecamente ligado a un alto coste computacional, el cual escala con el método de estructura electrónica elegido y el tamaño del sistema.
-
-\section{Teoría de los Funcionales de la Densidad}
 
