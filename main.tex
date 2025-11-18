@@ -44,6 +44,7 @@
 \titlespacing*{\chapter}{0pt}{1pt}{40pt} % Espaciado vertical antes y después del título
 
 \usepackage{tikz}
+\usetikzlibrary{arrows.meta}
 \usetikzlibrary{shapes.geometric, arrows, positioning}
 % --- Estilos para los bloques y flechas ---
 % 'process' es para los rectángulos de pasos
@@ -99,13 +100,11 @@
         \listoffigures
 
     \mainmatter % Páginas principales
-        \include{Capítulos/Introducción}
-        \include{Capítulos/Antecedentes}
-        %\include{Capítulos/Dinámica molecular}
-        \include{Capítulos/Marco Teórico}
+        %\include{Capítulos/Introducción}
+        %\include{Capítulos/Antecedentes}
+        %\include{Capítulos/Marco Teórico}
         %\include{Capítulos/DFT}
-        %\include{Capítulos/Anexos}
-
+        \include{Capítulos/Resultados}
     % Bibliografía
     \printbibliography
     \backmatter

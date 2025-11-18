@@ -19,6 +19,53 @@ Donde las fuerzas $F_i$ son obtenidas a partir del gradiente negativo del potenc
 
 Este método calcula las fuerzas, velocidades y posiciones de las partículas a lo largo de determinado tiempo (trayectoria) a partir de la cual es posible derivar propiedades de interés mediante su análisis o experimentos computacionales posteriores.
 
+El siguiente diagrama de flujo (Figura \ref{fig:md_flowchart}) ilustra de manera muy general la lógica en una simulación de dinámica molecular.
+
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[node distance=1.5cm]
+
+        % --- Definición de los nodos (los bloques del diagrama) ---
+        % Se colocan uno debajo del otro usando 'below=of...'
+        \node (step1) [process] {Paso 1: Inicialización del sistema};
+
+        \node (step2) [process, below=of step1] {Paso 2: Optimización de la geometría y minimización de energía};
+
+        \node (step3) [process, below=of step2] {Paso 3: Cálculo de fuerzas};
+
+        % Para este paso, usamos un ancho de texto mayor para que quepa bien el contenido
+        \node (step4) [process, below=of step3] {
+            Paso 4: Integración de las ecuaciones de movimiento en el paso del tiempo $\Delta t$ \\
+            $r_i(t) \rightarrow r_i(t+\Delta t)$; \quad $v_i(t) \rightarrow v_i(t+\Delta t)$;
+        };
+
+        \node (step5) [process, below=of step4] {Paso 5: Cálculo de propiedades físicas};
+
+        % Se usa 'yshift' para aumentar la distancia vertical antes del rombo
+        \node (decide) [decision, below=of step5, yshift=-0.75cm] {$t > t_{\max}$?};
+
+        \node (stop) [process, below=of decide, yshift=-0.75cm] {Fin};
+
+
+        % --- Conexión de los nodos con flechas ---
+        \draw [arrow] (step1) -- (step2);
+        \draw [arrow] (step2) -- (step3);
+        \draw [arrow] (step3) -- (step4);
+        \draw [arrow] (step4) -- (step5);
+        \draw [arrow] (step5) -- (decide);
+        \draw [arrow] (decide) -- node[anchor=west, xshift=0.2cm] {Si} (stop);
+
+        % La flecha de retroalimentación ("No")
+        % Va desde el lado izquierdo ('west') del rombo, se desplaza 2cm a la izquierda,
+        % y luego sube y se conecta al lado izquierdo del bloque del Step 3.
+        \draw [arrow] (decide.west) -- node[above, pos=0.25] {No} ++(-5,0) |- (step3.west);
+
+    \end{tikzpicture}
+    \caption{Diagrama de flujo típico de una MD.}
+    \label{fig:md_flowchart}
+\end{figure}
+
 
 \subsection{Integración numérica}
 El objetivo principal de la integración numérica es discretizar las ecuaciones diferenciales y resolverlas de forma aproximada para generar las trayectorias de las partículas. En esencia, se busca encontrar una expresión que defina las posiciones en un tiempo futuro $r_i (t +\Delta t)$ a partir de las posiciones ya conocidas en el tiempo $t$, usando un pequeño intervalo de tiempo finito $(\Delta t)$. 
@@ -88,7 +135,7 @@ Posteriormente, se ajusta la temperatura. La temperatura instantánea inicial ($
     \label{eq:temp_instantanea} 
 \end{equation}
 
-donde $N_f$ son los grados de libertad (usualmente $3N-3$), puede no coincidir con la temperatura objetivo ($T_{\text{deseada}}$). Por ello, todas las velocidades se re-escalan mediante un factor $f_s$ para establecer la temperatura correcta:
+donde $N_f$ son los grados de libertad (usualmente $3N-3$), puede no coincidir con la temperatura objetivo ($T_{\text{deseada}}$). Por ello, todas las velocidades se reescalan mediante un factor $f_s$ para establecer la temperatura correcta:
 
 \begin{equation}
     v''_{i, \alpha} = v'_{i, \alpha} \times f_s, \qquad \text{donde} \qquad f_s = \sqrt{\frac{T_{\text{deseada}}}{T_{\text{inst}}}}
@@ -161,50 +208,6 @@ El funcionamiento de este termostato depende de la hipótesis ergódica, que pos
 
 
 
-\begin{figure}[H]
-    \centering
-    \begin{tikzpicture}[node distance=1.5cm]
-
-        % --- Definición de los nodos (los bloques del diagrama) ---
-        % Se colocan uno debajo del otro usando 'below=of...'
-        \node (step1) [process] {Paso 1: Inicialización del sistema};
-
-        \node (step2) [process, below=of step1] {Paso 2: Optimización de la geometría y minimización de energia};
-
-        \node (step3) [process, below=of step2] {Paso 3: Cálculo de fuerzas};
-
-        % Para este paso, usamos un ancho de texto mayor para que quepa bien el contenido
-        \node (step4) [process, below=of step3] {
-            Paso 4: Integración de las ecuaciones de movimiento en el paso del tiempo $\Delta t$ \\
-            $r_i(t) \rightarrow r_i(t+\Delta t)$; \quad $v_i(t) \rightarrow v_i(t+\Delta t)$;
-        };
-
-        \node (step5) [process, below=of step4] {Paso 5: Cálculo de propiedades físicas};
-
-        % Se usa 'yshift' para aumentar la distancia vertical antes del rombo
-        \node (decide) [decision, below=of step5, yshift=-0.75cm] {$t > t_{\max}$?};
-
-        \node (stop) [process, below=of decide, yshift=-0.75cm] {Fin};
-
-
-        % --- Conexión de los nodos con flechas ---
-        \draw [arrow] (step1) -- (step2);
-        \draw [arrow] (step2) -- (step3);
-        \draw [arrow] (step3) -- (step4);
-        \draw [arrow] (step4) -- (step5);
-        \draw [arrow] (step5) -- (decide);
-        \draw [arrow] (decide) -- node[anchor=west, xshift=0.2cm] {Si} (stop);
-
-        % La flecha de retroalimentación ("No")
-        % Va desde el lado izquierdo ('west') del rombo, se desplaza 2cm a la izquierda,
-        % y luego sube y se conecta al lado izquierdo del bloque del Step 3.
-        \draw [arrow] (decide.west) -- node[above, pos=0.25] {No} ++(-5,0) |- (step3.west);
-
-    \end{tikzpicture}
-    \caption{Diagrama de flujo típico de una MD.}
-    \label{fig:md_flowchart}
-\end{figure}
-
 
 \section{Dinámica molecular ab initio}
 
@@ -222,7 +225,7 @@ A pesar de que la AIMD es significativamente más costosa que la MD clásica, li
 
 La aproximación de Born-Oppenheimer, también conocida como la aproximación adiabática, es una de las suposiciones más  importantes y fundamentales en la química cuántica y la dinámica molecular. Esta simplificación permite desacoplar el movimiento de los electrones y los núcleos en un sistema molecular. Se fundamenta en la gran diferencia de masas entre los núcleos y los electrones; la masa del núcleo más ligero (un protón) es aproximadamente 1840 veces más grande que la de un electrón. De manera que los núcleos se mueven en una escala de tiempo tres ordenes de magnitud más lenta que los electrones por lo que se puede considerar que los electrones se ajustan instantáneamente a la posición de los núcleos en movimiento. 
 
-Consideremos un sistema molecular compuesto por $M$ núcleos y $N$ electrones. Los núcleos están descritos por sus coordenadas $R$ y sus masas $M$ y los electrones están por sus coordenadas $r$ y masas $m$. El objetivo principal es resolver la ecuación de Schrödinger independiente del tiempo
+Consideremos un sistema molecular compuesto por $M$ núcleos y $N$ electrones. Los núcleos están descritos por sus coordenadas $R$ y sus masas $M$ y los electrones por sus coordenadas $r$ y masas $m$. El objetivo principal es resolver la ecuación de Schrödinger independiente del tiempo
 
 \begin{equation}
     H \Psi = E \Psi,
@@ -242,7 +245,7 @@ H &= - \sum_{I=1}^{M} \frac{\hbar^2}{2M_I} \nabla^2_I
 \label{eq:hamiltoniano_completo}
 \end{equation}
 
-Para simplificar la ecuación \ref{eq:hamiltoniano_completo} se puede escribir en unidadedes atómicas donde $\hbar = e = m_e = 4\pi\varepsilon_0 = 1$. Así, el Hamiltoniano se expresa como:
+Para simplificar la ecuación \ref{eq:hamiltoniano_completo} se puede escribir en unidades atómicas donde $\hbar = e = m_e = 4\pi\varepsilon_0 = 1$. Así, el Hamiltoniano se expresa como:
 
 \begin{equation} \label{eq:hamiltoniano_au}
 \begin{split}
@@ -302,7 +305,7 @@ Dado que los núcleos son partículas de naturaleza cuántica, debemos justifica
     \label{eq:ansatz_semiclasico} 
 \end{equation}
 
-donde $B_k(\{\mathbf{R}_I\};t)$ y $S_k(\{\mathbf{R}_I\};t)$ son funciones reales y positivos que representan la amplitud y la fase de la función de onda nuclear, respectivamente.
+donde $B_k(\{\mathbf{R}_I\};t)$ y $S_k(\{\mathbf{R}_I\};t)$ son funciones reales y positivas que representan la amplitud y la fase de la función de onda nuclear, respectivamente.
 
 Al sustituir este ansatz en la ecuación de Schrödinger dependiente del tiempo y realizar la separación de las componentes real e imaginaria, se obtienen dos ecuaciones acopladas que gobiernan la evolución de la amplitud y la fase de manera independiente. Tras aplicar el operador Laplaciano , las ecuaciones resultantes son:
 
@@ -338,5 +341,3 @@ Esta expresión es idéntica a la ecuación de Hamilton-Jacobi de la mecánica c
     \label{eq:hamiltoniano} 
 \end{equation}
 Esto demuestra que, en este formalismo, los núcleos se propagan de acuerdo a la mecánica clásica sobre una superficie de energía potencial.
-
-

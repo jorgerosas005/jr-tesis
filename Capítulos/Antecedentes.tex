@@ -104,7 +104,7 @@ El JTE es una de las principales causas de la química de coordinación excepcio
             \hline
 
 
-            \multirow{2}{*}{\cite{Wa-2001-01}} & \multirow{2}{2.5cm}{Difracción de neutrones CPMD / BYLP} & \multirow{2}{*}{5} & Pirámide cuadrada & \multirow{2}{*}{$1.96$} & \multirow{2}{*}{$1.96$} & \multirow{2}{*}{} \\
+            \multirow{2}{*}{\cite{Wa-2001-01}} & \multirow{2}{2.5cm}{Difracción de neutrones CPMD / BLYP} & \multirow{2}{*}{5} & Pirámide cuadrada & \multirow{2}{*}{$1.96$} & \multirow{2}{*}{$1.96$} & \multirow{2}{*}{} \\
             & & & Bipirámide trigonal & & & \\
             \hline
 
@@ -153,13 +153,22 @@ El JTE es una de las principales causas de la química de coordinación excepcio
     Los estudios computacionales han sido fundamentales para interpretar la evidencia experimental y proporcionar una visión dinámica del proceso de solvatación. Los principales métodos teóricos empleados son:
 
     \begin{itemize}
-        \item Optmización de geometrías mediante métodos \textit{ab initio}
+        \item Optimización de geometrías mediante métodos \textit{ab initio}
         \item Dinámica Molecular, con técnicas de Mecánica Cuántica/Mecánica Molecular y \textit{ab initio}
     \end{itemize}
 
-    Las simulaciones teóricas corroboran la naturaleza dinámica del efecto Jahn-Teller, mostrando transformaciones rápidas entre diferentes configuraciones en escalas de tiempo de femtosegundos. Gran parte de los modelos teóricos indican que la geometría de pirámide cuadrada, con número de coordinación (NC) de 5, es la más estable en solución acuosa, aunque la diferencia de energía con la forma hexa-coordinada (NC=6) es muy pequeña ($\sim$1.4 kcal/mol) \cite{Wa-2008-01, Wa-2009-02}. Esto sugiere que ambas especies pueden coexistir en solución, lo cual está en línea con los hallazgos experimentales.
 
-    Un aporte crucial de los estudios teóricos ha sido resaltar el papel de la segunda capa de solvatación. Se ha demostrado que la formación de enlaces de hidrógeno entre las moléculas de agua de la primera y segunda esfera de hidratación es un factor de estabilización que puede competir energéticamente con la coordinación de una molécula de agua en la posición axial \cite{Wa-2007-03, Wa-2008-01,Wa-2024-01}. Las distancias de enlace calculadas concuerdan con los datos experimentales, con valores promedio para \ce{Cu-O_{eq}} de alrededor de 2.00--2.03 \AA \ y para \ce{Cu-O_{ax}} de 2.15--2.30 \AA. El resumen de todos estos trabajos también se encuentra en la tabla \ref{tab:trabajos_teoricos_agua}.
+    Las simulaciones teóricas pioneras también corroboraban la naturaleza dinámica del efecto Jahn-Teller para el $\ce{Cu^{2+}}$ en solución. Sin embargo, esta idea se fue desafiando con el tiempo, y diversos autores sugirieron que la alta labilidad axial del $\ce{Cu^{2+}}$ lo llevaba a favorecer la coordinación quíntuple, generalmente como una pirámide cuadrada alargada \cite{Wa-2001-01, Wa-2005-02, Wa-2008-04, Wa-2008-01}.
+    
+    Gran parte de los modelos teóricos apoyan esta idea, indicando que la geometría de pirámide cuadrada (con número de coordinación de 5) es la más estable en solución acuosa. No obstante, la diferencia de energía con la forma hexa-coordinada (NC=6) es muy pequeña, del orden de $\sim$1.4 kcal/mol \cite{Wa-2008-01, Wa-2009-02}. Esto sugiere que ambas especies pueden coexistir en solución, lo cual está en línea con los hallazgos experimentales.
+    
+    Un aporte crucial de los estudios teóricos para entender este equilibrio ha sido resaltar el papel de la segunda capa de solvatación. Se ha demostrado que la formación de enlaces de hidrógeno entre las moléculas de agua de la primera y segunda esfera de hidratación es un factor de estabilización que puede competir energéticamente con la coordinación de una molécula de agua en la posición axial \cite{Wa-2007-03, Wa-2008-01, Wa-2024-01}.
+    
+    Referente a las técnicas que son relevantes a esta tesis, hay que mencionar que muchos de estos trabajos caracterizan la estructura de solvatación del $\ce{Cu^{2+}}$ mediante cálculos de optimización para explorar diversas geometrías. Estos estudios se basan principalmente en DFT, con funcionales de intercambio y correlación como B3LYP \cite{Wa-2004-01, Wa-2005-03, Wa-2007-02, Wa-2007-03, Wa-2008-01, Wa-2009-01}, BLYP \cite{Wa-2010-02}, PBE \cite{Wa-2017-01}, PBE0 \cite{Wa-2018-01, Wa-2019-01} y M06-2X \cite{Wa-2018-01}. De igual forma, se ha empleado el método Hartree-Fock \cite{Wa-2007-03} y métodos post-Hartree-Fock como MP2 \cite{Wa-2007-03, Wa-2017-01, Wa-2024-03, Wa-2024-01}.
+    
+    Por otra parte, los enfoques en dinámica molecular se han basado principalmente en técnicas como CPMD y QM/MM, y un par de estudios han abordado el tema con BOMD. El resumen de todos estos trabajos se encuentra en la tabla \ref{tab:trabajos_teoricos_agua}.
+
+
 
 
  \begin{table}[h!]
@@ -167,7 +176,7 @@ El JTE es una de las principales causas de la química de coordinación excepcio
     \small
     \begin{threeparttable}
     % Te sugiero un caption para esta tabla, similar al de tu ejemplo
-    \caption{Parámetros estructurales del ion Cu(II) solvatado en agua reportados en trabajos teóricos y de simulación.}
+    \caption{Parámetros estructurales del ion Cu(II) solvatado en agua reportados en trabajos de dinámica molecular.}
     \label{tab:trabajos_teoricos_agua} % Es importante usar un label único
     
     % Definición de las 7 columnas con anchos ajustados
@@ -206,12 +215,17 @@ El JTE es una de las principales causas de la química de coordinación excepcio
         
         % Fila 8: Wa-2016-01 (fila única)
         \cite{Wa-2016-01} & QM/MM MD & DFTB3 / VALBOND & 6 & OD & 2.0 & 2.35 \\ \hline
+
+        \cite{Wa-2008-04} & BOMD / DFT & BLYP & 5 & PC y BT          & 1.99 &  \\ \hline
+
+        \cite{Wa-2015-03} & DFTMD \tnote{a} & BLYP & 5 & & 1.95 -- 2.01 & \\ \hline
         
     \end{tabular}
     \begin{tablenotes}
             \small % Puedes ajustar el tamaño de la fuente de las notas
             % 5. Define cada nota usando \item
             \item[] La notación para la geometría es la siguiente: CP = cuadrangular plana, PC = pirámide cuadrada, T = tetraédrica, BT = bipirámide trigonal, OD = octaedro distorsionado.
+            \item[a] La propagación de la MD se realizó con el ''método Born -- Oppenheimer''
         \end{tablenotes}
     \end{threeparttable}
 \end{table}   
@@ -235,7 +249,7 @@ Al igual que en el agua, la estructura de solvatación del ion \ce{Cu^{2+}} en m
 
     El panorama experimental se caracteriza por una falta de acuerdo. Mientras que estudios tempranos \cite{Me-1980-01} propusieron una coordinación de seis    , trabajos posteriores sugirieron que la técnica empleada podría haber sobrestimado las distancias de enlace. Más tarde, estudios de RMN \cite{Me-1986-01} observaron una ''rápida transición'' de isómeros hexacoordinados a conformaciones pentacoordinadas, introduciendo la idea de un equilibrio dinámico.
 
-    Este debate continúa en estudios más recientes. Por un lado, en un estudio que combina EXAFS y XANES concluyeron \char"22 inequívocamente\char"22 \ que el \ce{Cu^{2+}} en metanol adopta una geometría de pirámide cuadrada con NC=5 \cite{Me-2012-01}. Por otro lado, un estudio más reciente con EXAFS de alta calidad determinó que el mejor modelo de ajuste correspondía a una estructura octaédrica distorsionada por Jahn-Teller con NC=6 y carácter no centrosimétrico \cite{Wa-2020-01}, contradiciendo directamente la conclusión anterior.
+    Este debate continúa en estudios más recientes. Por un lado, en un estudio que combina EXAFS y XANES concluyó \char"22 inequívocamente\char"22 \ que el \ce{Cu^{2+}} en metanol adopta una geometría de pirámide cuadrada con NC=5 \cite{Me-2012-01}. Por otro lado, un estudio más reciente con EXAFS de alta calidad determinó que el mejor modelo de ajuste correspondía a una estructura octaédrica distorsionada por Jahn-Teller con NC=6 y carácter no centrosimétrico \cite{Wa-2020-01}, contradiciendo directamente la conclusión anterior.
 
     A pesar de la discrepancia en el número de coordinación, hay un mayor consenso en las distancias de enlace ecuatoriales (\ce{Cu-O_{eq}}), reportadas consistentemente en el rango de 1.95 -- 1.98 \AA. Las distancias axiales (\ce{Cu-O_{ax}}), sin embargo, varían más, con valores reportados de 2.23 \AA \ para el modelo de NC=5 y dos distancias distintas de aproximadamente 2.20 \AA \ y 2.34 \AA \ para el modelo de NC=6. El resumen de dichos trabajos se encuentra en la tabla \ref{tab:trabajos_experimentales_metanol}.
 
