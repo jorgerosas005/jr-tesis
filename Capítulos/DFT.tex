@@ -27,7 +27,6 @@ En la práctica computacional, los orbitales moleculares se describen matemátic
 $$ \psi_i = \sum_{\mu=1}^{k} c_{\mu i} \phi_{\mu} $$
 donde $\psi_i$ es el orbital molecular, $\phi_{\mu}$ son las funciones de base y $c_{\mu i}$ son los coeficientes de la combinación lineal. Comúnmente se utilizan funciones de tipo Gaussiano (GTOs) en lugar de las de tipo Slater (STOs) por su eficiencia computacional en el cálculo de integrales. Existen jerarquías de conjuntos de bases, como los desarrollados por Pople (e.g., 6-31G*, 6-311+G**), que ofrecen un compromiso entre precisión y costo computacional al mejorar la descripción de la valencia y añadir funciones de polarización y difusas \cite[195]{szabo1996modern}, \cite[140]{ramachandran2008computational}.
 
-\section{La Revolución de DFT: El Paradigma de la Densidad}
 
 \subsection{La Densidad Electrónica y la Densidad de Pares}
 La Teoría de los Funcionales de la Densidad (DFT) se basa en el uso de la \textbf{densidad electrónica}, $\rho(\mathbf{r})$, como la variable fundamental, en lugar de la compleja función de onda de N-electrones \cite[187]{ramachandran2008computational}. La densidad electrónica es una función de solo tres variables espaciales $(x, y, z)$ y determina la probabilidad de encontrar cualquiera de los $N$ electrones en un elemento de volumen $d\mathbf{r}$ \cite[36]{koch2015chemist}.
@@ -47,7 +46,7 @@ El \textbf{segundo teorema de Hohenberg-Kohn} introduce un principio variacional
 $$ E_0 \le E[\tilde{\rho}] $$
 Esto proporciona una ruta para encontrar la densidad y la energía del estado fundamental: minimizar el funcional de la energía con respecto a la densidad \cite[53]{koch2015chemist}. El problema principal, sin embargo, es que la forma exacta del funcional universal de la energía, $F_{HK}[\rho]$, no se conoce.
 
-\section{La Implementación Práctica: El Método de Kohn-Sham}
+\section{Método de Kohn-Sham}
 En 1965, Walter Kohn y Lu Jeu Sham propusieron un método ingenioso para aplicar los teoremas de Hohenberg-Kohn de manera práctica. La idea central es reemplazar el difícil problema de modelar el sistema real de electrones que interactúan, por un sistema ficticio de electrones \textbf{no interactuantes} que, por definición, produce la misma densidad electrónica que el sistema real \cite[58]{koch2015chemist}.
 
 La energía cinética de este sistema de referencia no interactuante, $T_s[\rho]$, puede calcularse de manera exacta a partir de sus orbitales, los llamados \textbf{orbitales de Kohn-Sham (KS)}. La energía total del sistema real se reescribe como:
