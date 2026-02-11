@@ -1,0 +1,59 @@
+ A G U A 
+ - - - - - - - - - - - - - - 
+ ¿Dónde se ubica exactamente el máximo del primer pico (rmax)?
+
+ El máximo del primer pico esta en r = 2.18018 (g(r) = 6.45487), tiene dos picos muy estrechos y apenas notables, uno en r =  2.07808 (g(r) = 5.66654y otro en r = 2.26727 (g(r) = 5.57986) 
+
+ ¿Cuál es la anchura del primer pico?
+La anchura del primer pico, observada de forma gráfica, es de aproximadamente 0.674 Amstrong. Es un pico alto y definido cuando se observa la RDF general. 
+
+ ¿Existe una "región vacante" clara después del primer pico? (¿El valle llega a cero?)
+ Existe un valle de aproximadamente de 0.444 A en el que g(r) no llega a cero en ningún momento. El mínimo local de esta zona es r = 2.82282 (g(r) = 0.43501) lo que indica que no hay una separación neta entre capas y que la esfera es lábil y flexible, permitiendo el intercambio continuo de moleculas de agua. 
+
+¿Dónde aparecen los picos correspondientes a los átomos no coordinantes (ej. Hidrógeno en agua)?
+En la viaualización  de la dinámica molecular, se observa inequivocamente que las moleculas de agua se orientan con el dipolo del oxigeno interaccionando con  el Cu2+
+
+ ¿La estructura sugerida por la RDF es consistente con una geometría holodirigida o hemidirigida?
+
+ Como el primer pico de la RDF está muy bien definido apunta a una estructura holodirigida (simétrica) para la primera esfera de solvatación
+
+
+ Describe el segundo pico de la RDF
+ El perfil del segundo pico de la función de distribución radial (RDF) para el sistema acuoso, evaluado a partir del mínimo local en $r = 2.82$ \AA\ ($g(r) \approx 0.50$), presenta una morfología irregular dominada por una región de máxima probabilidad ancha y sostenida. Tras un ascenso abrupto, la curva se estabiliza en una primera meseta comprendida entre $3.4$ y $4.3$ \AA, la cual alberga el máximo absoluto de la estructura en $r = 4.01$ \AA\ con una intensidad de $g(r) \approx 1.84$. Posteriormente, se registra un descenso pronunciado hasta $r = 4.9$ \AA, punto de inflexión que da paso a una segunda región de estabilidad o 'hombro' en el intervalo $4.9 \le r \le 5.3$ \AA, donde la densidad de probabilidad se mantiene prácticamente constante en torno a la unidad ($g(r) \approx 1.03$) antes de decaer monótonamente a distancias superiores a $5.3$ \AA
+
+ -------------------
+
+En el mínimo local de la RDF r = 2.82282 (g(r) = 0.43501) el valor del CN acumulado es (r, cn) = (2.82282, 4.71060)
+
+ -------------------
+SEGUNDO PICO
+
+Descripción:
+El perfil del segundo pico de la función de distribución radial (RDF) para el sistema acuoso, evaluado a partir del mínimo local en $r = 2.82$ \AA\ ($g(r) \approx 0.50$), presenta una morfología irregular dominada por una región de máxima probabilidad ancha y sostenida. Tras un ascenso abrupto, la curva se estabiliza en una primera meseta comprendida entre $3.4$ y $4.3$ \AA, la cual alberga el máximo absoluto de la estructura en $r = 4.01$ \AA\ con una intensidad de $g(r) \approx 1.84$. Posteriormente, se registra un descenso pronunciado hasta $r = 4.9$ \AA, punto de inflexión que da paso a una segunda región de estabilidad o 'hombro' en el intervalo $4.9 \le r \le 5.3$ \AA, donde la densidad de probabilidad se mantiene prácticamente constante en torno a la unidad ($g(r) \approx 1.03$) antes de decaer monótonamente a distancias superiores a $5.3$ \AA.
+
+Analisis basados en estudios similares con cationes:
+ El perfil que describes sugiere fuertemente un sistema con alta labilidad, intercambio dinámico y posible asimetría estructural.
+La ausencia de una "región vacante" (donde g(r)=0) entre la primera y la segunda estructura indica que no existe una separación neta entre las esferas de solvatación.
+ Las moléculas de agua no están atrapadas en una "jaula" rígida, sino que existe un intercambio frecuente de solvente entre la primera y la segunda capa.
+ La amplitud de la distribución (3.4−4.3 Å) indica que las moléculas en la segunda esfera tienen una gran libertad de movimiento radial. No están fuertemente orientadas ni fijas por fuerzas electrostáticas intensas, lo que es consistente con una interacción ion-dipolo atenuada por la distancia
+ Análisis del "Hombro" (4.9−5.3 Å, g(r)≈1.03): Este hombro se interpreta típicamente como la superposición de la segunda y la tercera esfera de solvatación. A estas distancias, el ordenamiento inducido por el ion compite con la red de puentes de hidrógeno del agua en bulto. El hecho de que la densidad se mantenga cerca de 1 indica que en esta región el solvente ya se comporta casi como el líquido en bulto, sin una estructuración concéntrica definida.
+ Introduce en donde consideres más apropiado el análisis de la competencia de las interacciones por puente de hidrógeno y la pertenencia a la segunda esfera de coordinación 
+
+ --------
+ PRIMER PICO
+
+ Descripción:
+ El primer pico de la función de distribución radial, delimitado superiormente por el mínimo en $r = 2.82$ \AA. La señal emerge de forma significativa a partir de $r \approx 1.85$ \AA, experimentando un ascenso abrupto hasta culminar en un máximo absoluto en $r = 2.18$ \AA, donde la probabilidad alcanza un valor de $g(r) \approx 6.26$. A diferencia de la estructura posterior, este pico es notablemente estrecho (FWHM $\approx 0.28$ \AA) y carece de subestructuras o mesetas, mostrando un decaimiento precipitado inmediatamente después del máximo hasta converger en el mínimo local de $r = 2.82$ \AA\ ($g(r) \approx 0.50$),
+PD: tiene dos picos muy muy estrechos y apenas notables, uno en r =  2.07808 (g(r) = 5.66654y otro en r = 2.26727 (g(r) = 5.57986)
+Existe un valle de aproximadamente de 0.444 A en el que g(r) no llega a cero en ningún momento. El mínimo local de esta zona es r = 2.82282 (g(r) = 0.43501) lo que indica que no hay una separación neta entre capas y que la esfera es lábil y flexible, permitiendo el intercambio continuo de moleculas de agua.
+
+Análisis basados en estudios similares con cationes: 
+pico estructuralmente "rígido" (estrecho y alto) pero cinéticamente "lábil" (valle no nulo).
+La posición y la forma del pico sugieren una interacción fuerte y definida, comparable a cationes de alta densidad de carga.
+Generalmente, un pico estrecho (FWHM bajo) indica una baja dispersión térmica en las distancias de enlace, lo cual es típico de interacciones electrostáticas fuertes que forman una "jaula" estable. Sin embargo, tu sistema rompe esta regla en la región del valle.
+Interpretación de los "Picos Menores": La presencia de subestructuras muy tenues (2.07 Å y 2.26 Å) flanqueando al máximo podría interpretarse como asimetría estructural discreta.(Asocia el análisis al Efecto de Jehn Teller).
+Ausencia de Separación Neta: El hecho de que g(r) nunca baje de 0.43 en el valle indica inequívocamente que no existe una región vacante entre la primera y la segunda esfera.
+ Introduce en donde consideres más apropiado el análisis de la competencia de las interacciones por puente de hidrógeno y la pertenencia a la primera esfera de coordinación 
+
+
+

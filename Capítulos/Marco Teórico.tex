@@ -2,102 +2,109 @@
 
 \section{Fundamentos de Dinámica molecular}
 
-La dinámica molecular (MD, por sus siglas en inglés) es una técnica de simulación por computadora que ha sido utilizada para analizar el comportamiento y evolución de diversos sistemas a nivel atomístico. Su esencia consiste en resolver numéricamente las ecuaciones clásicas del movimiento, típicamente las de Newton, para un conjunto $R^N = \{ r_1, r_2, r_3, \ldots, r_N \}$ de $N$ partículas con masas $m_i$.
+La dinámica molecular (MD, por sus siglas en inglés) es una técnica de simulación por computadora que ha sido utilizada para analizar el comportamiento y evolución de diversos sistemas a nivel atomístico. Su esencia consiste en resolver numéricamente las ecuaciones clásicas del movimiento, típicamente las de Newton, para un conjunto $\mathbf{R}^N = \{ \mathbf{r}_1, \mathbf{r}_2, \mathbf{r}_3, \dots, \mathbf{r}_N \}$ de $N$ partículas con masas $m_i$,
 
 \begin{equation}
     \label{eq:newton_segunda_ley}
-    m_i \frac{d^2 r_i}{dt^2} = F_i,
+    m_i \frac{d^2 \mathbf{r}_i}{dt^2} = \mathbf{F}_i
 \end{equation}
-
-Donde las fuerzas $F_i$ son obtenidas a partir del gradiente negativo del potencial $U(R^N)$ 
+Donde las fuerzas $\mathbf{F_i}$ son obtenidas a partir del gradiente negativo del potencial $U(R^N)$ 
 
 \begin{equation}
     \label{eq:fuerza_potencial_sencilla}
-    F_i(R^N) = - \frac{\partial U(R^N)}{\partial r_i}.
+    \mathbf{F}_i(\mathbf{R}^N) = - \frac{\partial U(\mathbf{R^N})}{\partial \mathbf{r}_i}.
 \end{equation}
 
 
-Este método calcula las fuerzas, velocidades y posiciones de las partículas a lo largo de determinado tiempo (trayectoria) a partir de la cual es posible derivar propiedades de interés mediante su análisis o experimentos computacionales posteriores.
+Este método calcula las fuerzas, velocidades y posiciones de las partículas a lo largo de un tiempo determinado (trayectoria) a partir de la cual es posible derivar propiedades de interés mediante su análisis o experimentos computacionales posteriores.
 
 El siguiente diagrama de flujo (Figura \ref{fig:md_flowchart}) ilustra de manera muy general la lógica en una simulación de dinámica molecular.
 
-
+%%%%%%
 \begin{figure}[H]
     \centering
-    \begin{tikzpicture}[node distance=1.5cm]
+    \begin{tikzpicture}[node distance=1.0cm] % Reduje un poco la distancia para que quepa mejor
 
-        % --- Definición de los nodos (los bloques del diagrama) ---
-        % Se colocan uno debajo del otro usando 'below=of...'
-        \node (step1) [process] {Paso 1: Inicialización del sistema};
+        % --- Definición de los nodos ---
 
-        \node (step2) [process, below=of step1] {Paso 2: Optimización de la geometría y minimización de energía};
+        % Paso 1: Optimización (antes era Paso 2)
+        \node (step1) [process] {Paso 1: Optimización y \\ minimización de energía};
 
+        % Paso 2: Inicialización (Coordenadas y Velocidades)
+        \node (step2) [process, below=of step1] {Paso 2: Coordenadas iniciales $\mathbf{R}_0$ y \\  y velocidades iniciales $\mathbf{V}_0$};
+
+        % Paso 3: Fuerzas (Inicio del bucle)
         \node (step3) [process, below=of step2] {Paso 3: Cálculo de fuerzas};
 
-        % Para este paso, usamos un ancho de texto mayor para que quepa bien el contenido
+        % Paso 4: Integración
         \node (step4) [process, below=of step3] {
-            Paso 4: Integración de las ecuaciones de movimiento en el paso del tiempo $\Delta t$ \\
-            $r_i(t) \rightarrow r_i(t+\Delta t)$; \quad $v_i(t) \rightarrow v_i(t+\Delta t)$;
+            Paso 4: Integración de las ecuaciones de movimiento $\Delta t$ \\
+            $\mathbf{r}_i(t) \rightarrow \mathbf{r}_i(t+\Delta t)$; \quad $\mathbf{v}_i(t) \rightarrow \mathbf{v}_i(t+\Delta t)$
         };
 
-        \node (step5) [process, below=of step4] {Paso 5: Cálculo de propiedades físicas};
+        % Decisión: ¿Terminó el tiempo?
+        \node (decide) [decision, below=of step4, yshift=-0.5cm] {$t > t_{\max}$?};
 
-        % Se usa 'yshift' para aumentar la distancia vertical antes del rombo
-        \node (decide) [decision, below=of step5, yshift=-0.75cm] {$t > t_{\max}$?};
+        % Paso 5: Análisis (FUERA del bucle, solo si Si)
+        \node (step5) [process, below=of decide, yshift=-0.5cm] {Paso 5: Análisis de trayectoria y cálculo de propiedades físicas};
 
-        \node (stop) [process, below=of decide, yshift=-0.75cm] {Fin};
+        % Fin
+        \node (stop) [process, below=of step5] {Fin};
 
 
-        % --- Conexión de los nodos con flechas ---
+        % --- Conexión de flechas ---
+        
+        % Flujo lineal inicial
         \draw [arrow] (step1) -- (step2);
         \draw [arrow] (step2) -- (step3);
         \draw [arrow] (step3) -- (step4);
-        \draw [arrow] (step4) -- (step5);
-        \draw [arrow] (step5) -- (decide);
-        \draw [arrow] (decide) -- node[anchor=west, xshift=0.2cm] {Si} (stop);
+        \draw [arrow] (step4) -- (decide);
 
-        % La flecha de retroalimentación ("No")
-        % Va desde el lado izquierdo ('west') del rombo, se desplaza 2cm a la izquierda,
-        % y luego sube y se conecta al lado izquierdo del bloque del Step 3.
-        \draw [arrow] (decide.west) -- node[above, pos=0.25] {No} ++(-5,0) |- (step3.west);
+        % Camino del "Sí" (Terminó la simulación -> Análisis)
+        \draw [arrow] (decide) -- node[anchor=west, xshift=0.1cm] {Sí} (step5);
+        \draw [arrow] (step5) -- (stop);
+
+        % Camino del "No" (Bucle: Regresa al paso 3 Cálculo de Fuerzas)
+        % Sale por la izquierda, sube y entra a la izquierda del Paso 3
+        \draw [arrow] (decide.west) -- node[above, pos=0.2] {No} ++(-4.5,0) |- (step3.west);
 
     \end{tikzpicture}
-    \caption{Diagrama de flujo típico de una MD.}
+    \caption{Diagrama de flujo de la simulación MD.}
     \label{fig:md_flowchart}
 \end{figure}
-
-
+%%%%%
 \subsection{Integración numérica}
-El objetivo principal de la integración numérica es discretizar las ecuaciones diferenciales y resolverlas de forma aproximada para generar las trayectorias de las partículas. En esencia, se busca encontrar una expresión que defina las posiciones en un tiempo futuro $r_i (t +\Delta t)$ a partir de las posiciones ya conocidas en el tiempo $t$, usando un pequeño intervalo de tiempo finito $(\Delta t)$. 
+El objetivo principal de la integración numérica es discretizar las ecuaciones diferenciales y resolverlas de forma aproximada para generar las trayectorias de las partículas. En esencia, se busca encontrar una expresión que defina las posiciones en un tiempo futuro $\mathbf{r}_i (t +\Delta t)$ a partir de las posiciones ya conocidas en el tiempo $t$, usando un pequeño intervalo de tiempo finito $(\Delta t)$. 
 
 El algoritmo de Velocity-Verlet es actualmente uno de los más populares y ampliamente utilizados en las simulaciones de MD. Se obtiene a partir de una reformulación equivalente al algoritmo de Verlet original y al Leap-Frog, pero resuelve el problema del desfase temporal. Las ecuaciones para actualizar las posiciones y velocidades son:
 
 \begin{equation}
     \label{eq:velocity_verlet_posiciones}
-    r(t + \Delta t) = r(t) + \Delta t v(t) + \frac{\Delta t^2}{2m} F(t) + O(\Delta t^3)
+    \mathbf{r}(t + \Delta t) = \mathbf{r}(t) + \Delta t \mathbf{v}(t) + \frac{\Delta t^2}{2m} \mathbf{F}(t) + O(\Delta t^3)
 \end{equation}
 
 \begin{equation}
     \label{eq:velocity_verlet_velocidades}
-    v(t + \Delta t) = v(t) + \frac{\Delta t}{2m} \left( F(t + \Delta t) + F(t) \right) + O(\Delta t^3)
+    \mathbf{v}(t + \Delta t) = \mathbf{v}(t) + \frac{\Delta t}{2m} \left( \mathbf{F}(t + \Delta t) + \mathbf{F}(t) \right) + O(\Delta t^3)
 \end{equation}
-
 Nótese que en este algoritmo, las velocidades se actualizan después de calcular las nuevas posiciones y con ello las fuerzas correspondientes. Esto permite que las velocidades y posiciones estén sincronizadas en el mismo instante de tiempo, lo que permite calcular propiedades dependientes de la velocidad, como la temperatura y la presión. Debido a esto, es el esquema más comúnmente utilizado como base para la integración de sistemas dinámicos extendidos, como termostatos (Nosé-Hoover) y barostatos (NPT) \cite{Hoover-1992-01,frenkel2002understanding}.
 
 
 \subsection{Condiciones iniciales}
 
-Las condiciones iniciales en una simulación de dinámica molecular (MD) son el conjunto de posiciones $R^N (t = 0)$ y velocidades $V^N (t = 0)$ de todos los átomos del sistema en el instante de tiempo cero. Es el punto en el espacio de fases del sistema a partir del cual el algoritmo de integración comienza a calcular la trayectoria futura de cada partícula. 
+Las condiciones iniciales en una simulación de dinámica molecular (MD) son el conjunto de posiciones $\mathbf{R}^N (t = 0)$ y velocidades $\mathbf{V}^N (t = 0)$ de todos los átomos del sistema en el instante de tiempo cero. Es el punto en el espacio fase del sistema a partir del cual el algoritmo de integración comienza a calcular la trayectoria futura de cada partícula. 
 
 \subsubsection*{Asignación de posiciones}
 
 La etapa de construcción de las coordenadas iniciales es el primer paso práctico para definir la configuración de partida del sistema. Para un sistema no periódico, como un clúster molecular o una proteína aislada, esta etapa consiste en obtener datos experimentales (si se dispone de ellos) ya que son una excelente fuente para las posiciones iniciales o en su defecto, se pueden construir utilizando software de modelado molecular.
 
-La calidad de las coordenadas iniciales es crucial, ya que una mala estructura de partida puede llevar a problemas de inestabilidad o a un tiempo de equilibrado muy largo por lo que es importante realizar una minimización de energía (también llamada optimización de geometría) antes de iniciar la dinámica para asegurar la estabilidad y la viabilidad de la simulación.  Este paso evita problemas asociados con fuerzas repulsivas enormes, inestabilidad numérica y oscilaciones de temperatura grandes \cite{haile1992molecular}. La minimización de energía coloca a la estructura en un mínimo local de energía potencial cercano $R_{\text{min}}^N = \{ r_1^{\text{min}}, r_2^{\text{min}}, r_3^{\text{min}}, \ldots, r_N^{\text{min}} \}$ donde:
+La calidad de las coordenadas iniciales es crucial, ya que una mala estructura de partida puede llevar a problemas de inestabilidad o a un tiempo de equilibrado muy largo por lo que es importante realizar una minimización de energía (también llamada optimización de geometría) antes de iniciar la dinámica para asegurar la estabilidad y la viabilidad de la simulación.  Este paso evita problemas asociados con fuerzas repulsivas enormes, inestabilidad numérica y oscilaciones de temperatura grandes \cite{haile1992molecular}. La minimización de energía coloca a la estructura en un mínimo local de energía potencial cercano $\mathbf{R}_{\text{min}}^N = \{ \mathbf{r}_1^{\text{min}}, \mathbf{r}_2^{\text{min}}, \mathbf{r}_3^{\text{min}}, \ldots, \mathbf{r}_N^{\text{min}} \}$ donde:
 
 \begin{equation}
     \label{eq:minimizacion_energia}
-\left.\frac{\partial U(R^N)}{\partial r_{i,\alpha}}\right|_{R^N = R^N_{\text{min}}} = 0, \left.\frac{\partial^2 U(R^N)}{\partial r_{i,\alpha}^2}\right|_{R^N = R^N_{\text{min}}} > 0, \quad i = 1, 2, 3, \ldots, N; \quad a = x, y, z.
+    \left.\frac{\partial U(\mathbf{R}^N)}{\partial r_{i,\alpha}}\right|_{\mathbf{R}^N = \mathbf{R}^N_{\text{min}}} = 0, \quad
+    \left.\frac{\partial^2 U(\mathbf{R}^N)}{\partial r_{i,\alpha}^2}\right|_{\mathbf{R}^N = \mathbf{R}^N_{\text{min}}} > 0, \quad
+    i = 1, \ldots, N; \quad \alpha = x, y, z.
 \end{equation}
 
 \subsubsection*{Asignación de velocidades}
@@ -134,7 +141,6 @@ Posteriormente, se ajusta la temperatura. La temperatura instantánea inicial ($
     k_B T_{\text{inst}} \equiv (\sum m_i v_i'^2) / N_f, 
     \label{eq:temp_instantanea} 
 \end{equation}
-
 donde $N_f$ son los grados de libertad (usualmente $3N-3$), puede no coincidir con la temperatura objetivo ($T_{\text{deseada}}$). Por ello, todas las velocidades se reescalan mediante un factor $f_s$ para establecer la temperatura correcta:
 
 \begin{equation}
@@ -149,32 +155,29 @@ En mecánica estadística, un ensamble termodinámico es una colección de un n�
 
 Una simulación de dinámica molecular estándar, al resolver las ecuaciones de movimiento de Newton para un sistema aislado, conserva de forma natural el número de partículas ($N$), el volumen ($V$) y la energía total ($E$). Este conjunto de condiciones define el ensamble microcanónico (NVE). Sin embargo, la mayoría de los experimentos en el laboratorio no se realizan a energía constante, sino a temperatura y presión controladas. Para replicar estas condiciones y obtener resultados comparables, es necesario realizar simulaciones en otros ensambles termodinámicos.
 
-
 \subsubsection*{El Ensamble Canónico (NVT)}
 
 El ensamble más relevante para el control de temperatura es el ensamble canónico, donde el número de partículas ($N$), el volumen ($V$) y la temperatura ($T$) se mantienen constantes. Este ensamble describe un sistema cerrado que puede intercambiar energía con un baño térmico externo, lo que permite que su energía total ($E$) fluctúe.
 
-El propósito fundamental de simular en el ensamble NVT es modelar sistemas bajo condiciones isotérmicas, lo que permite el cálculo de propiedades de equilibrio como la energía libre de Helmholtz ($F$) y asegura un muestreo adecuado del espacio de fases correspondiente a la temperatura de interés
+El propósito fundamental de simular en el ensamble NVT es modelar sistemas bajo condiciones isotérmicas, lo que permite el cálculo de propiedades de equilibrio como la energía libre de Helmholtz ($F$) y asegura un muestreo adecuado del espacio fase correspondiente a la temperatura de interés
 
 \begin{equation}
-    \beta F = -\ln Q(N, V, T), 
+    F = - k_B T \ln Q(N, V, T), 
     \label{eq:helmholtz_free_energy}
 \end{equation}
 
-donde $\beta = 1/(k_B T)$, $h$ es la constante de Planck y $Q(N, V, T)$ es la función de partición del ensamble canónico, que fundamenta la termodinámica de este ensamble: 
+\noindent donde $k_B$ es la constante de Boltzmann. La termodinámica de este ensamble se fundamenta en la función de partición canónica $Q(N, V, T)$, definida en términos de la constante beta $\beta = 1/(k_B T)$ como:
 
 \begin{equation}
-    Q_{N,V,T} = \frac{1}{h^{3N}N!} \int d\mathbf{p}^N d\mathbf{r}^N \exp[-\beta H(\mathbf{p}^N, \mathbf{r}^N)]
+    Q_{N,V,T} = \frac{1}{h^{3N}N!} \int \mathrm{d}\mathbf{p}^N \mathrm{d}\mathbf{r}^N \exp[-\beta H(\mathbf{p}^N, \mathbf{r}^N)]
     \label{eq:canonical_partition_function}
 \end{equation}
-
-donde $H$ es el Hamiltoniano clásico del sistema,
+donde $h$ es la constante de Planck y $H$ es el Hamiltoniano clásico del sistema,
 
 \begin{equation}
-    H(\mathbf{p}^N, \mathbf{r}^N) = \sum_{i=1}^{N} \frac{\mathbf{p}_i^2}{2m} + U\left(\mathbf{r}^N\right)
+    H(\mathbf{p}^N, \mathbf{r}^N) = \sum_{i=1}^{N} \frac{\mathbf{p}_i^2}{2m_i} + U\left(\mathbf{r}^N\right).
     \label{eq:classical_hamiltonian}
 \end{equation}
-
 La integración se realiza sobre todas las coordenadas de posición $\mathbf{r}^N$ y momento $\mathbf{p}^N$ del espacio de fases.
 
 Para mantener una temperatura constante en una simulación de MD y así generar una trayectoria que explore los microestados del ensamble NVT, es necesario modificar las ecuaciones de movimiento. Esto se logra mediante el uso de algoritmos conocidos como termostatos.
@@ -189,46 +192,44 @@ Un termostato es un algoritmo que modifica las velocidades de las partículas pa
 Uno de los termostatos más robustos y teóricamente fundamentados es el de Nosé-Hoover. Este método introduce un grado de libertad ficticio adicional ($\eta$) que actúa como el reservorio de calor. La idea original de Nosé se basa en un Hamiltoniano extendido que, al evolucionar en el tiempo, genera una trayectoria en el espacio de fases canónico. Hoover reformuló estas ecuaciones de una manera más directa y computacionalmente eficiente. Las ecuaciones de movimiento de Nosé-Hoover para las partículas del sistema son:
 
 \begin{equation}
-m_i \ddot{r}_i = -\frac{\partial U(\mathbf{R}^N)}{\partial r_i} - \gamma_i m_i \dot{r}_i,
+    m_i \frac{\mathrm{d}^2 \mathbf{r}_i}{\mathrm{d}t^2} = -\frac{\partial U(\mathbf{R}^N)}{\partial \mathbf{r}_i} - \gamma_i m_i \frac{\mathrm{d} \mathbf{r}_i}{\mathrm{d}t}
 \end{equation}
 
 \begin{equation}
-    \frac{\mathrm{d}\gamma_{i}(t)}{\mathrm{d}t} = \frac{1}{Q} \left[ \sum_{i=1}^{N} m_{i} \frac{v_i^2}{2} - \frac{3N + 1}{2} k_{B} T \right]
+    \frac{\mathrm{d}\gamma_{i}(t)}{\mathrm{d}t} = \frac{1}{Q} \left[ \sum_{i=1}^{N} m_{i} \frac{\mathbf{v}_i^2}{2} - \frac{3N + 1}{2} k_{B} T \right]
 \end{equation}
-
-En estas ecuaciones, el término $\gamma_i$ representa el coeficiente de fricción dinámico que acopla el sistema al baño térmico. Su evolución temporal, descrita en la segunda ecuación, depende de la diferencia entre la energía cinética instantánea del sistema ($\sum m_i v_i^2 / 2$) y la energía cinética objetivo, que es proporcional a la temperatura deseada $T$. El parámetro $Q$, conocido como la ''masa'' del termostato, modula la intensidad de este acoplamiento: un valor pequeño de $Q$ resulta en una respuesta rápida y oscilaciones de temperatura, mientras que un valor grande produce un acoplamiento más suave pero fluctuaciones más lentas.
+En estas ecuaciones, el término $\gamma_i$ representa el coeficiente de fricción dinámico que acopla el sistema al baño térmico. Su evolución temporal, descrita en la segunda ecuación, depende de la diferencia entre la energía cinética instantánea del sistema ($\sum m_i \mathbf{v}_i^2 / 2$) y la energía cinética objetivo, que es proporcional a la temperatura deseada $T$. El parámetro $Q$, conocido como la ''masa'' del termostato, modula la intensidad de este acoplamiento: un valor pequeño de $Q$ resulta en una respuesta rápida y oscilaciones de temperatura, mientras que un valor grande produce un acoplamiento más suave pero fluctuaciones más lentas.
 
 
 El funcionamiento de este termostato depende de la hipótesis ergódica, que postula que en el límite de una evolución temporal infinita, un sistema dinámico muestreará todos los microestados accesibles de su espacio de fases. Consecuentemente, se establece una equivalencia formal entre los promedios de ensamble de un observable $O(P, R)$ y los promedios temporales calculados a lo largo de una trayectoria de dinámica molecular \cite{MD-2002-01}. 
 
 \begin{equation}
-    \langle O(P, R) \rangle = \lim_{T \to \infty} \frac{1}{T} \int_{0}^{T} dt \, O(P(t), R(t));
+    \langle O(\mathbf{P}, \mathbf{R}) \rangle = \lim_{T \to \infty} \frac{1}{T} \int_{0}^{T} \mathrm{d}t \, O(\mathbf{P}(t), \mathbf{R}(t))
     \label{eq:ergodic_hypothesis}
 \end{equation}
 
 
 
-
 \section{Dinámica molecular ab initio}
 
-La dinámica molecular clásica ha sido ampliamente utilizada para simular sistemas de gran tamaño, cuyo estudio mediante métodos de primeros principios resultaría prohibitivo en términos de costo computacional. Sin embargo, el alcance y la precisión de la MD clásica dependen de la calidad de los potenciales empíricos parametrizados que emplea para describir las interacciones atómicas. Estos potenciales, aunque eficientes, limitan la capacidad del método para describir fenómenos químicamente complejos, como la formación y ruptura de enlaces, la polarización electrónica o las fuerzas de muchos cuerpos.
+La dinámica molecular clásica ha sido ampliamente utilizada para simular sistemas de gran tamaño, cuyo estudio mediante métodos de primeros principios resultaría prohibitivo en términos de costo computacional. Sin embargo, el alcance y la precisión de la MD clásica dependen de la calidad de los potenciales empíricos parametrizados que emplea para describir las interacciones atómicas. Estos potenciales, aunque eficientes computacionalmente, limitan la capacidad del método para describir fenómenos químicamente complejos, como la formación y ruptura de enlaces, la polarización electrónica o las fuerzas de muchos cuerpos.
 
 Para abordar estas limitaciones, se emplea la dinámica molecular ab initio (AIMD, por sus siglas en inglés), donde las fuerzas que actúan sobre las partículas se calculan directamente a partir de la estructura electrónica. La AIMD se fundamenta en una aproximación semi clásica que permite desacoplar el movimiento de los núcleos y los electrones, conocida como la aproximación de Born-Oppenheimer.
 
-Esta aproximación permite tratar el problema electrónico de forma independiente, resolviéndolo para un conjunto de posiciones nucleares fijas y obteniendo así la Superficie de Energía Potencial (SEP, por sus siglas en inglés) del estado fundamental. En la AIMD, los núcleos se propagan clásicamente sobre esta SEP, y las fuerzas ($F_I$) que dictan su movimiento se calculan en cada paso como el gradiente de esta energía electrónica ($E_0(R)$) respecto a las posiciones nucleares ($F_I = -\nabla_I E_0(R)$).
+Esta aproximación permite tratar el problema electrónico de forma independiente, resolviéndolo para un conjunto de posiciones nucleares fijas y obteniendo así la Superficie de Energía Potencial (PES, por sus siglas en inglés) del estado fundamental. En la AIMD, los núcleos se propagan clásicamente sobre esta PES, y las fuerzas ($\mathbf{F}_I$) que dictan su movimiento se calculan en cada paso como el gradiente de esta energía electrónica ($E_0(\mathbf{R})$) respecto a las posiciones nucleares ($\mathbf{F}_I = -\nabla_I E_0(\mathbf{R})$).
 
 En la práctica, los principales enfoques de la AIMD radican en la dinámica molecular de Born-Oppenheimer, que resuelve explícitamente el estado fundamental electrónico en cada paso, y la dinámica de Car-Parrinello (CPMD, por sus siglas en inglés). Esta última reformula el problema introduciendo un Lagrangiano extendido que incluye los grados de libertad electrónicos como variables clásicas con una ''masa ficticia'' ($\mu$). CPMD emplea una dinámica ficticia acoplada en la que los electrones siguen adiabáticamente el movimiento nuclear, eliminando la necesidad del ciclo de campo autoconsistente en cada paso y permitiendo, en general, una mayor eficiencia computacional.
 
 A pesar de que la AIMD es significativamente más costosa que la MD clásica, limitando las simulaciones a sistemas de decenas o cientos de átomos y a escalas de tiempo de picosegundos, su aplicación permite el acceso a detalles microscópicos y observables electrónicos (como espectros IR o RMN). Es una herramienta relevante para investigar la dinámica de líquidos y soluciones, la catálisis o procesos bioquímicos complejos donde la descripción cuántica de las interacciones es fundamental.
 
-\subsection{La aproximación de Bohr-Oppenheimer}
+\subsection{La aproximación de Born-Oppenheimer}
 
 La aproximación de Born-Oppenheimer, también conocida como la aproximación adiabática, es una de las suposiciones más  importantes y fundamentales en la química cuántica y la dinámica molecular. Esta simplificación permite desacoplar el movimiento de los electrones y los núcleos en un sistema molecular. Se fundamenta en la gran diferencia de masas entre los núcleos y los electrones; la masa del núcleo más ligero (un protón) es aproximadamente 1840 veces más grande que la de un electrón. De manera que los núcleos se mueven en una escala de tiempo tres ordenes de magnitud más lenta que los electrones por lo que se puede considerar que los electrones se ajustan instantáneamente a la posición de los núcleos en movimiento. 
 
-Consideremos un sistema molecular compuesto por $M$ núcleos y $N$ electrones. Los núcleos están descritos por sus coordenadas $R$ y sus masas $M$ y los electrones por sus coordenadas $r$ y masas $m$. El objetivo principal es resolver la ecuación de Schrödinger independiente del tiempo
+Consideremos un sistema molecular compuesto por $M$ núcleos y $N$ electrones. Los núcleos están descritos por sus coordenadas $\mathbf{R}$ y sus masas $M$ y los electrones por sus coordenadas $\mathbf{r}$ y masas $m$. El objetivo principal es resolver la ecuación de Schrödinger independiente del tiempo
 
 \begin{equation}
-    H \Psi = E \Psi,
+    \hat{H} \Psi = E \Psi,
     \label{eq:schrodinger_independiente_tiempo}
 \end{equation}
 
@@ -236,41 +237,38 @@ en donde el Hamiltoniano no relativista del sistema está dado por:
 
 \begin{equation}
 \begin{split}
-H &= - \sum_{I=1}^{M} \frac{\hbar^2}{2M_I} \nabla^2_I
-    - \sum_{i=1}^{N} \frac{\hbar^2}{2m_e} \nabla^2_i 
-    \quad - \frac{1}{4\pi\varepsilon_0} \sum_{i=1}^{N} \sum_{I=1}^{M} \frac{Z_A e^2}{\left| \mathbf{R}_I - \mathbf{r}_i \right|} \\
-  &\quad + \frac{1}{4\pi\varepsilon_0} \sum_{I=1}^{M} \sum_{J>I}^M \frac{Z_I Z_J e^2}{\left| \mathbf{R}_J  - \mathbf{R}_I \right|} 
-  \quad + \frac{1}{4\pi\varepsilon_0} \sum_{i=1}^{N} \sum_{j>i}^{N} \frac{e^2}{\left| \mathbf{r}_i - \mathbf{r}_j \right|}. 
+    \hat{H} &= - \sum_{I=1}^{M} \frac{\hbar^2}{2M_I} \nabla^2_I
+       - \sum_{i=1}^{N} \frac{\hbar^2}{2m_e} \nabla^2_i 
+       - \frac{1}{4\pi\varepsilon_0} \sum_{i=1}^{N} \sum_{I=1}^{M} \frac{Z_I e^2}{\left| \mathbf{R}_I - \mathbf{r}_i \right|} \\
+      &\quad + \frac{1}{4\pi\varepsilon_0} \sum_{I=1}^{M} \sum_{J>I}^M \frac{Z_I Z_J e^2}{\left| \mathbf{R}_J  - \mathbf{R}_I \right|} 
+      + \frac{1}{4\pi\varepsilon_0} \sum_{i=1}^{N} \sum_{j>i}^{N} \frac{e^2}{\left| \mathbf{r}_i - \mathbf{r}_j \right|}. 
 \end{split}
 \label{eq:hamiltoniano_completo}
 \end{equation}
-
 Para simplificar la ecuación \ref{eq:hamiltoniano_completo} se puede escribir en unidades atómicas donde $\hbar = e = m_e = 4\pi\varepsilon_0 = 1$. Así, el Hamiltoniano se expresa como:
 
 \begin{equation} \label{eq:hamiltoniano_au}
 \begin{split}
-    H = & - \sum_{I=1}^{M} \frac{1}{2M_I} \nabla^2_I - \sum_{i=1}^{N} \frac{1}{2} \nabla^2_i - \sum_{i=1}^{N} \sum_{I=1}^{M} \frac{Z_I}{|R_I - r_i|} \\
-    & + \sum_{I=1}^{M} \sum_{J>I}^{M} \frac{Z_I Z_J}{|R_J - R_I|} + \sum_{i=1}^{N} \sum_{j>i}^{N} \frac{1}{|r_i - r_j|} \\
-    = & T_N + T_e + V_{Ne} + V_{ee} + V_{NN}
+    \hat{H} = & - \sum_{I=1}^{M} \frac{1}{2M_I} \nabla^2_I - \sum_{i=1}^{N} \frac{1}{2} \nabla^2_i - \sum_{i=1}^{N} \sum_{I=1}^{M} \frac{Z_I}{|\mathbf{R}_I - \mathbf{r}_i|} \\
+    & + \sum_{I=1}^{M} \sum_{J>I}^{M} \frac{Z_I Z_J}{|\mathbf{R}_J - \mathbf{R}_I|} + \sum_{i=1}^{N} \sum_{j>i}^{N} \frac{1}{|\mathbf{r}_i - \mathbf{r}_j|} \\
+    = & \hat{T}_N + \hat{T}_e + \hat{V}_{Ne} + \hat{V}_{NN} + \hat{V}_{ee}
 \end{split}
 \end{equation}
+donde $\hat{T}_N$ y $\hat{T}_e$ son los operadores de energía cinética nuclear y electrónica; $V_{Ne}$ es el potencial de atracción núcleo electrón; $V_{ee}$ es el potencial de repulsión electrón electrón; y $V_{NN}$ es el potencial de repulsión núcleo núcleo.
 
-donde $T_N$ y $T_e$ son los operadores de energía cinética nuclear y electrónica; $V_{Ne}$ es el potencial de atracción núcleo electrón; $V_{ee}$ es el potencial de repulsión electrón electrón; y $V_{NN}$ es el potencial de repulsión núcleo núcleo.
-
-El Hamiltoniano total (Ecuación \ref{eq:hamiltoniano_au}) se puede reagrupar como $H = T_N + H_e$, donde $H_e$ se define como el Hamiltoniano electrónico:
+El Hamiltoniano total (Ecuación \ref{eq:hamiltoniano_au}) se puede reagrupar como $\hat{H} = \hat{T}_N + \hat{H}_e$, donde $\hat{H}_e$ se define como el Hamiltoniano electrónico:
 
 \begin{equation}
-H_e = T_e + V_{Ne} + V_{ee} + V_{NN}
+\hat{H}_e = \hat{T}_e + \hat{V}_{Ne} + \hat{V}_{ee} + \hat{V}_{NN}
 \label{eq:hamiltoniano_electronico_res}
 \end{equation}
 
 Este operador depende paramétricamente de las coordenadas nucleares $\mathbf{R}$. La aproximación inicia resolviendo la ecuación de Schrödinger electrónica para una geometría nuclear fija:
 
 \begin{equation} 
-H_e\left(\{r\}; \{R\}\right) \Psi_k = E_K \Psi_k\left(\{r\}; \{R\}\right), 
-\label{eq:schrodinger_electronica_res}
+    \hat{H}_e\left(\{\mathbf{r}\}; \{\mathbf{R}\}\right) \Psi_k = E_k \Psi_k\left(\{\mathbf{r}\}; \{\mathbf{R}\}\right), 
+    \label{eq:schrodinger_electronica_res}
 \end{equation}
-
 donde los eigenvalores $E_k(\mathbf{R})$ definen la $k$-ésima Superficie de Energía Potencial.
 
 La función de onda molecular total $\Psi_{tot}$ se puede expandir de forma exacta en la base completa de las eigenfunciones electrónicas $\Psi_k$:
@@ -279,19 +277,44 @@ La función de onda molecular total $\Psi_{tot}$ se puede expandir de forma exac
 \Psi_{tot}(\mathbf{R}, \mathbf{r}) = \sum_{k=1}^{\infty} \Psi_{Nk}(\mathbf{R}) \Psi_k(\mathbf{r}, \mathbf{R})
 \label{eq:ansatz_BO_res}
 \end{equation}
-
 donde los coeficientes $\Psi_{Nk}(\mathbf{R})$ son las funciones de onda nucleares.
 
-Sustituir esta expansión en la ecuación de Schrödinger total (Ecuación \ref{eq:schrodinger_independiente_tiempo}), proyectar sobre un estado $\Psi_j^*$ e integrar sobre $\mathbf{r}$ genera un conjunto de ecuaciones \textit{exactas pero acopladas} para $\Psi_{Nj}$, donde aparecen los términos de acoplamiento no adiabático $A_{jk}$.
+%%%%%
+Al sustituir el ansatz en la ecuación de Schrödinger
+\begin{equation}
+    \sum_{k=1}^{\infty} (\hat{T}_N + \hat{H}_e) \Psi_{Nk} \Psi_k = E \sum_{k=1}^{\infty} \Psi_{Nk} \Psi_k 
+    \label{eq:schrodinger_total_res}
+\end{equation}
 
-La Aproximación de Born-Oppenheimer consiste en despreciar dichos acoplamientos ($A_{jk} \approx 0$). Esta suposición desacopla el sistema, simplificando el problema a la ecuación de Schrödinger nuclear independiente para cada estado $j$:
+\begin{equation}
+    \sum_{k=1}^{\infty} \left( -\sum_{I=1}^{M} \frac{1}{2M_I} \nabla^2_I \Psi_{Nk} \Psi_k + \hat{H}_e \Psi_{Nk} \Psi_k \right) = E \sum_{k=1}^{\infty} \Psi_{Nk} \Psi_k
+    \label{eq:schrodinger_total_res_2}
+\end{equation}
+la acción del operador de energía cinética nuclear ($\nabla^2_I$) sobre  $\Psi_{Nk} \Psi_k$ debe desarrollarse mediante la regla de la cadena, generando términos de derivadas cruzadas:
+
+\begin{equation}
+    \begin{split}
+        \sum_{k=1}^{\infty} \left\{ -\sum_{I=1}^{M} \frac{1}{2M_I} \left[ \Psi_k \nabla^2_I \Psi_{Nk} + 2(\nabla_I \Psi_k)(\nabla_I \Psi_{Nk}) + \Psi_{Nk} (\nabla^2_I \Psi_k) \right] \right\} + \\ \hat{H}_e \Psi_{Nk} \Psi_k = E \sum_{k=1}^{\infty} \Psi_{Nk} \Psi_k 
+    \end{split}
+    \label{eq:energia}
+\end{equation}
+
+Para aislar la ecuación nuclear del estado $j$, se proyecta sobre el estado electrónico $\Psi_j^*$ y se integra sobre las coordenadas electrónicas. Aprovechando la ortonormalidad de la base ($\langle \Psi_j | \Psi_k \rangle = \delta_{jk}$), se obtiene el sistema de ecuaciones acopladas:
+
+\begin{equation}
+    \begin{split}
+        -\sum_{A=1}^{M} \frac{1}{2M_A} \left( \nabla^2_A \Psi_{Nj} + \sum_{k=1}^{\infty} \left[ 2 \langle \Psi_j | \nabla_A |\Psi_k \rangle \left( \nabla_A \Psi_{Nk} \right) +  \langle \Psi_j | \nabla^2_A |\Psi_k \rangle \Psi_{Nk} \right] \right) + \\ E_j \Psi_{Nj} = E \Psi_{Nj}
+    \end{split}
+    \label{eq:schrodinger_nuclear_acoplada_res}
+\end{equation}
+donde los términos entre corchetes son los términos no adiabáticos de primer y segundo orden que mezclan los estados electrónicos debido al movimiento nuclear. La Aproximación de Born-Oppenheimer consiste en despreciar dichos acoplamientos ($A_{jk} \approx 0$). Esta suposición desacopla el sistema, simplificando el problema a la ecuación de Schrödinger nuclear independiente para cada estado $j$:
 
 \begin{equation}
 \left[ -\sum_{I=1}^{M} \frac{1}{2M_I} \nabla^2_I + E_j(\mathbf{R}) \right] \Psi_{Nj}(\mathbf{R}) = E \Psi_{Nj}(\mathbf{R})
 \label{eq:schrodinger_nuclear_res}
 \end{equation}
 
-Así, el movimiento nuclear (gobernado por $T_N = -\sum_{I=1}^M \frac{1}{2M_I} \nabla^2_I$) se describe sobre una única PES, $E_j(\mathbf{R})$, que actúa como el potencial efectivo generado por los electrones.
+Así, el movimiento nuclear (gobernado por $\hat{T}_N = -\sum_{I=1}^M \frac{1}{2M_I} \nabla^2_I$) se describe sobre una única PES, $E_j(\mathbf{R})$, que actúa como el potencial efectivo generado por los electrones.
 
 
 

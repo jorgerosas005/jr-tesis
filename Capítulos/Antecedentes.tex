@@ -17,7 +17,7 @@
 
     La versatilidad fisicoquímica del \ce{Cu^{2+}} emana directamente de su estructura electrónica \ce{[Ar]}$d^9$ , siendo uno de los fenómenos centrales que gobiernan su comportamiento el efecto de Jahn-Teller (JTE, por sus siglas en inglés). Este efecto se manifiesta como una deformación geométrica espontánea que ocurre en moléculas no lineales con un estado electrónico fundamental degenerado. El teorema postula que el sistema reduce su simetría para eliminar dicha degeneración, lo que resulta en una disminución de su energía total \cite{Cu-2019-01}.
 
-    En el particular caso del complejo octaédrico de \ce{Cu^{2+}}, la configuración \ce{[Ar]}$d^9$ presenta orbitales $e_g$ degenerados. La distorsión para resolver esta degeneración emerge de la diferencia en la densidad electrónica entre el metal y los ligandos  y puede presentarse de dos maneras:
+    En el particular caso del complejo octaédrico de \ce{Cu^{2+}}, la configuración \ce{[Ar]}$d^9$ presenta orbitales $e_g$ degenerados. La distorsión para resolver esta degeneración emerge de la diferencia en la densidad electrónica entre el metal y los ligandos  y puede presentarse de dos maneras, ambas ilustradas esquemáticamente en la figura \ref{fig:jahn_teller_d9}:
 
     \begin{itemize}
         \item \textbf{Elongación (z-out):} Los dos enlaces axiales se alargan y los cuatro ecuatoriales se acortan. Esto ocurre cuando la densidad electrónica es mayor en el eje $z$ y el orbital molecular semiocupado (SOMO, por sus siglas en inglés) es el $d_{x^2-y^2}$.
@@ -89,58 +89,59 @@ El JTE es una de las principales causas de la química de coordinación excepcio
         \caption{Parámetros estructurales del ion Cu(II) solvatado en agua reportados en trabajos de carácter experimental.}
         \label{tab:trabajos_experimentales_agua}
         
-        \begin{tabular}{| C{0.7cm} | C{2.5cm} | C{0.75cm} | C{2.5cm} | C{2.1cm} | C{2.1cm} | C{2.1cm} |}
+        \begin{tabular}{| C{1cm} | C{2.5cm} | C{0.75cm} | C{2.2cm} | C{2.1cm} | C{2.1cm} | C{2.1cm} |}
             \hline
-            \textbf{Ref} & \textbf{Técnica} & \textbf{NC} & \textbf{Geometría} & \textbf{\ce{Cu-O_{eq}} (\AA)} & \textbf{\ce{Cu-O_{ax1}} (\AA)} & \textbf{\ce{Cu-O_{ax2}} (\AA)} \\ 
-            \hline
-
-            \cite{Wa-1982-01} & Difracción de neutrones & 2+4 & & $2.05$   &  & \\
-            \hline
-        
-            \cite{Wa-1981-01} & EXAFS & 6 & Octaédrica distorsionada & $1.955 \pm 0.03$ & $2.60 \pm 0.05$ & \\
+            \textbf{Ref Año} & \textbf{Técnica} & \textbf{NC} & \textbf{Geometría} & \textbf{\ce{Cu-O_{eq}} (\AA)} & \textbf{\ce{Cu-O_{ax1}} (\AA)} & \textbf{\ce{Cu-O_{ax2}} (\AA)} \\ 
             \hline
 
-            \cite{Wa-1987-01} & Difracción de neutrones  & 6 & Octaédrica distorsionada & $1.96 \pm 0.03$ & & \\
+            \cite{Wa-1982-01} \citeyear{Wa-1982-01} & Difracción de neutrones & 2+4 & & $2.05$   &  & \\
+            \hline
+
+            \cite{Wa-1981-01} \citeyear{Wa-1981-01} & EXAFS & 6 & OD & $1.955 \pm 0.03$ & $2.60 \pm 0.05$ & \\
+            \hline
+
+            \cite{Wa-1987-01} \citeyear{Wa-1987-01} & Difracción de neutrones  & 6 & OD & $1.96 \pm 0.03$ & & \\
             \hline
 
 
-            \multirow{2}{*}{\cite{Wa-2001-01}} & \multirow{2}{2.5cm}{Difracción de neutrones CPMD / BLYP} & \multirow{2}{*}{5} & Pirámide cuadrada & \multirow{2}{*}{$1.96$} & \multirow{2}{*}{$1.96$} & \multirow{2}{*}{} \\
-            & & & Bipirámide trigonal & & & \\
+            \multirow{2}{0.7cm}{\cite{Wa-2001-01} \citeyear{Wa-2001-01}} & \multirow{2}{2.5cm}{Difracción de neutrones CPMD / BLYP} & \multirow{2}{*}{5} & PC & \multirow{2}{*}{$1.96$} & \multirow{2}{*}{$1.96$} & \multirow{2}{*}{} \\ [0.5cm]
+            & & & BT & & & \\ 
             \hline
 
-            \cite{Wa-2002-01} & XANES / MXAN /XAS & 5 & Pirámide cuadrada & $1.97 \pm 0.01$ & $2.39 \pm 0.06$ & \\
+            \cite{Wa-2002-01} \citeyear{Wa-2002-01} & XANES / MXAN /XAS & 5 & PC & $1.97 \pm 0.01$ & $2.39 \pm 0.06$ & \\
             \hline
-            
-            \multirow{2}{*}{\cite{Wa-2005-01}} & \multirow{2}{2.5cm}{MXAN / XAS DFT / B(38HF)P86} & 4 & Distorsión D$_{2\text{d}}$ & $1.96 \pm 0.02$ & & \\
+
+            \multirow{2}{0.7cm}{\cite{Wa-2005-01} \citeyear{Wa-2005-01}} & \multirow{2}{2.5cm}{MXAN / XAS DFT / B(38HF)P86} & 4 & Distorsión D$_{2\text{d}}$ & $1.96 \pm 0.02$ & & \\
             \cline{3-7}
-            & & 5 & Pirámide cuadrada C$_{2\text{v}}$ & $1.98 \pm 0.03$ $1.95 \pm 0.03$ & $2.35 \pm 0.05$ & \\
+            & & 5 & PC C$_{2\text{v}}$ & $1.98 \pm 0.03$ $1.95 \pm 0.03$ & $2.35 \pm 0.05$ & \\
             \hline
 
-            \cite{Wa-2009-02} & Análisis estructural por rayos X & 6 & Octaédrica distorsionada & $2.00$ & $2.10 - 2.30$ & $2.10 - 2.30$ \\
+            \cite{Wa-2009-02} \citeyear{Wa-2009-02} & Análisis estructural por rayos X & 6 & OD & $2.00$ & $2.10 - 2.30$ & $2.10 - 2.30$ \\
             \hline
 
-            \multirow{3}{*}{\cite{Wa-2015-01}} & \multirow{3}{*}{MXAN} & 5 & Pirámide cuadrada & $1.95 \pm 0.02$ & $2.23 \pm 0.11$ & \\
+            \multirow{3}{0.7cm}{\cite{Wa-2015-01} \citeyear{Wa-2015-01}} & \multirow{3}{*}{MXAN} & 5 & PC & $1.95 \pm 0.02$ & $2.23 \pm 0.11$ & \\
             \cline{3-7}
-            & & 5+1 & Pirámide cuadrada & $1.94 \pm 0.02$ & $2.06 \pm 0.07$ & $2.99 \pm 0.22$ \\
+            & & 5+1 & PC & $1.94 \pm 0.02$ & $2.06 \pm 0.07$ & $2.99 \pm 0.22$ \\
             \cline{3-7}
-            & & 5+1  & Pirámide cuadrada \tnote{b} & $1.97 \pm 0.02$ & $2.44 \pm 0.13$ & $3.0 \pm 0.1$ \\
+            & & 5+1  & PC \tnote{b} & $1.97 \pm 0.02$ & $2.44 \pm 0.13$ & $3.0 \pm 0.1$ \\
             \hline
 
-            \multirow{4}{*}{\cite{Wa-2018-02}} & EXAFS \tnote{a} & 6 & Asimétrica axial & $1.97$ & \makecell{$2.22$ \\ $2.24$} & \makecell{$2.37$ \\ $2.38$} \\
+            \multirow{4}{0.7cm}{\cite{Wa-2018-02} \citeyear{Wa-2018-02}} & EXAFS \tnote{a} & 6 & Asimétrica axial & $1.97$ & \makecell{$2.22$ \\ $2.24$} & \makecell{$2.37$ \\ $2.38$} \\
             \cline{2-2} \cline{3-7}
-            & \multirow{3}{*}{MXAN \tnote{a}} & 5 & Pirámide cuadrada & $1.95 \pm 0.01$ $1.95 \pm 0.01$ & $2.23 \pm 0.08$ $2.24 \pm 0.06$ & \\
+            & \multirow{3}{*}{MXAN \tnote{a}} & 5 & PC & $1.95 \pm 0.01$ $1.95 \pm 0.01$ & $2.23 \pm 0.08$ $2.24 \pm 0.06$ & \\
             \cline{3-7}
             & & 6 & Asimétrica axial & $1.95 \pm 0.01$ $1.94 \pm 0.01$ & $1.93 \pm 0.03$ $2.14 \pm 0.11$ & $2.22 \pm 0.04$ $2.28 \pm 0.10$\\
             \cline{3-7}
             \hline
 
-            \cite{Wa-2020-01} & EXAFS & 6 & Octaédrica distorsionada & $1.957 \pm 0.003$ & $2.14 \pm 0.02$ & $2.32 \pm 0.02$ \\ 
+            \cite{Wa-2020-01} \citeyear{Wa-2020-01} & EXAFS & 6 & OD & $1.957 \pm 0.003$ & $2.14 \pm 0.02$ & $2.32 \pm 0.02$ \\ 
             \hline
 
         \end{tabular}
         \begin{tablenotes}
             \small % Puedes ajustar el tamaño de la fuente de las notas
             % 5. Define cada nota usando \item
+            \item[] La notación para la geometría es la siguiente: CP = cuadrangular plana, PC = pirámide cuadrada, T = tetraédrica, BT = bipirámide trigonal, OD = octaedro distorsionado.
             \item[a] Realizado en vidrios acuosos congelados con 1,3-propanodiol (arriba) y 1,5-pentanodiol (abajo).
             \item[b] Realizado en solución congelada
         \end{tablenotes}
@@ -180,45 +181,45 @@ El JTE es una de las principales causas de la química de coordinación excepcio
     \label{tab:trabajos_teoricos_agua} % Es importante usar un label único
     
     % Definición de las 7 columnas con anchos ajustados
-    \begin{tabular}{| C{0.7cm} | C{2.5cm} | C{2.7cm} | C{0.7cm} | C{2.5cm} | C{1.8cm} | C{1.8cm} |}
+    \begin{tabular}{| C{0.8cm} | C{2.5cm} | C{2.7cm} | C{0.7cm} | C{2.4cm} | C{1.8cm} | C{1.8cm} |}
         \hline
-        \textbf{Ref} & \textbf{Técnica} & \textbf{Funcional \& Base} & \textbf{NC} & \textbf{Geometría} & \textbf{\ce{Cu-O_{eq}} (\AA)} & \textbf{\ce{Cu-O_{ax}} (\AA)} \\
+        \textbf{Ref Año} & \textbf{Técnica} & \textbf{Funcional \& Base} & \textbf{NC} & \textbf{Geometría} & \textbf{\ce{Cu-O_{eq}} (\AA)} & \textbf{\ce{Cu-O_{ax}} (\AA)} \\
         \hline
         
         % Fila 1: Wa-1999-01 (abarca 3 sub-filas)
-        \multirow{3}{2.0cm}{\cite{Wa-1999-01}} & \multirow{3}{2.5cm}{CPMD / Optimización / DFT} & \multirow{3}{3.0cm}{LDA / Becke y Perdew Base DZ y TZ} & 4 & CP y T distorsionada & 1.967 - 2.011 & - \\ \cline{4-7}
+        \multirow{3}{0.8cm}{\cite{Wa-1999-01} \citeyear{Wa-1999-01}} & \multirow{3}{2.5cm}{CPMD / Optimización / DFT} & \multirow{3}{3.0cm}{LDA / Becke y Perdew Base DZ y TZ} & 4 & CP y T distorsionada & 1.967 - 2.011 & - \\ \cline{4-7}
         & & & 5 & Pirámide tetragonal & 1.982 - 2.053 & 2.250 - 2.370 \\ \cline{4-7}
         & & & 6 & OD & 2.019 - 2.037 & 2.342  2.398 \\ \hline
         
         % Fila 2: Wa-2010-03 (abarca 4 sub-filas)
-        \multirow{4}{2.0cm}{\cite{Wa-2010-03}} & \multirow{4}{2.5cm}{CPMD / DFT} & \multirow{4}{3.0cm}{BLYP, PBE} & 4 & CP & 1.93 - 2.06 & - \\ \cline{4-7}
+        \multirow{4}{0.8cm}{\cite{Wa-2010-03} \citeyear{Wa-2010-03}} & \multirow{4}{2.5cm}{CPMD / DFT} & \multirow{4}{3.0cm}{BLYP, PBE} & 4 & CP & 1.93 - 2.06 & - \\ \cline{4-7}
         & & & 5 & PC & 2.03 - 2.09 & 2.31 \\ \cline{4-7}
         & & & 5 & BT & 2.04 - 2.14 & 1.95  2.14 \\ \cline{4-7}
         & & & 6 & OD & 1.97 - 2.09 & 2.46  2.58 \\ \hline
         
         % Fila 3: Wa-2001-01 (fila única)
-        \cite{Wa-2001-01} & Difracción de neutrones / CPMD & BLYP funcional polarizado en espín & 5 & PC / BT & 1.96 & - \\ \hline
+        \cite{Wa-2001-01} \citeyear{Wa-2001-01} & Difracción de neutrones / CPMD & BLYP funcional polarizado en espín & 5 & PC / BT & 1.96 & - \\ \hline
         
         % Fila 4: Wa-2003-01 (abarca 3 sub-filas)
-        \multirow{3}{2.0cm}{\cite{Wa-2003-01}} & \multirow{3}{2.5cm}{QM/MM MD} & \multirow{3}{3.0cm}{HF, B3LYP, y RIDFT} & \multirow{3}{0.7cm}{6} & \multirow{3}{3.5cm}{OD} & 2.02 (HF) & 2.15 / 2.30 (HF) \\ \cline{6-7}
+        \multirow{3}{0.8cm}{\cite{Wa-2003-01} \citeyear{Wa-2003-01}} & \multirow{3}{2.5cm}{QM/MM MD} & \multirow{3}{3.0cm}{HF, B3LYP, y RIDFT} & \multirow{3}{0.7cm}{6} & \multirow{3}{3.5cm}{OD} & 2.02 (HF) & 2.15 / 2.30 (HF) \\ \cline{6-7}
         & & & & & 2.03 (B3LYP) & 2.29 (B3LYP) \\ \cline{6-7}
         & & & & & 1.99 (RIDFT) & 2.30 (RIDFT) \\ \hline
         
         % Fila 5: Wa-2004-02 (fila única)
-        \cite{Wa-2004-02} & CPMD / DFT & BLYP & 5.7 & OD, PC y BT & 2.0 & - \\ \hline
+        \cite{Wa-2004-02} \citeyear{Wa-2004-02} & CPMD / DFT & BLYP & 5.7 & OD, PC y BT & 2.0 & - \\ \hline
         
         % Fila 6: Wa-2005-02 (fila única)
-        \cite{Wa-2005-02} & CPMD / DFT & BLYP y LSDA & 5 & PC distorsionada y BT & 2.0 & 2.45 \\ \hline
+        \cite{Wa-2005-02} \citeyear{Wa-2005-02} & CPMD / DFT & BLYP y LSDA & 5 & PC distorsionada y BT & 2.0 & 2.45 \\ \hline
         
         % Fila 7: Wa-2013-02 (fila única)
-        \cite{Wa-2013-02} & QM/MM MD & HF & 6 & OD & 2.06 & 2.21 \\ \hline
-        
+        \cite{Wa-2013-02} \citeyear{Wa-2013-02} & QM/MM MD & HF & 6 & OD & 2.06 & 2.21 \\ \hline
+
         % Fila 8: Wa-2016-01 (fila única)
-        \cite{Wa-2016-01} & QM/MM MD & DFTB3 / VALBOND & 6 & OD & 2.0 & 2.35 \\ \hline
+        \cite{Wa-2016-01} \citeyear{Wa-2016-01} & QM/MM MD & DFTB3 / VALBOND & 6 & OD & 2.0 & 2.35 \\ \hline
 
-        \cite{Wa-2008-04} & BOMD / DFT & BLYP & 5 & PC y BT          & 1.99 &  \\ \hline
+        \cite{Wa-2008-04} \citeyear{Wa-2008-04} & BOMD PW / DFT & BLYP & 5 & PC y BT          & 1.99 &  \\ \hline
 
-        \cite{Wa-2015-03} & DFTMD \tnote{a} & BLYP & 5 & & 1.95 -- 2.01 & \\ \hline
+        \cite{Wa-2015-03} \citeyear{Wa-2015-03} & CPMD \tnote{a} & BLYP & 5 & & 1.95 -- 2.01 & \\ \hline
         
     \end{tabular}
     \begin{tablenotes}
@@ -262,21 +263,15 @@ Al igual que en el agua, la estructura de solvatación del ion \ce{Cu^{2+}} en m
     \label{tab:trabajos_experimentales_metanol}
 
 
-    \begin{tabular}{| C{0.7cm} | C{2cm} | C{0.75cm} | C{2.1cm} | C{2.0cm} | C{2.0cm} | C{2.0cm} |}
+    \begin{tabular}{| C{0.9cm} | C{1.8cm} | C{0.75cm} | C{2.1cm} | C{2.0cm} | C{2.0cm} | C{2.0cm} |}
         \hline
-        \textbf{Ref} & \textbf{Técnica} & \textbf{NC} & \textbf{Geometría} & \textbf{\ce{Cu-O_{eq1}} (\AA)} & \textbf{\ce{Cu-O_{eq2}} (\AA)} & \textbf{\ce{Cu-O_{ax1}} (\AA)} \\ 
-        \hline
-
-        \cite{Me-1980-01} & \makecell{Análisis} & 6 & Octaédrica & & & 2.1 \\
+        \textbf{Ref Año} & \textbf{Técnica} & \textbf{NC} & \textbf{Geometría} & \textbf{\ce{Cu-O_{eq1}} (\AA)} & \textbf{\ce{Cu-O_{eq2}} (\AA)} & \textbf{\ce{Cu-O_{ax1}} (\AA)} \\ 
         \hline
 
-        \cite{Me-1986-01} & Oxygen-17 NMR & 6 & & & & \\
+        \cite{Me-1999-01} \citeyear{Me-1999-01} & EXAFS & 3.8 & & $1.97 \pm 0.01$ & & \\
         \hline
 
-        \cite{Me-1999-01} & EXAFS & 3.8 & & $1.97 \pm 0.01$ & & \\
-        \hline
-
-        \multirow{7}{*}{\cite{Me-2012-01}} & \multirow{2}{*}{EXAFS} & 5 & & $1.96 \pm 0.01$ & & $2.28 \pm 0.02$ \\
+        \multirow{7}{0.9cm}{\cite{Me-2012-01} \citeyear{Me-2012-01}} & \multirow{2}{*}{EXAFS} & 5 & & $1.96 \pm 0.01$ & & $2.28 \pm 0.02$ \\
         \cline{3-7} 
         & & 6 & & $1.96 \pm 0.01$ & & $2.32 \pm 0.02$ \\ 
         \cline{2-7} 
@@ -289,40 +284,32 @@ Al igual que en el agua, la estructura de solvatación del ion \ce{Cu^{2+}} en m
         & & 6 & & $1.95 \pm 0.02$ & $1.95 \pm 0.02$ & $2.23 \pm 0.04$ \\ 
         \hline
         % Esta última fila parece ser de otra referencia, puedes añadirla aquí
-         & EXAFS & 6 & \makecell{Octaédrica\\ distorsionada} & $1.975 \pm 0.003$ & & $2.202 \pm 0.008$ $2.34 \pm 0.01$ \\
+        \cite{Wa-2020-01} \citeyear{Wa-2020-01} & EXAFS & 6 & \makecell{Octaédrica\\ distorsionada} & $1.975 \pm 0.003$ & & $2.202 \pm 0.008$ $2.34 \pm 0.01$ \\
         \hline
 
 
     \end{tabular}
-     \begin{tablenotes}
-         \small 
-         \item[a] Análisis de eco de espín electrónico
-     \end{tablenotes}
     \end{threeparttable}
 \end{table}
 
+\subsection{Estudios Teóricos}
 
+Las principales técnicas utilizadas para explorar las estructuras de coordinación del ion \ce{Cu^{2+}} solvatado en metanol incluyen:
+\begin{itemize}
+    \item Métodos basados en la función de onda como MP2 
+    \item Teoría del Funcional de la Densidad, en particular con el funcional M06-2X
+    \item Modelos de disolvente continuo implícito (IEF-PCM)
+\end{itemize}
 
+Los estudios teóricos, encabezados principalmente por los trabajos de Da-yang et al., han demostrado que el número de coordinación más estable depende fuertemente de las condiciones del modelo, tales como el tamaño del clúster de solvente ($n$), la temperatura y el entorno (fase gaseosa vs. disolvente implícito) \cite{Me-2022-01, Me-2023-02}.
 
+En la fase gaseosa, los cálculos muestran una competencia entre diferentes números de coordinación. El método MP2 tiende a favorecer isómeros tetra- y pentacoordinados \cite{Me-2022-01}, mientras que el funcional M06-2X favorece a los penta- y hexacoordinados \cite{Me-2023-01}. Para clústeres pequeños ($n=1-5$), las coordinaciones más bajas son las más estables, pero a medida que aumenta el tamaño, las estructuras de mayor NC ganan relevancia. Por su parte, la inclusión de un modelo de disolvente implícito (IEF-PCM) revela una clara preferencia por los números de coordinación más altos, desfavoreciendo a las estructuras de NC=4. Para clústeres de mayor tamaño ($n=7-10$), las estructuras hexacoordinadas (NC=6) dominan exclusivamente la población a cualquier temperatura \cite{Me-2023-02}, subrayando la importancia crítica del efecto del medio dieléctrico para estabilizar geometrías más compactas.
 
-    \subsection{Estudios Teóricos}
+En cuanto a los parámetros estructurales, las distancias de enlace calculadas teóricamente muestran concordancia con los datos experimentales, con valores de \ce{Cu-O_{eq}} que oscilan entre 1.94 -- 2.02 \AA \ y de \ce{Cu-O_{ax}} entre 2.15 -- 2.27 \AA. Asimismo, los cálculos revelan que el disolvente alarga los enlaces dativos axiales en las estructuras pentacoordinadas en comparación con la fase gaseosa. Un resumen de estos trabajos, basados únicamente en optimización de geometrías (0 K), se presenta en la tabla \ref{tab:trabajos_teoricos_metanol}.
 
-    Los métodos computacionales han sido cruciales para explorar el complejo panorama energético de la solvatación del Cu\textsuperscript{2+} en metanol. Las principales técnicas utilizadas incluyen:
-    \begin{itemize}
-        \item Métodos como MP2 
-        \item Teoría del Funcional de la Densidad, en particular con el funcional M06-2X
-        \item Modelos de disolvente continuo implícito (IEF-PCM)
-    \end{itemize}
+Sin embargo, es importante contrastar estos hallazgos con el trabajo realizado en la hidratación del ion \ce{Cu^{2+}}. Hasta la fecha, no se han reportado estudios de dinámica molecular para la solvatación en metanol. El enfoque teórico predominante se ha limitado a exploraciones de la superficie de energía potencial (PES), considerando diferentes estructuras que posteriormente se optimizan. En consecuencia, estos estudios presentan limitaciones importantes: no consideran los efectos de una temperatura finita ni la dinámica de las moléculas del sistema. Además, los cúmulos explorados ($n \le 10$) resultan insuficientes para representar adecuadamente la formación y la dinámica de una segunda esfera de coordinación. Por estos motivos, el presente trabajo busca superar estas barreras y dar un paso importante en la descripción teórica del ion \ce{Cu^{2+}} en metanol.
 
-    Los estudios teóricos, principalmente los trabajos exhaustivos de Da-yang et al., han demostrado que el número de coordinación más estable depende fuertemente de las condiciones del modelo, como el tamaño del clúster de solvente (n), la temperatura y el entorno (fase gaseosa vs. disolvente implícito).
-
-    En la fase gaseosa, los cálculos muestran una competencia entre diferentes números de coordinación. El método MP2 tiende a favorecer isómeros tetra- y pentacoordinados \cite{Me-2022-01}, mientras que el método DFT (M06-2X) favorece a los penta- y hexacoordinados \cite{Me-2023-01}. Para clústeres pequeños (n=1-5), las coordinaciones más bajas son las más estables, pero a medida que aumenta el tamaño, las estructuras de mayor NC ganan relevancia.
-
-    La inclusión de un modelo de disolvente implícito (IEF-PCM) tiene un impacto discernible y cambia el panorama. En este entorno, se observa una clara preferencia por los números de coordinación más altos, desfavoreciendo a las estructuras de NC=4. Para clústeres de mayor tamaño (n=7-10), las estructuras hexacoordinadas (NC=6) dominan exclusivamente la población a cualquier temperatura \cite{Me-2023-02}. Este hallazgo subraya la importancia crítica del efecto del medio dieléctrico para estabilizar geometrías más compactas y con mayor número de coordinación.
-
-    Las distancias de enlace calculadas teóricamente muestran una excelente concordancia con los datos experimentales, con valores de \ce{Cu-O_{eq}} que oscilan entre 1.94 -- 2.02 \AA \ y de \ce{Cu-O_{ax}} entre 2.15 -- 2.27 \AA. Los cálculos también revelan que el disolvente alarga los enlaces dativos axiales en las estructuras pentacoordinadas en comparación con la fase gaseosa.
-
-\begin{table}[H]
+\begin{table}[h]
     \centering
     \small
     \begin{threeparttable}
@@ -331,37 +318,37 @@ Al igual que en el agua, la estructura de solvatación del ion \ce{Cu^{2+}} en m
 
     \begin{tabular}{| C{1.8cm} | C{6cm} | C{0.75cm} | C{2.5cm} | C{2.5cm} |}
         \hline
-        \textbf{Ref.} & \textbf{Técnica} & \textbf{NC} & \textbf{\ce{Cu-O_{eq}} (\AA)} & \textbf{\ce{Cu-O_{ax}} (\AA)} \\ 
+        \textbf{Ref y Año} & \textbf{Técnica} & \textbf{NC} & \textbf{\ce{Cu-O_{eq}} (\AA)} & \textbf{\ce{Cu-O_{ax}} (\AA)} \\ 
         \hline
 
-        \multirow{3}{*}{\cite{Me-2022-01}} & \multirow{3}{*}{\makecell{MP2 (fase gas)\\ n = 8}} & 4 & 1.94 & \\ 
+        \multirow{3}{1cm}{\cite{Me-2022-01} \citeyear{Me-2022-01}} & \multirow{3}{*}{\makecell{Optimización / MP2 (fase gas)\\ n = 8}} & 4 & 1.94 & \\ 
         \cline{3-5} 
         & & 5 & 1.99 & 2.21 \\ 
         \cline{3-5} 
         & & 6 & 2.01 & 2.27 \\ 
         \hline
 
-        \multirow{3}{*}{\cite{Me-2023-01}} & \multirow{3}{*}{\makecell{M06-2X (fase gas)\\ n = 8}} & 4 & 1.95 & \\ 
+        \multirow{3}{1cm}{\cite{Me-2023-01} \citeyear{Me-2023-01}} & \multirow{3}{*}{\makecell{Optimización / M06-2X (fase gas)\\ n = 8}} & 4 & 1.95 & \\ 
         \cline{3-5} 
         & & 5 & 2.00 & 2.15 \\ 
         \cline{3-5} 
         & & 6 & 2.02 & 2.26 \\ 
         \hline
 
-        \multirow{3}{*}{\cite{Me-2023-02}} & \multirow{3}{*}{\makecell{M06-2X + IEF-PCM\\ n = 8}} & 4 & 1.97 & \\ 
+        \multirow{3}{1cm}{\cite{Me-2023-02} \citeyear{Me-2023-02}} & \multirow{3}{*}{\makecell{Optimización / M06-2X + IEF-PCM\\ n = 8}} & 4 & 1.97 & \\ 
         \cline{3-5} 
         & & 5 & 1.99 & 2.16 \\ 
         \cline{3-5} 
         & & 6 & 2.02 & 2.24 \\ 
         \hline
 
-        \multirow{6}{*}{\cite{Me-2025-01}} & \multirow{3}{*}{\makecell{M06-2X (fase gas)\\ n = 10}} & 4 & 1.95 & \\ 
+        \multirow{6}{1cm}{\cite{Me-2025-01} \citeyear{Me-2025-01}} & \multirow{3}{*}{\makecell{Optimización / M06-2X (fase gas)\\ n = 10}} & 4 & 1.95 & \\ 
         \cline{3-5} 
         & & 5 & 1.99 & 2.14 \\ 
         \cline{3-5} 
         & & 6 & 2.02 & 2.26 \\ 
         \cline{2-5} 
-        & \multirow{3}{*}{\makecell{M06-2X + IEF-PCM\\ n = 10}} & 4 & 1.96 & \\ 
+        & \multirow{3}{*}{\makecell{Optimización / M06-2X + IEF-PCM\\ n = 10}} & 4 & 1.96 & \\ 
         \cline{3-5} 
         & & 5 & 1.99 & 2.19 \\ 
         \cline{3-5} 

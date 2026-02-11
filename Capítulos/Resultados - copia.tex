@@ -1,73 +1,8 @@
-\chapter{Resultados}
+\chapter{Metodología}
 
 De forma general, la metodología seguida es análoga a la de estudios anteriores en la línea de cationes metálicos inmersos en solventes polares \cite{CILP-2018-02, CILP-2019-01, CILP-2023-01, CILP-2024-01}. El procedimiento se divide en la calibración del nivel de teoría, la exploración estática de clústeres pequeños y la ejecución de simulaciones BOMD para su posterior análisis estructural.
 
-La preparación de las configuraciones iniciales del sistema se realizó con el programa Packmol \cite{packmol}. Posteriormente, todas las optimizaciones de geometría y las simulaciones de dinámica molecular se llevaron a cabo con el paquete de química cuántica ORCA v6.1 \cite{orca}, utilizando su módulo \texttt{orca\_md}. Finalmente, el post-procesamiento de las trayectorias para calcular las RDF, ADF y números de coordinación se efectuó mediante \textit{scripts} de desarrollo propio escritos en Fortran y Python. 
-
-\subsection*{Recursos de cómputo}
-
-Dada la alta demanda de recursos que implica la BOMD, la fase de producción requirió una estrategia de cómputo intensivo de alto rendimiento. Para solventar este costo, se combinó el supercómputo académico (DGTIC-UNAM) con estaciones de trabajo locales. Este despliegue permitió paralelizar las trayectorias en diferentes réplicas y acumular un tiempo total de ejecución de aproximadamente \textbf{212} días de cómputo. Las características de los recursos y la distribución de la carga de trabajo se detallan en la Tabla \ref{tab:recursos_computacionales} y se ilustran en la Figura \ref{fig:tiempo_computo}.
-
-% --- Tabla de Recursos Computacionales (Estilo Cuadrícula) ---
-\begin{table}[H]
-    \centering
-    \footnotesize 
-    \begin{threeparttable}
-        \caption{Infraestructura de cómputo y rendimiento en la producción de dinámica molecular.}
-        \label{tab:recursos_computacionales}
-        % Nota los '|' entre las letras para crear las líneas verticales
-        \begin{tabular}{|l|c|c|c|}
-            \hline
-             & \textbf{Supercomputadora} & \textbf{Estación} & \textbf{Estación} \\
-             & \textbf{Miztli (DGTIC)} & \textbf{Supermicro AS-5014A} & \textbf{Micro-Star MS-7E26} \\
-            \hline
-            \hline
-            \multicolumn{4}{|c|}{\textbf{Especificaciones de Hardware}} \\
-            \hline
-            \textbf{Procesador} & 2x Intel Xeon E5-2670v1 & 1x AMD Threadripper & 1x AMD Ryzen 9 \\
-             & (por nodo) & Pro 3975WX & 7950X3D \\
-            \hline
-            \textbf{Núcleos} & \textbf{32 núcleos} (16/nodo) & \textbf{32 núcleos} & \textbf{16 núcleos} \\
-            \hline
-            \textbf{Hilos} & \textbf{64 hilos} (32/nodo) & \textbf{64 hilos} & \textbf{32 hilos} \\
-            \hline
-            \textbf{RAM} & \textbf{128 GB} (64/nodo) & \textbf{128 GB} & \textbf{128 GB} \\
-            \hline
-            \hline
-            \multicolumn{4}{|c|}{\textbf{Rendimiento (ORCA 6.1)}} \\
-            \hline
-            \textbf{\ce{[Cu(H2O)_{40}]^{2+}}} & 38,000 pasos & 8,000 pasos & 14,400 pasos \\
-             & (378 pasos/día) & (789 pasos/día) & (807 pasos/día)\\
-            \hline
-            \textbf{\ce{[Cu(CH3OH)_{40}]^{2+}}} & --- & 31,000 pasos & 37,000 pasos \\
-             & & (222 pasos/día) & (236 pasos/día) \\
-            \hline
-        \end{tabular}
-        \begin{tablenotes}
-            \footnotesize
-            \item Nota: El rendimiento se reporta para una única réplica utilizando la mitad de los núcleos disponibles del equipo (o cluster). Bajo condiciones de ocupación total (dos réplicas simultáneas), el rendimiento total del equipo sería aproximadamente el doble del valor mostrado.
-        \end{tablenotes}
-    \end{threeparttable}
-\end{table}
-
-% --- Gráfico de Pastel ---
-\begin{figure}[H]
-    \centering
-    % --- Gráfica 1: Tiempo (Izquierda) ---
-    \begin{minipage}[b]{0.48\textwidth}
-        \centering
-        % Nota: Verifica si debes actualizar "178.4" a "212.4" según nuestro cálculo anterior
-        \includegraphics[width=\linewidth]{Imágenes/grafico_tiempo_pastel.png}
-    \end{minipage}
-    \hfill % Relleno flexible para separarlas
-    % --- Gráfica 2: Pasos (Derecha) ---
-    \begin{minipage}[b]{0.48\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{Imágenes/grafico_pasos_pastel.png}
-    \end{minipage}
-    \caption{Distribución del tiempo de cómputo (izquierda) y del número de pasos de MD (derecha) entre los diferentes recursos utilizados.}
-    \label{fig:tiempo_computo}
-\end{figure}
+La preparación de las configuraciones iniciales del sistema se realizó con el programa Packmol \cite{packmol}. Posteriormente, todas las optimizaciones de geometría y las simulaciones de dinámica molecular se llevaron a cabo con el paquete de química cuántica ORCA v6.1 \cite{orca}, utilizando su módulo \texttt{orca\_md}. Finalmente, el post-procesamiento de las trayectorias para calcular las RDF, ADF y números de coordinación se efectuó mediante \textit{scripts} de desarrollo propio escritos en Fortran y Python. El poder de cómputo para estas tareas fue provisto por dos nodos G1 de la Supercomputadora Miztli (DGTIC, UNAM) y las estaciones de trabajo Supermicro AS-5014A-TT y Micro-Star MS-7E26.
 
 \section{Calibración del conjunto base}
 
@@ -75,7 +10,7 @@ La calibración del conjunto base es un procedimiento preliminar esencial. Su ob
 
 Las simulaciones de BOMD, tienen un costo computacional muy elevado. El uso de conjuntos base muy grandes y precisos (por ejemplo, aquellos con múltiples funciones difusas y de polarización) se vuelve muy costoso computacionalmente e impráctico para simular sistemas del tamaño de este trabajo durante escalas de tiempo de picosegundos.
 
-Por lo tanto, el objetivo de esta calibración es validar que un conjunto base de tamaño moderado (y costo computacional viable) que sea capaz de describir la física del sistema con una fiabilidad comparable a la de un conjunto más completo y costoso.
+Por lo tanto, el objetivo de esta calibración es validar que un conjunto base de tamaño moderado (y costo computacional viable) sea capaz de describir la física del sistema con una fiabilidad comparable a la de un conjunto más completo y costoso.
 
 Para realizar esta validación, se llevó a cabo una exploración estática (optimización de geometría) de los dos sistemas de interés: $\ce{[Cu(H2O)_{n}]^{2+}}$ y $\ce{[Cu(CH3OH)_{n}]^{2+}}$. Se optimizaron las geometrías para clústeres de $n = 1$ a $10$, así como para $n = 30$ y $40$, ilustrados en las figuras \ref{fig:geo_opt_cumulos} y \ref{fig:geo_opt_cumulos_m}. Se compararon tres conjuntos base de la familia Pople: 6-31G*, 6-31+G* y 6-31++G**. 
 
@@ -90,7 +25,7 @@ El proceso de validación se fundamentó en verificar dos aspectos críticos de 
 % --- Entorno de Figuras 3x4 ---
 \begin{figure}[h!]
     \centering
-    \caption{Geometrías optimizadas para los cúmulos \ce{[Cu(H2O)_{n}]^{2+}} con $n = 1-10, 30, 40$ en el nivel de teoría M06-2X/6-31G*.}
+    \caption{Geometrías optimizadas para los cúmulos \ce{[Cu(H2O)_{n}]^{2+}} con $n = 1-10, 30, 40$ en el nivel de teoría 6-31G*.}
     \label{fig:geo_opt_cumulos}
 
     % --- Fila 1 (n=1, 2, 3) ---
@@ -173,7 +108,7 @@ El proceso de validación se fundamentó en verificar dos aspectos críticos de 
 % --- Entorno de Figuras 3x4 ---
 \begin{figure}[h!]
     \centering
-    \caption{Geometrías optimizadas para los cúmulos \ce{[Cu(CH3OH)_{n}]^{2+}} con $n = 1-10, 30, 40$ en el nivel de teoría M06-2X/6-31G*.}
+    \caption{Geometrías optimizadas para los cúmulos \ce{[Cu(CH3OH)_{n}]^{2+}} con $n = 1-10, 30, 40$ en el nivel de teoría 6-31G*.}
     \label{fig:geo_opt_cumulos_m}
 
     % --- Fila 1 (n=1, 2, 3) ---
@@ -265,7 +200,7 @@ El proceso de validación se fundamentó en verificar dos aspectos críticos de 
     \includegraphics[width=0.85\textwidth]{Imágenes/bases_metanol.png}
 
     % --- LEYENDA ACTUALIZADA ---
-    \caption{Energías de enlace por molécula de solvente calculada para las estructuras de solvatación óptimas de \ce{[Cu(H2O)_{n}]^{2+}} (arriba) y \ce{[Cu(CH3OH)_{n}]^{2+}} (abajo), con $n = 1,\ 2,\ \ldots,\ 10,\ 30,\ 40$, mediante cálculos de optimización con los niveles de teoría 6-31G$^\ast$, 6-31+G$^\ast$ y 6-31++G$^{\ast\ast}$. Resultados obtenidos con MP2 \cite{Me-2022-01} y validación de M06-2X respecto a MP2 \cite{Me-2023-01}. Las energías reportadas para $n=30$ y $n=40$ no corresponden a mínimos globales pues el cálculo para cúmulos de este tamaño conlleva una complejidad que excede el alcance de la presente tesis.}
+    \caption{Energías de enlace por molécula de solvente calculada para las estructuras de solvatación óptimas de \ce{[Cu(H2O)_{n}]^{2+}} (arriba) y \ce{[Cu(CH3OH)_{n}]^{2+}} (abajo), con $n = 1,\ 2,\ \ldots,\ 10,\ 30,\ 40$, mediante cálculos de optimización con los niveles de teoría 6-31G$^\ast$, 6-31+G$^\ast$ y 6-31++G$^{\ast\ast}$. Resultados obtenidos con MP2 \cite{Me-2022-01} y validación de M06-2X respecto a MP2 \cite{Me-2023-01}.}
     \label{fig:bases}
 \end{figure}
 
@@ -282,7 +217,7 @@ Dado que el conjunto base \textbf{6-31G*}, siendo el más eficiente en términos
 \section{Simulaciones de Dinámica Molecular}
 \label{sec:met_md}
 
-Una vez seleccionado el conjunto base y optimizadas las geometrías de los clústeres de mayor tamaño ($n=40$), se procedió a la fase de producción de la Dinámica Molecular. El objetivo de esta etapa fue generar trayectorias a nivel atomístico para los dos sistemas de interés: \ce{[Cu(H2O)40]^{2+}} y \ce{[Cu(CH3OH)40]^{2+}}, modelados como nanogotas. Todas las simulaciones se realizaron con el módulo \texttt{orca\_md} del paquete ORCA v6.1 \cite{orca, orca6.1}.
+Una vez seleccionado el conjunto base y optimizadas las geometrías de los clústeres de mayor tamaño ($n=40$), se procedió a la fase de producción de la Dinámica Molecular. El objetivo de esta etapa fue generar trayectorias a nivel atomístico para los dos sistemas de interés: \ce{[Cu(H2O)40]^{2+}} y \ce{[Cu(CH3OH)40]^{2+}}, modelados como nanogotas. Todas las simulaciones se realizaron con el módulo \texttt{orca\_md} del paquete ORCA v6.1.
 
 El nivel de teoría empleado fue consistente con la calibración estática. Se utilizó el funcional \textit{meta}-GGA híbrido M06-2X, complementado con la corrección de dispersión D3 de Grimme con amortiguamiento cero (\texttt{D3zero}). Para los átomos de C, H y O se empleó el conjunto base \textbf{6-31G*}. Para el catión \ce{Cu^{2+}}, se utilizó el Potencial de Núcleo Efectivo (ECP) de 10 electrones (N\_core 10) y la base GTO asociada.
 
@@ -314,17 +249,18 @@ El flujo de cálculo seguido en las simulaciones de MD mediante un diagrama de f
 
 % --- Mover este bloque antes de \section{Simulaciones de Dinámica Molecular} ---
 
-\begin{figure}[H] 
+\begin{figure}[H] % El [H] fuerza la posición exacta
     \centering
-    \caption{Diagrama general de cálculo. Los dos principales bucles son los referentes al método de campo autoconsistente (SCF) y al principal de la dinámica molecular.}
+    \caption{Diagrama general de cálculo. Los dos principales bucles son los referentes a el método de campo autoconsistente (SCF) y al principal de la dinámica molecular.}
     \label{fig:metodologia}
     \vspace{0.5cm}
     
+    % Rotamos el diagrama 90 grados para mantener el formato horizontal
     \rotatebox{90}{
         \begin{tikzpicture}[
         scale=0.4, transform shape,
         font=\large\sffamily,
-        node distance = 8mm and 15mm, 
+        node distance = 8mm and 15mm, % Distancia vertical y horizontal
         block/.style = {rectangle, draw, text centered, rounded corners,
                         minimum height=2.2cm, align=center},
         diamond_dec/.style = {diamond, draw, text centered, aspect=2,
@@ -333,43 +269,34 @@ El flujo de cálculo seguido en las simulaciones de MD mediante un diagrama de f
         ]
 
         % --- Fila Superior ---
-        \node[block] (cond) {\textbf{Inicialización}  \\ $\mathbf{R}^{N}(t=0)$};
-        \node[block, right=of cond] (opt_structure) {\textbf{Optimizar estructura} \\ {\text{Minimizar energía}} \\ $\mathbf{R}^{N}_{min}(0)$};
-        \node[block, right=of opt_structure](init_vel) {\textbf{Velocidades} \\ \textbf{iniciales} \\$\mathbf{V}^{N}(t=0)$};
+        \node[block] (cond) {\textbf{Inicialización}  \\ $R^{N}(t=0)$};
+        \node[block, right=of cond] (opt_structure) {\textbf{Optimizar estructura} \\ {\text{Minimizar energía}} \\ $R^{N}_{min}(0)$};
+        \node[block, right=of opt_structure](init_vel) {\textbf{Velocidades} \\ \textbf{iniciales} \\$V^{N}(t=0)$};
         \node[block, right=of init_vel] (t_step) { \textbf{Bucle SCF} \\ $t^{(n)}$};
 
+
+
         % --- Fila Intermedia (Bucle SCF) ---
-        % CORRECCIÓN: \rho(\mathbf{r}) en lugar de \rho(r)
-        \node[block, right=3cm of t_step] (propose_rho){ \textbf{Proponer} \\$\rho^{(n)}(\mathbf{r})$};
-        
-        % CORRECCIÓN: \hat{H} y \mathbf{r} implicito en nabla
-        \node[block, below=2.3cm of propose_rho] (build_h) {\textbf{Construir hamiltoniano} \\ $\hat{H}^{(n)}_{KS} = -\frac{1}{2} \nabla^2 + V_{\text{ext}} + V_H^{(n)} + V_{xc}^{(n)}$};
-        
-        % CORRECCIÓN: \hat{H}
-        \node[block, right=of build_h] (solve_ks) {\textbf{Resolver ecuaciones} \\ \textbf{de Kohn-Sham} \\ $\hat{H}^{(n)}_{KS} \psi_i = \epsilon_i\psi_i$};
-        
-        % CORRECCIÓN: \mathbf{r}
-        \node[block, right=of solve_ks] (calc_rho) {\textbf{Calcular nueva densidad} \\ $\rho^{(n+1)}(\mathbf{r}) = \sum_{i=1}^{N_{occ}} |\psi_i(\mathbf{r})|^2$};
-        
+        \node[block, right=3cm of t_step] (propose_rho){ \textbf{Proponer} \\$\rho^{(n)}(r)$};
+        \node[block, below=2.3cm of propose_rho] (build_h) {\textbf{Construir hamiltoniano} \\ $H^{(n)}_{KS} = -\frac{1}{2} \nabla^2 + V_{\text{ext}} + V_H^{(n)} + V_{xc}^{(n)}$};
+        \node[block, right=of build_h] (solve_ks) {\textbf{Resolver ecuaciones} \\ \textbf{de Kohn-Sham} \\ $H^{(n)}_{KS} \psi_i = \epsilon_i\psi_i$};
+        \node[block, right=of solve_ks] (calc_rho) {\textbf{Calcular nueva densidad} \\ $\rho^{(n+1)}(r) = \sum_{i=1}^{N_{occ}} |\psi_i(r)|^2$};
         \node[diamond_dec, above=1.8cm of calc_rho, xshift=0cm, minimum width=6cm, minimum height=2.5cm] (scf_check) {  \textbf{¿Converge?}  };
-        
-        % CORRECCIÓN: \mathbf{F}_I y \nabla_{\mathbf{R}_I}
-        \node[block, right=of scf_check, xshift=1cm] (forces) {\textbf{Calcular energía y fuerzas} \\ $E[\rho] = T_s[\rho] + V_H[\rho] + E_{xc}[\rho] + V_{ext}[\rho]$ \\ $\mathbf{F}_I = -\nabla_{\mathbf{R}_I} E[\rho]$};
+        \node[block, right=of scf_check, xshift=1cm] (forces) {\textbf{Calcular energía y fuerzas} \\ $E[\rho] = T_s[\rho] + V_H[\rho] + E_{xc}[\rho] + V_{ext}[\rho]$ \\ $F_I = -\nabla_{R_I} E[\rho]$};
 
         % --- Fila Inferior (Bucle de Dinámica) ---
-        % CORRECCIÓN: \mathbf{V}^N
-        \node[block, below=5.5cm of forces] (vel_update) {\textbf{Actualizar velocidades} \\ \text{Integración + Nosé-Hoover} \\  $\mathbf{V}^{N}(t + \Delta t)$ , $T \approx 300\,\text{K}$ };
-        
-        % CORRECCIÓN: \mathbf{R}^N
-        \node[block, left=11.5cm of vel_update] (pos_update) {\textbf{Actualizar posiciones} \\ \text{Integración} \\ $\mathbf{R}^{N}( t + \Delta t)$};
+        % ***** LÍNEA MODIFICADA AQUÍ *****
+        \node[block, below=5.5cm of forces] (vel_update) {\textbf{Actualizar velocidades} \\ \text{Integración + Nosé-Hoover} \\  $V^{N}(t + \Delta t)$ , $T \approx 300\,\text{K}$ };
+        \node[block, left=11.5cm of vel_update] (pos_update) {\textbf{Actualizar posiciones} \\ \text{Integración} \\ $R^{N}( t + \Delta t)$};
 
         % --- Inicio y Fin ---
         \node[block, left=of cond] (start) {Inicio};
-        \node[diamond_dec, left=11.5cm of pos_update] (main_loop_check) {¿$t < 30\,\text{ps}$?};
+        \node[diamond_dec, left=11.5cm of pos_update] (main_loop_check) {¿$t < 20\,\text{ps}$?};
         \node[block, left=of main_loop_check] (analysis) {\textbf{Análisis}};
         \node[block, left=of analysis] (end) {Fin};
 
         % --- Conexiones con Flechas ---
+        % Flujo principal
         \draw[line] (start) -- (cond);
         \draw[line] (cond) -- (opt_structure);
         \draw[line] (opt_structure) -- (init_vel);
@@ -382,9 +309,7 @@ El flujo de cálculo seguido en las simulaciones de MD mediante un diagrama de f
         \draw[line] (solve_ks) -- (calc_rho);
         \draw[line] (calc_rho) -- (scf_check);
         \draw[line] (scf_check) -- node[above] {Sí} (forces);
-        
-        % CORRECCIÓN: \mathbf{r} en la etiqueta de la flecha
-        \draw[line] (scf_check.west) -- ++(-0.5,0) -| node[below, pos=0.25] {$\rho^{(n)} = \rho^{(n+1)}$}  node[above, pos=0.25] {No} (propose_rho.east);
+        \draw[line] (scf_check.west) -- ++(-0.5,0) -| node[below, pos=0.25] {$\rho^{(n)}(r) = \rho^{(n+1)}(r)$}  node[above, pos=0.25] {No} (propose_rho.east);
 
         % Bucle de Dinámica
         \draw[line] (forces) -- (vel_update);
@@ -396,11 +321,14 @@ El flujo de cálculo seguido en las simulaciones de MD mediante un diagrama de f
         \draw[line] (main_loop_check) -- node[below, pos=0.5] {No} (analysis);
         \draw[line] (analysis) -- (end);
 
+        
+
         \end{tikzpicture}
     }
 \end{figure}
 
-\section{Función de distribución radial y numero de coordinación}
+
+\section{Función de Distribución Radial}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 La Función de Distribución Radial (RDF, por sus siglas en inglés) es una herramienta estadística en el análisis estructural de sistemas moleculares, mide la probabilidad de encontrar un átomo de tipo $X$ a una distancia radial $r$ respecto a un átomo de referencia $M$. Su definición formal se establece como el cociente entre la densidad local de partículas, $\rho(r)$, y la densidad numérica promedio del sistema, $\rho_0$. 
@@ -428,31 +356,14 @@ Para determinar la densidad local, se selecciona un átomo central y se contabil
      \label{fig:esquema_rdf}
 \end{figure}
 
-Se desarrolló un programa en python que calcula la densidad local basándose en el volumen geométrico exacto de las capas esféricas discretizadas. De esta manera, la expresión teórica general utilizada para determinar $g(r)$ en el intervalo de distancia $(r, r + \Delta r)$ queda definida como:
+El algoritmo implementado calcula la densidad local basándose en el volumen geométrico exacto de las capas esféricas discretizadas. De esta manera, la expresión teórica general utilizada para determinar $g(r)$ en el intervalo de distancia $(r, r + \Delta r)$ queda definida como:
+
 \begin{equation}
     g(r) = \frac{\langle N(r, \Delta r) \rangle}{\frac{4}{3}\pi \rho_{0} \left[ (r + \Delta r)^3 - r^3 \right]}
     \label{eq:rdf_general}
 \end{equation}
 
-En esta expresión, el término $\langle N(r, \Delta r) \rangle$ representa el número promedio de partículas encontradas dentro de una capa esférica de grosor $\Delta r$ a lo largo de los pasos de simulación analizados. El denominador normaliza este conteo utilizando el volumen real de dicha cáscara esférica y por la densidad, $\rho_{0}$.
-
-De manera complementaria al perfil de distribución, se evalúa el Número de Coordinación Acumulado, denotado como $n(r)$. Esta métrica cuantifica el número total promedio de átomos vecinos que se encuentran confinados dentro de una esfera de radio $r$ centrada en el átomo de referencia. Analíticamente, esta magnitud corresponde a la integración de la función de distribución radial, ponderada por la densidad numérica del sistema y el elemento diferencial de volumen esférico:
-
-\begin{equation}
-    n(r) = 4\pi \rho_0 \int_0^{r} g(r') r'^2 dr'
-    \label{eq:cn_integral}
-\end{equation}
-
-En consistencia con el algoritmo discretizado empleado para la Ec. \ref{eq:rdf_general}, el cálculo computacional de $n(r)$ no requiere una integración numérica compleja, sino que se obtiene mediante la suma acumulativa directa del conteo promedio de partículas por capa. Dado que el término $\langle N(r, \Delta r) \rangle$ ya representa la población promedio en cada cascarón esférico individual, el número de coordinación a una distancia $r$ queda definido por la suma de estas contribuciones desde el origen hasta el radio de corte:
-\begin{equation}
-    n(r) = \sum_{r'=0}^{r} \langle N(r', \Delta r') \rangle
-    \label{eq:cn_discreto}
-\end{equation}
-
-Esta formulación permite determinar con precisión la ocupación de las distintas esferas de solvatación, identificando la cantidad de vecinos inmediatos al evaluar $n(r)$ en los mínimos locales de $g(r)$.
-Los gráficos resultantes de las funciones de distribución radial para los sistemas \ce{[Cu(CH3OH)40]^{2+}} y \ce{[Cu(H2O)40]^{2+}}, así como su número de coordinación acumulado se presentan en la Figura \ref{fig:bases2}.
-
-
+En esta expresión, el término $\langle N(r, \Delta r) \rangle$ representa el número promedio de partículas encontradas dentro de una capa esférica de grosor $\Delta r$ a lo largo de los pasos de simulación analizados. El denominador normaliza este conteo utilizando el volumen real de dicha cáscara esférica ponderado por la densidad numérica macroscópica del disolvente, $\rho_{0}$.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%x
 
 \begin{figure}[H]
@@ -474,34 +385,3 @@ Los gráficos resultantes de las funciones de distribución radial para los sist
 
 
 \section{Función de Distribución Angular}
-
-La Función de Distribución Angular (ADF, por sus siglas en inglés) se emplea para cuantificar la disposición espacial de tripletes atómicos. Específicamente, esta métrica evalúa la probabilidad de ocurrencia de un ángulo $\theta_{ijk}$ formado entre un átomo central y sus pares adyacentes. La importancia de la ADF radica en su capacidad para revelar el entorno de coordinación y las hibridaciones presentes, ya que la posición y morfología de sus picos actúan como una huella dactilar de la geometría local del material. 
-
-Se desarrollaron algoritmos en python que evalúan iterativamente las trayectorias de dinámica molecular. El programa identifica los ligandos situados dentro de la primera esfera de solvatación, delimitada por un radio de corte $r_{cut}$  y determina el ángulo $\theta$ a partir del producto escalar entre los vectores de posición relativos $\mathbf{r}_{ij}$ y $\mathbf{r}_{ik}$, de acuerdo con la relación geométrica:
-
-\begin{equation}
-    \theta = \arccos \left( \frac{\mathbf{r}_{ij} \cdot \mathbf{r}_{ik}}{|\mathbf{r}_{ij}| |\mathbf{r}_{ik}|} \right)
-    \label{eq:angulo_adf}
-\end{equation}
-
-Posteriormente, la recolección estadística de estos valores permite la construcción de histogramas de frecuencia normalizados que, tras aplicar un suavizado numérico, revelan la función de densidad de probabilidad $P(\theta)$ característica de cada sistema. El histograma resultante está ilustrado en la Figura \ref{fig:ADF}.
-
-
-\begin{figure}[H]
-    \centering
-    
-    % Gráfica 1 (Agua)
-    \includegraphics[width=0.85\textwidth]{Imágenes/ADF-OUTPUT-CH4O.png}
-    
-    % Un pequeño espacio vertical entre las gráficas
-    \vspace{0.5cm} 
-    
-    % Gráfica 2 (Metanol)
-    \includegraphics[width=0.85\textwidth]{Imágenes/ADF-OUTPUT-H2O.png}
-
-    % --- LEYENDA ACTUALIZADA ---
-    \caption{}{Funciones de distribución angular (ADF) obtenidas para los sistemas \ce{[Cu(CH3OH)40]^{2+}} (arriba) y \ce{[Cu(H2O)40]^{2+}} (abajo) a partir de las simulaciones de dinámica molecular.}
-    \label{fig:ADF}
-\end{figure}
-
-\subsection{Análisis del sistema \ce{[Cu(H2O)40]^{2+}}}
