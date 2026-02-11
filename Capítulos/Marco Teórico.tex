@@ -208,7 +208,34 @@ El funcionamiento de este termostato depende de la hipótesis ergódica, que pos
     \label{eq:ergodic_hypothesis}
 \end{equation}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Control de Temperatura: Termostato de Cadenas de Nosé-Hoover}
 
+Para reproducir las condiciones del colectivo canónico ($NVT$) en la dinámica molecular, donde el número de partículas $N$, el volumen $V$ y la temperatura $T$ permanecen constantes, es necesario modificar las ecuaciones de movimiento newtonianas para acoplar el sistema a un reservorio térmico externo. El enfoque determinista más establecido se basa en el método de sistema extendido propuesto originalmente por Nosé y reformulado por Hoover. Este método introduce un grado de libertad adicional, una variable de fricción dinámica $\xi$, que actúa sobre las velocidades de las partículas para regular la energía cinética del sistema y mantener la temperatura promedio deseada.
+
+Sin embargo, se ha demostrado que el termostato de Nosé-Hoover original (que equivale a una cadena de longitud $M=1$) no es ergódico para sistemas pequeños, rígidos o con modos de alta frecuencia, como el oscilador armónico. En tales casos, la dinámica no logra explorar todo el espacio de fases accesible, quedando atrapada en toros cuasi-periódicos y generando distribuciones de probabilidad no canónicas (conocidos en la literatura como "huecos de Hoover" o \textit{Hoover holes}).
+
+Para resolver los problemas de ergodicidad y garantizar un muestreo canónico robusto, Martyna, Klein y Tuckerman generalizaron el método introduciendo las \textbf{Cadenas de Nosé-Hoover} (NHC, por sus siglas en inglés). En este esquema, el termostato original que interactúa con las partículas del sistema es, a su vez, termostatado por un segundo termostato, y este por un tercero, formando una cadena de $M$ osciladores acoplados. Este mecanismo fuerza fluctuaciones en las variables del control térmico, rompiendo las trayectorias regulares y restaurando la ergodicidad.
+
+En este trabajo se emplea una cadena de longitud $M=4$. Las ecuaciones de movimiento para un sistema de $N$ partículas con coordenadas $\mathbf{r}_i$, momentos $\mathbf{p}_i$ y masas $m_i$, acoplado a una cadena de termostatos con variables $\xi_k$ y momentos asociados $p_{\xi_k}$, se definen como:
+
+\begin{align}
+\dot{\mathbf{r}}_i &= \frac{\mathbf{p}_i}{m_i} \\
+\dot{\mathbf{p}}_i &= \mathbf{F}_i(\mathbf{r}) - \frac{p_{\xi_1}}{Q_1}\mathbf{p}_i \\
+\dot{\xi}_k &= \frac{p_{\xi_k}}{Q_k}, \quad k = 1, \dots, M
+\end{align}
+
+La evolución de los momentos de los termostatos está acoplada jerárquicamente:
+
+\begin{align}
+\dot{p}_{\xi_1} &= \left[ \sum_{i=1}^N \frac{\mathbf{p}_i^2}{m_i} - N_f k_B T \right] - \frac{p_{\xi_2}}{Q_2} p_{\xi_1} \\
+\dot{p}_{\xi_k} &= \left[ \frac{p_{\xi_{k-1}}^2}{Q_{k-1}} - k_B T \right] - \frac{p_{\xi_{k+1}}}{Q_{k+1}} p_{\xi_k}, \quad k = 2, \dots, M-1 \\
+\dot{p}_{\xi_M} &= \left[ \frac{p_{\xi_{M-1}}^2}{Q_{M-1}} - k_B T \right]
+\end{align}
+
+donde $N_f$ son los grados de libertad físicos, $k_B$ es la constante de Boltzmann y $Q_k$ son las masas inerciales ficticias de los termostatos, elegidas típicamente para resonar con las frecuencias características del sistema. La elección de $M=4$ asegura una disipación eficiente de las oscilaciones de energía y una convergencia estricta a la distribución canónica, incluso en sistemas con dinámicas patológicas o condiciones iniciales alejadas del equilibrio.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Dinámica molecular ab initio}
 
