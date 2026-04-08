@@ -373,7 +373,7 @@ En esta fase de calibración, se analizó la coherencia en las tendencias energ�
     \includegraphics[width=0.85\textwidth]{Imágenes/bases_metanol.png}
 
     % --- LEYENDA ACTUALIZADA ---
-    \caption[Energías de enlace por molécula de solvente \ce{[Cu(H2O)_{n}]^{2+}} y \ce{[Cu(CH3OH)_{n}]^{2+}}]{Energías de enlace por molécula de solvente calculada para las estructuras de solvatación óptimas de \ce{[Cu(H2O)_{n}]^{2+}} (arriba) y \ce{[Cu(CH3OH)_{n}]^{2+}} (abajo), con $n = 1,\ 2,\ \ldots,\ 10,\ 30,\ 40$, mediante cálculos de optimización con los niveles de teoría 6-31G$^\ast$, 6-31+G$^\ast$ y 6-31++G$^{\ast\ast}$. Resultados obtenidos con MP2 \cite{Me-2022-01} y validación de M06-2X respecto a MP2 \cite{Me-2023-01}. Las energías reportadas para $n=30$ y $n=40$ no corresponden a mínimos globales pues el cálculo para cúmulos de este tamaño conlleva una complejidad que excede el alcance de la presente tesis.}
+    \caption[Energías de enlace por molécula de solvente \ce{[Cu(H2O)_{n}]^{2+}} \ce{[Cu(CH3OH)_{n}]^{2+}}]{Energías de enlace por molécula de solvente calculada para las estructuras de solvatación óptimas de \ce{[Cu(H2O)_{n}]^{2+}} (arriba) y \ce{[Cu(CH3OH)_{n}]^{2+}} (abajo), con $n = 1,\ 2,\ \ldots,\ 10,\ 30,\ 40$, mediante cálculos de optimización con los niveles de teoría 6-31G$^\ast$, 6-31+G$^\ast$ y 6-31++G$^{\ast\ast}$. Resultados obtenidos con MP2 \cite{Me-2022-01} y validación de M06-2X respecto a MP2 \cite{Me-2023-01}. Las energías reportadas para $n=30$ y $n=40$ no corresponden a mínimos globales pues el cálculo para cúmulos de este tamaño conlleva una complejidad que excede el alcance de la presente tesis.}
     \label{fig:bases}
 \end{figure}
 
@@ -674,7 +674,7 @@ El análisis estructural de este sistema se realizó a partir de la trayectoria 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.95\textwidth]{Imágenes/RDF-OUTPUT-HISTOGRAMA-AGUA.png}
-    \caption[RDF para \ce{[Cu(H2O)40]^{2+}}]{Función de distribución radial (RDF) obtenida para el sistema \ce{[Cu(H2O)40]^{2+}} a partir de la simulación de dinámica molecular.}
+    \caption[RDF para el cúmulo \ce{[Cu(H2O)40]^{2+}}]{Función de distribución radial (RDF) obtenida para el sistema \ce{[Cu(H2O)40]^{2+}} a partir de la simulación de dinámica molecular.}
     \label{fig:rdf_agua}
 \end{figure}
 
@@ -699,7 +699,7 @@ Adicionalmente, es posible calcular la distribución del número de coordinació
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.6\textwidth]{Imágenes/nc_distribution_agua.png}
-    \caption{Frecuencia del número de coordinación del ion obtenida a partir de la trayectoria (60\,391 frames, $r = 2.833$~\AA).}
+    \caption[Frecuencia del número de coordinación para \ce{[Cu(H2O)40]^{2+}}]{Frecuencia del número de coordinación del ion obtenida a partir de la trayectoria (60\,391 frames, $r = 2.833$~\AA).}
     \label{fig:nc_distribution_water}
 \end{figure}
 
@@ -774,8 +774,7 @@ De esta inspección se desprende que la geometría fluctúa de manera continua e
         \text{OD}
     \end{minipage}
 
-    \caption[Geometrías representativas de la primera esfera de coordinación en
-    \ce{[Cu(H2O)_{40}]^{2+}}]{Geometrías representativas observadas en la primera esfera de
+    \caption[Geometrías representativas de la primera esfera, \ce{[Cu(H2O)_{40}]^{2+}}]{Geometrías representativas observadas en la primera esfera de
     coordinación del sistema \ce{[Cu(H2O)_{40}]^{2+}} extraídas de la simulación. Filas
     superior e intermedia: cada geometría representada en el cúmulo completo de 40 moléculas;
     fila inferior: primera esfera de coordinación aislada. Las geometrías predominantes son la
@@ -815,7 +814,7 @@ En total, 19 de los 40 oxígenos residieron en la primera esfera de coordinació
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.95\textwidth]{Imágenes/distancias_panoramica.png}
-    \caption[Evolución de distancias \ce{Cu-O} — moléculas protagonistas]{
+    \caption[Evolución de distancias \ce{Cu^{2+}}--O para \ce{[Cu(H2O)_{40}]^{2+}}]{
         Evolución temporal de las distancias \ce{Cu^{2+}}--O para las 8 moléculas
         de agua que presentaron los eventos de intercambio o trayectorias de mayor
         interés dinámico durante la réplica A del sistema \ce{[Cu(H2O)_{40}]^{2+}}.
@@ -864,7 +863,7 @@ El análisis sigue la misma metodología descrita para el cúmulo de agua y, con
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.95\textwidth]{Imágenes/RDF-OUTPUT-HISTOGRAMA-METANOL.png}
-    \caption[RDF para \ce{[Cu(CH3OH)40]^{2+}}]{Función de distribución radial (RDF) obtenida para el sistema \ce{[Cu(CH3OH)40]^{2+}} a partir de la simulación de dinámica molecular.}
+    \caption[RDF para cúmulo \ce{[Cu(CH3OH)40]^{2+}}]{Función de distribución radial (RDF) obtenida para el sistema \ce{[Cu(CH3OH)40]^{2+}} a partir de la simulación de dinámica molecular.}
     \label{fig:rdf_metanol}
 \end{figure}
 
@@ -902,7 +901,7 @@ Adicionalmente, se muestra el histograma del número de coordinación a lo largo
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{Imágenes/nc_distribution_metanol.png}
-    \caption{Frecuencia del número de coordinación del ion obtenida a partir de la trayectoria (68\,073 frames, $r = 3.023$~\AA).}
+    \caption[Frecuencia del número de coordinación de \ce{[Cu(CH3OH)40]^{2+}}]{Frecuencia del número de coordinación del ion obtenida a partir de la trayectoria (68\,073 frames, $r = 3.023$~\AA).}
     \label{fig:nc_distribution_methanol}
 \end{figure}
 
@@ -914,7 +913,7 @@ La ADF obtenida para el sistema \ce{[Cu(CH3OH)_{40}]^{2+}} se muestra en la Figu
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.95\textwidth]{Imágenes/ADF-OUTPUT-CH4O.png}
-    \caption[ADF para \ce{[Cu(CH3OH)40]^{2+}}]{Función de distribución angular (ADF) obtenida para el sistema \ce{[Cu(CH3OH)40]^{2+}} a partir de la simulación de dinámica molecular.}
+    \caption[ADF para el cúmulo \ce{[Cu(CH3OH)40]^{2+}}]{Función de distribución angular (ADF) obtenida para el sistema \ce{[Cu(CH3OH)40]^{2+}} a partir de la simulación de dinámica molecular.}
     \label{fig:adf_metanol}
 \end{figure}
 
@@ -975,8 +974,7 @@ Las geometrías representativas de la primera esfera de coordinación, identific
         \text{OD}
     \end{minipage}
 
-    \caption[Geometrías representativas de la primera esfera de coordinación en
-    \ce{[Cu(CH3OH)_{40}]^{2+}}]{Geometrías representativas observadas en la primera esfera de
+    \caption[Geometrías representativas de la primera esfera, \ce{[Cu(CH3OH)_{40}]^{2+}}]{Geometrías representativas observadas en la primera esfera de
     coordinación del sistema \ce{[Cu(CH3OH)_{40}]^{2+}} extraídas de la simulación. Filas
     superior e intermedia: cada geometría representada en el cúmulo completo de 40 moléculas;
     fila inferior: primera esfera de coordinación aislada. Las geometrías predominantes son la
@@ -1008,7 +1006,7 @@ El seguimiento temporal de las distancias \ce{Cu^{2+}}--O revela que 15 de los 4
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.95\textwidth]{Imágenes/distancias_panoramica_metanol.png}
-    \caption[Evolución de distancias \ce{Cu-O} — sistema \ce{[Cu(CH3OH)40]^{2+}}]{Evolución temporal de las distancias \ce{Cu^{2+}}--O para las 9 moléculas de metanol de mayor interés en el cúmulo \ce{[Cu(CH3OH)_{40}]^{2+}}. La línea punteada indica el radio de corte $r_\text{corte} = 3.023$~\AA.}
+    \caption[Evolución de distancias \ce{Cu^{2+}}--O en \ce{[Cu(CH3OH)40]^{2+}}]{Evolución temporal de las distancias \ce{Cu^{2+}}--O para las 9 moléculas de metanol de mayor interés en el cúmulo \ce{[Cu(CH3OH)_{40}]^{2+}}. La línea punteada indica el radio de corte $r_\text{corte} = 3.023$~\AA.}
     \label{fig:distancias_panoramica_metanol}
 \end{figure}
 
