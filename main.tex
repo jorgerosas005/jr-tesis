@@ -4,13 +4,13 @@
 \usepackage[utf8]{inputenc}                                           % Codificación de caracteres
 \usepackage[T1]{fontenc}                                              % Codificación de salida
 \usepackage[spanish,es-nodecimaldot,es-tabla]{babel}                  % Idioma español
-\usepackage{graphicx}                                                 % Para insertar imágenes
+\usepackage{graphicx}  
+\usepackage{grffile}                                                % Para insertar imágenes
 \usepackage[top=1in, left=0.9in, right=1.25in, bottom=1in]{geometry}  % Márgenes
-\usepackage{tikz}                                                     % Para crear gráficos
 \usepackage{tocloft}                                                  % Para personalizar la tabla de contenido
 \usepackage{setspace}                                                 % Para el interlineado
 %\usepackage[backend=biber,style=numeric, sorting=none, doi=false, url=false]{biblatex}                    % Para la bibliografía
-\usepackage[backend=biber, style=nature, doi=false, url=false]{biblatex}
+\usepackage[backend=biber, style=nature, doi=true, url=false, maxbibnames=10]{biblatex}
 \usepackage{csquotes}                                                 % Para citas bibliográficas
 \usepackage{amsmath}                                                  % Para ecuaciones matemáticas
 \usepackage{amsfonts}
@@ -101,11 +101,14 @@
         \listoffigures
 
     \mainmatter % Páginas principales
-        %\include{Capítulos/Introducción}
-        %\include{Capítulos/Antecedentes}
+        \include{Capítulos/Introducción}
+        \include{Capítulos/Antecedentes}
         \include{Capítulos/Marco Teórico}
-        %\include{Capítulos/DFT}
-        %\include{Capítulos/Resultados}
+        \include{Capítulos/Resultados}
+
+        \appendix
+        \include{Capítulos/Apendice_BO}
+
     % Bibliografía
     \printbibliography
     \backmatter

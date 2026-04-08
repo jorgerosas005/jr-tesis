@@ -1,0 +1,183 @@
+Voy a responder las preguntas en formato lluvia de ideas y me dices si es buena idea ponerlo o no. o incluso pintarlo de forma estratégica para que suene mejor.
+
+P1: ¿Qué problema específico en ingeniería de procesos te motiva a investigar?
+Durante la carrera me apasioné por las materias de Balance de materia y energía, Diseño de procesos y Taller de problemas. También por Din´'amica y control de procesos pero lamentablemente nome pude meter tan de lleno porque se cruzó la pandemia. La resolución de los problemas académicos me quitaba el sueño por lo interesante que se ponía programarlo en excel (como me hubieragustado hacerlo en python!) También me gusto mucho el laboratorio de IQ dos porque nos pidieron hacer un programa de simulación muy básico.
+Ahoram, en mi experiencia profesional la actividad que más me gustó fue la identificación de circuitos y unidades de control (líneas y equipos) para SIMECELE en Diagramas de flujo de proceso y DTIS. Para poder hacerlo necesitábamos consultar Balances de materia de la planta, filosofía del proceso, entender el por qué de la existencia de las líneas, (si eran auxiliares, de arranque, de proceso, de servicios). Aquí fue donde usé más mi criterio de Ingeniero. igualmente la actividad me la llevaba a casa no por querer trabajar gratis si no porque quería hacerlo bien. 
+
+Ahora qué problema en especifico? no lo sé, creo que los que me han llamado la atención: Proceso de Haber Bosh, Captura directa de CO2 y en general los procesos que vayan a desarrollarse con un enfoque energético verde basados en hidrógeno. Sé que la industris de hidrocarburos tarde o temprano tendrá que migrar a los procesos verdes. Por decir algo. 
+
+P2: ¿Por qué maestría específicamente? ¿Por qué no trabajar directamente o hacer certificaciones?
+Me gusta trabajar, pero creo que con un titulo de licenciatura estás más en roles operativos sin tanta responsabilidad técnica. Aspiras a tener responsabilidades corporativas pero francamente no me veo dirigiriendo personal y recursos. Me imagino mas como a un doctor que va a operar a corazón abierto. El director del hospital no podría hacerlo igual de bien. y nopor eso el doctor gana menos. Es operativo si pero con alto impacto. 
+Para hacer algo así necesito de pérdida un par de grados más. Certificaciones no me llevarían a lo mismo. Además este año que estuve trabajando en dinámica molecular me di cuenta de que disfruto más hacer investigaciónque estar respondiendo ordenes y correos. tienen lo suyo pero siento que soy alguien que disfruta mucho las cosas teóricas y echar a volar su cerebro, no el mundo cruel de afuera, donde hay consultoría negra, corrupción, explotación, nepotismo etc. 
+
+P3: ¿Por qué ESTA maestría en la UNAM y no otra?
+La verdad porque la unam es TOP en méxico jaja. No me gustaría nombrar profesores aún ni líneas de investigación. 
+
+P4: ¿Qué experiencia previa te preparó para investigación?
+
+Un año y medio en la industria, trabajando con DFPs, DTIs, Diagraas técnicos de inspección, experiencia enplanta con levantamientos As Built. en la Refinería de Madero, CPG Cactus y Ciudad Pemex. Experiencia en proyectos de implentacipon SIMECELE (no en campo) pero si con plantas como Hisdrodesulfuradoras de naftas, ULSG, FCC, Combinadas (destilación al vacio y a presión atomosferica), CCR entre otros centros más de PEMEX logística. 
+
+Y en cuanto a investigación Tengo un año en el proyecto de Dinamica molecular (BOMD) para el estudio de la solvatación del Cu2+ en medios polares como el agua y metanol. Te describo las actividades:
+Para alcanzar los objetivos propuestos, se llevo a cabo un plan de trabajo que abarc ´ o desde la capacitaci ´ on ´
+teorica hasta la divulgaci ´ on de resultados. Las actividades realizadas se resumen a continuaci ´ on: ´
+1. Capacitacion Te ´ orico-Pr ´ actica: ´ Se realizo una investigaci ´ on bibliogr ´ afica exhaustiva sobre la re- ´
+levancia del ion Cu2+ y los antecedentes de su estudio en disolucion acuosa y metan ´ olica. Se ad- ´
+quirieron conocimientos fundamentales en mecanica cu ´ antica, din ´ amica molecular y Teor ´ ´ıa de los
+1Funcionales de la Densidad (DFT) [6], as´ı como competencias practicas en programaci ´ on con For- ´
+tran y Python para el analisis de datos, y en el manejo del sistema operativo Linux y la l ´ ´ınea de
+comandos para la gestion de c ´ alculos. ´
+2. Simulacion Computacional de Sistemas Moleculares: ´ Se ejecutaron simulaciones de dinamica ´
+molecular Born-Oppenheimer para los sistemas [Cu(H2O)40]2+ y [Cu(CH3OH)40]2+. Para ello se
+empleo el software ORCA v6.1 [7] en un entorno de c ´ omputo de alto rendimiento, utilizando ´
+tanto la supercomputadora Miztli (UNAM) como equipos de computo locales. Esta labor incluy ´ o´
+la supervision activa de la convergencia y estabilidad de las simulaciones en todas las plataformas ´
+utilizadas.
+3. Analisis Estructural y de Resultados: ´ Se desarrollaron herramientas computacionales en Fortran
+y Python para el post-procesamiento de las trayectorias de dinamica molecular. Estas herramientas ´
+permitieron el calculo de par ´ ametros estructurales y energ ´ eticos clave, tales como la funci ´ on de ´
+distribucion radial (RDF), la funci ´ on de distribuci ´ on angular (ADF), el n ´ umero de coordinaci ´ on y ´
+la energ´ıa de solvatacion por mol ´ ecula. ´
+4. Comunicacion y Divulgaci ´ on Cient ´ ´ıfica: Se elaboraron informes tecnicos peri ´ odicos y se presen- ´
+taron seminarios internos para comunicar los avances del proyecto. Adicionalmente, se disen˜o un ´
+cartel de divulgacion cient ´ ´ıfica que se presentara en los siguientes eventos acad ´ emicos: ´
+D´ıa de puertas abiertas: Organizado por el departamento de matematicas de la Facultad de ´
+Qu´ımica en conjunto con el Departamento de F´ısica y Qu´ımica Teorica el d ´ ´ıa 29 de Agosto
+del 2025
+Congreso Internacional de Supercomputo: ´ Organizado por la UNAM el d´ıa 05 de Septiembre del 2025.
+
+P5. ¿Qué habilidades tienes que te diferencian de otros candidatos?
+Se usar AutoCAD, Python, Linux, Fortan, un poco de Julia, Git, Latex, he usado APIs de Google y Open AI para mis scripts, Hice mi estancia académica modelando un proceso de despolimerización del PET usando herramientas en python y usando ASpen Plus. Excel avanzado con BVA también he llegado a hacer unpar de proyectos. 
+
+P7: ¿Qué tema general de tesis te interesa explorar?
+
+No tengo el tema exacto pero me interesa mucho meterme de lleno a el área de aplicación de herramientas estadísticas como el machine learning, IA o anális de Datos en el desarrollo de la Ingeniería Química. (Diseño de experimentos, optimización de procesos etc.) Quiero ser un ingeniero quimico de procesos que estpé a la vanguardia en la aplicación de estasherramienta. 
+
+P8: ¿Cómo se relaciona este tema con tu experiencia previa?
+
+En la industria estuve prácticamente alimentando una base de datos de espesores para su control estádistico con objeto de asegurar la integridad mecánica de 
+las líneas y equipos (el alcance son tosas las tuberías de proceso y equipos de PEMEX e incluso de  centros privados). El director incluso buscaba una forma de automatizar la creación de los diagramas de inspección. Este es un ejemplo de cómo la Ingeniería Química/mecánica está caminado a el manejo de datos masivos y la implenetación de Inteligencia Artificial. 
+
+Además, mi tesis fue practicamente analizar 60 ps de dinámica molecular que equivale a más de 125 mil pasos de simulación, aprox 23 millones de vectores de posición (x,y,z) que se obtubvieron en 212 días de computo en equipos de alto rendimiento incluido la supercomputadora de la UNAM Miztli. todo para analizar un fenómeno químico como la solvatación de un ión metálico Cu2+ enmedios polares. Todo analizado con scripts de fortran y python en linux. 
+
+No se relaciona tanto el tema pero si para hacer incapie en el tinte que busco darle a mi carrera profesional en el área de procesos. 
+
+P9: ¿Qué harás DESPUÉS de la maestría?
+
+Mi intención es ejercer mi profesión en Industria con rol técnico avanzad o realizar un doctorado y a largo plazo un Emprendimiento tecnológico
+
+----------------------------------------------------------------
+
+Respondi las preguntas, ayúdame a darle el mejor enfoque. El problema es queno tengo tan claro ni los profesores ni las líneas de investigación, solo tengo claro que quiero profundizar en los conocimientos que ofrece el programa de estudio del area de procesos. Casi que quiero estar en miles de proyectos a largo plazo qpero que se basen en eso, entonces nome importa tanto con qué aplicación empiece. Sin embargo aquí está la lista de profesores. No estpy seguro d eponerlos o no, lo dejo a tu consideración según la convocatoria. 
+
+
+M. A. Fernando José Baez Ramos
+
+Proyectos industriales
+Economía de empresas
+Desarrollo de nuevos proyectos
+Dr. José Fernando Barragán Aroche
+
+Análisis y desarrollo de modelos para predicción de propiedades termodinámicas y mecánicas de materiales
+Uso eficiente de materiales y energía en procesos
+Recuperación mejorada de crudo
+Dr. Luís Cedeño Caero
+
+Ingeniería de reactores
+Procesos para desulfuración
+Catálisis heterogénea
+Cinética catalítica
+Síntesis y caracterización de catalizadores
+Dr. Ángel Enrique Chávez Castellanos
+
+Reología de polímeros y dinámica de fluidos viscoelásticos
+Dr. Modesto Javier Cruz Gómez
+
+Química de los Procesos Industriales y Poliméricos
+Reciclaje y Biodegradación de Polímeros
+Seguridad Industrial aplicado a la Industria Química, Petroquímica y de Refinación del Petróleo
+Dr. Rogelio Cuevas García
+
+Desarrollo de catalizadores heterogéneos, síntesis de nuevos materiales catalíticos
+Dra. María del Carmen Durán Domínguez
+
+Tratamiento bioquímico y fotocatalítico de aguas residuales
+Desarrollo de tecnologías más limpias para la industria de proceso de alimentos y biotecnológicas
+Efectos de aditivos y sustancias extrañas a los alimentos y bebida
+Reaprovechamiento de subproductos de las industrias químicas
+Empleo de herramientas como la auditoría ambiental para mejorar la calidad global de los procesos
+Dr. Alfonso Durán Moreno
+
+Tratamiento de aguas residuales municipales e industriales con procesos biológicos y electroquímicos
+Producción de biocombustibles
+Digestión anaerobia de residuos sólidos orgánicos
+Producción de Arthospira máxima y extracción de ficobiliproteínas
+M. en C. Rolando Salvador García Gómez
+
+Dr. Francisco Javier Garfias Vásquez
+
+Electroquímica Inorgánica y Procesos Electroquímicos
+M. I. Margarita Rosa Garfias Vázquez
+
+Dra. Aída Gutiérrez Alejandre
+
+Síntesis, Caracterización y Evaluación catalítica de catalizadores para hidrotratamiento
+Dr. Martín Guillermo Hernández Luna
+
+Desarrollo de procesos de biorefinación de materiales lignocelulósicos
+Dra. Tatiana Klimova Berestneva
+
+Desarrollo de nuevos materiales nanoestructurados en 1, 2 y 3 D para diferentes aplicaciones catalíticas
+Catálisis con nanopartículas soportadas (hidrogenación, hidrodesoxigenación, hidrodesulfuración, síntesis orgánica)
+Fotocatálisis
+Biocombustibles renovables y sustentables
+Simón López Ramírez
+
+Desarrollo de procesos de recuperación mejorada de hidrocarburos
+Diseño de productos químicos
+Fisicoquímica de hidrocarburos
+Fenómenos de superficie
+Fenómenos de transporte
+Dr. Francisco López Serrano Ramos
+
+Entendimiento de los fenómenos que ocurren en los sistemas reaccionantes de polimerización
+
+Modelado matemático
+Reactores
+Polimerización en emulsión y microemulsión
+Celestino Montiel Maldonado
+
+Dr. Jorge Fernando Ramírez Solís
+
+Desarrollo de catalizadores heterogéneos
+Síntesis de nuevos materiales catalíticos
+Modelamiento de reactores
+Dr. Pedro Roquero Tejeda
+
+Catálisis, Ingeniería de Procesos y Procesos Electroquímicos
+Dr. José Sabino Sámano Castillo
+
+Ingeniería y Administración de Proyectos
+Dr. Eduardo Vivaldo Lima
+
+Ingeniería en reacciones de polimerización:
+
+Polimerización radicálica controlada
+Polimerización en dióxido de carbono supercrítico
+Procesos de polimerización en fase dispersa (suspensión, dispersión y emulsión)
+Formación de redes poliméricas
+Extrusión reactiva
+Polimerización activada con microondas
+Simulación de procesos de polimerización
+
+
+
+
+
+mi dedicación es 100% tiempo completo
+No estoy convencido de mencionar una línea de investigación ahorita, no quiero echarme la soga al cuello tampoco 
+Ya hable con coordinación, puedo entregar el acta en junio pero haré una carta de compromiso a parte (titularme) 
+
+
+
+
+

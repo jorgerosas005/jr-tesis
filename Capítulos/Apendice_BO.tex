@@ -1,0 +1,111 @@
+\chapter{Derivación de la aproximación de Born-Oppenheimer}
+\label{app:derivacion_bo}
+
+Consideremos un sistema molecular compuesto por $M$ núcleos y $N$ electrones. Los núcleos están descritos por sus coordenadas $\mathbf{R}$ y sus masas $M$ y los electrones por sus coordenadas $\mathbf{r}$ y masas $m$. El objetivo principal es resolver la ecuación de Schrödinger independiente del tiempo
+\begin{equation}
+    \hat{H} \Psi = E \Psi,
+    \label{eq:schrodinger_independiente_tiempo}
+\end{equation}
+en donde el Hamiltoniano no relativista del sistema está dado por:
+\begin{equation}
+\begin{split}
+    \hat{H} &= - \sum_{I=1}^{M} \frac{\hbar^2}{2M_I} \nabla^2_I
+       - \sum_{i=1}^{N} \frac{\hbar^2}{2m_e} \nabla^2_i 
+       - \frac{1}{4\pi\varepsilon_0} \sum_{i=1}^{N} \sum_{I=1}^{M} \frac{Z_I e^2}{\left| \mathbf{R}_I - \mathbf{r}_i \right|} \\
+      &\quad + \frac{1}{4\pi\varepsilon_0} \sum_{I=1}^{M} \sum_{J>I}^M \frac{Z_I Z_J e^2}{\left| \mathbf{R}_J  - \mathbf{R}_I \right|} 
+      + \frac{1}{4\pi\varepsilon_0} \sum_{i=1}^{N} \sum_{j>i}^{N} \frac{e^2}{\left| \mathbf{r}_i - \mathbf{r}_j \right|}. 
+\end{split}
+\label{eq:hamiltoniano_completo}
+\end{equation}
+Para simplificar la ecuación \ref{eq:hamiltoniano_completo} se puede escribir en unidades atómicas donde $\hbar = e = m_e = 4\pi\varepsilon_0 = 1$. Así, el Hamiltoniano se expresa como:
+\begin{equation} \label{eq:hamiltoniano_au}
+\begin{split}
+    \hat{H} = & - \sum_{I=1}^{M} \frac{1}{2M_I} \nabla^2_I - \sum_{i=1}^{N} \frac{1}{2} \nabla^2_i - \sum_{i=1}^{N} \sum_{I=1}^{M} \frac{Z_I}{|\mathbf{R}_I - \mathbf{r}_i|} \\
+    & + \sum_{I=1}^{M} \sum_{J>I}^{M} \frac{Z_I Z_J}{|\mathbf{R}_J - \mathbf{R}_I|} + \sum_{i=1}^{N} \sum_{j>i}^{N} \frac{1}{|\mathbf{r}_i - \mathbf{r}_j|} \\
+    = & \hat{T}_N + \hat{T}_e + \hat{V}_{Ne} + \hat{V}_{NN} + \hat{V}_{ee}
+\end{split}
+\end{equation}
+donde $\hat{T}_N$ y $\hat{T}_e$ son los operadores de energía cinética nuclear y electrónica; $V_{Ne}$ es el potencial de atracción núcleo-electrón; $V_{ee}$ es el potencial de repulsión electrón-electrón; y $V_{NN}$ es el potencial de repulsión núcleo-núcleo.
+
+El Hamiltoniano total (ecuación \ref{eq:hamiltoniano_au}) se puede reagrupar como $\hat{H} = \hat{T}_N + \hat{H}_e$, donde $\hat{H}_e$ se define como el Hamiltoniano electrónico:
+\begin{equation}
+\hat{H}_e = \hat{T}_e + \hat{V}_{Ne} + \hat{V}_{ee} + \hat{V}_{NN}
+\label{eq:hamiltoniano_electronico_res}
+\end{equation}
+Este operador depende paramétricamente de las coordenadas nucleares $\mathbf{R}$. La aproximación inicia resolviendo la ecuación de Schrödinger electrónica para una geometría nuclear fija:
+\begin{equation} 
+    \hat{H}_e\left(\{\mathbf{r}\}; \{\mathbf{R}\}\right) \Psi_k = E_k \Psi_k\left(\{\mathbf{r}\}; \{\mathbf{R}\}\right), 
+    \label{eq:schrodinger_electronica_res}
+\end{equation}
+donde los eigenvalores $E_k(\mathbf{R})$ definen la $k$-ésima Superficie de Energía Potencial.
+La función de onda molecular total $\Psi_{tot}$ se puede expandir de forma exacta en la base completa de las eigenfunciones electrónicas $\Psi_k$:
+\begin{equation}
+\Psi_{tot}(\mathbf{R}, \mathbf{r}) = \sum_{k=1}^{\infty} \Psi_{Nk}(\mathbf{R}) \Psi_k(\mathbf{r}, \mathbf{R})
+\label{eq:ansatz_BO_res}
+\end{equation}
+donde los coeficientes $\Psi_{Nk}(\mathbf{R})$ son las funciones de onda nucleares.
+Al sustituir el ansatz en la ecuación de Schrödinger
+\begin{equation}
+    \sum_{k=1}^{\infty} (\hat{T}_N + \hat{H}_e) \Psi_{Nk} \Psi_k = E \sum_{k=1}^{\infty} \Psi_{Nk} \Psi_k 
+    \label{eq:schrodinger_total_res}
+\end{equation}
+\begin{equation}
+    \sum_{k=1}^{\infty} \left( -\sum_{I=1}^{M} \frac{1}{2M_I} \nabla^2_I \Psi_{Nk} \Psi_k + \hat{H}_e \Psi_{Nk} \Psi_k \right) = E \sum_{k=1}^{\infty} \Psi_{Nk} \Psi_k
+    \label{eq:schrodinger_total_res_2}
+\end{equation}
+la acción del operador de energía cinética nuclear ($\nabla^2_I$) sobre  $\Psi_{Nk} \Psi_k$ debe desarrollarse mediante la regla de la cadena, generando términos de derivadas cruzadas:
+\begin{equation}
+    \begin{split}
+        \sum_{k=1}^{\infty} \left\{ -\sum_{I=1}^{M} \frac{1}{2M_I} \left[ \Psi_k \nabla^2_I \Psi_{Nk} + 2(\nabla_I \Psi_k)(\nabla_I \Psi_{Nk}) + \Psi_{Nk} (\nabla^2_I \Psi_k) \right] \right\} + \\ \hat{H}_e \Psi_{Nk} \Psi_k = E \sum_{k=1}^{\infty} \Psi_{Nk} \Psi_k 
+    \end{split}
+    \label{eq:energia}
+\end{equation}
+Para aislar la ecuación nuclear del estado $j$, se proyecta sobre el estado electrónico $\Psi_j^*$ y se integra sobre las coordenadas electrónicas. Aprovechando la ortonormalidad de la base ($\langle \Psi_j | \Psi_k \rangle = \delta_{jk}$), se obtiene el sistema de ecuaciones acopladas:
+\begin{equation}
+    \begin{split}
+        -\sum_{A=1}^{M} \frac{1}{2M_A} \left( \nabla^2_A \Psi_{Nj} + \sum_{k=1}^{\infty} \left[ 2 \langle \Psi_j | \nabla_A |\Psi_k \rangle \left( \nabla_A \Psi_{Nk} \right) +  \langle \Psi_j | \nabla^2_A |\Psi_k \rangle \Psi_{Nk} \right] \right) + \\ E_j \Psi_{Nj} = E \Psi_{Nj}
+    \end{split}
+    \label{eq:schrodinger_nuclear_acoplada_res}
+\end{equation}
+donde los términos entre corchetes son los términos no adiabáticos de primer y segundo orden que mezclan los estados electrónicos debido al movimiento nuclear. La Aproximación de Born-Oppenheimer consiste en despreciar estos términos de acoplamiento basándose en la premisa de que el movimiento electrónico es casi instantáneo en comparación con el desplazamiento nuclear. Las contribuciones no adiabáticas son, de hecho, muy pequeñas. Cálculos realizados para sistemas de referencia, como la molécula de hidrógeno ($H_2$), indican que el error introducido al ignorar estos términos es del orden de $10^{-4}$ unidades atómicas \cite{jensen2017introduction}. Esta suposición desacopla el sistema, simplificando el problema a la ecuación de Schrödinger nuclear independiente para cada estado $j$:
+\begin{equation}
+\left[ -\sum_{I=1}^{M} \frac{1}{2M_I} \nabla^2_I + E_j(\mathbf{R}) \right] \Psi_{Nj}(\mathbf{R}) = E \Psi_{Nj}(\mathbf{R})
+\label{eq:schrodinger_nuclear_res}
+\end{equation}
+Así, el movimiento nuclear (gobernado por $\hat{T}_N = -\sum_{I=1}^M \frac{1}{2M_I} \nabla^2_I$) se describe sobre una única PES, $E_j(\mathbf{R})$, que actúa como el potencial efectivo generado por los electrones.
+
+\subsubsection{Tratamiento semiclásico de los núcleos}
+
+Dado que los núcleos son partículas de naturaleza cuántica, es necesario justificar su tratamiento con una aproximación semiclásica dentro del marco de la dinámica molecular de Born-Oppenheimer. Para ello, se puede seguir una ruta conocida para extraer las ecuaciones clásicas de movimiento a partir de la mecánica cuántica, reescribiendo la función de onda con el siguiente ansatz: 
+\begin{equation}
+    \Psi_{Nk}(\{\mathbf{R}_I\};t) = B_k(\{\mathbf{R}_I\};t) \exp[iS_k(\{\mathbf{R}_I\};t)/\hbar]
+    \label{eq:ansatz_semiclasico} 
+\end{equation}
+donde $B_k(\{\mathbf{R}_I\};t)$ y $S_k(\{\mathbf{R}_I\};t)$ son funciones reales y positivas que representan la amplitud y la fase de la función de onda nuclear, respectivamente.
+Al sustituir este ansatz en la ecuación de Schrödinger dependiente del tiempo y realizar la separación de las componentes real e imaginaria, se obtienen dos ecuaciones acopladas que gobiernan la evolución de la amplitud y la fase de manera independiente. Tras aplicar el operador Laplaciano, las ecuaciones resultantes son:
+\begin{equation}
+    \frac{\partial S_k}{\partial t} + \sum_I \frac{1}{2M_I}(\nabla_I S_k)^2 + E_k = \hbar^2 \sum_I \frac{1}{2M_I} \frac{\nabla_I^2 B_k}{B_k}
+    \label{eq:fase} 
+\end{equation}
+\begin{equation}
+    \frac{\partial B_k}{\partial t} + \sum_I \frac{1}{M_I}(\nabla_I B_k)(\nabla_I S_k) + \sum_I \frac{1}{2M_I} B_k (\nabla_I^2 S_k) = 0
+    \label{eq:amplitud} 
+\end{equation}
+La ecuación para la amplitud, ec. \eqref{eq:amplitud} describe la evolución temporal de la amplitud ($B_k$) de la función de onda. Al ser multiplicada por un factor de $2B_k$, puede ser reexpresada de forma compacta como una ecuación de continuidad:
+\begin{equation}
+    \frac{\partial B_k^2}{\partial t} + \sum_A \frac{1}{M_I} \nabla_I(B_k^2 \nabla_I S_k) = 0
+    \label{eq:continuidad_reescrita} 
+\end{equation}
+Esta forma es análoga a la ecuación de continuidad general $\frac{\partial \rho_k}{\partial t} + \nabla \cdot \mathbf{J}_k = 0$, donde la densidad de probabilidad se define como $\rho_k = |\Psi_{Nk}|^2 = B_k^2$ y la corriente de probabilidad es $\mathbf{J}_{k,I} = B_k^2(\nabla_I S_k)/M_I$. Esto garantiza la conservación de la densidad de probabilidad del núcleo. 
+
+Por otro lado, la ecuación \eqref{eq:fase} describe la evolución temporal de la fase $S_k$ de la función de onda. El término en el lado derecho es a menudo denominado ''potencial cuántico'' y es el único que depende explícitamente de $\hbar$. En el límite clásico ($\hbar \to 0$), este término se anula, simplificando la ecuación a:
+\begin{equation}
+    \frac{\partial S_k}{\partial t} + \sum_I \frac{1}{2M_I}(\nabla_I S_k)^2 + E_k = 0
+    \label{eq:hamilton_jacobi}
+\end{equation}
+Esta expresión es idéntica a la ecuación de Hamilton-Jacobi de la mecánica clásica. Si se define el momento conjugado como $\mathbf{P}_I = \nabla_I S_k$, la ecuación puede escribirse en términos del Hamiltoniano clásico $H_k$:
+\begin{equation}
+    \frac{\partial S_k}{\partial t} + H_k(\{\mathbf{R}_I\}, \{\nabla_I S_k\}) = 0
+    \label{eq:hamiltoniano} 
+\end{equation}
+Esto demuestra que, en este formalismo, los núcleos se propagan de acuerdo a la mecánica clásica sobre una superficie de energía potencial.

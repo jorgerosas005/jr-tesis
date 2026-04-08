@@ -1,14 +1,14 @@
 \chapter{Marco teórico}
 
-\section{Fundamentos de Dinámica molecular}
+\section{Fundamentos de dinámica molecular}
 
-La dinámica molecular (MD, por sus siglas en inglés) es una técnica de simulación por computadora que ha sido utilizada para analizar el comportamiento y evolución de diversos sistemas a nivel atomístico. Su esencia consiste en resolver numéricamente las ecuaciones clásicas del movimiento, típicamente las de Newton, para un conjunto $\mathbf{R}^N = \{ \mathbf{r}_1, \mathbf{r}_2, \mathbf{r}_3, \dots, \mathbf{r}_N \}$ de $N$ partículas con masas $m_i$,
+La dinámica molecular (MD, por sus siglas en inglés) es una técnica de simulación por computadora que se emplea para simular el comportamiento de sistemas a nivel atomístico. Su esencia consiste en resolver numéricamente las ecuaciones clásicas del movimiento, típicamente las de Newton, para un conjunto $\mathbf{R}^N = \{ \mathbf{r}_1, \mathbf{r}_2, \dots, \mathbf{r}_N \}$ de $N$ partículas con masas $m_i$, donde cada una de ellas obedece a la segunda ley de Newton:
 
 \begin{equation}
     \label{eq:newton_segunda_ley}
     m_i \frac{d^2 \mathbf{r}_i}{dt^2} = \mathbf{F}_i
 \end{equation}
-Donde las fuerzas $\mathbf{F_i}$ son obtenidas a partir del gradiente negativo del potencial $U(R^N)$ 
+donde las fuerzas $\mathbf{F_i}$ son obtenidas a partir del gradiente negativo del potencial $U(R^N)$ 
 
 \begin{equation}
     \label{eq:fuerza_potencial_sencilla}
@@ -31,7 +31,7 @@ El siguiente diagrama de flujo (Figura \ref{fig:md_flowchart}) ilustra de manera
         \node (step1) [process] {Paso 1: Optimización y \\ minimización de energía};
 
         % Paso 2: Inicialización (Coordenadas y Velocidades)
-        \node (step2) [process, below=of step1] {Paso 2: Coordenadas iniciales $\mathbf{R}_0$ y \\  y velocidades iniciales $\mathbf{V}_0$};
+        \node (step2) [process, below=of step1] {Paso 2: Coordenadas iniciales $\mathbf{R}_0$ y \\  velocidades iniciales $\mathbf{V}_0$};
 
         % Paso 3: Fuerzas (Inicio del bucle)
         \node (step3) [process, below=of step2] {Paso 3: Cálculo de fuerzas};
@@ -92,7 +92,7 @@ Nótese que en este algoritmo, las velocidades se actualizan después de calcula
 
 \subsection{Condiciones iniciales}
 
-Las condiciones iniciales en una simulación de dinámica molecular (MD) son el conjunto de posiciones $\mathbf{R}^N (t = 0)$ y velocidades $\mathbf{V}^N (t = 0)$ de todos los átomos del sistema en el instante de tiempo cero. Es el punto en el espacio fase del sistema a partir del cual el algoritmo de integración comienza a calcular la trayectoria futura de cada partícula. 
+Las condiciones iniciales en una simulación de dinámica molecular son el conjunto de posiciones $\mathbf{R}^N (t = 0)$ y velocidades $\mathbf{V}^N (t = 0)$ de todos los átomos del sistema en el instante de tiempo cero. Es el punto en el espacio fase del sistema a partir del cual el algoritmo de integración comienza a calcular la trayectoria futura de cada partícula. 
 
 \subsubsection*{Asignación de posiciones}
 
@@ -148,25 +148,26 @@ donde $N_f$ son los grados de libertad (usualmente $3N-3$), puede no coincidir c
     \label{eq:temp_scaling} % Etiqueta opcional para referenciar la ecuación
 \end{equation}
 
+Es importante destacar que este procedimiento de reescalado de velocidades constituye, en la práctica, un termostato. Si bien es un método eficaz para aproximar el sistema a la temperatura objetivo durante las etapas iniciales, se considera una técnica de control térmico básica o preliminar. Existen métodos más avanzados para regular la temperatura en una simulación, como las cadenas de Nosé-Hoover, cuyo funcionamiento se detalla en el próximo apartado.
 
-\subsection{Ensambles Termodinámicos y Control de Temperatura}
+\subsection{Colectivos termodinámicos y control de temperatura}
 
-En mecánica estadística, un ensamble termodinámico es una colección de un número muy grande de copias virtuales de un sistema, todas sujetas a las mismas condiciones macroscópicas. Cada copia representa un microestado accesible para el sistema, y las propiedades termodinámicas se obtienen promediando sobre todos los miembros del ensamble \Cite{zhou2022molecular}.
+En mecánica estadística, un colectivo termodinámico (del francés \textit{ensemble}) es una colección de un número muy grande de copias virtuales de un sistema, todas sujetas a las mismas condiciones macroscópicas. Cada copia representa un microestado accesible para el sistema, y las propiedades termodinámicas se obtienen promediando sobre todos los miembros del colectivo \cite{zhou2022molecular}.
 
-Una simulación de dinámica molecular estándar, al resolver las ecuaciones de movimiento de Newton para un sistema aislado, conserva de forma natural el número de partículas ($N$), el volumen ($V$) y la energía total ($E$). Este conjunto de condiciones define el ensamble microcanónico (NVE). Sin embargo, la mayoría de los experimentos en el laboratorio no se realizan a energía constante, sino a temperatura y presión controladas. Para replicar estas condiciones y obtener resultados comparables, es necesario realizar simulaciones en otros ensambles termodinámicos.
+Una simulación de dinámica molecular estándar, al resolver las ecuaciones de movimiento de Newton para un sistema aislado, conserva de forma natural el número de partículas ($N$), el volumen ($V$) y la energía total ($E$). Este conjunto de condiciones define el colectivo microcanónico (NVE). Sin embargo, la mayoría de los experimentos en el laboratorio no se realizan a energía constante, sino a temperatura y presión controladas. Para replicar estas condiciones y obtener resultados comparables, es necesario realizar simulaciones en otros colectivos termodinámicos.
 
-\subsubsection*{El Ensamble Canónico (NVT)}
+\subsubsection*{El colectivo canónico (NVT)}
 
-El ensamble más relevante para el control de temperatura es el ensamble canónico, donde el número de partículas ($N$), el volumen ($V$) y la temperatura ($T$) se mantienen constantes. Este ensamble describe un sistema cerrado que puede intercambiar energía con un baño térmico externo, lo que permite que su energía total ($E$) fluctúe.
+El colectivo más relevante para el control de temperatura es el colectivo canónico, donde el número de partículas ($N$), el volumen ($V$) y la temperatura ($T$) se mantienen constantes. Este colectivo describe un sistema cerrado que puede intercambiar energía con un baño térmico externo, lo que permite que su energía total ($E$) fluctúe.
 
-El propósito fundamental de simular en el ensamble NVT es modelar sistemas bajo condiciones isotérmicas, lo que permite el cálculo de propiedades de equilibrio como la energía libre de Helmholtz ($F$) y asegura un muestreo adecuado del espacio fase correspondiente a la temperatura de interés
+El propósito fundamental de simular en el colectivo NVT es modelar sistemas bajo condiciones isotérmicas, lo que permite el cálculo de propiedades de equilibrio como la energía libre de Helmholtz ($F$) y asegura un muestreo adecuado del espacio fase correspondiente a la temperatura de interés. Esta energía se calcula como:
 
 \begin{equation}
     F = - k_B T \ln Q(N, V, T), 
     \label{eq:helmholtz_free_energy}
 \end{equation}
 
-\noindent donde $k_B$ es la constante de Boltzmann. La termodinámica de este ensamble se fundamenta en la función de partición canónica $Q(N, V, T)$, definida en términos de la constante beta $\beta = 1/(k_B T)$ como:
+\noindent donde $k_B$ es la constante de Boltzmann. La termodinámica de este colectivo se fundamenta en la función de partición canónica $Q(N, V, T)$, definida en términos de la constante beta $\beta = 1/(k_B T)$ como:
 
 \begin{equation}
     Q_{N,V,T} = \frac{1}{h^{3N}N!} \int \mathrm{d}\mathbf{p}^N \mathrm{d}\mathbf{r}^N \exp[-\beta H(\mathbf{p}^N, \mathbf{r}^N)]
@@ -178,18 +179,15 @@ donde $h$ es la constante de Planck y $H$ es el Hamiltoniano clásico del sistem
     H(\mathbf{p}^N, \mathbf{r}^N) = \sum_{i=1}^{N} \frac{\mathbf{p}_i^2}{2m_i} + U\left(\mathbf{r}^N\right).
     \label{eq:classical_hamiltonian}
 \end{equation}
-La integración se realiza sobre todas las coordenadas de posición $\mathbf{r}^N$ y momento $\mathbf{p}^N$ del espacio de fases.
+La integración se realiza sobre todas las coordenadas de posición $\mathbf{r}^N$ y momento $\mathbf{p}^N$ del espacio fase.
 
-Para mantener una temperatura constante en una simulación de MD y así generar una trayectoria que explore los microestados del ensamble NVT, es necesario modificar las ecuaciones de movimiento. Esto se logra mediante el uso de algoritmos conocidos como termostatos.
+Para mantener una temperatura constante en una simulación de MD y así generar una trayectoria que explore los microestados del colectivo NVT, es necesario modificar las ecuaciones de movimiento. Esto se logra mediante el uso de algoritmos conocidos como termostatos.
 
+\subsubsection{Termostatos: El termostato de Nosé-Hoover}
+\label{section-Termostatos}
+Un termostato es un algoritmo que modifica las velocidades de las partículas para simular el efecto de un baño térmico, permitiendo que la energía fluya hacia adentro o hacia afuera del sistema para mantener constante la temperatura promedio. Su uso es esencial para prevenir la deriva de energía por errores numéricos y para asegurar que la distribución de velocidades se ajuste a la de Maxwell-Boltzmann para la temperatura deseada.
 
-
-
-\subsubsection{Termostatos: El Termostato de Nosé-Hoover}
-
-Un termostato es un algoritmo que modifica las velocidades de las partículas para simular el efecto de un baño térmico, permitiendo que la energía fluya hacia adentro o hacia afuera del sistema para mantener constante la temperatura promedio. Su uso es crucial para prevenir la deriva de energía por errores numéricos y para asegurar que la distribución de velocidades se ajuste a la de Maxwell-Boltzmann para la temperatura deseada.
-
-Uno de los termostatos más robustos y teóricamente fundamentados es el de Nosé-Hoover. Este método introduce un grado de libertad ficticio adicional ($\eta$) que actúa como el reservorio de calor. La idea original de Nosé se basa en un Hamiltoniano extendido que, al evolucionar en el tiempo, genera una trayectoria en el espacio de fases canónico. Hoover reformuló estas ecuaciones de una manera más directa y computacionalmente eficiente. Las ecuaciones de movimiento de Nosé-Hoover para las partículas del sistema son:
+El termostato usado en el presente trabajo está basado en el trabajo de Nosé y Hoover, cuyo método acopla el sistema a un reservorio de calor mediante la introducción de un coeficiente de fricción dinámico, $\gamma$. La idea original de Nosé se basa en un Hamiltoniano extendido que, al evolucionar en el tiempo, genera una trayectoria en el espacio de fases canónico. Hoover reformuló estas ecuaciones de una manera más directa y computacionalmente eficiente. Las ecuaciones de movimiento de Nosé-Hoover para las partículas del sistema son:
 
 \begin{equation}
     m_i \frac{\mathrm{d}^2 \mathbf{r}_i}{\mathrm{d}t^2} = -\frac{\partial U(\mathbf{R}^N)}{\partial \mathbf{r}_i} - \gamma_i m_i \frac{\mathrm{d} \mathbf{r}_i}{\mathrm{d}t}
@@ -201,175 +199,243 @@ Uno de los termostatos más robustos y teóricamente fundamentados es el de Nos�
 En estas ecuaciones, el término $\gamma_i$ representa el coeficiente de fricción dinámico que acopla el sistema al baño térmico. Su evolución temporal, descrita en la segunda ecuación, depende de la diferencia entre la energía cinética instantánea del sistema ($\sum m_i \mathbf{v}_i^2 / 2$) y la energía cinética objetivo, que es proporcional a la temperatura deseada $T$. El parámetro $Q$, conocido como la ''masa'' del termostato, modula la intensidad de este acoplamiento: un valor pequeño de $Q$ resulta en una respuesta rápida y oscilaciones de temperatura, mientras que un valor grande produce un acoplamiento más suave pero fluctuaciones más lentas.
 
 
-El funcionamiento de este termostato depende de la hipótesis ergódica, que postula que en el límite de una evolución temporal infinita, un sistema dinámico muestreará todos los microestados accesibles de su espacio de fases. Consecuentemente, se establece una equivalencia formal entre los promedios de ensamble de un observable $O(P, R)$ y los promedios temporales calculados a lo largo de una trayectoria de dinámica molecular \cite{MD-2002-01}. 
+El funcionamiento de este termostato depende de la hipótesis ergódica, que postula que en el límite de una evolución temporal infinita, un sistema dinámico muestreará todos los microestados accesibles de su espacio de fases. Consecuentemente, se establece una equivalencia formal entre los promedios de colectivo de un observable $O(P, R)$ y los promedios temporales calculados a lo largo de una trayectoria de dinámica molecular \cite{MD-2002-01}
 
 \begin{equation}
-    \langle O(\mathbf{P}, \mathbf{R}) \rangle = \lim_{T \to \infty} \frac{1}{T} \int_{0}^{T} \mathrm{d}t \, O(\mathbf{P}(t), \mathbf{R}(t))
+    \langle O(\mathbf{P}, \mathbf{R}) \rangle = \lim_{T \to \infty} \frac{1}{T} \int_{0}^{T} \mathrm{d}t \, O(\mathbf{P}(t), \mathbf{R}(t)).
     \label{eq:ergodic_hypothesis}
 \end{equation}
 
-No obstante, se ha demostrado que para sistemas pequeños, rígidos o con modos de alta frecuencia, como el oscilador armónico, el termostato de Nosé-Hoover simple no garantiza la ergodicidad, pudiendo quedar la dinámica atrapada en regiones locales del espacio de fases (toros invariantes), lo que resulta en distribuciones no canónicas. Para solventar este problema y asegurar un muestreo ergódico robusto, Martyna, Klein y Tuckerman generalizaron el método introduciendo las Cadenas de Nosé-Hoover \cite{Hoover-1992-01}.
-En este esquema, el termostato original $\gamma_1$ no se acopla únicamente al sistema físico, sino que es termostatado a su vez por un segundo termostato ($\gamma_2$), y este por un tercero, formando una cadena de M osciladores. Esto fuerza fluctuaciones en las variables de control y rompe las trayectorias cuasi-periódicas. Las ecuaciones de movimiento para una cadena de longitud $M$ (donde $k=1M$) modifican la evolución de los coeficientes de fricción de la siguiente manera:
+No obstante, se ha demostrado que para sistemas pequeños, rígidos o con modos de alta frecuencia, como el oscilador armónico, el termostato de Nosé-Hoover simple no garantiza la ergodicidad, pudiendo quedar la dinámica atrapada en regiones locales del espacio fase, lo que resulta en distribuciones no canónicas. Para solventar este problema y asegurar un muestreo ergódico robusto, Martyna, Klein y Tuckerman generalizaron el método introduciendo las Cadenas de Nosé-Hoover \cite{Hoover-1992-01}.
+En este esquema, el termostato original $\gamma_1$ no se acopla únicamente al sistema físico, sino que este termostato se acopla a su vez a un segundo termostato ($\gamma_2$), y este a un tercero, y así sucesivamente formando una cadena de $M$ termostatos. Esto fuerza fluctuaciones en las variables de control y rompe las trayectorias cuasi-periódicas. Las ecuaciones de movimiento para una cadena de longitud $M$ modifican la evolución de los coeficientes de fricción de la siguiente manera:
 
 \begin{align} 
-    \frac{\mathrm{d}\gamma_1}{\mathrm{d}t} &= \frac{1}{Q_1} \left[ \sum_{i=1}^{N} m_{i} \frac{\mathbf{v}_i^2}{2} - N_f k_{B} T \right] - \gamma_1 \gamma_2 \\
-    \frac{\mathrm{d}\gamma_k}{\mathrm{d}t} &= \frac{1}{Q_k} \left[ Q_{k-1} \gamma_{k-1}^2 - k_{B} T \right] - \gamma_k \gamma_{k+1} \quad (k < M) \\
+    \frac{\mathrm{d}\gamma_1}{\mathrm{d}t} &= \frac{1}{Q_1} \left[ \sum_{i=1}^{N} m_{i} \frac{\mathbf{v}_i^2}{2} - \frac{3N + 1}{2} k_{B} T \right] - \gamma_1 \gamma_2 \\
+    \frac{\mathrm{d}\gamma_k}{\mathrm{d}t} &= \frac{1}{Q_k} \left[ Q_{k-1} \gamma_{k-1}^2 - k_{B} T \right] - \gamma_k \gamma_{k+1} \quad (k = 2, \dots, M-1) \\
     \frac{\mathrm{d}\gamma_M}{\mathrm{d}t} &= \frac{1}{Q_M} \left[ Q_{M-1} \gamma_{M-1}^2 - k_{B} T \right] 
 \end{align}
-Donde $N_f$ son los grados de libertad físicos y $Q_k$ son las masas inerciales de cada eslabón de la cadena, permitiendo así que el sistema explore correctamente la distribución canónica incluso en condiciones dinámicas complejas.
+
+donde $3N$ representa los grados de libertad físicos del sistema, el término $+1$ corresponde al grado de libertad del termostato y $Q_k$ son las masas inerciales de cada eslabón de la cadena, permitiendo así que el sistema explore correctamente la distribución canónica incluso en condiciones dinámicas complejas.
 
 
 \section{Dinámica molecular ab initio}
 
-La dinámica molecular clásica ha sido ampliamente utilizada para simular sistemas de gran tamaño, cuyo estudio mediante métodos de primeros principios resultaría prohibitivo en términos de costo computacional. Sin embargo, el alcance y la precisión de la MD clásica dependen de la calidad de los potenciales empíricos parametrizados que emplea para describir las interacciones atómicas. Estos potenciales, aunque eficientes computacionalmente, limitan la capacidad del método para describir fenómenos químicamente complejos, como la formación y ruptura de enlaces, la polarización electrónica o las fuerzas de muchos cuerpos.
+La dinámica molecular clásica ha sido ampliamente utilizada para simular sistemas de gran tamaño, cuyo tratamiento ab initio resultaría computacionalmente prohibitivo. Sin embargo, el alcance y la precisión de la MD clásica dependen de la calidad de los potenciales empíricos parametrizados que emplea para describir las interacciones atómicas. Estos potenciales, aunque eficientes computacionalmente, limitan la capacidad del método para describir fenómenos químicamente complejos, como la formación y ruptura de enlaces, la polarización electrónica o las fuerzas de muchos cuerpos.
 
-Para abordar estas limitaciones, se emplea la dinámica molecular ab initio (AIMD, por sus siglas en inglés), donde las fuerzas que actúan sobre las partículas se calculan directamente a partir de la estructura electrónica. La AIMD se fundamenta en una aproximación semi clásica que permite desacoplar el movimiento de los núcleos y los electrones, conocida como la aproximación de Born-Oppenheimer.
+Para abordar estas limitaciones, se emplea la dinámica molecular ab initio (AIMD, por sus siglas en inglés), donde las fuerzas que actúan sobre las partículas se calculan directamente a partir de cálculos de estructura electrónica. La AIMD se fundamenta en una aproximación semi clásica que permite desacoplar el movimiento de los núcleos y los electrones, conocida como la aproximación de Born-Oppenheimer.
 
 Esta aproximación permite tratar el problema electrónico de forma independiente, resolviéndolo para un conjunto de posiciones nucleares fijas y obteniendo así la Superficie de Energía Potencial (PES, por sus siglas en inglés) del estado fundamental. En la AIMD, los núcleos se propagan clásicamente sobre esta PES, y las fuerzas ($\mathbf{F}_I$) que dictan su movimiento se calculan en cada paso como el gradiente de esta energía electrónica ($E_0(\mathbf{R})$) respecto a las posiciones nucleares ($\mathbf{F}_I = -\nabla_I E_0(\mathbf{R})$).
 
-En la práctica, los principales enfoques de la AIMD radican en la dinámica molecular de Born-Oppenheimer, que resuelve explícitamente el estado fundamental electrónico en cada paso, y la dinámica de Car-Parrinello (CPMD, por sus siglas en inglés). Esta última reformula el problema introduciendo un Lagrangiano extendido que incluye los grados de libertad electrónicos como variables clásicas con una ''masa ficticia'' ($\mu$). CPMD emplea una dinámica ficticia acoplada en la que los electrones siguen adiabáticamente el movimiento nuclear, eliminando la necesidad del ciclo de campo autoconsistente en cada paso y permitiendo, en general, una mayor eficiencia computacional.
-
-A pesar de que la AIMD es significativamente más costosa que la MD clásica, limitando las simulaciones a sistemas de decenas o cientos de átomos y a escalas de tiempo de picosegundos, su aplicación permite el acceso a detalles microscópicos y observables electrónicos (como espectros IR o RMN). Es una herramienta relevante para investigar la dinámica de líquidos y soluciones, la catálisis o procesos bioquímicos complejos donde la descripción cuántica de las interacciones es fundamental.
+En la práctica, los principales enfoques de la AIMD radican en la dinámica molecular de Born-Oppenheimer, que resuelve explícitamente el estado fundamental electrónico en cada paso, y la dinámica de Car-Parrinello (CPMD, por sus siglas en inglés). Esta última reformula el problema mediante un Lagrangiano extendido que integra los grados de libertad electrónicos como variables clásicas asociadas a una masa ficticia ($\mu$). Esta aproximación permite una dinámica donde los electrones siguen adiabáticamente el movimiento nuclear, eliminando la necesidad de una minimización iterativa de la función de onda en cada paso, aunque requiere intervalos de integración temporalmente más pequeños para preservar dicha separación adiabática. Además, CPMD está intrínsecamente diseñado y optimizado para operar con conjuntos de bases de ondas planas, acopladas a esquemas de pseudopotenciales para simplificar el tratamiento de los electrones internos (core) y suavizar el potencial efectivo cerca del núcleo. Sin embargo, en un espacio de ondas planas el uso de funcionales híbridos es computacionalmente prohibitivos por la inclusión del intercambio exacto de Hartree-Fock, el cual tiene una naturaleza no local por lo que, en la práctica, las simulaciones con esta metodología suelen limitarse a funcionales más sencillos como el BLYP. Por todo lo anterior, BOMD es el enfoque más adecuado para la presente tesis pues acopla de forma natural y eficiente el funcional M06-2X con el conjunto de bases gaussianas utilizadas.
 
 \subsection{La aproximación de Born-Oppenheimer}
 
-La aproximación de Born-Oppenheimer, también conocida como la aproximación adiabática, es una de las suposiciones más  importantes y fundamentales en la química cuántica y la dinámica molecular. Esta simplificación permite desacoplar el movimiento de los electrones y los núcleos en un sistema molecular. Se fundamenta en la gran diferencia de masas entre los núcleos y los electrones; la masa del núcleo más ligero (un protón) es aproximadamente 1840 veces más grande que la de un electrón. De manera que los núcleos se mueven en una escala de tiempo tres ordenes de magnitud más lenta que los electrones por lo que se puede considerar que los electrones se ajustan instantáneamente a la posición de los núcleos en movimiento. 
+La aproximación de Born-Oppenheimer, también conocida como la aproximación adiabática, es una de las suposiciones más importantes en la química cuántica y la dinámica molecular. Esta simplificación permite desacoplar el movimiento de los electrones y los núcleos en un sistema molecular. Se fundamenta en la gran diferencia de masas entre los núcleos y los electrones; la masa del núcleo más ligero (un protón) es aproximadamente 1840 veces más grande que la de un electrón. De manera que los núcleos se mueven en una escala de tiempo tres órdenes de magnitud más lenta que los electrones por lo que se puede considerar que los electrones se ajustan instantáneamente a la posición de los núcleos en movimiento. 
 
-Consideremos un sistema molecular compuesto por $M$ núcleos y $N$ electrones. Los núcleos están descritos por sus coordenadas $\mathbf{R}$ y sus masas $M$ y los electrones por sus coordenadas $\mathbf{r}$ y masas $m$. El objetivo principal es resolver la ecuación de Schrödinger independiente del tiempo
-
-\begin{equation}
-    \hat{H} \Psi = E \Psi,
-    \label{eq:schrodinger_independiente_tiempo}
-\end{equation}
-
-en donde el Hamiltoniano no relativista del sistema está dado por:
+Bajo este esquema, el Hamiltoniano total del sistema puede reagruparse en una contribución de energía cinética nuclear ($\hat{T}_N$) y un Hamiltoniano electrónico ($\hat{H}_e$):
 
 \begin{equation}
-\begin{split}
-    \hat{H} &= - \sum_{I=1}^{M} \frac{\hbar^2}{2M_I} \nabla^2_I
-       - \sum_{i=1}^{N} \frac{\hbar^2}{2m_e} \nabla^2_i 
-       - \frac{1}{4\pi\varepsilon_0} \sum_{i=1}^{N} \sum_{I=1}^{M} \frac{Z_I e^2}{\left| \mathbf{R}_I - \mathbf{r}_i \right|} \\
-      &\quad + \frac{1}{4\pi\varepsilon_0} \sum_{I=1}^{M} \sum_{J>I}^M \frac{Z_I Z_J e^2}{\left| \mathbf{R}_J  - \mathbf{R}_I \right|} 
-      + \frac{1}{4\pi\varepsilon_0} \sum_{i=1}^{N} \sum_{j>i}^{N} \frac{e^2}{\left| \mathbf{r}_i - \mathbf{r}_j \right|}. 
-\end{split}
-\label{eq:hamiltoniano_completo}
+    \hat{H} = \hat{T}_N + \hat{H}_e
+    \label{eq:hamiltoniano_reagrupado}
 \end{equation}
-Para simplificar la ecuación \ref{eq:hamiltoniano_completo} se puede escribir en unidades atómicas donde $\hbar = e = m_e = 4\pi\varepsilon_0 = 1$. Así, el Hamiltoniano se expresa como:
 
-\begin{equation} \label{eq:hamiltoniano_au}
-\begin{split}
-    \hat{H} = & - \sum_{I=1}^{M} \frac{1}{2M_I} \nabla^2_I - \sum_{i=1}^{N} \frac{1}{2} \nabla^2_i - \sum_{i=1}^{N} \sum_{I=1}^{M} \frac{Z_I}{|\mathbf{R}_I - \mathbf{r}_i|} \\
-    & + \sum_{I=1}^{M} \sum_{J>I}^{M} \frac{Z_I Z_J}{|\mathbf{R}_J - \mathbf{R}_I|} + \sum_{i=1}^{N} \sum_{j>i}^{N} \frac{1}{|\mathbf{r}_i - \mathbf{r}_j|} \\
-    = & \hat{T}_N + \hat{T}_e + \hat{V}_{Ne} + \hat{V}_{NN} + \hat{V}_{ee}
-\end{split}
-\end{equation}
-donde $\hat{T}_N$ y $\hat{T}_e$ son los operadores de energía cinética nuclear y electrónica; $V_{Ne}$ es el potencial de atracción núcleo electrón; $V_{ee}$ es el potencial de repulsión electrón electrón; y $V_{NN}$ es el potencial de repulsión núcleo núcleo.
-
-El Hamiltoniano total (Ecuación \ref{eq:hamiltoniano_au}) se puede reagrupar como $\hat{H} = \hat{T}_N + \hat{H}_e$, donde $\hat{H}_e$ se define como el Hamiltoniano electrónico:
+donde el operador electrónico $\hat{H}_e$ engloba la energía cinética de los electrones, así como los potenciales de interacción núcleo-electrón, electrón-electrón y la repulsión entre núcleos:
 
 \begin{equation}
-\hat{H}_e = \hat{T}_e + \hat{V}_{Ne} + \hat{V}_{ee} + \hat{V}_{NN}
-\label{eq:hamiltoniano_electronico_res}
+    \hat{H}_e = \hat{T}_e + \hat{V}_{Ne} + \hat{V}_{ee} + \hat{V}_{NN}
+    \label{eq:hamiltoniano_electronico_def}
 \end{equation}
 
-Este operador depende paramétricamente de las coordenadas nucleares $\mathbf{R}$. La aproximación inicia resolviendo la ecuación de Schrödinger electrónica para una geometría nuclear fija:
+Debido a la separación de escalas de tiempo, la aproximación de Born-Oppenheimer permite resolver primero la ecuación de Schrödinger electrónica para una geometría nuclear fija ($\mathbf{R}$), la cual actúa como un parámetro y no como una variable dinámica:
 
 \begin{equation} 
-    \hat{H}_e\left(\{\mathbf{r}\}; \{\mathbf{R}\}\right) \Psi_k = E_k \Psi_k\left(\{\mathbf{r}\}; \{\mathbf{R}\}\right), 
-    \label{eq:schrodinger_electronica_res}
+    \hat{H}_e\left(\mathbf{r}; \mathbf{R}\right) \Psi_k(\mathbf{r}; \mathbf{R}) = E_k(\mathbf{R}) \Psi_k(\mathbf{r}; \mathbf{R}) 
+    \label{eq:schrodinger_electronica_final}
 \end{equation}
-donde los eigenvalores $E_k(\mathbf{R})$ definen la $k$-ésima Superficie de Energía Potencial.
 
-La función de onda molecular total $\Psi_{tot}$ se puede expandir de forma exacta en la base completa de las eigenfunciones electrónicas $\Psi_k$:
+Un aspecto fundamental de este tratamiento es que los eigenvalores $E_k(\mathbf{R})$ definen la PES del sistema. Esta PES representa el potencial efectivo sobre el cual se desplazan los núcleos. Al despreciar los términos de acoplamiento no adiabático (cuya derivación detallada y justificación matemática se presentan en el Apéndice \ref{app:derivacion_bo} \cite{LeonPimentel2019}), el movimiento nuclear para un estado $j$ queda descrito de forma independiente por:
 
 \begin{equation}
-\Psi_{tot}(\mathbf{R}, \mathbf{r}) = \sum_{k=1}^{\infty} \Psi_{Nk}(\mathbf{R}) \Psi_k(\mathbf{r}, \mathbf{R})
-\label{eq:ansatz_BO_res}
+    \left[ -\sum_{I=1}^{M} \frac{1}{2M_I} \nabla^2_I + E_j(\mathbf{R}) \right] \Psi_{Nj}(\mathbf{R}) = E \Psi_{Nj}(\mathbf{R})
+    \label{eq:schrodinger_nuclear_decoupled}
 \end{equation}
-donde los coeficientes $\Psi_{Nk}(\mathbf{R})$ son las funciones de onda nucleares.
 
-%%%%%
-Al sustituir el ansatz en la ecuación de Schrödinger
+Esta ecuación constituye la base de la dinámica molecular de Born-Oppenheimer utilizada en este trabajo, permitiendo que los núcleos se propaguen clásicamente sobre la PES del estado fundamental electrónico calculada en cada paso de la simulación.
+
+\subsection{El método de Hartree-Fock}
+
+La aproximación de Born-Oppenheimer reduce la dinámica molecular ab initio a la resolución de la ecuación de Schrödinger electrónica en cada paso temporal. Ante la imposibilidad de resolver exactamente este sistema de múltiples cuerpos, el método de Hartree-Fock emerge como una aproximación fundamental. Este método constituye la base de la química cuántica basada en funciones de onda y también tiene una importancia conceptual en métodos basados en la densidad electrónica como DFT.
+
+La teoría de Hartree-Fock se deriva al aplicar el principio variacional dentro de un espacio restringido de funciones de onda. Para cumplir con el principio de exclusión de Pauli y la naturaleza fermiónica de los electrones, la función de onda total debe ser antisimétrica ante el intercambio de partículas. Bajo este esquema, se propone una aproximación mediante un producto antisimétrico de $N$ espín-orbitales $\chi_i(\mathbf{x}_i)$, a los cuales se les impone la estricta condición de ser mutuamente ortonormales entre sí, conocido como determinante de Slater:
 \begin{equation}
-    \sum_{k=1}^{\infty} (\hat{T}_N + \hat{H}_e) \Psi_{Nk} \Psi_k = E \sum_{k=1}^{\infty} \Psi_{Nk} \Psi_k 
-    \label{eq:schrodinger_total_res}
+    \Psi (\mathbf{x}_1, \mathbf{x}_2, \ldots, \mathbf{x}_N) \approx \Phi_{SD} = \frac{1}{\sqrt{N!}} 
+    \begin{vmatrix}
+        \chi_1(\mathbf{x}_1) & \chi_2(\mathbf{x}_1) & \cdots & \chi_N(\mathbf{x}_1) \\
+        \chi_1(\mathbf{x}_2) & \chi_2(\mathbf{x}_2) & \cdots & \chi_N(\mathbf{x}_2) \\
+        \vdots & \vdots & \ddots & \vdots \\
+        \chi_1(\mathbf{x}_N) & \chi_2(\mathbf{x}_N) & \cdots & \chi_N(\mathbf{x}_N) 
+    \end{vmatrix}
+    \label{eq:determinante_slater}
 \end{equation}
+El mínimo variacional de la energía electrónica total se obtiene evaluando el valor esperado del hamiltoniano sobre este determinante, lo cual resulta en la siguiente expresión integral para la energía
+\begin{align}
+    E_{HF} &= \langle \Psi | \hat{\mathbf{H}}_e | \Psi \rangle \nonumber \\
+    &= \sum_{i} \langle \chi_i(\mathbf{x}_1) | \hat{h}_i | \chi_i(\mathbf{x}_1) \rangle \nonumber \\
+    &\quad + \frac{1}{2} \sum_{i,j} \left( \langle \chi_i(\mathbf{x}_1)\chi_j(\mathbf{x}_2) | \hat{g}_{12} | \chi_i(\mathbf{x}_1)\chi_j(\mathbf{x}_2) \rangle - \langle \chi_i(\mathbf{x}_1)\chi_j(\mathbf{x}_2) | \hat{g}_{12} | \chi_j(\mathbf{x}_1)\chi_i(\mathbf{x}_2) \rangle \right) \nonumber \\
+    &\quad + V_{NN} 
+    \label{eq:hf_energy}
+\end{align}
+en donde los operadores $\hat{h}_i$ y $\hat{g}_{12}$ representan los operadores unielectrónicos y bielectrónicos, que corresponden a la energía cinética y la interacción núcleo-electrón, y a la repulsión electrón-electrón, respectivamente. El potencial de repulsión núcleo-núcleo $V_{NN} = \langle \Psi | \mathbf{V}_{NN} | \Psi \rangle  $ es una constante para una geometría nuclear dada. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Para simplificar la expresión de la energía, el formalismo define dos operadores efectivos de un electrón basándose en su acción sobre un orbital arbitrario. El primero es el operador de Coulomb ($\hat{J}$), el cual posee una interpretación clásica al representar la repulsión electrostática promediada. Por otro lado, el operador de Intercambio ($\hat{K}$) es un término no local y estrictamente cuántico que surge como consecuencia del principio de antisimetría, intercambiando las coordenadas de las partículas en el núcleo de la integral:
+\begin{align}
+    \hat{J}_i \left| \chi_j (\mathbf{x}_2) \right\rangle &= \left\langle \chi_i (\mathbf{x}_1) \right| \hat{g}_{12} \left| \chi_i (\mathbf{x}_1) \right\rangle \left| \chi_j (\mathbf{x}_2) \right\rangle \label{eq:coulomb_operator} \\
+    \hat{K}_i \left| \chi_j (\mathbf{x}_2) \right\rangle &= \left\langle \chi_i (\mathbf{x}_1) \right| \hat{g}_{12} \left| \chi_j (\mathbf{x}_1) \right\rangle \left| \chi_i (\mathbf{x}_2) \right\rangle \label{eq:exchange_operator}
+\end{align}
+Posteriormente, se obtiene el determinante de Slater que minimiza dicha expresión de energía mediante la aplicación del principio variacional con restricciones de ortonormalidad y normalización mediante el formalismo de multiplicadores de Lagrange ($\lambda_{ij}$), lo que conduce a las ecuaciones de Hartree-Fock:
+    \begin{equation}
+        \hat{F}_i \chi_i = \sum_{j} \lambda_{ij} \chi_j,
+        \label{eq:balance}
+    \end{equation}
+en donde se introduce el operador de Fock $\hat{F}_i$, que es un operador efectivo de un electrón que incorporan los operadores de Coulomb e intercambio (Ec. \ref{eq:coulomb_operator} y \ref{eq:exchange_operator}) y se define como:
+    \begin{equation}
+        \hat{F}_i = \hat{h}_i + \sum_{j} (\hat{J}_j - \hat{K}_j) 
+        \label{eq:resultado}
+    \end{equation}
+Para facilitar la resolución numérica, este sistema se simplifica mediante una transformación unitaria que diagonaliza la matriz de multiplicadores ($\lambda_{ii} = \epsilon_i$ y $\lambda_{ij} = 0$). Este procedimiento permite definir los llamados orbitales canónicos ($\phi_i'$), transformando el problema en una ecuación de pseudovalores estándar:
+\begin{equation} 
+    \hat{F}_i \phi'_i = \epsilon_i \phi'_i 
+    \label{eq:canonical_orbitals} 
+\end{equation}
+En esta forma final, los valores de $\epsilon_i$ adquieren una interpretación física directa como las energías asociadas a cada orbital molecular.
+
+No obstante, la principal limitación del método de Hartree-Fock radica en la omisión de la correlación electrónica. Al basarse en una aproximación de campo promedio, el formalismo ignora las interacciones instantáneas entre electrones de espines opuestos, lo que resulta en una descripción incompleta de la dinámica electrónica. Naturalmente, se han desarrollado diversos métodos post-Hartree-Fock, como la teoría de perturbaciones de Møller-Plesset de segundo orden (MP2) o el método de interacción de configuraciones (CI), los cuales buscan recuperar la energía de correlación mediante el tratamiento de excitaciones electrónicas.
+
+\section{Teoría del funcional de la densidad}
+
+La teoría del funcional de la densidad (DFT, por sus siglas en inglés) es la teoría de estructura electrónica desde primeros principios más utilizada en la actualidad en química computacional. Su principal objetivo es evaluar la energía del estado fundamental de un sistema cuántico de muchos cuerpos, evitando la complejidad de resolver exactamente la ecuación de Schrödinger para múltiples electrones. 
+La validez de la DFT descansa sobre dos pilares fundamentales establecidos por Pierre Hohenberg y Walter Kohn \cite{jensen2017introduction}.
+ 
+\begin{itemize}
+    \item El \textbf{Primer Teorema} establece que la densidad electrónica del estado base, $\rho_0(\mathbf{r})$, determina el potencial externo $V_{ext}(\mathbf{r})$ (salvo por una constante aditiva). Dado que el potencial externo define el Hamiltoniano del sistema, esto implica que todas las propiedades del estado base son funcionales únicos de la densidad. De forma que, la energía total se puede expresar como un funcional de la densidad:
+            \begin{equation}
+                E[\rho_0] = T[\rho] + V_{ext}[\rho] + V_{ee}[\rho]
+                \label{eq:energy_functional}
+            \end{equation}
+    Los términos de energía cinética ($T$) e interacción electrón-electrón ($V_{ee}$) no dependen de las características específicas del núcleo ($Z$ o posición $R_A$), lo que permite definir el funcional universal de Hohenberg-Kohn:
+            \begin{equation}
+                F_{HK}[\rho] = T[\rho] + E_{ee}[\rho]
+                \label{eq:universal_functional}
+            \end{equation}
+    De conocerse la forma exacta para este funcional, sería posible resolver la ecuación de Schrödinger de forma exacta
+    \item El \textbf{Segundo Teorema} es, en esencia, la aplicación del principio variacional a la densidad electrónica. Establece que para cualquier densidad de prueba $\rho_t$ tal que $\int \rho_t(\mathbf{r}) d\mathbf{r} = N$, la energía del sistema evaluada con esta densidad de prueba es siempre mayor o igual a la energía del estado base $E[\rho_t] \geq E_0$ en donde $E_0$ es la energía del estado fundamental.
+
+\end{itemize}
+
+Ambos teoremas conducen a la base fundamental de la DFT, que utiliza un multiplicador de Lagrange ($\mu$) para resolver la minimización funcional:
+\begin{equation}
+    \delta \left[ E[\rho] - \mu \left( \int \rho(\mathbf{r}) \, d\mathbf{r} - N \right) \right] = 0,
+    \label{eq:variational_principle_dft}
+\end{equation}
+donde $\mu$ representa el potencial químico del sistema electrónico.
+
+\subsection{Ecuaciones de Kohn-Sham}
+Kohn y Sham propusieron un enfoque para aproximar los funcionales de energía cinética y electrón-electrón (Ecuación \ref{eq:energy_functional}). La idea es utilizar un sistema de $N$ electrones no interactuantes descritos con una función de onda de un solo determinante en $N$ orbitales $\phi_i$ \cite{jensen2017introduction,LeonPimentel2019}. De forma que el funcional de energía se reescribe como:
+\begin{equation}
+    E[\rho] = T_s[\rho] + V_{ext}[\rho] + V_H[\rho] + E_{xc}[\rho]
+    \label{eq:kohn_sham_equations}
+\end{equation}
+donde el potencial externo $V_{ext}[\rho]$ y las interacciones clásicas que se agrupan en el potencial de Hartree $V_H[\rho]$ se definen como
+\begin{equation}
+    V_{\text{ext}}[\rho] =  \int - \sum_{I} \frac{Z_{I}}{|\mathbf{R}_{I} - \mathbf{r}|} \rho(\mathbf{r}) d\mathbf{r} 
+    \label{eq:external_potential_dft}
+\end{equation}
+\begin{equation}
+    V_H[\rho] = \frac{1}{2} \int \frac{\rho(\mathbf{r}_1)\rho(\mathbf{r}_2)}{|\mathbf{r}_1 - \mathbf{r}_2|} \, d\mathbf{r}_1 \, d\mathbf{r}_2 
+    \label{eq:hartree_potential_dft}
+    \end{equation}
+mientras que en este formalismo, la energía cinética y la densidad electrónica están dados por 
+\begin{equation}
+    T_s[\rho] = -\frac{1}{2} \sum_{i}^{N} \langle \phi_i | \nabla^2 | \phi_i \rangle \label{eq:kinetic_energy_ks}
+\end{equation}
+\begin{equation}
+    \rho(r) = \sum_{i}^{N} |\phi_i|^2. \label{eq:density_ks}
+\end{equation}
+De igual forma, el funcional de energía de intercambio y correlación $E_{xc}[\rho]$ se define como el error cometido al utilizar la energía cinética y potencial de un sistema de electrones que no interaccionan, en lugar de un sistema con interacción.
+\begin{equation}
+    E_{xc}[\rho] = T[\rho] - T_s[\rho] + V_{ee}[\rho] - V_H[\rho] 
+    \label{eq:exchange_correlation_functional}
+\end{equation}
+Por último, la minimización de la expresión de energía de la ecuación \ref{eq:kohn_sham_equations} con respecto a los orbitales $\phi_i$ y con la restricción de ortonormalidad $\langle \phi_i | \phi_j \rangle = \delta_{ij}$ utilizando multiplicadores de Lagrange (ecuación \ref{eq:variational_principle_dft}) conduce a las ecuaciones de Kohn-Sham:
+\begin{equation}
+    \left[ -\frac{1}{2}\nabla^2 - \sum_A \frac{Z_A}{|\mathbf{R}_{A} - \mathbf{r}_i|} + \int \frac{\rho(\mathbf{r}')}{|\mathbf{r}_i - \mathbf{r}'|} d\mathbf{r}' + V_{xc}(\mathbf{r}) \right] \phi_i(\mathbf{r}) = \epsilon_i \phi_i(\mathbf{r}),
+    \label{eq:kohn_sham_final}    
+\end{equation}
+donde
+\begin{equation}
+    V_{xc}(\mathbf{r}) = \frac{\delta E_{xc}[\rho]}{\delta \rho(\mathbf{r})}.
+    \label{eq:exchange_correlation_potential}
+\end{equation}
+
+Debido a que la expresión analítica exacta de $E_{xc}[\rho]$ es aún desconocida, la capacidad predictiva de la DFT recae estrictamente en la fidelidad de las aproximaciones desarrolladas para este término. A lo largo de las últimas décadas, el avance de la teoría ha sido impulsado por el diseño de funcionales con niveles de complejidad creciente tales como la aproximación de densidad local (LDA, por sus siglas en inglés), los funcionales de gradiente generalizado (GGA, por sus siglas en inglés), los meta-GGA y los funcionales híbridos, los cuales buscan capturar con mayor rigor los efectos cuánticos de muchos cuerpos.
+
+\subsection{Funcional híbrido meta-GGA M06-2X}
+
+El funcional M06-2X es un funcional desarrollado para cálculos de termoquímica, cinética termoquímica e interacciones no covalentes. Forma parte de la familia de funcionales M06 (junto con el M06, M06-L y M06-HF), desarrollados por el grupo de Donald Truhlar \cite{DFT-2008-01}. Se clasifica específicamente como un funcional híbrido meta-GGA, situándose así en el cuarto peldaño de la denominada ``Escalera de Jacob'' de Perdew. Esta clasificación implica que su energía depende no solo de la densidad electrónica ($\rho_\sigma$) y su gradiente ($x_\sigma$), sino también de la densidad de energía cinética de espín ($\tau_\sigma$):
 
 \begin{equation}
-    \sum_{k=1}^{\infty} \left( -\sum_{I=1}^{M} \frac{1}{2M_I} \nabla^2_I \Psi_{Nk} \Psi_k + \hat{H}_e \Psi_{Nk} \Psi_k \right) = E \sum_{k=1}^{\infty} \Psi_{Nk} \Psi_k
-    \label{eq:schrodinger_total_res_2}
+    \tau_{\sigma} = \frac{1}{2} \sum_{i}^{\text{occup}} |\nabla \Psi_{i \sigma}|^2
 \end{equation}
-la acción del operador de energía cinética nuclear ($\nabla^2_I$) sobre  $\Psi_{Nk} \Psi_k$ debe desarrollarse mediante la regla de la cadena, generando términos de derivadas cruzadas:
+
+La característica que más define al M06-2X es su alto contenido de intercambio exacto de Hartree-Fock. En este esquema, la energía de intercambio-correlación híbrida se construye como una combinación lineal:
 
 \begin{equation}
-    \begin{split}
-        \sum_{k=1}^{\infty} \left\{ -\sum_{I=1}^{M} \frac{1}{2M_I} \left[ \Psi_k \nabla^2_I \Psi_{Nk} + 2(\nabla_I \Psi_k)(\nabla_I \Psi_{Nk}) + \Psi_{Nk} (\nabla^2_I \Psi_k) \right] \right\} + \\ \hat{H}_e \Psi_{Nk} \Psi_k = E \sum_{k=1}^{\infty} \Psi_{Nk} \Psi_k 
-    \end{split}
-    \label{eq:energia}
+    E_{XC}^{\text{hyb}} = \frac{X}{100} E_{X}^{HF} + \left( 1 - \frac{X}{100} \right) E_{X}^{DFT} + E_{C}^{DFT}
 \end{equation}
+donde $X$ representa el porcentaje de intercambio de Hartree-Fock, el cual para el caso específico de M06-2X es igual a 54. El término de intercambio ($E_{X}^{DFT}$) y el de correlación ($E_{C}^{DFT}$) se construyen a partir de variables que permiten al funcional capturar la complejidad del entorno electrónico local.
 
-Para aislar la ecuación nuclear del estado $j$, se proyecta sobre el estado electrónico $\Psi_j^*$ y se integra sobre las coordenadas electrónicas. Aprovechando la ortonormalidad de la base ($\langle \Psi_j | \Psi_k \rangle = \delta_{jk}$), se obtiene el sistema de ecuaciones acopladas:
+%%%%%%%%%%%%%%%%%%
+\subsubsection{Intercambio}
+
+La formulación del intercambio en los funcionales M06 se basa en una combinación de la densidad de energía de intercambio del modelo PBE \cite{DFT-1996-01} y un término de la aproximación de densidad de espín local (LSDA, por sus siglas en inglés). La energía de intercambio se define mediante la integral:
 
 \begin{equation}
-    \begin{split}
-        -\sum_{A=1}^{M} \frac{1}{2M_A} \left( \nabla^2_A \Psi_{Nj} + \sum_{k=1}^{\infty} \left[ 2 \langle \Psi_j | \nabla_A |\Psi_k \rangle \left( \nabla_A \Psi_{Nk} \right) +  \langle \Psi_j | \nabla^2_A |\Psi_k \rangle \Psi_{Nk} \right] \right) + \\ E_j \Psi_{Nj} = E \Psi_{Nj}
-    \end{split}
-    \label{eq:schrodinger_nuclear_acoplada_res}
+E^{M06-2X}_{X} = \sum_{\sigma} \int dr \left[ F^{PBE}_{X\sigma}(\rho_{\sigma}, \nabla\rho_{\sigma}) f(w_{\sigma}) \right]
 \end{equation}
-donde los términos entre corchetes son los términos no adiabáticos de primer y segundo orden que mezclan los estados electrónicos debido al movimiento nuclear. La Aproximación de Born-Oppenheimer consiste en despreciar dichos acoplamientos ($A_{jk} \approx 0$). Esta suposición desacopla el sistema, simplificando el problema a la ecuación de Schrödinger nuclear independiente para cada estado $j$:
+
+donde $F^{PBE}_{X\sigma}$ representa la densidad de energía de intercambio del funcional PBE. El factor de mejora $f(w_{\sigma})$ es una expansión polinomial que depende de la variable $w_{\sigma}$, la cual a su vez es una función de la densidad de energía cinética de espín $\tau_{\sigma}$:
 
 \begin{equation}
-\left[ -\sum_{I=1}^{M} \frac{1}{2M_I} \nabla^2_I + E_j(\mathbf{R}) \right] \Psi_{Nj}(\mathbf{R}) = E \Psi_{Nj}(\mathbf{R})
-\label{eq:schrodinger_nuclear_res}
+w_{\sigma} = \frac{t_{\sigma} - 1}{t_{\sigma} + 1}, \quad t_{\sigma} = \frac{\tau^{LSDA}_{\sigma}}{\tau_{\sigma}}
 \end{equation}
 
-Así, el movimiento nuclear (gobernado por $\hat{T}_N = -\sum_{I=1}^M \frac{1}{2M_I} \nabla^2_I$) se describe sobre una única PES, $E_j(\mathbf{R})$, que actúa como el potencial efectivo generado por los electrones.
+Esta dependencia permite capturar efectos de la densidad de energía cinética local en la descripción del intercambio electrónico.
 
+\subsubsection{Correlación}
 
-
-\subsubsection{Tratamiento semiclásico de los núcleos}
-
-Dado que los núcleos son partículas de naturaleza cuántica, debemos justificar su tratamiento con una aproximación semiclásica dentro del marco de la dinámica molecular de Born-Oppenheimer. Para ello, se puede seguir una ruta conocida para extraer las ecuaciones clásicas de movimiento a partir de la mecánica cuántica, reescribiendo la función de onda con el siguiente ansatz: 
-
+La energía de correlación en el esquema M06-2X distingue entre las interacciones de espines opuestos ($\alpha\beta$) y espines paralelos ($\sigma\sigma$). La energía de correlación total se obtiene como la suma de estas contribuciones:
 
 \begin{equation}
-    \Psi_{Nk}(\{\mathbf{R}_I\};t) = B_k(\{\mathbf{R}_I\};t) \exp[iS_k(\{\mathbf{R}_I\};t)/\hbar]
-    \label{eq:ansatz_semiclasico} 
+E_{C} = E^{\alpha\beta}_{C} + E^{\alpha\alpha}_{C} + E^{\beta\beta}_{C}
 \end{equation}
 
-donde $B_k(\{\mathbf{R}_I\};t)$ y $S_k(\{\mathbf{R}_I\};t)$ son funciones reales y positivas que representan la amplitud y la fase de la función de onda nuclear, respectivamente.
-
-Al sustituir este ansatz en la ecuación de Schrödinger dependiente del tiempo y realizar la separación de las componentes real e imaginaria, se obtienen dos ecuaciones acopladas que gobiernan la evolución de la amplitud y la fase de manera independiente. Tras aplicar el operador Laplaciano , las ecuaciones resultantes son:
+Para la correlación de espines opuestos, se utiliza la densidad de energía de correlación del gas electrónico uniforme (UEG, por sus siglas en inglés) ($e^{UEG}_{\alpha\beta}$) modulada por funciones de enriquecimiento $g_{\alpha\beta}$ y $h_{\alpha\beta}$:
 
 \begin{equation}
-    \frac{\partial S_k}{\partial t} + \sum_I \frac{1}{2M_I}(\nabla_I S_k)^2 + E_k = \hbar^2 \sum_I \frac{1}{2M_I} \frac{\nabla_I^2 B_k}{B_k}
-    \label{eq:fase} 
+E^{\alpha\beta}_{C} = \int e^{UEG}_{\alpha\beta} \left[ g_{\alpha\beta}(x_{\alpha}, x_{\beta}) + h_{\alpha\beta}(x_{\alpha\beta}, z_{\alpha\beta}) \right] dr
 \end{equation}
+
+En el caso de los espines paralelos, la expresión incorpora un factor de corrección de autointeracción $D_{\sigma}$, el cual asegura que la energía de correlación se anule para sistemas de un solo electrón:
 
 \begin{equation}
-    \frac{\partial B_k}{\partial t} + \sum_I \frac{1}{M_I}(\nabla_I B_k)(\nabla_I S_k) + \sum_I \frac{1}{2M_I} B_k (\nabla_I^2 S_k) = 0
-    \label{eq:amplitud} 
+E^{\sigma \sigma}_{C} = \int e^{UEG}_{\sigma \sigma} [g_{\sigma\sigma}(x_{\sigma}) + h_{\sigma\sigma}(x_{\sigma}, z_{\sigma})] D_{\sigma} dr
 \end{equation}
 
-
-La ecuación para la amplitud, ec. \eqref{eq:amplitud} describe la evolución temporal de la amplitud ($B_k$) de la función de onda. Al ser multiplicada por un factor de $2B_k$, puede ser reexpresada de forma compacta como una ecuación de continuidad:
+El factor correctivo se define a partir del gradiente de densidad reducido $x_\sigma$ y la variable de trabajo $z_\sigma$:
 
 \begin{equation}
-    \frac{\partial B_k^2}{\partial t} + \sum_A \frac{1}{M_I} \nabla_I(B_k^2 \nabla_I S_k) = 0
-    \label{eq:continuidad_reescrita} 
+D_{\sigma} = 1 - \frac{x_{\sigma}^2}{4(z_{\sigma} + C_{F})}
 \end{equation}
 
-Esta forma es análoga a la ecuación de continuidad general $\frac{\partial \rho_k}{\partial t} + \nabla \cdot \mathbf{J}_k = 0$, donde la densidad de probabilidad se define como $\rho_k = |\Psi_{Nk}|^2 = B_k^2$ y la corriente de probabilidad es $\mathbf{J}_{k,I} = B_k^2(\nabla_I S_k)/M_I$. Esto garantiza la conservación de la densidad de probabilidad del núcleo. 
-
-Por otro lado, la ecuación \eqref{eq:fase} describe la evolución temporal de la fase $S_k$ de la función de onda. El término en el lado derecho es a menudo denominado ''potencial cuántico'' y es el único que depende explícitamente de $\hbar$. En el límite clásico ($\hbar \to 0$), este término se anula, simplificando la ecuación a:
-
-\begin{equation}
-    \frac{\partial S_k}{\partial t} + \sum_I \frac{1}{2M_I}(\nabla_I S_k)^2 + E_k = 0
-    \label{eq:hamilton_jacobi}
-\end{equation}
-Esta expresión es idéntica a la ecuación de Hamilton-Jacobi de la mecánica clásica. Si se define el momento conjugado como $\mathbf{P}_I = \nabla_I S_k$, la ecuación puede escribirse en términos del Hamiltoniano clásico $H_k$:
-\begin{equation}
-    \frac{\partial S_k}{\partial t} + H_k(\{\mathbf{R}_I\}, \{\nabla_I S_k\}) = 0
-    \label{eq:hamiltoniano} 
-\end{equation}
-Esto demuestra que, en este formalismo, los núcleos se propagan de acuerdo a la mecánica clásica sobre una superficie de energía potencial.
+La optimización de los coeficientes de las funciones $g$ y $h$, así como de $X$ se basó en un ajuste sistemático frente a diversas bases de datos de referencia que incluyen propiedades químicas fundamentales como termoquímica, cinética e interacciones no covalentes. Dicho proceso de parametrización se realizó de forma autoconsistente bajo restricciones físicas específicas, lo cual asegura que el funcional sea teóricamente más consistente que las versiones resultantes de optimizaciones no restringidas. La inclusión de un 54\% de intercambio de Hartree-Fock resulta fundamental para mitigar el error de autointeracción, permitiendo una descripción superior de sistemas donde la deslocalización electrónica y los fenómenos de transferencia de carga son relevantes.
